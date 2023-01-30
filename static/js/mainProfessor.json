@@ -1,0 +1,98 @@
+[
+  {
+    "front_num": "I",
+    "front_icon": "../img/circle/con6/Charms.svg",
+    "front_subject": "Charms",
+    "back_subject": "일반마법",
+    "back_professor": "필리우스 플리트윅",
+    "back_img": "../img/circle/con6/Charms_Event.png"
+  },
+  {
+    "front_num": "II",
+    "front_icon": "../img/circle/con6/Transfiguration.svg",
+    "front_subject": "Transfiguration",
+    "back_subject": "변환마법",
+    "back_professor": "미네르바 맥고나걸",
+    "back_img": "../img/circle/con6/Transfiguration_Event.png"
+  },
+  {
+    "front_num": "III",
+    "front_icon": "../img/circle/con6/Potions.svg",
+    "front_subject": "Potions",
+    "back_subject": "마법약",
+    "back_professor": "세베루스 스네이프",
+    "back_img": "../img/circle/con6/Potions_Event.png"
+  },
+  {
+    "front_num": "IV",
+    "front_icon": "../img/circle/con6/Herbology.svg",
+    "front_subject": "Herbology",
+    "back_subject": "약초학",
+    "back_professor": "포모나 스트라우트 ",
+    "back_img": "../img/circle/con6/Herbology_Event.png"
+  },
+  {
+    "front_num": "V",
+    "front_icon": "../img/circle/con6/Astronomy.svg",
+    "front_subject": "Astronomy",
+    "back_subject": "천문학",
+    "back_professor": "오로라 시니스트라",
+    "back_img": "../img/circle/con6/Astronomy_Event.png"
+  },
+  {
+    "front_num": "VI",
+    "front_icon": "../img/circle/con6/History-of-Magic.svg",
+    "front_subject": "History of Magic",
+    "back_subject": "마법의 역사",
+    "back_professor": "커스버트 빈스",
+    "back_img": "../img/circle/con6/History-of-Magic_Event.png"
+  },
+  {
+    "front_num": "VII",
+    "front_icon": "../img/circle/con6/Defence-Against-the-Dark-Arts.svg",
+    "front_subject": "Defence Against the Dark Arts",
+    "back_subject": "어둠의 마법 방어법",
+    "back_professor": "리머스 루핀",
+    "back_img": "../img/circle/con6/Defence-Against-the-Dark-Arts_Event.png"
+  },
+  {
+    "front_num": "VIII",
+    "front_icon": "../img/circle/con6/Care-of-Magical-Creatures.svg",
+    "front_subject": "Care of Magical Creatures",
+    "back_subject": "마법 생명체 돌보기",
+    "back_professor": "루비우스 해그리드",
+    "back_img": "../img/circle/con6/Care-of-Magical-Creatures_Event.png"
+  },
+  {
+    "front_num": "IX",
+    "front_icon": "../img/circle/con6/Divination.svg",
+    "front_subject": "Divination",
+    "back_subject": "점술",
+    "back_professor": "시빌 트릴로니",
+    "back_img": "../img/circle/con6/Divination_Event.png"
+  },
+  {
+    "front_num": "X",
+    "front_icon": "../img/circle/con6/Muggle-Studies.svg",
+    "front_subject": "Muggle Studies",
+    "back_subject": "머글학",
+    "back_professor": "제이콥 코왈스키",
+    "back_img": "../img/circle/con6/Muggle-Studies_Event.png"
+  },
+  {
+    "front_num": "XI",
+    "front_icon": "../img/circle/con6/Study-of-Ancient-Runes.svg",
+    "front_subject": "Study of Ancient Runes",
+    "back_subject": "고대 룬 문자 연구마법",
+    "back_professor": "배스시다 배블링",
+    "back_img": "../img/circle/con6/Study-of-Ancient-Runes_Event.png"
+  },
+  {
+    "front_num": "XII",
+    "front_icon": "../img/circle/con6/Flights.svg",
+    "front_subject": "Flights",
+    "back_subject": "비행",
+    "back_professor": "롤랜다 후치",
+    "back_img": "../img/circle/con6/Flights_Event.png"
+  }
+]
