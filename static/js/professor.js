@@ -5,7 +5,7 @@
     
     // json가져오기
     function loadItems(){
-        return fetch("./professor.json")
+        return fetch("../static/json/professor.json")
             .then((response)=>response.json())
             .then((json)=>json.items);
     }

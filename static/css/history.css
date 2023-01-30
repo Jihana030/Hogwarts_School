@@ -23,11 +23,11 @@ a {
     --font-size-20: 1vw;
     --font-size-20-h: 2.2vh;
     --font-size-28: 1.45vw;
-    --font-size-28-h: 4vh;
-    --font-size-y: 2vw;
+    --font-size-28-h: 4vw;
+    --font-size-y: 3vh;
     --font-size-y-h: 2.7vh;
     --color-back: #F0EDE8;
-    --img-size-y: 16.5vh;
+    --img-size-y: 20vh;
     --img-size-y-h: 30vw;
     --vh: 6.91px;
 }
@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
 /* 배경 종이질감 */
 .his_paper {
     position: absolute;
-    background-image: url('../image/paper.jpg');
+    background-image: url('../img/jiwon/paper.jpg');
     mix-blend-mode: darken;
     opacity: 40%;
     width: 100%;
@@ -102,7 +102,7 @@ body::-webkit-scrollbar {
 .his_infoTitleCnt::before {
     content: "";
     position: absolute;
-    background-image: url('../image/logo_2-w.svg.png');
+    background-image: url('../img/jiwon/logo_2-w.svg.png');
     background-size: 18vw;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
@@ -202,7 +202,7 @@ body::-webkit-scrollbar {
 /* 연혁 가운데 선 */
 
 .his_lineLong {
-    background-image: url('../image/Line3.svg');
+    background-image: url('../img/jiwon/Line3.svg');
     content: "";
     position: absolute;
     background-size: 500%;

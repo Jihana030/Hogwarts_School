@@ -11,7 +11,7 @@ body {
 /* paper */
 .alo_paper {
     position: absolute;
-    background-image: url('../image/paper.jpg');
+    background-image: url('../img/jiwon/paper.jpg');
     mix-blend-mode: darken;
     opacity: 40%;
     width: 100%;

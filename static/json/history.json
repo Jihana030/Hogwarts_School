@@ -1,6 +1,6 @@
 {"items":[
     {
-        "image": "./image/hogwartsLogo.jpg",
+        "image": "../static/img/jiwon/hogwartsLogo.jpg",
         "years": "∎",
         "title1": "호그와트 마법학교 설립",
         "title2": "",
@@ -12,7 +12,7 @@
         "century": "his_year10"
     },
     {
-        "image": "./image/Salazar_Slytherin.jpg",
+        "image": "../static/img/jiwon/Salazar_Slytherin.jpg",
         "years": "∎",
         "title1": "살라자르 슬리데린",
         "title2": "교육이념 갈등",
@@ -24,7 +24,7 @@
         "century": "his_year10"
     },
     {
-        "image": "./image/Triwizard2.png",
+        "image": "../static/img/jiwon/Triwizard2.png",
         "years": "∎",
         "title1": "트리위저드",
         "title2": "토너먼트 개최",
@@ -36,7 +36,7 @@
         "century": "his_year13"
     }, 
     {
-        "image": "./image/floopowder2.png",
+        "image": "../static/img/jiwon/floopowder2.png",
         "years": "∎",
         "title1": "플루 파우더 개발",
         "title2": "",
@@ -48,7 +48,7 @@
         "century": "his_year13"
     },
     {
-        "image": "./image/toilet3.jpg",
+        "image": "../static/img/jiwon/toilet3.jpg",
         "years": "∎",
         "title1": "배관 공사로",
         "title2": "비밀의 방 입구 수정",
@@ -60,7 +60,7 @@
         "century": "his_year18"
     },
     {
-        "image": "./image/express2.png",
+        "image": "../static/img/jiwon/express2.png",
         "years": "1830",
         "title1": "호그와트 급행열차",
         "title2": "상용화",
@@ -72,7 +72,7 @@
         "century": "his_year19"
     },
     {
-        "image": "./image/peeves2.png",
+        "image": "../static/img/jiwon/peeves2.png",
         "years": "1876",
         "title1": "피브스",
         "title2": "학교를 위협",
@@ -84,7 +84,7 @@
         "century": "his_year19"
     },
     {
-        "image": "./image/wars1-1.png",
+        "image": "../static/img/jiwon/wars1-1.png",
         "years": "1939~1945",
         "title1": "1차 세계 마법사전쟁",
         "title2": "",
@@ -96,7 +96,7 @@
         "century": "his_year20"
     },
     {
-        "image": "./image/Albus_Percival_Wulfric_Brian_Dumbledore4.jpg",
+        "image": "../static/img/jiwon/Albus_Percival_Wulfric_Brian_Dumbledore4.jpg",
         "years": "1965",
         "title1": "알버스 덤블도어",
         "title2": "교장 취임",
@@ -108,7 +108,7 @@
         "century": "his_year20"
     },
     {
-        "image": "./image/Death_Eaters2.jpg",
+        "image": "../static/img/jiwon/Death_Eaters2.jpg",
         "years": "1997",
         "title1": "죽음을 먹는 자들 침입",
         "title2": "",
@@ -120,7 +120,7 @@
         "century": "his_year20"
     },
     {
-        "image": "./image/Severus_Snape5.png",
+        "image": "../static/img/jiwon/Severus_Snape5.png",
         "years": "1997",
         "title1": "세베루스 스네이프",
         "title2": "교장 취임",
@@ -133,7 +133,7 @@
         "century": "his_year20"
     },
     {
-        "image": "./image/wars2-1.png",
+        "image": "../static/img/jiwon/wars2-1.png",
         "years": "1995~1998",
         "title1": "2차 세계 마법사 전쟁",
         "title2": "",
@@ -145,7 +145,7 @@
         "century": "his_year20"
     },
     {
-        "image": "./image/Minerva_McGonagall3.jpg",
+        "image": "../static/img/jiwon/Minerva_McGonagall3.jpg",
         "years": "1998",
         "title1": "미네르바 맥고나걸",
         "title2": "교장 취임",
