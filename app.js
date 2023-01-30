@@ -15,6 +15,9 @@ app.use('/login', loginRouter);
 const joinRouter = require('./routes/join');
 app.use('/join', joinRouter);
 
+const mypageRouter = require('./routes/mypage');
+app.use('/mypage', mypageRouter);
+
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 

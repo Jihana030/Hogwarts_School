@@ -19,7 +19,7 @@ const sessionObj = {
 router.use(session(sessionObj));
 
 router.get('/', async (req, res) => {
-    res.render('ticket', {session: req.session.user});
+    res.render('index', {session: req.session.user});
     }); //로그인 연결
 
 router.post('/', async (req, res) => {
