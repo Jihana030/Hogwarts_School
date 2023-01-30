@@ -20,7 +20,7 @@ $borderColor-smooth: #AFA489;
 #comm_container {
     width: 100%;
 
-    background: url("../../images/background-default.png");
+    background: url("../../img/khlll/background-default.png");
     background-size: cover;
     font-family: 'Ibarra Real Nova', serif;
     overflow: hidden;
@@ -278,6 +278,33 @@ $borderColor-smooth: #AFA489;
                 }
             }
 
+            // Calendar style ***
+
+            // .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th {
+            //     border: 0;
+            // }
+            
+            .fc-today-button {
+                display: none;
+            }
+
+            .fc-prev-button, .fc-next-button {
+                background-color: transparent;
+                border-color: transparent;
+                color: $borderColor;
+            }
+
+            .fc .fc-button {
+                border: none;
+            }
+            .fc .fc-button:active {
+                border: none;
+            }
+
+            
+            
+            // Calendar style ***
+
             .mypage_calendar_Todolist {
                 border-right: 1px solid $borderColor-smooth;
 
@@ -298,6 +325,7 @@ $borderColor-smooth: #AFA489;
                         height: 16vw;
                     }
                 }
+                
 
                 .mypage_Todolist {
                     width: 100%;

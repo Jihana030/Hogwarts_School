@@ -5,7 +5,7 @@
 }
 #comm_container {
   width: 100%;
-  background: url("../../images/background-default.png");
+  background: url("../../img/khlll/background-default.png");
   background-size: cover;
   font-family: "Ibarra Real Nova", serif;
   overflow: hidden;
@@ -208,6 +208,20 @@
   margin-top: 1vw;
   display: flex;
   justify-content: flex-end;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc-today-button {
+  display: none;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc-prev-button, #mypage_contents .mypage_contents_line .mypage_contents_box .fc-next-button {
+  background-color: transparent;
+  border-color: transparent;
+  color: #69604b;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc .fc-button {
+  border: none;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc .fc-button:active {
+  border: none;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist {
   border-right: 1px solid #AFA489;
