@@ -78,7 +78,7 @@ span {
 }
 
 .main_overlay {
-  background-image: url("../img/common/Background_texture.jpg");
+  background-image: url("../img/circle/common/Background_texture.jpg");
   background-repeat: repeat;
   opacity: 0.25;
   position: absolute;
@@ -302,7 +302,7 @@ header {
 
 /* main_nav-menu style sheet */
 #main_nav-menu-wrap {
-  background-image: url(../img/common/Background_texture-light.jpg);
+  background-image: url(../img/circle/common/Background_texture-light.jpg);
   background-repeat: repeat;
 
   position: -webkit-sticky;
@@ -353,7 +353,7 @@ header {
 
 /* main_mobile-toggle style sheet */
 #main_mobile-toggle {
-  background-image: url(../img/common/Background_texture-light.jpg);
+  background-image: url(../img/circle/common/Background_texture-light.jpg);
   background-repeat: repeat;
   display: grid;
 
@@ -598,7 +598,7 @@ header {
 
 /* main_mainCon style sheet */
 .main_mainCon {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.2)), url(../img/main/Hogwarts.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.2)), url(../img/circle/main/Hogwarts.jpg);
   background-size: cover;
   border: 1px solid var(--line-color);
   filter: grayscale(1);
@@ -1045,10 +1045,10 @@ header {
   height: inherit;
   border-style: solid;
   border-width: 2vw;
-  -moz-border-image: url(../img/con6/frame.svg) 8;
-  -webkit-border-image: url(../img/con6/frame.svg) 8;
-  -o-border-image: url(../img/con6/frame.svg) 8;
-  border-image: url(../img/con6/frame.svg) 8;
+  -moz-border-image: url(../img/circle/con6/frame.svg) 8;
+  -webkit-border-image: url(../img/circle/con6/frame.svg) 8;
+  -o-border-image: url(../img/circle/con6/frame.svg) 8;
+  border-image: url(../img/circle/con6/frame.svg) 8;
 }
 
 .main_con6_card-back {
