@@ -98,9 +98,8 @@
   // con6
   // con6 card list 가져오기
   let cardList = null;
-
   function getData() {
-    fetch("./mainProfessor.json")
+    fetch("../static/json/mainProfessor.json")
       .then((res) => res.json())
       .then((result) => {
         cardList = result;

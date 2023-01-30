@@ -80,7 +80,7 @@
 
 /* menu-toggle - 메뉴 소제목 */
 #main_menu-toggle-wrap {
-  background-image: url(../img/common/Background_texture-light.jpg);
+  background-image: url(../img/circle/common/Background_texture-light.jpg);
   background-repeat: repeat;
   display: grid;
   grid-template-columns: 1.1fr 6fr 1fr;
