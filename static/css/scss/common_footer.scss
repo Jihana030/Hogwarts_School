@@ -1,0 +1,98 @@
+/*------------ font ------------*/
+
+@font-face {
+    font-family: 'Eulyoo1945', serif;
+    src: url('../../font/Eulyoo1945-Regular.eot'),
+        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
+        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
+        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+}
+
+// font-family: 'SUIT', sans-serif;
+// font-family: 'Ibarra Real Nova', serif;
+// font-family: 'Eulyoo1945', serif;
+
+
+// ------------------------------------------------- DEFAULT SET -------------------------------------------*
+
+$fontmainColor: #423620;
+
+.comm_animation_play_pause { animation-play-state: paused !important; }
+.comm_dp_none { display: none; }
+
+// ---------------------------------------------------------------------------------------------------------*
+
+// ------------------------------------------------- FOOTER START ------------------------------------------*
+
+#common_footer {
+    width: 100%;
+    height: 170px;
+
+    padding: 2em 3.75rem;
+    background-image: url('../../images/background-dark.png');
+    color: #BFBFBF;
+    font-family: 'SUIT', sans-serif;
+    transition: .3s;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(400px, 1fr) 5em;
+
+    .comm_footer_text {
+
+        .comm_footer_text1 {
+            margin-bottom: .2em;
+        }
+        .comm_footer_text2 {
+            margin-bottom: .7em;
+        }
+
+        .comm_copyright {
+            font-size: .75rem;
+            color: #777;
+        }
+    }
+
+    .comm_footer_logo {
+        width: 5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #common_footer {
+        height: 300px;
+        padding: 2em 6.25vw;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5fr 1fr;
+
+        .comm_footer_text {
+            order: 1;
+            text-align: center;
+        }
+        .comm_footer_logo {
+            width: 6em;
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        #common_footer{
+            height: 350px;
+            grid-template-rows: 1fr 1fr;
+            
+            .comm_footer_text {
+                width: 13em;
+                align-self: flex-end;
+                justify-self: center;
+
+                .comm_footer_text1 {
+                    margin-bottom: .7em;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------------- FOOTER END --------------------------------------------*

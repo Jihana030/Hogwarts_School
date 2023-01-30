@@ -1,0 +1,395 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova' , 'Eulyoo1945';
+}
+
+@font-face {
+    font-family: 'Eulyoo1945' !important;
+    src: url(../fonts/ChosunCentennial/ChosunCentennial.eot);
+    src: url(../fonts/ChosunCentennial/ChosunCentennial.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/ChosunCentennial/ChosunCentennial.woff) format('woff'),
+         url(../fonts/ChosunCentennial/ChosunCentennial.ttf) format('truetype');
+         unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+002A;
+        }
+        
+@font-face {
+    font-family: 'Ibarra Real Nova' !important;
+    src: url(../fonts/ChosunCentennial/ChosunCentennial.eot);
+    src: url(../fonts/ChosunCentennial/ChosunCentennial.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/ChosunCentennial/ChosunCentennial.woff) format('woff'),
+         url(../fonts/ChosunCentennial/ChosunCentennial.ttf) format('truetype');
+         unicode-range: U+0041-005A,  U+0061-007A, U+0030-0039;
+        }
+
+@font-face {
+    font-family: 'Roustel';
+    src: url('../font/Roustel.ttf') format('truetype');
+}
+
+body{
+	width:100%;
+    background-color: rgba(228, 221, 214, 0.909);
+}
+
+.join_paper{
+    background-image: url(../img/bgimg.jpg);
+    opacity: 0.3;
+    width:100%;
+	height:100%;
+    mix-blend-mode: darken;
+    position: fixed;
+}
+
+.hidden{
+    display: none;
+}
+
+.join_main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.join_box1{
+    background-color: #f5f0ebb1;
+    height: 1180px;
+    border: 3px solid #4e4e4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.35%;
+}
+
+.join_box2{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #4e4e4e;
+}
+
+#join_logo{
+    width: 150px;
+}
+
+.join_logo_box{
+    margin-top: 84px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#join_logo_text{
+    margin-top: 35px;
+    color:#4e4e4e;
+    text-align: center;
+}
+
+#join_logo_text h1{
+    font-size: 36px;
+    letter-spacing: -0.01em;
+}
+
+#join_logo_text p{
+    font-size: 26px;
+}
+
+.join_contnets_box{
+    margin-top: 90px;
+    width: 100%;
+}
+
+@media screen and (min-width:1024px) {
+    .join_box1{
+        width: 60vw;
+    }
+    .join_contnets_box ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 43%);
+        grid-template-rows: repeat(4, 74px);
+        padding: 0 12%;
+        gap: 14%;
+    }
+
+    .join_contnets_box ul li{
+        width: 100%;
+    }
+    .join_search_btn{
+        bottom: 32%;
+    }
+}
+
+@media screen and (max-width:1401px) and (min-width:1023px){
+    .join_box1{
+        height: 1300px !important;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .join_box1{
+        width: 70vw;
+        height: 1530px !important;
+    }
+    .join_contnets_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .join_contnets_box ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10%;
+    }
+
+    .join_contnets_box ul li{
+        margin-bottom: 50px;
+    }
+
+    .join_box1{
+        height: 1500px;
+    }
+    
+    .join_contnets_box ul{
+        width: 100%;
+    }
+
+    .join_contnets_box ul li{
+        width: 70%;
+    }
+
+    .join_search_btn{
+        bottom: 12%;
+    }
+}
+
+@media screen and (max-width:1085px){
+    .join_contnets_box ul .join_checkBox_list div{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+    }
+}
+
+
+.join_contnets_box ul li{
+    position: relative;
+}
+
+
+.join_contnets_box ul li>p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4e4e4e;
+}
+
+.join_contnets_box ul li>p>span{
+    font-family: 'Eulyoo1945' !important;
+}
+
+
+.join_contnets_box ul li input{
+    border-bottom: 1 solid #4e4e4e;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    text-align: center;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.join_contnets_box ul li input:focus{
+    outline: none;
+}
+
+.join_contnets_box ul li .join_alert{
+    font-size: 14px;
+    color: #605242;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 66px;
+}
+
+.join_contnets_box ul .join_u_address{
+    grid-area: 3/span 2;
+    position: relative;
+}
+
+.join_contnets_box ul .join_checkBox_list{
+    grid-area: 5/span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join_contnets_box ul .join_checkBox_list div{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.join_contnets_box ul .join_checkBox_list div label{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.join_search_btn{
+    position: absolute;
+    right: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.join_btn_container{
+    display: flex;
+    justify-content: center;
+    grid-area: 6/span 2;
+    margin-top: 30px;
+}
+
+.join_btn{
+    border: none;
+    width: 320px;
+    background-color: #4e4e4e;
+    color: #f0ede8;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 체크박스 */
+
+.join_contnets_box ul .join_checkBox_list div label input[type="checkbox"]{
+    width: 14px;
+    margin-right: 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    border: 1.5px solid #4e4e4e !important;
+  }
+
+  input[type="checkbox"]:checked {
+    border: none !important;
+    background-image: url(../img/checkmark.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 4px !important;
+  }
+
+/* 입학 편지 */
+.join_letter{
+    position: fixed;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 510px;
+    height: 780px;
+    background-image: url(../img/letterBg.png);
+    filter: drop-shadow(2px 4px 20px #c3bfb8);
+    padding: 28px 60px;
+    color: #4a4233;
+    
+}
+
+#join_letter_logo{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top:120px;
+    width: 140px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.join_letter_top{
+    margin-top: 210px;
+}
+
+.join_letter_top p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+}
+
+.join_letter_middle{
+    margin-top: 30px;
+}
+
+.join_letter_middle p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    margin-top: 22px;
+}
+
+.join_houseTest{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.join_houseTest:hover{
+    font-weight: 600;
+}
+
+.join_letter_bottom{
+    position: relative;
+    margin-top: 30px;
+}
+
+.join_letter_font{
+    margin-left: 10px;
+    font-family: 'Roustel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.join_stamp{
+    position: absolute;
+    right:0;
+    bottom: -10px;
+}
+
+.join_stamp img{
+    width: 95px;
+}
+
+.join_letter_close{
+    margin-top: 46px;
+}
+
+.join_letter_closeBtn {   
+    text-align: center;
+    cursor: pointer;
+}
+
+.join_letter_closeBtn:hover{
+    font-weight: 600;
+}

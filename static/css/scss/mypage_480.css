@@ -1,0 +1,408 @@
+/*------------ font ------------*/
+@font-face {
+  font-family: "Eulyoo1945", serif;
+  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+}
+@media screen and (max-width: 480px) {
+  #mypage_contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line {
+    width: 100%;
+    margin-top: 10vh;
+    border-top: 1px solid #69604b;
+    border-bottom: 1px solid #69604b;
+    display: flex;
+    justify-content: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box {
+    width: 100%;
+    height: 100%;
+    border-left: 0;
+    border-right: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 90vh 75vh 75vh;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile {
+    width: 100%;
+    height: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #AFA489;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: grid;
+    grid-template-rows: 65vh 25vh;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #AFA489;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vh 15vh;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_house_dp {
+    position: absolute;
+    top: -1.7%;
+    right: 6.2%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_house_dp i {
+    font-size: 10vw;
+    color: #AA3939;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top {
+    width: 100%;
+    height: 100%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic {
+    width: 49vw;
+    height: 49vw;
+    position: relative;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_setting {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_setting svg {
+    height: 7vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_img img {
+    height: 100%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_text {
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_text .mypage_profile_top_name {
+    font-size: 8.5vw;
+    font-family: "Eulyoo1945", serif;
+    font-weight: 400;
+    letter-spacing: -0.3vw;
+    color: #504733;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_text .mypage_profile_top_year {
+    font-size: 4.8vw;
+    margin-top: 1.3vw;
+    color: #504733;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom {
+    width: 100%;
+    height: 100%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul {
+    width: 100%;
+    height: 100%;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon {
+    width: 15vw;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon svg {
+    width: 8.5vw;
+    height: 8.5vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon .mypage_profile_bottom_icon_new {
+    width: 0.45em;
+    height: 0.45em;
+    background-color: #E71A1A;
+    border-radius: 0.45em;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon .mypage_profile_bottom_text {
+    width: 100%;
+    height: 100%;
+    display: inline;
+    margin-top: 2vw;
+    font-size: 3.5vw;
+    font-weight: 400;
+    text-align: center;
+    color: #504733;
+    font-family: "SUIT", sans-serif;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_left_menu {
+    border-right: 1px solid #AFA489;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_left_menu ul {
+    width: 100%;
+    height: 100%;
+    padding: 5vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_left_menu ul .mypage_profile_menu_text {
+    width: 100%;
+    height: 10vw;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_left_menu ul .mypage_profile_menu_text p {
+    display: inline-block;
+    font-size: 4.5vw;
+    color: #504733;
+    font-family: "SUIT", sans-serif;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_left_menu ul .mypage_profile_menu_text p:hover {
+    font-weight: 500;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_right_menu {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_right_menu .mypage_profile_right_menu_text {
+    font-size: 6.5vw;
+    font-weight: 500;
+    line-height: 6.5vw;
+    color: #504733;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_right_menu .mypage_profile_right_menu_arrow {
+    width: 25vw;
+    margin-top: 5.5vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist {
+    border-right: 0;
+    display: grid;
+    grid-template-rows: 1.25fr 1fr;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #AFA489;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar {
+    width: 70vw;
+    height: 62vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #AFA489;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top {
+    width: 70vw;
+    height: 3.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_title {
+    display: inline-block;
+    font-size: 6vw;
+    letter-spacing: -0.05vw;
+    color: #423620;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus {
+    width: 3.5vw;
+    height: 3.5vw;
+    margin-left: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon {
+    width: 100%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon::before, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon::after {
+    content: "";
+    width: 1px;
+    height: 3.5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #423620;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon::before {
+    transform: rotate(-90deg);
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom {
+    width: 70vw;
+    height: 55%;
+    margin-top: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_contents {
+    width: 100%;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_contents .mypage_Todolist_detail {
+    font-size: 3.3vw;
+    color: #504733;
+    font-family: "Eulyoo1945", serif;
+    display: grid;
+    grid-template-columns: 2vw 1fr;
+    display: flex;
+    align-items: flex-start;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_contents .mypage_Todolist_detail:not(:last-child) {
+    margin-bottom: 2.5vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_contents .mypage_Todolist_detail p {
+    display: inline-block;
+    line-height: 5vw;
+    margin-left: 1vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_box {
+    width: 95vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(5, 1fr);
+    gap: 2vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot {
+    display: grid;
+    grid-template-rows: 1.5fr repeat(16, 1.2fr);
+    gap: 0.5vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_time, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_day {
+    color: #423620;
+    display: flex;
+    justify-content: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_time {
+    font-size: 1.8vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_day {
+    font-size: 2vw;
+    font-weight: 500;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_detail {
+    padding: 1vw;
+    font-size: 1.5vw;
+    color: #504733;
+    font-family: "SUIT", sans-serif;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: flex-end;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_select_subject {
+    background-color: rgba(171, 161, 141, 0.5215686275);
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot1 .mypage_timeTable_slot_time {
+    grid-row: span 2;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot2 .mypage_timeTable_slot_select_subject {
+    grid-row: span 3;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot2 .mypage_subject1 {
+    grid-row: 6/8;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot2 .mypage_subject2 {
+    grid-row: 8/11;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot2 .mypage_subject3 {
+    grid-row: 13/17;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot3 .mypage_subject1 {
+    grid-row: 3/5;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot3 .mypage_subject2 {
+    grid-row: 7/11;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot3 .mypage_subject3 {
+    grid-row: 13/15;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot4 .mypage_subject1 {
+    grid-row: 2/4;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot4 .mypage_timeTable_slot_select_subject {
+    grid-row: 5/8;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot4 .mypage_subject2 {
+    grid-row: 8/11;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot4 .mypage_subject3 {
+    grid-row: 13/16;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot5 .mypage_subject1 {
+    grid-row: 2/4;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot5 .mypage_subject2 {
+    grid-row: 5/10;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot5 .mypage_subject3 {
+    grid-row: 13/17;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_select_subject1 {
+    grid-row: 2/5;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_subject1 {
+    grid-row: 5/9;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_subject2 {
+    grid-row: 9/11;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_select_subject2 {
+    grid-row: 13/16;
+  }
+}/*# sourceMappingURL=mypage_480.css.map */

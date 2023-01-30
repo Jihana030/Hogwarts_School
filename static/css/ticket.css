@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova';
+}
+
+body{
+	width:100%;
+	height:100vh;
+}
+
+.body{
+    width:100%;
+	height:100vh;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.login_btn{
+    cursor: pointer;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.login_modal{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#login_main_body{
+    position: relative;
+    width: 618px;
+    height: 260px;
+    padding: 4px;
+    background: #F8F1E6;
+}
+
+#login_item_body{
+    position: absolute;
+    width: 610px;
+    height: 252px;
+    background: #F8F1E6;
+    border: 2px solid #DBC48F;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 455px 125px;
+    grid-template-rows: 208px auto;
+    gap: 10px;
+    row-gap: 0;
+}
+
+#login_body_left{
+    width: 455px;
+    height: 208px;
+}
+
+#login_left_list tr td{
+    border: 2px solid #DBC48F;
+    width: 455px;
+    height: 51.5px;
+}
+
+#ticket_title{
+    font-size: 32px;
+    letter-spacing: 0.1em;
+    color: #DBC48F;
+    text-shadow: 0.5px 0.5px 0.8px rgba(219, 196, 143, 0.87);
+    text-align: center;
+}
+
+.login_form{
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #DBC48F;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.login_form::placeholder{
+    font-weight: 600;
+    color: #DBC48F;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+}
+
+.login_form:focus{
+    outline: none;
+}
+
+.item_4_head{
+    font-weight: 400;
+    font-size: 12px;
+    color: #8C7653;
+    margin-left: 20px;
+}
+
+.item_4_body{
+    font-weight: 600;
+    font-size: 20px;
+    color: #8C7653;
+    margin-left: 20px;
+}
+
+#platform{
+    width: 220px !important;
+    cursor: pointer;
+    background-color: #A22200;
+}
+
+#platform button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+    background-color: #A22200;
+    border: none;
+}
+
+#platform button:hover{
+    transition: 0.3s;
+    background-color: #942303;
+}
+
+.login_large_text, .login_small_text{
+    color: #DBC48F;
+    text-align: center;
+    text-shadow: 0px 0px 1px #E3AB9C;
+    font-weight: 600;
+}
+
+.login_large_text{
+    font-size: 24px;
+    text-decoration: underline;
+    line-height: 25px;
+}
+
+.login_small_text{
+    font-size: 16px;
+}
+
+#login_platform_svg{
+    display: flex; justify-content: center; align-items: center;
+    margin-top: 5px;
+}
+
+#login_body_right{
+    border: 6px double #DBC48F;
+    width: 125px;
+    height: 208px;
+}
+
+#login_body_right p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #8C7653;
+    letter-spacing: -0.05em;
+}
+
+#london{
+    margin-top: 33px;
+}
+
+#one_way{
+    text-decoration: underline;
+}
+
+.login_right_small_text{
+    font-size: 13px !important;
+}
+
+.login_underText{
+    text-align: center;
+    grid-area: 2/ span 2;
+    font-size: 13.3px;
+    color: #DBC48F;
+    letter-spacing: 0.065em;
+}
+
+#login_underLine1{
+    border: 1.5px solid #DBC48F;
+    background-color: #DBC48F;
+    margin-top: 3px;
+}
+
+#login_underLine2{
+    margin-top: 2px;
+    background-color: #DBC48F;
+    border: 0.8px solid #DBC48F;
+}
+
+.login_underText div{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    gap: 2px;
+}
+
+.login_underText div hr{
+    display: inline-block;
+    width: 13.5px;
+    border: 0.5px solid #8C7653;
+    background-color:  #8C7653;
+    transform: rotate(90deg);
+}
+
+.login_underText div a{
+    color: #8C7653 !important;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.015em;
+}
+
+.modal_overlay{
+    filter: blur(5px);
+    -webkit-filter: blur(3px);
+}
+
+.login_form_btn:focus{
+    outline: none;
+}

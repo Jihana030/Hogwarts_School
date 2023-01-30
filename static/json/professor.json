@@ -1,0 +1,152 @@
+{"items":[
+    {
+        "house" : "./image/Gryffindor_House_white.svg",
+        "image" : "./image/Rubeus_Hagrid3.png",
+        "position" : "숲지기",
+        "name" : "루비우스 해그리드",
+        "subject" : "마법 생명체 돌보기",
+        "years" : "1984~현재",
+        "width" : "322px",
+        "height" : "386px"
+    },
+    {
+        "house" : "./image/Ravenclaw_House_white.svg",
+        "image" : "./image/Filius_Flitwick2.png",
+        "position" : "사감",
+        "name" : "필리우스 플리트윅",
+        "subject" : "일반마법",
+        "years" : "?~현재",
+        "width" : "370px",
+        "height" : "272px"
+    },
+    {
+        "house" : "./image/Ravenclaw_House_white.svg",
+        "image" : "./image/Sybill_Patricia_Trelawney.png",
+        "position" : "",
+        "name" : "시빌 트릴로니",
+        "subject" : "점술학",
+        "years" : "1980~현재",
+        "width" : "255px",
+        "height" : "389px"
+    },
+    {
+        "house" : "./image/Gryffindor_House_white.svg",
+        "image" : "./image/Albus_Percival_Wulfric_Brian_Dumbledore3.png",
+        "position" : "교장",
+        "name" : "알버스 덤블도어",
+        "subject" : "변환마법",
+        "years" : "?~1997",
+        "width" : "366px",
+        "height" : "573px"
+    },
+    {
+        "house" : "",
+        "image" : "./image/Rolanda_Hooch.png",
+        "position" : "퀴디치 심판",
+        "name" : "롤랜다 후치",
+        "subject" : "비행마법 ",
+        "years" : "?~현재",
+        "width" : "354px",
+        "height" : "351px"
+    },
+    {
+        "house" : "./image/Gryffindor_House_white.svg",
+        "image" : "./image/Minerva_McGonagall4.png",
+        "position" : "교감/사감",
+        "name" : "미네르바 맥고나걸",
+        "subject" : "변환마법",
+        "years" : "1956~2020 ",
+        "width" : "300px",
+        "height" : "394px"
+    },
+    { 
+        "house" : "",
+        "image" : "./image/Alastor_Mad-Eye_Moody2.png",
+        "position" : "",
+        "name" : "매드아이 무디",
+        "subject" : "어둠의 마법 방어법",
+        "years" : "1994~1995",
+        "width" : "362px",
+        "height" : "286px"
+    },
+    {
+        "house" : "",
+        "image" : "./image/Argus_Filch2.png",
+        "position" : "관리인",
+        "name" : "아거스 필치",
+        "subject" : "",
+        "years" : "1973~현재",
+        "width" : "255px",
+        "height" : "393px"
+    },
+    {
+        "house" : "./image/Ravenclaw_House_white.svg",
+        "image" : "./image/Quirinus_Quirrell.png",
+        "position" : "",
+        "name" : "퀴리너스 퀴렐",
+        "subject" : "어둠의 마법 방어법",
+        "years" : "?~1992",
+        "width" : "378px",
+        "height" : "369px"
+    },
+    {
+        "house" : "./image/Slytherin_House_white.svg",
+        "image" : "./image/Horace_Eugene_Flaccus_Slughorn.png",
+        "position" : "",
+        "name" : "호러스 슬러그혼",
+        "subject" : "",
+        "years" : "1996~현재",
+        "width" : "268px",
+        "height" : "390px"
+    },
+    {
+        "house" : "./image/Gryffindor_House_white.svg",
+        "image" : "./image/Remus_John_Lupin.png",
+        "position" : "",
+        "name" : "리머스 루핀",
+        "subject" : "어둠의 마법 방어법",
+        "years" : "1993~1994",
+        "width" : "371px",
+        "height" : "430px"
+    },
+    {
+        "house" : "./image/Slytherin_House_white.svg",
+        "image" : "./image/Severus_Snape4.png",
+        "position" : "사감",
+        "name" : "세베루스 스네이프",
+        "subject" : "마법약",
+        "years" : "1996~1998",
+        "width" : "383px",
+        "height" : "502px"
+    },
+    {
+        "house" : "",
+        "image" : "./image/Poppy_Pomfrey2.png",
+        "position" : "병동 간호사",
+        "name" : "포피 폼프리",
+        "subject" : "",
+        "years" : "?~현재",
+        "width" : "389px",
+        "height" : "470px"
+    },
+    {
+        "house" : "./image/Hufflepuff_House_white.svg",
+        "image" : "./image/Pomona_Sprout2.png",
+        "position" : "사감",
+        "name" : "포모나 스프라우트",
+        "subject" : "약초학",
+        "years" : "?~2017",
+        "width" : "325px",
+        "height" : "409px"
+    },
+    {
+        "house" : "./image/Ravenclaw_House_white.svg",
+        "image" : "./image/Gilderoy_Lockhart.png",
+        "position" : "",
+        "name" : "길더로이 록하트",
+        "subject" : "어둠의 마법 방어법",
+        "years" : "?~1993",
+        "width" : "262px",
+        "height" : "375px"
+    }
+]}

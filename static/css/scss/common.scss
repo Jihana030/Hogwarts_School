@@ -1,0 +1,58 @@
+/*------------ font ------------*/
+
+@font-face {
+    font-family: 'Eulyoo1945', serif;
+    src: url('../../font/Eulyoo1945-Regular.eot'),
+        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
+        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
+        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+}
+
+// font-family: 'SUIT', sans-serif;
+// font-family: 'Ibarra Real Nova', serif;
+// font-family: 'Eulyoo1945', serif;
+
+
+// ------------------------------------------------- DEFAULT SET -------------------------------------------*
+
+$fontmainColor: #423620;
+
+.comm_white_Bg { background-color: rgba(255, 255, 255, 0.15); }
+.comm_animation_play_pause { animation-play-state: paused !important; }
+.comm_dp_none { display: none; }
+
+// ---------------------------------------------------------------------------------------------------------*
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $fontmainColor;
+    display: inline-block;
+}
+
+// #comm_container {
+//     width: 100%;
+//     height: 100vh;
+
+//     background: url("../../images/background-default.png");
+//     background-size: cover;
+//     font-family: 'Ibarra Real Nova', serif;
+//     overflow: hidden;
+//     position: relative;
+// }

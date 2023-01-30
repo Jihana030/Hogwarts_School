@@ -1,0 +1,371 @@
+.main_Read-Btn span {
+    font-size: 1rem;
+  }
+
+  .main_Read-Btn i {
+    font-size: 1.5rem;
+  }
+
+/* main_con1 style sheet */
+.main_con1 {
+  padding: 4rem 0;
+  margin: 0 var(--display-gap);
+  gap: 4.5rem;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  grid-template-rows: 1fr;
+  border-bottom: 1px solid var(--line-color);
+}
+
+/* main_con1 - 달력 */
+.main_calendar {
+  gap: 0;
+}
+
+.main_calendar-box {
+  padding: 1.25rem 2rem 1rem;
+  gap: 3rem;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main_ctr-box {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.main_ctr-num {
+  align-self: flex-start;
+  grid-column: 1 / 3;
+  padding: 0;
+}
+
+.main_cal-year {
+  font-size: 2.5rem;
+}
+
+.main_cal-month {
+  font-size: 5.5rem;
+}
+
+.main_cal-table {
+  flex-grow: 1;
+}
+
+.main_btn-cal {
+  padding-bottom: 1rem;
+}
+
+.main_cal-table thead tr th,
+.main_cal-body tr .day {
+  height: 3rem;
+  font-size: 1rem;
+}
+
+/* main_con1 - 달력 : 상세 부분 */
+.main_calendar-sub {
+  align-items: flex-end;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.main_calendar-sub p {
+  padding: 0;
+}
+
+.main_calendar-sub span {
+  grid-row: 1 / 3;
+  grid-column: 2 / 4;
+  font-size: 1.125rem;
+  justify-self: end;
+  padding-bottom: 0.25rem;
+}
+
+/* main_con1 - 교가 */
+.main_song {
+  gap: 2rem;
+  padding: 0 4vw;
+}
+
+.main_song h1 {
+  font-size: 4rem;
+}
+
+.main_song p {
+  font-size: 2rem;
+}
+
+/* main_con1 - 이달의 교수 */
+.main_awards {
+  gap: 0;
+}
+
+.main_awards div {
+  align-items: flex-end;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.main_awards div p {
+  padding: 0;
+}
+
+
+.main_awards div span {
+  grid-row: 1 / 3;
+  grid-column: 2 / 4;
+  font-size: 1.125rem;
+  justify-self: end;
+  padding-bottom: 0.25rem;
+}
+
+/* main_mainCon style sheet */
+.main_mainCon {
+  margin: 4rem 24vw 0 var(--display-gap);
+  height: 50rem;
+}
+
+.main_mainCon h1 {
+  font-size: 5rem;
+  padding: 3rem 4rem;
+}
+
+/* con2 style sheet */
+.main_con2 {
+  padding: 4rem 0 0 0;
+  margin: 4rem var(--display-gap);
+}
+
+/* main_con2 - 환영사 */
+#main_con2-first {
+  padding-left: 2.5vw;
+  padding-bottom: 16rem;
+}
+
+#main_con2-first video {
+  height: 40vw;
+}
+
+#main_con2-first h1 {
+  font-size: 4rem;
+}
+#main_con2-first h1 br {
+  display: none;
+}
+#main_con2-first > span {
+  font-size: 1.25rem;
+}
+
+#main_con2-first .main_Read-Btn {
+  padding: 0 0 4rem 0;
+}
+/* main_con2 - 우승 기숙사 */
+#main_con2-second {
+  padding-right: 2.5vw;
+}
+#main_con2-second p {
+  font-size: 2.5rem;
+}
+
+#main_con2-second h1 {
+  /* font-size: 5rem; */
+  font-size: 4vw;
+  padding-bottom: 2.5rem;
+}
+
+#main_con2-second-img-wrap {
+  height: 37.5vw;
+}
+#main_con2-second .main_Read-Btn {
+  padding-top: 2.5rem;
+}
+
+/* main_con3 style sheet : 기숙사 점수 */
+.main_con3 {
+  margin: 0 var(--display-gap);
+  padding: 2.5rem 10.5rem;
+}
+.main_con3-house p {
+  font-size: 1.25rem;
+}
+
+.main_con3-house h3 {
+  font-size: 4.5rem;
+}
+
+/* main_con4 style sheet */
+.main_con4 {
+  grid-template-columns: 25% 50% 20%;
+  height: auto;
+  /* max-height: 1110px; */
+  max-height: 1000px;
+  padding: 4rem 0;
+}
+.main_blog-header {
+  gap: 2.5rem;
+}
+/* con4 - 고정 영역 */
+.main_blog-big_title {
+  font-size: clamp(6rem, 5.45vw, 7rem);
+}
+.main_page-number {
+  font-size: clamp(3rem, 4vw, 4rem);
+}
+
+/* con4 - 기사 */
+.main_header-article {
+  gap: 1.5rem;
+  padding: 0 2vw;
+}
+
+.main_header-article img {
+  height: 24rem;
+  max-height: auto;
+}
+.main_header-article h2 {
+  font-size: 2.5rem;
+}
+.main_header-article span {
+  font-size: 1.25rem;
+}
+
+.main_header-article > .main_Read-Btn {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* con4 - 우측 게시판 */
+.main_blog-right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+
+.main_blog-right-container:not(:first-child) {
+  margin: 2.5rem 0;
+}
+
+.main_blog-right-title {
+  font-size: 1.5rem;
+  margin-right: 2vw;
+}
+.main_blog-right-date {
+  font-size: 1rem;
+}
+
+/* main_con5 style sheet */
+.main_con5 {
+  padding-top: 4rem;
+  margin: 0px 15vw;
+}
+
+/* main_con5 - 카테고리 */
+.main_con5-categories div {
+  padding: 2rem 0;
+}
+.main_con5-categories img {
+  width: 4.5rem;
+}
+.main_con5-categories span {
+  font-size: 1.25rem;
+}
+
+/* main_con5 -  오늘 식단표 */
+.main_con5-today_menu {
+  flex-direction: row;
+  padding: 2rem 5rem;
+  gap: 2.5rem;
+}
+
+.main_con5-today_menu h3 {
+  text-align: left;
+}
+.main_con5-today_menu h3 br {
+  display: block;
+}
+.main_con5-today_menu ul {
+  flex-grow: 1;
+}
+.main_con5-today_menu ul li {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+/* main_con5 - 세계 뉴스 - 기사 */
+.main_con5-news-article h3 {
+  padding-bottom: 1rem;
+}
+.main_con5-news-article span {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* main_con5 - 세계 뉴스 - 영상 */
+.main_con5-news-wrap video {
+  height: auto;
+  width: 100%;
+}
+
+/* main_con6 style sheet - 교수 */
+.main_con6 {
+  padding: 4rem var(--display-gap);
+}
+
+.main_con6-hr-sect {
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.main_con6_card-wrapper {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* main_con6 - 카드 앞면 */
+.main_con6_card-front {
+  padding: 0.75vw;
+}
+
+.main_con6_card-border {
+  border-width: 1vw;
+}
+
+.main_con6_card-front img {
+  padding: 2rem 0;
+}
+
+/* main_con6 - 카드 뒷면 */
+.main_con6_card-back {
+  padding: 1.5vw;
+}
+.main_con6_card-back > div {
+  bottom: 1.5vw;
+}
+
+/* main_con7 style sheet */
+.main_con7 {
+  gap: 3rem;
+  padding: 4rem 0;
+}
+.main_con7 div img {
+  height: 18.75rem;
+}
+.main_con7 div h3 {
+  font-size: 2.25rem;
+  padding: 1rem 0 0.5rem;
+}
+
+.main_con7 div span {
+  font-size: 1.5rem;
+}
+
+/* main_auto-scroll style sheet */
+.main_auto-scroll {
+  height: 15rem;
+}
+.main_auto-scroll-roller {
+    font-size: 144px;
+  }

@@ -1,0 +1,132 @@
+*{
+    margin: 0; padding: 0;
+}
+/* ----------------가로세로 스크롤 막기---------------------------------------------------- */
+body {
+    overflow: hidden;
+    touch-action: none;
+}
+/* ------가로세로 스크롤 막기----------------------------------------------------------------- */
+
+/* paper */
+.alo_paper {
+    position: absolute;
+    background-image: url('../image/paper.jpg');
+    mix-blend-mode: darken;
+    opacity: 40%;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------컨테이너----------------------컨테이너------------------------------------------ */
+.start_ctn {
+    overflow: hidden;
+    
+}
+/* ------------컨테이너----------------------컨테이너-------------------------------------------- */
+/* ------------------밝은 배경--------------------------밝은 배경----------------------- */
+.start_back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #E4DDD0;
+}
+/* ------------------밝은 배경--------------------------밝은 배경----------------------- */
+/* -------------어두운 배경----------------------------어두운 배경------------------------- */
+.start_backChange_right {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #211B19;
+    overflow: hidden;
+}
+
+.start_img_right {
+    opacity: 30%;
+    filter: grayscale(100%);
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 0; top: 0;
+}
+.start_ani_right {
+    transition: transform 2s;
+    transform-origin: 0% 100%;
+    transform: rotate(90deg) scale(400%);
+}
+
+.start_backChange_left {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: #211B19;
+    overflow: hidden;
+}
+
+.start_img_left {
+    opacity: 30%;
+    filter: grayscale(100%);
+    position: absolute;
+    height: 100%;
+    width: auto;
+    right: 0; 
+    top: 0;
+}
+
+.start_ani_left {
+    transform-origin: 100% 100%;
+    transition: transform 2s;
+    transform: rotate(-90deg) scale(400%);
+}
+/* -------------어두운 배경----------------------------어두운 배경------------------------- */
+
+/* ----------input-------------------------------------input------------------------- */
+.alohomora {
+    position: fixed;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: none;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    font-size: 5vw;
+    text-align: center;
+    font-family: 'Ibarra Real Nova';
+    /* 한글영어 폰트 지정하기 */
+    background-color: transparent;
+    color: white;
+}
+
+.alohomora:focus {
+    outline: none;
+}
+
+.start_error {
+    animation: shaking 300ms
+}
+
+@keyframes shaking {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) translateX(0);
+    }
+  
+    25%,
+    75% {
+      transform: translate(-50%, -50%) translateX(10px);
+    }
+  
+    50% {
+      transform: translate(-50%, -50%) translateX(-10px);
+    }
+  }
+/* event after input none */
+.displayNone {
+    display: none;
+}
+/* event after input none */
+
+/* ----------input-------------------------------------input------------------------------------- */
