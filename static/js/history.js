@@ -9,7 +9,7 @@
 
     // json 가져오기
     function loadItems(){
-        return fetch("./history.json")
+        return fetch("../static/json/history.json")
         .then((response)=>response.json())
         .then((json)=>json.items);
     }
@@ -30,7 +30,7 @@
                         const downImg = document.createElement('img');
                         // 사이 가름선
                         const lineM = document.createElement('img');
-                        lineM.src = './image/LineM.svg'
+                        lineM.src = '../static/img/jiwon/LineM.svg'
                         lineM.classList.add('his_lineM', 'his_lineMdown');
                         // 에피소드별 이미지
                         downImg.src=`${ele.image}`
@@ -39,7 +39,7 @@
                         downDiv.innerHTML = `
                             <div class="his_detailY">
                                 ${ele.years}
-                                <img src='./image/paper.jpg' class="his_border"></img>
+                                <img src='../static/img/jiwon/paper.jpg' class="his_border"></img>
                             </div>
                             <div class="his_lineLong"></div>
                             <div class="his_detCnt">
@@ -69,7 +69,7 @@
                         hisUp.classList.add('his_up');
                         const UpDiv = document.createElement('div');
                         const lineM = document.createElement('img');
-                        lineM.src = './image/LineM.svg'
+                        lineM.src = '../static/img/jiwon/LineM.svg'
                         lineM.classList.add('his_lineM', 'his_lineMup');
                         const UpImg = document.createElement('img');
                         UpImg.src=`${ele.image}`
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="his_detailY">
-                                <img src='./image/paper.jpg' class="his_border"></img>
+                                <img src='../static/img/jiwon/paper.jpg' class="his_border"></img>
                                 ${ele.years}
                             </div>
                             <div class="his_lineLong"></div>

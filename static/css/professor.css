@@ -92,7 +92,7 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 }
 
 .body::before {/*배경에 종이질감을 넣으려는 시도*/
-    background-image: url('/harry_potter_project/image/paper_big.jpg');
+    background-image: url('../img/jiwon/paper_big.jpg');
     opacity: 40%;
 }
 /* ---------교수사진----------------------교수사진---------------------------- */
