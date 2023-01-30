@@ -1,8 +1,8 @@
 (function(){
     //로그인 모달
-    const $body = document.querySelector('.body');
+    // const $body = document.querySelector('.main_overlay');
     const $loginBtn = document.querySelector('.login_btn');
-    const $loginModal = document.querySelector('#login_main_body');
+    const $loginModal = document.querySelector('#login_frm');
 
     $loginBtn.addEventListener('click', e=>{
         //로그인 날짜 및 시간
@@ -28,7 +28,7 @@
         $loginTime.innerHTML = ` ${hours>=12 ? 'PM' : 'AM'} ${newHours()} : ${minutes<10 ? '0'+minutes : minutes}`;
 
         $loginModal.classList.toggle('hidden', false);
-        $body.classList.add('modal_overlay');
+        // $body.classList.add('modal_overlay');
     })
 
     // 로그인 클릭 이벤트
