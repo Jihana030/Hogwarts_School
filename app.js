@@ -21,6 +21,9 @@ app.use('/mypage', mypageRouter);
 const logoutRouter = require('./routes/logout');
 app.use('/logout', logoutRouter);
 
+const houseTestRouter = require('./routes/houseTest');
+app.use('/houseTest', houseTestRouter);
+
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 

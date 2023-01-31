@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova' , 'Eulyoo1945';
+}
+
+body {
+    height: 100%;
+}
+
+.HouseTest_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.HouseTest_center{
+    position: relative;
+    text-align: center;
+}
