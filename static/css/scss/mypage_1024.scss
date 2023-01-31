@@ -297,6 +297,132 @@ $borderColor-smooth: #AFA489;
                         #calendar {
                             width: 30vw;
                             height: 28vw;
+
+                            // Fullcalendar style fix ***
+
+                            // calendar top
+                            .fc-header-toolbar {
+                                align-self:stretch;
+                                margin-bottom: 1vw;
+
+                                .fc-toolbar-chunk {
+
+                                    // title
+                                    .fc-toolbar-title {
+                                        width: 25vw;
+                                        font-size: 2.7vw;
+                                        color: $fontSubColor;
+                                    }
+
+                                    // 오늘 일자 버튼
+                                    .fc-today-button {
+                                        display: none;
+                                    }
+
+                                    // prev / next button
+                                    .fc-button-group {
+                                        width: 100%;
+                                        margin-left: 0;
+                        
+                                        display: flex;
+                                        justify-content: space-between;
+                                        
+                                        .fc-button:focus {
+                                            box-shadow: none !important;
+                                        }
+
+                                        .fc-prev-button, .fc-next-button {
+                                            background-color: transparent;
+                                            border-color: transparent;
+                                            color: $borderColor;
+                                            padding: 0;
+                                            margin-left: 0;
+                                            border: none;
+                            
+                                            display: flex;
+                            
+                                        }
+                                        
+                                        .fc-button {
+
+                                            span {
+                                                width: 3.5vw;
+                                                height: 100%;
+                            
+                                                line-height: 1vw;
+                                                font-size: 2.5vw;
+                                                text-align: left;
+                                            }
+                                        }
+                                        
+                            
+                                        .fc-prev-button {
+                                            justify-content: flex-start;
+                                        }
+                                        .fc-next-button {
+                                            justify-content: flex-end;
+                                        }
+                                    }
+                                }
+                            }
+
+                            // calendar main
+                            .fc-view-harness {
+                                width: 33vw;
+                                height: 100% !important;
+
+                                .fc-dayGridMonth-view {
+
+                                    .fc-scrollgrid {
+
+                                        // Day
+                                        .fc-col-header {
+                                            width: 100% !important;
+                                            height: 100% !important;
+
+                                            .fc-scrollgrid-sync-inner a {
+                                                font-size: 1.7vw;
+                                            }
+                                        }
+
+                                        // Month
+                                        .fc-daygrid-body {
+                                            width: 100% !important;
+                            
+                                            .fc-scrollgrid-sync-table {
+                                                width: 100% !important;
+                                                height: 100% !important;
+                                                margin: 0;
+                                            }
+
+                                            .fc-daygrid-day-top {
+                                                display: block;
+                                                width: 100%;
+                                                height: 100%;
+                                                
+                                                .fc-daygrid-day-number {
+                                                    width: 100%;
+                                                    height: 4.2vw;
+                                
+                                                    padding: 0;
+                                                    text-align: center;
+                                                    font-size: 1.5vw;
+                                                    font-family: 'SUIT', sans-serif;
+                                
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                }
+                                            }
+
+                                            .fc-daygrid-day-events {
+                                                display: none;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
                         }
                     }
     
