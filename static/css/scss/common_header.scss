@@ -20,9 +20,17 @@ $fontSubColor: #504733;
 $borderColor: #69604b;
 $borderColor-smooth: #AFA489;
 
-.comm_white_Bg { background-color: rgba(255, 255, 255, 0.4); }
-.comm_animation_play_pause { animation-play-state: paused !important; }
-.comm_dp_none { display: none; }
+.comm_white_Bg {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.comm_animation_play_pause {
+    animation-play-state: paused !important;
+}
+
+.comm_dp_none {
+    display: none;
+}
 
 // ---------------------------------------------------------------------------------------------------------*
 
@@ -51,6 +59,7 @@ $borderColor-smooth: #AFA489;
             color: $fontmainColor;
             display: inline-block;
             align-self: center;
+            font-family: 'Ibarra Real Nova', serif;
         }
 
         .comm_musicbar {
@@ -207,7 +216,7 @@ $borderColor-smooth: #AFA489;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
+
                 i.comm_search_btn {
                     width: 1.3rem;
                     height: 1.3rem;
@@ -216,10 +225,10 @@ $borderColor-smooth: #AFA489;
                     color: $fontmainColor;
                     cursor: pointer;
                 }
-                
+
                 input.comm_search_text {
                     width: 0;
-                    
+
                     padding: .2vw 0;
                     margin-right: .5em;
                     outline: none;
@@ -237,14 +246,116 @@ $borderColor-smooth: #AFA489;
                 }
 
             }
-            
+
         }
 
         .comm_login {
+
             svg {
                 width: 2rem;
                 display: inline-block;
                 fill: $fontmainColor;
+            }
+            
+            position: relative;
+
+            .comm_login_flag_box:hover .comm_login_flag_menu {
+                display: block;
+            }
+
+            .comm_login_flag_menu {
+                width: 95px;
+                height: 195px;
+
+                position: absolute;
+                top: 155px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                display: none;
+                
+                .comm_login_flag_menu_box {
+                    
+                    padding: 14px;
+                    color: $fontSubColor;
+                    box-shadow: 0 0.3vw 0.5vw #c4bead;
+                    border: 1px solid $fontSubColor;
+                    font-family: 'SUIT', sans-serif;
+                    background-image: url('../../img/khlll/background-default.png');
+    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .comm_login_flag_menu_name_year {
+                        width: 70px;
+                        margin-top: 0.5em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: $fontSubColor;
+    
+                        .comm_login_flag_menu_name {
+                            font-size: 1rem;
+                        }
+    
+                        .comm_login_flag_menu_year {
+                            font-size: 14px;
+                        }
+                    }
+    
+                    .comm_login_flag_menu_line {
+                        width: 70px;
+                        border-bottom: 1px solid #918670;
+                        margin: 0.7em;
+                    }
+    
+                    .comm_login_flag_menu_contents {
+                        width: 70px;
+                        height: 90%;
+    
+                        display: inline-flex;
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        // background-color:#dbd6c9;
+    
+                        ul {
+                            .comm_login_flag_menu_item {
+                                margin-bottom: 0.5em;
+    
+                                a {
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    color: $fontmainColor;
+                                }
+                            }
+                        }
+    
+                        .comm_login_flag_menu_logout {
+                            font-size: 14px;
+                            margin-bottom: 0.5em;
+                        }
+    
+                    }
+    
+                    .comm_login_flag_menu_tail {
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+    
+                        border-bottom: 5.5px solid $fontSubColor;
+    
+                        position: absolute;
+                        top: -1.5%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
             }
         }
 
@@ -266,20 +377,24 @@ $borderColor-smooth: #AFA489;
                 transform-origin: 4px 0px;
                 transition: all 0.25s ease-in-out;
             }
+
             span:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
+
         .comm_menu_btn.comm_active_header_btn {
             span:first-child {
                 width: 15px;
-                transform: translateX(.8px) translateY(5.5px) rotate(-55deg) ;
+                transform: translateX(.8px) translateY(5.5px) rotate(-55deg);
             }
+
             span:nth-child(2) {
                 width: 10px;
                 align-self: center;
                 transform: rotate(-15deg);
             }
+
             span:nth-child(3) {
                 width: 15px;
                 transform: translateX(2.5px) translateY(1px) rotate(-55deg);
@@ -289,7 +404,8 @@ $borderColor-smooth: #AFA489;
     }
 }
 
-.comm_header_menu_max1920, .comm_header_menu_max768 {
+.comm_header_menu_max1920,
+.comm_header_menu_max768 {
     z-index: 9999;
 }
 
@@ -304,7 +420,8 @@ $borderColor-smooth: #AFA489;
     font-family: 'SUIT', sans-serif;
     color: $fontmainColor;
 
-    .comm_menu_top, .comm_header_menu_bottom {
+    .comm_menu_top,
+    .comm_header_menu_bottom {
         display: none;
     }
 
@@ -349,6 +466,7 @@ $borderColor-smooth: #AFA489;
             }
 
         }
+
         .comm_header_submenu.comm_active_accordion {
             max-height: 16em;
             padding: 1.5em;
@@ -357,6 +475,7 @@ $borderColor-smooth: #AFA489;
 
 
 }
+
 //======================== header TOP menu [end] =================================== //
 
 
@@ -364,11 +483,12 @@ $borderColor-smooth: #AFA489;
 .comm_header_menu_max768 {
     width: 90%;
     height: 100%;
+    display: none;
 
     margin-top: 0;
     position: fixed;
     right: 0;
-    background: url('../../images/background-white.png') no-repeat;
+    background: url('../../img/khlll/background-white.png') no-repeat;
     background-size: cover;
     transition: all 0.4s ease-out;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -383,14 +503,12 @@ $borderColor-smooth: #AFA489;
 
     .comm_header_menu_top {
         padding: 0 12.5vw;
-        display: grid;
-        grid-template-rows: 91px 2fr;
-        gap: 5vw;
     }
 
     .comm_header_menu_bottom {
         position: fixed;
-        bottom: 0; left: 0;
+        bottom: 0;
+        left: 0;
     }
 
     .comm_closeBtn {
@@ -398,21 +516,30 @@ $borderColor-smooth: #AFA489;
         height: 5vw;
 
         position: absolute;
-        top: 5vw; right: 7vw;
+        top: 5vw;
+        right: 7vw;
         cursor: pointer;
     }
-    .comm_closeBtn::before, .comm_closeBtn::after {
+
+    .comm_closeBtn::before,
+    .comm_closeBtn::after {
         width: .2vw;
         height: 100%;
 
-        content:'';
+        content: '';
         position: absolute;
         left: 4.55vw;
         border-radius: 4.55vw;
         background-color: $fontmainColor;
     }
-    .comm_closeBtn::before { transform: rotate(45deg); }
-    .comm_closeBtn::after { transform: rotate(-45deg); }
+
+    .comm_closeBtn::before {
+        transform: rotate(45deg);
+    }
+
+    .comm_closeBtn::after {
+        transform: rotate(-45deg);
+    }
 
     .comm_menu_top {
         .comm_menu_top_title {
@@ -421,7 +548,97 @@ $borderColor-smooth: #AFA489;
 
             display: flex;
             flex-direction: column;
+
         }
+        .comm_menu_login_flag_menu {
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: .3s;
+
+            &.comm_menu_login_flag_menu_accordion {
+                padding-top: 2vw;
+                max-height: 4.5em;
+            }
+            
+            .comm_menu_login_flag_menu_box {
+                
+                color: $fontSubColor;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .comm_menu_login_flag_menu_name_year {
+                    width: 100%;
+                    margin-top: 0.5em;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: $fontSubColor;
+
+                    .comm_menu_login_flag_menu_name {
+                        font-size: 15px !important;
+                    }
+
+                    .comm_menu_login_flag_menu_year {
+                        font-size: 14px;
+                    }
+                }
+
+                .comm_menu_login_flag_menu_line {
+                    width: 100%;
+                    border-bottom: 1px solid rgb(234, 234, 234);
+                    margin: 0.5em;
+                }
+
+                .comm_menu_login_flag_menu_contents {
+                    width: 100%;
+                    height: 90%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    // background-color:#dbd6c9;
+
+                    ul {
+                        width: 100%;
+                        .comm_menu_login_flag_menu_item {
+                            width: 100%;
+                            margin-bottom: 0.3em;
+                            a {
+                                display: inline-block;
+                                font-size: 5.5vw;
+                                color: $fontmainColor;
+                            }
+                        }
+                    }
+
+                    .comm_menu_login_flag_menu_logout {
+                        font-size: 5.5vw;
+                        margin-top: 0.3em;
+                    }
+
+                }
+
+                .comm_login_flag_menu_tail {
+                    width: 0;
+                    height: 0;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+
+                    border-bottom: 5.5px solid $fontSubColor;
+
+                    position: absolute;
+                    top: -1.5%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+        }
+
         span.comm_menu_line {
             width: 100%;
 
@@ -435,11 +652,11 @@ $borderColor-smooth: #AFA489;
         height: 60vh;
         overflow: scroll;
         transition: all 0.3s ease;
-        
-        &::-webkit-scrollbar{
+
+        &::-webkit-scrollbar {
             display: none;
         }
-        
+
         .comm_menu {
             margin-bottom: 6vw;
             display: flex;
@@ -470,11 +687,13 @@ $borderColor-smooth: #AFA489;
 
                 .comm_submenu {
                     margin-bottom: 4vw;
+
                     p {
                         font-size: 3vw;
                     }
                 }
             }
+
             .comm_header_submenu.comm_active_accordion {
                 max-height: 20em;
                 padding-top: 6vw;
@@ -522,7 +741,7 @@ $borderColor-smooth: #AFA489;
 
     .comm_header_menu_bottom.comm_active_menu_input {
         background-color: #333;
-        
+
         label.comm_menu_search_textbox {
             i.comm_menu_search_btn {
                 color: #f0f0f0;
@@ -533,7 +752,7 @@ $borderColor-smooth: #AFA489;
         #comm_menu_search_text {
             width: 100%;
             height: 100%;
-        
+
             border: none;
             background-color: transparent;
         }
@@ -541,6 +760,7 @@ $borderColor-smooth: #AFA489;
 
 
 }
+
 // ======================== header RIGHT menu [end] ================================ //
 
 
@@ -551,9 +771,10 @@ $borderColor-smooth: #AFA489;
 
         .comm_left {
             width: 70%;
-            
+
             .comm_musicbar {
                 margin-left: 1em;
+
                 .comm_bar {
                     padding: 0;
                 }
@@ -575,8 +796,14 @@ $borderColor-smooth: #AFA489;
     }
 
     .comm_header_menu_max768 {
-        // display: block;
+
+        display: block;
         .comm_menu_login {
+            display: none;
+
+        }
+
+        .comm_menu_login_flag_box {
             display: none;
         }
     }
@@ -597,10 +824,14 @@ $borderColor-smooth: #AFA489;
                 }
             }
         }
-        
+
         .comm_header_menu_max768 {
             .comm_dummy_header_menu_top {
                 height: 32vw;
+            }
+
+            .comm_menu_login_flag_box {
+                display: block;
             }
 
             .comm_menu_top {
@@ -612,8 +843,10 @@ $borderColor-smooth: #AFA489;
                     .comm_menu_login {
                         height: 1.45em;
                         position: absolute;
-                        top: 0; right: -.3em;
+                        top: 0;
+                        right: -.3em;
                         display: block;
+
                         svg {
                             height: 1.45em;
                             display: inline-block;
@@ -621,38 +854,47 @@ $borderColor-smooth: #AFA489;
                         }
                     }
                 }
-                
+
                 .comm_closeBtn {
                     width: 10vw;
                     height: 10vw;
-    
+
                     position: absolute;
-                    top: 5vw; right: 5vw;
+                    top: 5vw;
+                    right: 5vw;
                     cursor: pointer;
                 }
-                .comm_closeBtn::before, .comm_closeBtn::after {
+
+                .comm_closeBtn::before,
+                .comm_closeBtn::after {
                     width: .5vw;
                     height: 100%;
-                    
-                    content:'';
+
+                    content: '';
                     position: absolute;
                     left: 4.55vw;
                     border-radius: 4.55vw;
                     background-color: $fontmainColor;
                 }
-                .comm_closeBtn::before { transform: rotate(45deg); }
-                .comm_closeBtn::after { transform: rotate(-45deg); }
+
+                .comm_closeBtn::before {
+                    transform: rotate(45deg);
+                }
+
+                .comm_closeBtn::after {
+                    transform: rotate(-45deg);
+                }
 
                 span.comm_menu_line {
                     width: 100%;
                     display: inline-block;
                 }
             }
-    
+
             .comm_header_menu_list {
                 height: 55vh;
                 transition: all 0.3s ease;
-                
+
                 .comm_menu {
                     display: flex;
                     justify-content: space-between;
@@ -660,52 +902,54 @@ $borderColor-smooth: #AFA489;
                     flex-wrap: wrap;
                     margin-bottom: 8vw;
                     cursor: pointer;
-    
+
                     p {
                         display: inline-block;
                         font-size: 6.2vw;
                     }
-    
+
                     .comm_menu_title {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         width: 100%;
                     }
-    
+
                     .comm_header_submenu {
                         width: 100%;
                         max-height: 0;
-                        
+
                         margin-left: 6vw;
                         overflow: hidden;
                         transition: .3s;
-    
+
                         .comm_submenu {
                             margin-bottom: 4vw;
+
                             p {
                                 font-size: 4.5vw;
                             }
                         }
                     }
+
                     .comm_header_submenu.comm_active_accordion {
                         max-height: 16em;
                         padding-top: 6vw;
                     }
                 }
             }
-    
+
             .comm_header_menu_bottom {
                 width: 100%;
                 height: 17.5vw;
-    
+
                 label.comm_menu_search_textbox {
-    
+
                     i.comm_menu_search_btn {
                         font-size: 5vw;
                     }
                 }
-    
+
                 #comm_menu_search_text {
                     font-size: 4vw;
                 }
@@ -713,27 +957,27 @@ $borderColor-smooth: #AFA489;
 
             .comm_header_menu_bottom.comm_active_menu_input {
                 background-color: #333;
-                
+
                 label.comm_menu_search_textbox {
                     i.comm_menu_search_btn {
                         color: #f0f0f0;
                         padding: 0;
                     }
                 }
-    
+
                 #comm_menu_search_text {
                     width: 65vw;
                     height: 100%;
-                
+
                     border: none;
                     background-color: transparent;
                 }
             }
-            
-            
+
+
         }
 
-        
+
     }
 
     @media screen and (max-width: 319px) {
@@ -742,11 +986,12 @@ $borderColor-smooth: #AFA489;
                 h1 {
                     font-size: 7vw;
                 }
+
                 .comm_musicbar {
                     display: none;
                 }
             }
         }
     }
-    
+
 }
