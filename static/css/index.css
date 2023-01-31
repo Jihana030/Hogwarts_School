@@ -143,24 +143,6 @@ span {
   margin-top: 0.2rem;
 }
 
-
-#main_Voldemort::before {
-    content: "";
-    border-bottom: 16px solid var(--text-color);
-    z-index: 1;
-    transform: scaleX(0);
-    transform-origin: right;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    transition: transform 0.3s ease-out;
-}
-#main_Voldemort:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-  transition-delay: 0.3s;
-}
 #TopBtn {
   position: fixed;
   /* bottom  */
@@ -1124,6 +1106,69 @@ header {
   margin-top: auto;
 }
 
+.Voldemort {
+  position: relative;
+  overflow: hidden;
+}
+#Voldemort-work {
+  text-align: center;
+  background: var(--text-color);
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  color: var(--text-reverse-color);
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+#Voldemort-work:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
 /* con4 - 우측 게시판 */
 .main_right-blog {
   overflow: auto;
