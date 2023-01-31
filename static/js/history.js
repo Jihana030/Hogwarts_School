@@ -117,7 +117,7 @@
             his_cnt.scrollBy({
                 left: wheel,
                 // behavior: 'smooth'
-              });
+            });
               
             // -----가로 스크롤 터치하기------
             let startX;

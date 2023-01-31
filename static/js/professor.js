@@ -1,7 +1,10 @@
 (function(){
     'use strict';
-    
+    const probody = document.querySelector('body')
     const pro_img_cnt = document.querySelector('.pro_cnt');
+    
+    //반응형
+    let windowWidth = window.matchMedia('screen and (max-width: 850px)');
     
     // json가져오기
     function loadItems(){
@@ -51,14 +54,55 @@
             })
             
             // -------mouse trust event-----------------------------mouse trust event-----------------
-            pro_img_cnt.addEventListener("mousemove", (e) => {
-                let width = window.innerWidth / 2;
-                let mouseMoved2 = ((width - e.pageX*2.5));
-                let mouseMoved3 = ((width - e.pageY*2.8));
-                imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
-                imgDiv.style.transition=  'all 1s';
-            });
+            
+                let isDown = false; //터치이벤트용
+                if(!(windowWidth.matches)){ 
+                    probody.addEventListener("mousemove", (e) => {
+                        let width = window.innerWidth / 2;
+                        let mouseMoved2 = ((width - e.pageX*2.5));
+                        let mouseMoved3 = ((width - e.pageY*2.8));
+                        imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
+                        imgDiv.style.transition=  'all 1.5s';
+                    });
+                } else { //모바일
+                    // 세로 스크롤 터치하기
+                    let startY;
+                    let scrollTop;
+                
+                    probody.addEventListener('mousedown', e => {
+                        isDown = true;
+                        probody.classList.add('active');
+                        console.log(probody.classList)
+                        startY = e.pageY - probody.offsetTop;
+                        scrollTop = probody.scrollTop;
+                    });
+                    probody.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        probody.classList.remove('active');
+                        console.log(probody.classList)
+                    });
+                    probody.addEventListener('mouseup', () => {
+                        isDown = false;
+                        probody.classList.remove('active');
+                    });
+                    probody.addEventListener('mousemove', e => {
+                        if (!isDown) return; 
+                        e.preventDefault();
+                        const y = e.pageY - probody.offsetTop;
+                        const walk = y - startY;
+                        probody.scrollTop = scrollTop - walk;
+                    });// 세로 스크롤 터치하기
+                }
+
+            
         });
     })
+    //cursor grab grabbing 
+    probody.addEventListener('mousedown', e=>{
+        probody.classList.add('his_grabbing');
+    })
+    probody.addEventListener('mouseup', e=>{
+        probody.classList.remove('his_grabbing');
+    })   
 
 })()

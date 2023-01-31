@@ -32,12 +32,6 @@ a {
     --vh: 6.91px;
 }
 
-/* @font-face {
-    font-family: 'Eulyoo1945';
-    src: url();
-    unicode-range: U+AC00-D7A3;
-} */
-
 /* 바디에 스크롤 조절 */
 body{
     background-color: var(--color-back);
