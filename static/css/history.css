@@ -11,7 +11,7 @@ a {
     --font-e: 'Eulyoo1945';
     --font-i: 'Ibarra Real Nova';
     --font-size-nav: 1.2vw;
-    --font-size-nav-h: 2.5vh;
+    --font-size-nav-h: 2.3vw;
     --font-size-tle-v: 5vw;
     --font-size-tle-h: 13vh;
     --font-txt-color: #333;
@@ -459,13 +459,22 @@ body::-webkit-scrollbar {
     }
 
     .his_year {
-        transform: rotate(90deg) translateY(-43px);
+        transform: rotate(90deg) translateY(-6vw);
         transform-origin: left top;
         left: 0;
         flex-basis: auto;
         position: absolute;
         border-bottom: none;
         font-size: var(--font-size-nav-h);
+        width: 100rem;
+    }
+
+    .his_18nav {
+        width: 48rem;
+    }
+
+    .his_20nav {
+        width: 250rem;
     }
 
     .his_downImg, .his_upImg {
