@@ -313,7 +313,7 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 100%;
-  /* height: 57vh; */
+  height: 90vh;
   max-height: 770px;
   margin: 0 var(--display-gap);
   padding: 3rem 0;
