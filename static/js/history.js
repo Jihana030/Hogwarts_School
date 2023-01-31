@@ -152,7 +152,7 @@
                         his_cnt.scrollLeft = location;
                     })
             })
-        } else {
+        } else { //가로850보다 작을때
             his_cnt.scrollBy({
                 top: wheel,
                 // behavior: 'smooth'
@@ -193,23 +193,22 @@
             his_cnt.scrollTop = scrollTop - walk;
             });// 세로 스크롤 터치하기
             
-            // 시대 이동-폐기
-            // his_nav.forEach((ele, idx) =>{
-            //     ele.addEventListener('click', e=>{
-            //         const location = document.querySelector(".his_" + idx + 'nav').getBoundingClientRect().top;
-                    
-            //         console.log(`y: ${y}`);
-            //         his_cnt.scrollTo({
-            //             top: (location + y)
-            //         });
-            //         console.log(`top: ${location + y}`)
-            //         // his_cnt.scrollBy({
-            //         //     top: location + wheel
-            //         // });
-            //     })
-            // })
         }
     });
+    //에피소드 century width값을 height값으로 만들기 -폐기-
+    // const hisYear = document.querySelectorAll('.his_year');
+    // const flexStyle = document.querySelectorAll('.his_upDownCnt');
+    // console.log(hisYear);
+    // console.log(flexStyle[0].style);
+    // for(let i=0; i<flexStyle.length; i++){
+    //     const flexItem = flexStyle.item(i);
+    //     flexItem.style.height = '100%'
+    //     const yearItem = hisYear.item(i);
+    //     // console.log(flexItem);
+    //     yearItem.style.width = flexItem.style.height;
+    //     // yearItem.style.width = '1000px';
+    //     console.log(yearItem.style);
+    // }
     
     //cursor grab grabbing 
     his_cnt.addEventListener('mousedown', e=>{
