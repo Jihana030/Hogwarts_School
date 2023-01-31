@@ -393,7 +393,7 @@ body::-webkit-scrollbar {
 
     .his_yearFlex2 {
         flex-direction: row-reverse;
-        height: 100%;
+        height: au;
         position: relative;
         border-right: none;
         border-bottom: var(--border-color);
@@ -411,10 +411,19 @@ body::-webkit-scrollbar {
     .his_imgCnt {
         width: 100%;
     }
+
+    .his_img {
+        width: 100%;
+    }
     
     .his_upCnt {
         flex-direction: column-reverse;
     }
+/*  최후의 수단
+    .his_mcgonagall {
+        position: absolute;
+        bottom: 0; left: 0;
+    } */
 
     .his_lineLong {
         transform: rotate(90deg);
