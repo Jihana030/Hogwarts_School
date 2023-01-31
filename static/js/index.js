@@ -3,6 +3,33 @@
 
   //현재 위치를 기억하여 새로고침시 그자리를 유지한다.
   history.scrollRestoration = "auto";
+  
+  // Header music bar control ♬ ***
+  const $musicbarContainer = document.querySelector("#comm_musicbar_container");
+  const $musicbarSpanList = $musicbarContainer.querySelectorAll(".comm_bar");
+  const $audio = document.querySelector("audio");
+
+  // $audio.volume = 0.2; // volume control
+  $audio.volume = 0; // volume control(작업용)
+
+  $musicbarContainer.addEventListener("click", (e) => {
+    const state = parseInt($musicbarContainer.dataset.state);
+    $musicbarContainer.dataset.state = 1 - state;
+
+    $musicbarSpanList.forEach((item) => {
+      if (state) {
+        item.classList.add("comm_animation_play_pause");
+      } else {
+        item.classList.remove("comm_animation_play_pause");
+      }
+    });
+
+    if ($audio.paused) {
+      $audio.play();
+    } else {
+      $audio.pause();
+    }
+  });
 
   // header
   // 스크롤 시, header 높이 축소
@@ -94,6 +121,11 @@
   const $match = `${month} / ${day} : 퀴디치 (그리핀도르 vs 후플푸프)`;
   const $matchDate = document.querySelector("#main_match");
   $matchDate.innerHTML = $match;
+
+  // mainCon - h1 호버 효과
+  document
+    .querySelectorAll(".mainCon-hover")
+    .forEach((button) => (button.innerHTML = "<div><span>" + button.textContent.trim().split("").join("</span><span>") + "</span></div>"));
 
   // con6
   // con6 card list 가져오기

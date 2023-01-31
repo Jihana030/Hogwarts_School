@@ -37,6 +37,7 @@
   color: #423620;
   display: inline-block;
   align-self: center;
+  font-family: "Ibarra Real Nova", serif;
 }
 #comm_header .comm_left .comm_musicbar {
   display: inline-block;
@@ -265,10 +266,88 @@
 #comm_header .comm_right .comm_search .comm_search_textbox input.comm_search_text.comm_active_input {
   width: 10em;
 }
+#comm_header .comm_right .comm_login {
+  position: relative;
+}
 #comm_header .comm_right .comm_login svg {
   width: 2rem;
   display: inline-block;
   fill: #423620;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_box:hover .comm_login_flag_menu {
+  display: block;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu {
+  width: 95px;
+  height: 195px;
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
+  padding: 14px;
+  color: #504733;
+  box-shadow: 0 0.3vw 0.5vw #c4bead;
+  border: 1px solid #504733;
+  font-family: "SUIT", sans-serif;
+  background-image: url("../../img/khlll/background-default.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year {
+  width: 70px;
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #504733;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_name {
+  font-size: 1rem;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_year {
+  font-size: 14px;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_line {
+  width: 70px;
+  border-bottom: 1px solid #918670;
+  margin: 0.7em;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents {
+  width: 70px;
+  height: 90%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item {
+  margin-bottom: 0.5em;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item a {
+  display: inline-block;
+  font-size: 14px;
+  color: #423620;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents .comm_login_flag_menu_logout {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_tail {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5.5px solid #504733;
+  position: absolute;
+  top: -1.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #comm_header .comm_right .comm_menu_btn {
   width: 30px;
@@ -303,7 +382,8 @@
   transform: translateX(2.5px) translateY(1px) rotate(-55deg);
 }
 
-.comm_header_menu_max1920, .comm_header_menu_max768 {
+.comm_header_menu_max1920,
+.comm_header_menu_max768 {
   z-index: 9999;
 }
 
@@ -316,7 +396,8 @@
   font-family: "SUIT", sans-serif;
   color: #423620;
 }
-.comm_header_menu_max1920 .comm_menu_top, .comm_header_menu_max1920 .comm_header_menu_bottom {
+.comm_header_menu_max1920 .comm_menu_top,
+.comm_header_menu_max1920 .comm_header_menu_bottom {
   display: none;
 }
 .comm_header_menu_max1920 .comm_header_menu_list {
@@ -361,10 +442,11 @@
 .comm_header_menu_max768 {
   width: 90%;
   height: 100%;
+  display: none;
   margin-top: 0;
   position: fixed;
   right: 0;
-  background: url("../../images/background-white.png") no-repeat;
+  background: url("../../img/khlll/background-white.png") no-repeat;
   background-size: cover;
   transition: all 0.4s ease-out;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
@@ -377,9 +459,6 @@
 }
 .comm_header_menu_max768 .comm_header_menu_top {
   padding: 0 12.5vw;
-  display: grid;
-  grid-template-rows: 91px 2fr;
-  gap: 5vw;
 }
 .comm_header_menu_max768 .comm_header_menu_bottom {
   position: fixed;
@@ -394,7 +473,8 @@
   right: 7vw;
   cursor: pointer;
 }
-.comm_header_menu_max768 .comm_closeBtn::before, .comm_header_menu_max768 .comm_closeBtn::after {
+.comm_header_menu_max768 .comm_closeBtn::before,
+.comm_header_menu_max768 .comm_closeBtn::after {
   width: 0.2vw;
   height: 100%;
   content: "";
@@ -414,6 +494,76 @@
   font-size: 5.2vw;
   display: flex;
   flex-direction: column;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu.comm_menu_login_flag_menu_accordion {
+  padding-top: 2vw;
+  max-height: 4.5em;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box {
+  color: #504733;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_name_year {
+  width: 100%;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #504733;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_name_year .comm_menu_login_flag_menu_name {
+  font-size: 15px !important;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_name_year .comm_menu_login_flag_menu_year {
+  font-size: 14px;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_line {
+  width: 100%;
+  border-bottom: 1px solid rgb(234, 234, 234);
+  margin: 0.5em;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_contents {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_contents ul {
+  width: 100%;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_contents ul .comm_menu_login_flag_menu_item {
+  width: 100%;
+  margin-bottom: 0.3em;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_contents ul .comm_menu_login_flag_menu_item a {
+  display: inline-block;
+  font-size: 5.5vw;
+  color: #423620;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_menu_login_flag_menu_contents .comm_menu_login_flag_menu_logout {
+  font-size: 5.5vw;
+  margin-top: 0.3em;
+}
+.comm_header_menu_max768 .comm_menu_top .comm_menu_login_flag_menu .comm_menu_login_flag_menu_box .comm_login_flag_menu_tail {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5.5px solid #504733;
+  position: absolute;
+  top: -1.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .comm_header_menu_max768 .comm_menu_top span.comm_menu_line {
   width: 100%;
@@ -531,7 +681,13 @@
   .comm_header_menu_max1920 {
     display: none;
   }
+  .comm_header_menu_max768 {
+    display: block;
+  }
   .comm_header_menu_max768 .comm_menu_login {
+    display: none;
+  }
+  .comm_header_menu_max768 .comm_menu_login_flag_box {
     display: none;
   }
 }
@@ -544,6 +700,9 @@
   }
   .comm_header_menu_max768 .comm_dummy_header_menu_top {
     height: 32vw;
+  }
+  .comm_header_menu_max768 .comm_menu_login_flag_box {
+    display: block;
   }
   .comm_header_menu_max768 .comm_menu_top .comm_menu_top_title {
     font-size: 7.7vw;
@@ -570,7 +729,8 @@
     right: 5vw;
     cursor: pointer;
   }
-  .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::before, .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::after {
+  .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::before,
+.comm_header_menu_max768 .comm_menu_top .comm_closeBtn::after {
     width: 0.5vw;
     height: 100%;
     content: "";

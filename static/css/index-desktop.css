@@ -11,7 +11,6 @@
 /* main_nav-top - 최상단 */
 #main_nav-top {
   height: 3rem;
-  grid-template-columns: 1rem 1fr;
 }
 #main_nav-music i {
   font-size: 1.125rem;
@@ -85,11 +84,11 @@
   display: grid;
   grid-template-columns: 1.1fr 6fr 1fr;
   padding: 0 var(--display-gap);
-  
+
   height: 0;
   overflow: hidden;
   position: absolute;
-  transition: all 0.5s cubic-bezier(.8, .5, .2, 1.4);
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
   width: 100%;
 }
 .wide-toggle-active {
@@ -98,23 +97,28 @@
   height: 22.5rem !important;
 }
 
-
 #main_menu-toggle {
   display: grid;
   grid-template-columns: repeat(4, 1fr) 1.1fr;
   text-align: center;
 }
+
 #main_menu-toggle ul:not(:last-child) {
   border-right: 1px solid var(--line-color);
 }
 #main_menu-toggle ul li:not(:last-child) {
   padding-bottom: 1.5rem;
 }
-#main_menu-toggle ul li a{
+#main_menu-toggle ul li a {
   font-weight: 500;
   font-family: "suit";
+  color: rgb(112, 111, 111);
 }
-#main_menu-toggle ul li:hover a{
+#main_menu-toggle ul li a.main_page-complete {
+  color: var(--text-color);
+  font-weight: 600;
+}
+#main_menu-toggle ul li:hover a {
   color: var(--point-color);
 }
 #main_mobile-menu {
@@ -160,7 +164,7 @@
   padding-left: 1rem;
 }
 
-.main_btn-cal+.next {
+.main_btn-cal + .next {
   order: 1;
 }
 .main_cal-year {
@@ -209,18 +213,15 @@
   height: 22.75rem;
 }
 
-
 /* main_mainCon style sheet */
 .main_mainCon {
   margin: 3rem 24vw 0 var(--display-gap);
   height: 45rem;
 }
-.main_mainCon h1 {
-  font-size: 4rem;
+.main_mainCon a {
+  --font-size: 4rem;
   padding: 3rem;
 }
-
-
 
 /* con2 style sheet */
 .main_con2 {
@@ -314,7 +315,7 @@
   grid-template-rows: 100%;
   height: 57vh;
   max-height: 770px;
-  margin:  0 var(--display-gap);
+  margin: 0 var(--display-gap);
   padding: 3rem 0;
   border-bottom: 1px solid var(--line-color);
 }
@@ -413,7 +414,6 @@
   font-size: 14px;
 }
 
-
 /* main_con5 style sheet */
 .main_con5 {
   gap: 1.5rem;
@@ -431,7 +431,6 @@
 .main_con5-world_news {
   grid-template-columns: 3fr 1fr;
 }
-
 
 /* main_con6 style sheet - 교수 */
 .main_con6 {
@@ -456,7 +455,6 @@
 .main_con6_card-front p {
   font-size: 1rem;
 }
-
 
 /* main_con7 style sheet */
 .main_con7 {
@@ -487,6 +485,21 @@ main_con7 div h3 {
 }
 
 /* footer style sheet */
-footer {
-  height: 10.625rem;
+#common_footer {
+  height: 170px;
+  padding: 2em var(--display-gap);
+  grid-template-columns: minmax(400px, 1fr) 5em;
+  grid-template-rows: 1fr;
+}
+#common_footer .comm_footer_text {
+  order: 0;
+  justify-self: self-start;
+  text-align: left;
+  align-self: center;
+}
+#common_footer .comm_footer_text .comm_footer_text1 {
+  margin-bottom: -0.2em;
+}
+#common_footer .comm_footer_logo {
+  width: 5em;
 }
