@@ -144,6 +144,24 @@ span {
   margin-top: 0.2rem;
 }
 
+
+#main_Voldemort::before {
+    content: "";
+    border-bottom: 16px solid var(--text-color);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease-out;
+}
+#main_Voldemort:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition-delay: 0.3s;
+}
 #TopBtn {
   position: fixed;
   /* bottom  */
@@ -500,8 +518,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 99;
+  transition: all 0.5s ease-out;
 }
-
+#main_nav-menu-wrap.scrollDown { 
+  transform: translate(0, -100%);
+}
 #main_nav-menu {
   align-items: center;
   border-bottom: solid 1px var(--line-color);
@@ -523,11 +544,40 @@ header {
   display: none;
 }
 
+
 #main_mobile-menu {
-  display: flex;
   align-items: center;
+  justify-self: center;
   justify-content: center;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+#main_mobile-menu span {
+  width: 30px;
+  height: 2px;
+  align-self: center;
+  display: block;
+  border-radius: 30px;
+  background-color: #423620;
+  transform-origin: 4px 0px;
+  transition: all 0.25s ease-in-out;
+}
+#main_mobile-menu span:not(:last-child) {
+  margin-bottom: 5px;
+}
+#main_mobile-menu.comm_active_header_btn span:first-child {
+  width: 15px;
+  transform: translateX(0.8px) translateY(5.5px) rotate(-55deg);
+}
+#main_mobile-menu.comm_active_header_btn span:nth-child(2) {
+  width: 10px;
+  align-self: center;
+  transform: rotate(-15deg);
+}
+#main_mobile-menu.comm_active_header_btn span:nth-child(3) {
+  width: 15px;
+  transform: translateX(2.5px) translateY(1px) rotate(-55deg);
 }
 
 #main_nav-menu #main_user-info {
@@ -783,16 +833,16 @@ header {
 .main_mainCon {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.2)), url(../img/circle/main/Hogwarts.jpg);
   background-position: center;
-  background-size: 160%;
+  background-size: 175%;
   border: 1px solid var(--line-color);
   filter: grayscale(1);
   height: 22.5rem;
   position: relative;
   margin: 0 var(--display-gap);
-  transition: background-size .4s ease-in;
+  transition: background-size .4s ease-in-out;
 }
 .main_mainCon:hover {
-  background-size: 165%;
+  background-size: 170%;
   filter: grayscale(1);
 }
 .main_mainCon a {
@@ -1178,7 +1228,7 @@ header {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--gryffindor-color);
-  padding: 8vw;
+  padding: 8vw 4vw;
   text-align: center;
 }
 
@@ -1213,7 +1263,7 @@ header {
 /* main_con5 - 세계 뉴스 - 기사 */
 .main_con5-news-article {
   background-color: var(--text-color);
-  padding: 2rem var(--display-gap);
+  padding: 2rem 4vw;
 }
 
 .main_con5-news-article h3 {
@@ -1272,7 +1322,7 @@ header {
 }
 
 .main_con6_card {
-  transition: all 0.4s;
+  transition: all 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -1282,14 +1332,11 @@ header {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-perspective: 0;
-  -webkit-transition: 1s;
-  backface-visibility: hidden;
-  /* 뒷면 숨기기 */
+  backface-visibility: hidden; /* 뒷면 숨기기 */
 }
 
 .main_con6_card-front {
   background-color: #ded2b7;
-  mix-blend-mode: multiply;
   text-align: center;
   padding: 2vw;
   height: 100%;
