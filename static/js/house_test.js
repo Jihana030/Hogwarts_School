@@ -4,7 +4,8 @@ const $houseTest_qes = document.querySelector('.houseTest_qes');
 const app = new PIXI.Application({
     width: 537,
     height: 250,
-    backgroundColor: 0xffffffff,
+    backgroundColor: 0xffffff,
+    transparent: true,
 });
 
 // Append the canvas to the document <body>
@@ -19,7 +20,7 @@ const textStyle = {
     fill: 0x7E674B,
     align: 'left',
     wordWrap: true,
-    wordWrapWidth: 500,
+    wordWrapWidth: 600,
     lineHeight: 24,
     padding: 10, // some fonts get clipped 
   }
