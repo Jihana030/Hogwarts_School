@@ -261,6 +261,10 @@
   border: none;
   display: flex;
 }
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-prev-button:focus, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-next-button:focus {
+  outline: none !important;
+  border: 0 !important;
+}
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-prev-button span, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-next-button span {
   width: 0.5vw;
   height: 1vw;

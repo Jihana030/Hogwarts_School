@@ -6,7 +6,7 @@
     // -----------------------------------------/
 
     // ========================================================== *** Header & menu control *** ==================================== //
-    
+
 
     // Header hamberger Btn 🍔 **
     const $headerBtn = document.querySelector('.comm_menu_btn');
@@ -48,6 +48,37 @@
         }
     });
 
+    // Menu accordion animation ***
+
+    const $submenuTitle = document.querySelectorAll('.comm_menu_title');
+    const $submenuItem = document.querySelectorAll('.comm_header_submenu');
+
+    // Flag menu const
+    const $menuFlag = document.querySelector('.comm_menu_login_flag');
+    const $menuFlagList = document.querySelector('.comm_menu_login_flag_menu');
+
+    $submenuTitle.forEach((title, index) => {
+        title.addEventListener('click', e => {
+            e.preventDefault();
+            $menuFlagList.classList.remove('comm_menu_login_flag_menu_accordion');
+            $searchText.classList.remove('comm_active_input');
+            $submenuItem.forEach((item, index2) => {
+                item.classList.toggle('comm_active_accordion');
+                if (index !== index2) {
+                    item.classList.remove('comm_active_accordion');
+                }
+            });
+        })
+    })
+
+    // Flag icon accordion menu **
+    $menuFlag.addEventListener('click', () => {
+        $menuFlagList.classList.toggle('comm_menu_login_flag_menu_accordion');
+        $submenuItem.forEach(item => {
+            item.classList.remove('comm_active_accordion');
+        });
+        $searchText.classList.remove('comm_active_input');
+    })
 
     // Search box control **
 
@@ -79,26 +110,13 @@
         $searchMenuBox.classList.toggle('comm_active_menu_input');
         $searchMenuTextbox.focus();
         $searchMenuTextbox.value = '';
-    })
 
+        $menuFlagList.classList.remove('comm_menu_login_flag_menu_accordion');
+        $submenuItem.forEach(item => {
+            item.classList.remove('comm_active_accordion');
+        });
+    });
 
-    // Menu accordion animation **
-
-    const $submenuTitle = document.querySelectorAll('.comm_menu_title');
-    const $submenuItem = document.querySelectorAll('.comm_header_submenu');
-
-    $submenuTitle.forEach((title, index) => {
-        title.addEventListener('click', e => {
-            e.preventDefault();
-
-            $submenuItem.forEach((item, index2) => {
-                item.classList.toggle('comm_active_accordion');
-                if (index !== index2) {
-                    item.classList.remove('comm_active_accordion');
-                }
-            })
-        })
-    })
 
     const rightSideMenu = new Drawer(document.querySelector('.comm_header_menu_max768'));
     const topSideMenu = new Drawer(document.querySelector('.comm_header_menu_max1920'),

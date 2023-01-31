@@ -283,8 +283,6 @@ $borderColor-smooth: #AFA489;
             .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th {
                 border: 0;
             }
-
-            
             
             // Calendar style ***
 
@@ -343,6 +341,7 @@ $borderColor-smooth: #AFA489;
                                     display: flex;
                                     justify-content: space-between;
                                     background-color: aqua;
+                                    
 
                                     .fc-prev-button, .fc-next-button {
                                         background-color: transparent;
@@ -351,6 +350,11 @@ $borderColor-smooth: #AFA489;
                                         padding: 0;
                                         margin-left: 0;
                                         border: none;
+
+                                        &:focus {
+                                            outline: none !important;
+                                            border: 0 !important;
+                                        }
                         
                                         display: flex;
                         
