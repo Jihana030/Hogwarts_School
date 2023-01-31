@@ -447,14 +447,18 @@ $borderColor-smooth: #AFA489;
                     width: 100%;
                     height: 100%;
 
+                    margin-top: 1.5vw;
+                    overflow: hidden;
+
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     
                     .mypage_Todolist_top {
                         width: 18vw;
-                        height: 3.5vw;
+                        height: 2.5vw;
+                        margin-top: 1vw;
                         
                         display: flex;
                         justify-content: space-between;
@@ -472,6 +476,7 @@ $borderColor-smooth: #AFA489;
                             width: 1vw;
                             height: 1vw;
 
+                            display: inline-block;
                             margin-left: 5vw;
                             cursor: pointer;
     
@@ -488,43 +493,137 @@ $borderColor-smooth: #AFA489;
                                     left: 50%;
                                     background-color: $fontmainColor;
                                 }
+
+                                &::after {
+                                    transition: ease-out .3s all;
+                                }
     
-                                &::before { transform: rotate(-90deg); }
+                                &::before {
+                                    transform: rotate(-90deg);
+                                    transition: ease-out .3s all;
+                                }
+
+                                &.mypage_Todolist_plus_icon_active {
+                                    &::after {
+                                        transform: rotate(135deg);
+                                        transition: ease-out .3s all;
+                                    }
+        
+                                    &::before {
+                                        transform: rotate(45deg);
+                                        transition: ease-out .3s all;
+                                    }
+                                }
                             }
                         }
                     }
-                    
-                    .mypage_Todolist_bottom {
-                        width: 18vw;
-                        height: 10vw;
+
+                    .mypage_Todolist_middle {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: linear .3s all;
 
                         display: flex;
                         justify-content: center;
                         align-items: center;
 
-                        .mypage_Todolist_contents { // ul
-                            width: 100%;
+                        &.mypage_Todolist_middle_active {
+                            max-height: 5vw;
+                        }
 
-                            .mypage_Todolist_detail {
-                                font-size: 0.85vw;
-                                color: $fontSubColor;
-                                font-family: 'Eulyoo1945', serif;
+                        .mypage_Todolist_middle_input {
+                            width: 12vw;
+                            border: none;
+                            // background-color: #FFF;
+                            background-color: transparent;
+                            border-bottom: 1px solid $borderColor-smooth;
+                            padding: 0.3vw;
+                            font-family: 'SUIT', sans-serif;
+    
+                        }
 
-                                display: grid;
-                                grid-template-columns: 1.3vw 1fr;
+                        .mypage_Todolist_middle_btn {
+                            width: 2vw;
+                            height: 0.8vw;
 
-                                &:not(:last-child) {
-                                    margin-bottom: 0.7vw;
-                                }
+                            margin-left: 0.5vw;
+                            border: none;
+                            background-color: transparent;
+                            cursor: pointer;
+                            font-size: 0.8vw;
+                            color: $fontSubColor;
+                            font-family: 'Ibarra Real Nova', serif;
+                        }
+                    }
+                    
+                    .mypage_Todolist_bottom {
+                        width: 18vw;
+                        height: 9vw;
 
-                                p {
-                                    display: inline-block;
-                                    line-height: 1.2vw;
+                        margin-top: 1vw;
+                        overflow: scroll;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+
+                        .mypage_Todolist_bottom_box {
+
+                            .mypage_Todolist_contents { // ul
+                                width: 100%;
+    
+                                .mypage_Todolist_detail { // li
+                                    font-size: 0.85vw;
+                                    color: $fontSubColor;
+                                    font-family: 'Eulyoo1945', serif;
+    
+                                    display: grid;
+                                    grid-template-columns: 1.3vw 1fr;
+
+                                    &:not(:last-child) {
+                                        margin-bottom: 0.7vw;
+                                    }
+    
+                                    p {
+                                        display: inline-block;
+                                        line-height: 1.2vw;
+                                    }
+
+                                    .mypage_Todolist_detail_check_box {
+
+                                        display: flex;
+                                        align-items: center;
+
+                                        .mypage_Todolist_detail_check {
+                                            position: relative;
+                                        }
+    
+                                        input + label {
+                                            display: inline-block;
+                                            width: .8vw; height: .8vw;
+                                            border: 1px solid #9b9179;
+                                            cursor: pointer;
+                                        }
+
+                                        input:checked + label {
+                                            border: none;
+                                            background: url('../../img/khlll/check.png') no-repeat;
+                                            background-size: contain;
+                                        }
+                                        
+                                        input {
+                                            display: none;
+                                        }
+
+                                    }
                                 }
                             }
                         }
                     }
-
                 }
             }
 
