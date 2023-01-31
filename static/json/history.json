@@ -1,7 +1,7 @@
 {"items":[
     {
         "image": "../static/img/jiwon/hogwartsLogo.jpg",
-        "years": "∎",
+        "years": "•",
         "title1": "호그와트 마법학교 설립",
         "title2": "",
         "title3": "",
@@ -13,7 +13,7 @@
     },
     {
         "image": "../static/img/jiwon/Salazar_Slytherin.jpg",
-        "years": "∎",
+        "years": "•",
         "title1": "살라자르 슬리데린",
         "title2": "교육이념 갈등",
         "title3": "",
@@ -25,7 +25,7 @@
     },
     {
         "image": "../static/img/jiwon/Triwizard2.png",
-        "years": "∎",
+        "years": "•",
         "title1": "트리위저드",
         "title2": "토너먼트 개최",
         "title3": "",
@@ -37,7 +37,7 @@
     }, 
     {
         "image": "../static/img/jiwon/floopowder2.png",
-        "years": "∎",
+        "years": "•",
         "title1": "플루 파우더 개발",
         "title2": "",
         "title3": "",
@@ -49,7 +49,7 @@
     },
     {
         "image": "../static/img/jiwon/toilet3.jpg",
-        "years": "∎",
+        "years": "•",
         "title1": "배관 공사로",
         "title2": "비밀의 방 입구 수정",
         "title3": "",
