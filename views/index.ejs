@@ -74,7 +74,7 @@
       
                                   <tr id="item_2">
                                       <td colspan='2'> 
-                                          <input type="text" placeholder="ENTER YOUR ID" class="login_form" name="u_id">
+                                          <input type="text" placeholder="ENTER YOUR ID" class="login_form" name="u_id" autocomplete="off">
                                       </td>
                                       <td rowspan='3' id="platform">
                                       <button class="login_form_btn">
@@ -94,7 +94,7 @@
                                   </tr>
       
                                   <tr id="item_3">
-                                      <td colspan='2'> <input type="password" placeholder="ENTER YOUR PW" class="login_form" name="u_pw"> </td>
+                                      <td colspan='2'> <input type="password" placeholder="ENTER YOUR PW" class="login_form" name="u_pw" autocomplete="off"> </td>
                                   </tr>
       
                                   <tr id="item_4">
@@ -115,9 +115,6 @@
                           </div>
       
                           <div class="login_underText">
-                              <!-- Issued subject to the Rules & Regulations of the Hogwarts(TM) Express Railway Authorities
-                              <hr id="login_underLine1">
-                              <hr id="login_underLine2"> -->
                               <div>
                                   <a href="http://192.168.0.132:3001/join">JOIN</a>
                                   <hr>
@@ -142,7 +139,7 @@
       <div id="main_mobile-menu">
         <img src="../static/img/circle/header/Nav_menu_icon.svg" alt />
       </div>
-      <% if(session){ %>
+      <% if(!user.user){ %>
         <div class="login_btn" id="main_user-info">
           <img src="../static/img/circle/header/Nav_Info_SortingHat.svg" alt="" />
         </div>
