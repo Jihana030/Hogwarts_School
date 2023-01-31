@@ -195,20 +195,12 @@
             
         }
     });
-    //에피소드 century width값을 height값으로 만들기 -폐기-
-    // const hisYear = document.querySelectorAll('.his_year');
-    // const flexStyle = document.querySelectorAll('.his_upDownCnt');
-    // console.log(hisYear);
-    // console.log(flexStyle[0].style);
-    // for(let i=0; i<flexStyle.length; i++){
-    //     const flexItem = flexStyle.item(i);
-    //     flexItem.style.height = '100%'
-    //     const yearItem = hisYear.item(i);
-    //     // console.log(flexItem);
-    //     yearItem.style.width = flexItem.style.height;
-    //     // yearItem.style.width = '1000px';
-    //     console.log(yearItem.style);
-    // }
+    //paper 높이 조절용
+    function setScreenSize(){
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setScreenSize();
     
     //cursor grab grabbing 
     his_cnt.addEventListener('mousedown', e=>{

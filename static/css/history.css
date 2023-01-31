@@ -333,7 +333,16 @@ body::-webkit-scrollbar {
 @media (max-width: 850px){
     body {
         overflow-y: scroll;
+        height: 100%;
     }
+
+    /* 배경 종이질감 */
+    .his_paper {
+        width: 100%;
+        height: 100%;
+        /* height: calc(var(--vh, 1vh) * 100); */
+    }
+
     .his_cnt {
         flex-direction: column;
         height: 100%;
@@ -392,6 +401,7 @@ body::-webkit-scrollbar {
 
     .his_yearCnt {
         flex-direction: column;
+        flex-grow: 1;
     }
 
     .his_yearFlex2 {
