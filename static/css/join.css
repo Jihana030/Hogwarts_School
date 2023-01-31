@@ -31,17 +31,21 @@
 
 body{
 	width:100%;
-    background-color: rgba(228, 221, 214, 0.909);
+    background-color: #efefeb;
+  position: relative;
 }
 
-.join_paper{
-    background-image: url(../img/bgimg.jpg);
-    opacity: 0.3;
-    width:100%;
-	height:100%;
+.main_overlay {
+    background-image: url("../img/circle/common/Background_texture.jpg");
+    background-repeat: repeat;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     mix-blend-mode: darken;
-    position: fixed;
-}
+  }
 
 .hidden{
     display: none;
@@ -55,9 +59,9 @@ body{
 }
 
 .join_box1{
-    background-color: #f5f0ebb1;
+    background-color: #fafaf8;
     height: 1180px;
-    border: 3px solid #4e4e4e;
+    border: 2px solid #4e4e4e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +71,7 @@ body{
 .join_box2{
     width: 100%;
     height: 100%;
-    border: 2px solid #4e4e4e;
+    border: 0.5px solid #4e4e4e;
 }
 
 #join_logo{
@@ -193,7 +197,7 @@ body{
 
 
 .join_contnets_box ul li input{
-    border-bottom: 1 solid #4e4e4e;
+    border-bottom: 1px solid #4e4e4e;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -289,7 +293,7 @@ input[type="checkbox"] {
 
   input[type="checkbox"]:checked {
     border: none !important;
-    background-image: url(../img/checkmark.png) !important;
+    background-image: url(../img/seoha/checkmark.png) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
