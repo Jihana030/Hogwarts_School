@@ -97,6 +97,12 @@
             
         });
     })
+    //paper 높이 조절용 -근데 안됌.
+    function setScreenSize(){
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setScreenSize();
     //cursor grab grabbing 
     probody.addEventListener('mousedown', e=>{
         probody.classList.add('his_grabbing');

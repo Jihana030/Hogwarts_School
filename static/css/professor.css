@@ -168,8 +168,8 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 }
 /*---------교수사진 위치-------------------교수사진 위치------------------------*/
 
+/* --------미디어쿼리---------------------------------------------- */
 @media (max-width: 850px) {
-    
     body {
         /* 드래그 방지 */
         -webkit-user-select:none;
@@ -180,7 +180,8 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
     }
 
     .pro_paper {
-        height: 100vh;
+        height: 100%;
+        /* height: calc(var(--vh, 1vh) * 100); */
     }
 
     .pro_cnt {
