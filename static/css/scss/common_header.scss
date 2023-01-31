@@ -685,6 +685,8 @@ $borderColor-smooth: #AFA489;
                 overflow: hidden;
                 transition: .3s;
 
+                z-index: 98;
+
                 .comm_submenu {
                     margin-bottom: 4vw;
 

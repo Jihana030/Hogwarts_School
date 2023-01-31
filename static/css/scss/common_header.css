@@ -603,6 +603,7 @@
   margin-left: 6vw;
   overflow: hidden;
   transition: 0.3s;
+  z-index: 98;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu {
   margin-bottom: 4vw;

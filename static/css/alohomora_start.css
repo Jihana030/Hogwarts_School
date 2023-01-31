@@ -83,6 +83,16 @@ body {
 /* -------------어두운 배경----------------------------어두운 배경------------------------- */
 
 /* ----------input-------------------------------------input------------------------- */
+/* 한글영어 폰트 지정하기 */
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url(../font/Eulyoo1945-Regular.ttf);
+}
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    src: url(../font/IbarraRealNova-Regular.ttf);
+    unicode-range: U+0041-005A, U+0061-007A;
+}
 .alohomora {
     position: fixed;
     width: 40%;
@@ -94,8 +104,7 @@ body {
     border-bottom: 1px solid rgb(46, 46, 46);
     font-size: 5vw;
     text-align: center;
-    font-family: 'Ibarra Real Nova';
-    /* 한글영어 폰트 지정하기 */
+    font-family: 'Ibarra Real Nova', 'Eulyoo1945';
     background-color: transparent;
     color: white;
 }

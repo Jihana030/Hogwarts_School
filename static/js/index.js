@@ -3,7 +3,7 @@
 
   //현재 위치를 기억하여 새로고침시 그자리를 유지한다.
   history.scrollRestoration = "auto";
-  
+
   // Header music bar control ♬ ***
   const $musicbarContainer = document.querySelector("#comm_musicbar_container");
   const $musicbarSpanList = $musicbarContainer.querySelectorAll(".comm_bar");
@@ -32,15 +32,30 @@
   });
 
   // header
-  // 스크롤 시, header 높이 축소
-  const $navMenu = document.querySelector("#main_nav-menu");
-  window.onscroll = function () {
-    if (window.scrollY > 0) {
-      $navMenu.classList.add("nav-menu-scrolled");
-    } else {
-      $navMenu.classList.remove("nav-menu-scrolled");
+  // 스크롤 시, header 높이 축소 🖱
+  const $navMenu = document.querySelector("#main_nav-menu-wrap");
+  var headerMoving = function(direction){
+    if (direction === "up"){
+      $navMenu.className = '';
+    } else if (direction === "down"){
+      $navMenu.className = 'scrollDown';
     }
   };
+  // var prevScrollTop = 0;
+  const $header = document.querySelector('header')
+  var prevScrollTop = $navMenu.getBoundingClientRect().top;
+  console.log(prevScrollTop)
+
+  document.addEventListener("scroll", function(){
+    var nextScrollTop = window.pageYOffset || 0 ; // pageYOffset -> IE 8 이하 빼고 다 됨.
+    if (nextScrollTop > prevScrollTop){
+      headerMoving("down");
+    } else if (nextScrollTop < prevScrollTop){
+      headerMoving("up");
+    }
+    prevScrollTop = nextScrollTop;
+  });
+
 
   // main_search-container 클릭 후 유지
   const $searchFront = document.querySelector("#search-front > input");
@@ -57,6 +72,7 @@
   }
   console.log($searchFront.value);
 
+  
   // main_nav-menu-date
   // 현재 날짜 출력 ex.2023-01-19
   const $navDate = document.querySelector("#main_nav-menu-date");
@@ -84,11 +100,17 @@
     $WideTap.classList.toggle("wide-toggle-active");
   });
 
+  // Header hamberger Btn 🍔 **
+  const $headerBtn = document.querySelector("#main_mobile-menu");
+
+  $headerBtn.addEventListener("click", () => {
+    $headerBtn.classList.toggle("comm_active_header_btn"); // button
+  });
+
   // main_mobile-menu 모바일 메뉴 펼치기
-  const $menuBtn = document.querySelector("#main_mobile-menu img");
   const $mobileTap = document.querySelector("#main_mobile-toggle");
 
-  $menuBtn.addEventListener("click", function () {
+  $headerBtn.addEventListener("click", function () {
     $mobileTap.classList.toggle("mobile-toggle-active");
   });
 
@@ -102,11 +124,11 @@
       e.preventDefault();
       console.log(e.target);
       for (var j = 0; j < tabParent.length; j++) {
-        // 나머지 버튼 클래스 제거
-        tabParent[j].classList.remove("is_on");
-
         // 나머지 컨텐츠 display:none 처리
         tapChild[j].style.display = "none";
+
+        // 나머지 버튼 클래스 제거
+        tabParent[j].classList.remove("is_on");
       }
       // 버튼 관련 이벤트
       this.parentNode.classList.add("is_on");
@@ -129,6 +151,7 @@
 
   // con6
   // con6 card list 가져오기
+  const $cardWrapper = document.querySelector(".main_con6_card-wrapper");
   let cardList = null;
   function getData() {
     fetch("../static/json/mainProfessor.json")
@@ -141,13 +164,13 @@
 
   function makeList(items) {
     $cardWrapper.innerHTML = null;
-    items.forEach((item, idx) => {
+    items.forEach((item) => {
       const result = makeItem(item);
       $cardWrapper.appendChild(result);
     });
   }
 
-  function makeItem(item, idx) {
+  function makeItem(item) {
     const div = document.createElement("div");
     div.classList.add("main_con6_card");
 
@@ -170,22 +193,29 @@
   }
 
   getData();
-  const $cardWrapper = document.querySelector(".main_con6_card-wrapper");
-  const $card = document.querySelector(".main_con6_card");
 
   // con6 card flip
-  // $card.addEventListener('click', flipper)
+  // $card.addEventListener('mouseover', flipper)
 
   // function flipper (e) {
   //     const cardTarget = e.currentTarget;
   //     cardTarget.style.transform = 'rotateY(180deg)'
-  //     cardTarget.addEventListener('click', backFlipper);
+  //     cardTarget.addEventListener('mouseout', backFlipper);
   // };
 
   // function backFlipper(e) {
   //     const cardTarget = e.currentTarget;
   //     cardTarget.style.transform = 'rotateY(0deg)'
-  //     cardTarget.addEventListener('click', flipper);
-  //     cardTarget.removeEventListener('click', backFlipper);
-  //
+  //     cardTarget.addEventListener('mouseout', flipper);
+  //     cardTarget.removeEventListener('mouseout', backFlipper);
+
+  var timer;
+  document.querySelector("#input").addEventListener('click', function (e) {
+    if (!timer) {
+      timer = setTimeout(function () {
+        timer = null;
+        console.log("여기에 ajax 요청", e.target.value);
+      }, 200);
+    }
+  });
 })();
