@@ -13,8 +13,7 @@
          url(../fonts/ChosunCentennial/ChosunCentennial.woff) format('woff'),
          url(../fonts/ChosunCentennial/ChosunCentennial.ttf) format('truetype');
          unicode-range: U+AC00-D7A3, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+002A;
-        }
-        
+        }    
 @font-face {
     font-family: 'Ibarra Real Nova' !important;
     src: url(../fonts/ChosunCentennial/ChosunCentennial.eot);
