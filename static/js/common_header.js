@@ -187,6 +187,7 @@
         $headerBg.classList.toggle('comm_white_Bg');
         $headerBtn.classList.toggle('comm_active_header_btn');
         $searchMenuBox.classList.remove('comm_active_menu_input');
+        $menuFlagList.classList.remove('comm_menu_login_flag_menu_accordion');
         $submenuItem.forEach(item => {
             item.classList.remove('comm_active_accordion');
         })
