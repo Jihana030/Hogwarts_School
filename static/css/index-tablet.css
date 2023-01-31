@@ -15,7 +15,6 @@
 /* main_nav-top - 최상단 */
 #main_nav-top {
   height: 5rem;
-  grid-template-columns: 2rem 1fr;
 }
 #main_nav-music i {
   font-size: 2rem;
@@ -169,9 +168,8 @@
   margin: 0 var(--display-gap);
   height: 45rem;
 }
-.main_mainCon h1 {
-  font-weight: 500;
-  font-size: 3rem;
+.main_mainCon a {
+  --font-size: 3rem;
 }
 
 /* main_con2 style sheet : 학교 기사 */
@@ -439,15 +437,14 @@
 
 
 /* footer style sheet */
-footer {
-    height: 10rem;
-    padding:  2.25rem var(--display-gap);
-  }
-  
-  footer span {
-    font-size: 1rem;
-  }
-  
-  footer img {
-    width: 72px;
-  }
+#common_footer {
+  grid-template-rows: 1.5fr 1fr;
+  height: 300px;
+}
+#common_footer .comm_footer_text{
+  align-self: flex-start;
+  width: auto;
+}
+#common_footer .comm_footer_text .comm_footer_text1 {
+  margin-bottom: 0.2em;
+}
