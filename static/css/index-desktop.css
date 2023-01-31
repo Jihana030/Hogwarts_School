@@ -104,6 +104,7 @@
   grid-template-columns: repeat(4, 1fr) 1.1fr;
   text-align: center;
 }
+
 #main_menu-toggle ul:not(:last-child) {
   border-right: 1px solid var(--line-color);
 }
@@ -113,6 +114,11 @@
 #main_menu-toggle ul li a{
   font-weight: 500;
   font-family: "suit";
+  color: rgb(112, 111, 111);
+}
+#main_menu-toggle ul li a.main_page-complete {
+  color: var(--text-color);
+  font-weight: 600;
 }
 #main_menu-toggle ul li:hover a{
   color: var(--point-color);
@@ -215,8 +221,8 @@
   margin: 3rem 24vw 0 var(--display-gap);
   height: 45rem;
 }
-.main_mainCon h1 {
-  font-size: 4rem;
+.main_mainCon a{
+  --font-size: 4rem;
   padding: 3rem;
 }
 

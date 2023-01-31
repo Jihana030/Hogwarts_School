@@ -95,6 +95,11 @@
   const $matchDate = document.querySelector("#main_match");
   $matchDate.innerHTML = $match;
 
+  // mainCon - h1 호버 효과
+  document
+  .querySelectorAll(".mainCon-hover")
+  .forEach((button) => (button.innerHTML = "<div><span>" + button.textContent.trim().split("").join("</span><span>") + "</span></div>"));
+
   // con6
   // con6 card list 가져오기
   let cardList = null;

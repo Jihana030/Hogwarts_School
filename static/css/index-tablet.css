@@ -169,9 +169,8 @@
   margin: 0 var(--display-gap);
   height: 45rem;
 }
-.main_mainCon h1 {
-  font-weight: 500;
-  font-size: 3rem;
+.main_mainCon a {
+  --font-size: 3rem;
 }
 
 /* main_con2 style sheet : 학교 기사 */
