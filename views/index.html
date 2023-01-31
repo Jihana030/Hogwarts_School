@@ -36,9 +36,15 @@
   <div class="main_overlay"></div>
   <a href="#top" id="TopBtn"><img src="../static/img/circle/common/TopBtn_Default.svg" alt=""></a>
   <header>
+    <audio src="../audio/Prologue Book II and the Escape from the Dursleys.mp3" autoplay loop></audio>
+    
     <nav id="main_nav-top">
       <div id="main_nav-music">
-        <i class="fa-solid fa-signal"></i>
+        <div id="comm_musicbar_container" class="comm_musicbar" data-state="1">
+          <span class="comm_bar comm_bar-1"></span>
+          <span class="comm_bar comm_bar-2"></span>
+          <span class="comm_bar comm_bar-3"></span>
+      </div>
       </div>
       <!-- <div class="main_nav-search-wrapper"></div> -->
       <div class="main_nav-search">
@@ -532,13 +538,22 @@
       </div>
     </div>
   </main>
-  <footer>
-    <span>
-      Hogwarts School of Witchcraft and Wizardry <br>
-      Never go into a forbidden forest.
-    </span>
-    <img src="../static/img/circle/common/Logo_White.svg" alt="">
-  </footer>
+        <!-- footer   ***   -->
+        <footer id="common_footer">
+          <div class="comm_footer_text">
+              <p class="comm_footer_text1">
+                  Hogwarts School of Witchcraft and Wizardry
+              </p>
+              <p class="comm_footer_text2">
+                  Never go into a forbidden forest.
+              </p>
+              <p class="comm_copyright">
+                  ⓒ 2023.Harry potter and best team. All rights reserved.
+              </p>
+          </div>
+          <img src="../static/img/khr/hogwarts_logo_white_comm.png" alt="footer hogwarts logo" class="comm_footer_logo">
+      </footer>
+      <!-- footer   ***   -->
 </body>
 <script src="../static/js/index.js"></script>
 <script src="../static/js/callender.js"></script>

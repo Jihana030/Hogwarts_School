@@ -167,12 +167,208 @@ header {
   align-items: center;
   border-bottom: 1px solid var(--line-color);
   display: grid;
-  grid-template-columns: 1rem 1fr;
-  gap: var(--display-gap);
+  grid-template-columns: auto 1fr;
   height: 3rem;
-  padding-left: var(--display-gap);
 }
 
+/* main_nav-top - music */
+.comm_animation_play_pause {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.comm_musicbar {
+  padding: 0 var(--display-gap);
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+}
+.comm_musicbar .comm_bar {
+  background-color: var(--text-color);
+  width: 2px;
+  /* border-radius: 10px; */
+  display: inline-block;
+  -webkit-animation: equalize 4s 0s infinite;
+          animation: equalize 4s 0s infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  vertical-align: bottom;
+}
+.comm_musicbar .comm_bar-1 {
+  height: 5px;
+  -webkit-animation-delay: -1.9s;
+          animation-delay: -1.9s;
+}
+.comm_musicbar .comm_bar-2 {
+  height: 5px;
+  -webkit-animation-delay: -2.9s;
+          animation-delay: -2.9s;
+}
+.comm_musicbar .comm_bar-3 {
+  height: 5px;
+  -webkit-animation-delay: -3.9s;
+          animation-delay: -3.9s;
+}
+@-webkit-keyframes equalize {
+  0% {
+    height: 7px;
+  }
+  4% {
+    height: 13px;
+  }
+  8% {
+    height: 13.3px;
+  }
+  12% {
+    height: 14.7px;
+  }
+  16% {
+    height: 7px;
+  }
+  20% {
+    height: 14.7px;
+  }
+  24% {
+    height: 14.3px;
+  }
+  28% {
+    height: 7px;
+  }
+  32% {
+    height: 14.3px;
+  }
+  36% {
+    height: 7px;
+  }
+  40% {
+    height: 14.3px;
+  }
+  44% {
+    height: 14.3px;
+  }
+  48% {
+    height: 14.3px;
+  }
+  52% {
+    height: 14.7px;
+  }
+  56% {
+    height: 7px;
+  }
+  60% {
+    height: 14.7px;
+  }
+  64% {
+    height: 14.7px;
+  }
+  68% {
+    height: 14.7px;
+  }
+  72% {
+    height: 7px;
+  }
+  76% {
+    height: 14.3px;
+  }
+  80% {
+    height: 7px;
+  }
+  84% {
+    height: 15px;
+  }
+  88% {
+    height: 7px;
+  }
+  92% {
+    height: 14.3px;
+  }
+  96% {
+    height: 7px;
+  }
+  100% {
+    height: 7px;
+  }
+}
+@keyframes equalize {
+  0% {
+    height: 7px;
+  }
+  4% {
+    height: 13px;
+  }
+  8% {
+    height: 13.3px;
+  }
+  12% {
+    height: 14.7px;
+  }
+  16% {
+    height: 7px;
+  }
+  20% {
+    height: 14.7px;
+  }
+  24% {
+    height: 14.3px;
+  }
+  28% {
+    height: 7px;
+  }
+  32% {
+    height: 14.3px;
+  }
+  36% {
+    height: 7px;
+  }
+  40% {
+    height: 14.3px;
+  }
+  44% {
+    height: 14.3px;
+  }
+  48% {
+    height: 14.3px;
+  }
+  52% {
+    height: 14.7px;
+  }
+  56% {
+    height: 7px;
+  }
+  60% {
+    height: 14.7px;
+  }
+  64% {
+    height: 14.7px;
+  }
+  68% {
+    height: 14.7px;
+  }
+  72% {
+    height: 7px;
+  }
+  76% {
+    height: 14.3px;
+  }
+  80% {
+    height: 7px;
+  }
+  84% {
+    height: 15px;
+  }
+  88% {
+    height: 7px;
+  }
+  92% {
+    height: 14.3px;
+  }
+  96% {
+    height: 7px;
+  }
+  100% {
+    height: 7px;
+  }
+}
 /* main_nav-search - 검색 */
 .main_nav-search {
   overflow: hidden;
@@ -494,19 +690,19 @@ header {
 .main_cal-body tr .day-active p {
   transition: all 0.3s cubic-bezier(0.42, 0.97, 0.52, 3.49);
   background-color: rgba(0, 0, 0, 0.07);
-  border-radius: 20%;
+  border-radius: 0.3em;
 }
 
 .main_cal-body tr p {
   font-family: "suit";
   padding: 0.2rem 0.4rem;
   display: inline-table;
-  width: 1.5rem;
+  width: 40%;
 }
 
 .main_cal-body tr .today p {
   background-color: var(--point-color);
-  border-radius: 20%;
+  border-radius: 0.3em;
   color: #fff;
 }
 
@@ -587,7 +783,7 @@ header {
 .main_mainCon {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.2)), url(../img/circle/main/Hogwarts.jpg);
   background-position: center;
-  background-size: 130%;
+  background-size: 160%;
   border: 1px solid var(--line-color);
   filter: grayscale(1);
   height: 22.5rem;
@@ -596,7 +792,7 @@ header {
   transition: background-size .4s ease-in;
 }
 .main_mainCon:hover {
-  background-size: 135%;
+  background-size: 165%;
   filter: grayscale(1);
 }
 .main_mainCon a {
@@ -1204,20 +1400,41 @@ header {
 }
 
 /* footer style sheet */
-footer {
-  align-items: flex-end;
+#common_footer {
+  align-items: center;
   background-color: var(--text-color);
-  display: flex;
-  justify-content: space-between;
-  padding: var(--display-gap);
-  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 350px;
+  justify-items: center;
+  padding: 2em 6.25vw;
+  transition: 0.3s;
+  width: 100%;
 }
-
-footer span {
-  color: rgba(191, 191, 191, 1);
-  font-size: 0.5rem;
+#common_footer .comm_footer_text{
+  align-self: flex-end;
+  justify-self: center;
+  order: 1;
+  text-align: center;
+  width: 13em;
 }
-
-footer img {
-  width: 36px;
+#common_footer .comm_footer_text p {
+  color: var(--line-color);
+  font-family: "SUIT", sans-serif;
+}
+#common_footer .comm_footer_text .comm_footer_text1 {
+  margin-bottom: 0.7em;
+}
+#common_footer .comm_footer_text .comm_footer_text2 {
+  margin-bottom: 0.7em;
+}
+#common_footer .comm_footer_text .comm_copyright {
+  color: #777;
+  font-size: 0.75rem;
+}
+#common_footer .comm_footer_logo {
+  align-self: center;
+  justify-self: center;
+  width: 6em;
 }
