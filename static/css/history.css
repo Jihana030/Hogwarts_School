@@ -6,12 +6,22 @@ a {
     color: var(--font-nav-color);
 }
 
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url(../font/Eulyoo1945-Regular.ttf);
+}
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    src: url(../font/IbarraRealNova-Regular.ttf);
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
 /* 지정변수 */
 :root {
     --font-e: 'Eulyoo1945';
     --font-i: 'Ibarra Real Nova';
     --font-size-nav: 1.2vw;
-    --font-size-nav-h: 2.3vw;
+    --font-size-nav-h: 2.7vw;
     --font-size-tle-v: 5vw;
     --font-size-tle-h: 13vh;
     --font-txt-color: #333;
@@ -25,7 +35,7 @@ a {
     --font-size-28: 1.45vw;
     --font-size-28-h: 4vw;
     --font-size-y: 3vh;
-    --font-size-y-h: 2.7vh;
+    --font-size-y-h: 3vh;
     --color-back: #F0EDE8;
     --img-size-y: 20vh;
     --img-size-y-h: 30vw;
@@ -337,6 +347,7 @@ body::-webkit-scrollbar {
 @media (max-width: 850px){
     body {
         overflow-y: scroll;
+        /* overflow: hidden; */
         height: 100%;
     }
 
@@ -452,7 +463,7 @@ body::-webkit-scrollbar {
 
     .his_lineLong {
         transform: rotate(90deg);
-        margin: 100px -55vw;
+        margin: 0 -60vw;
         z-index: -2;
         left: 0%;
         background-position: center;
@@ -503,6 +514,7 @@ body::-webkit-scrollbar {
     }
     .his_detailD{
         font-size: var(--font-size-16-h);
+        padding: 0.7vw;
     }
 
     .his_border {

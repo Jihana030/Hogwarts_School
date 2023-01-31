@@ -109,6 +109,9 @@
     const his_nav = document.querySelectorAll('.his_nav')//----원하는 시대로 이동하기----
     let isDown = false; //터치이벤트용
     window.addEventListener('wheel', (e) => {
+        window.addEventListener('scroll', e=>{
+            e.preventDefault();
+        });
         let wheel = e.deltaY;
         let y = 0;
             y += wheel;

@@ -57,6 +57,9 @@
             
                 let isDown = false; //터치이벤트용
                 if(!(windowWidth.matches)){ 
+                    window.addEventListener('scroll', e=>{
+                        e.preventDefault();
+                    });
                     probody.addEventListener("mousemove", (e) => {
                         let width = window.innerWidth / 2;
                         let mouseMoved2 = ((width - e.pageX*2.5));
