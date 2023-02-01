@@ -188,25 +188,25 @@ header {
   /* border-radius: 10px; */
   display: inline-block;
   -webkit-animation: equalize 4s 0s infinite;
-          animation: equalize 4s 0s infinite;
+  animation: equalize 4s 0s infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   vertical-align: bottom;
 }
 .comm_musicbar .comm_bar-1 {
   height: 5px;
   -webkit-animation-delay: -1.9s;
-          animation-delay: -1.9s;
+  animation-delay: -1.9s;
 }
 .comm_musicbar .comm_bar-2 {
   height: 5px;
   -webkit-animation-delay: -2.9s;
-          animation-delay: -2.9s;
+  animation-delay: -2.9s;
 }
 .comm_musicbar .comm_bar-3 {
   height: 5px;
   -webkit-animation-delay: -3.9s;
-          animation-delay: -3.9s;
+  animation-delay: -3.9s;
 }
 @-webkit-keyframes equalize {
   0% {
@@ -501,7 +501,7 @@ header {
   z-index: 99;
   transition: all 0.5s ease-out;
 }
-#main_nav-menu-wrap.scrollDown { 
+#main_nav-menu-wrap.scrollDown {
   transform: translate(0, -100%);
 }
 #main_nav-menu {
@@ -524,7 +524,6 @@ header {
   text-transform: uppercase;
   display: none;
 }
-
 
 #main_mobile-menu {
   align-items: center;
@@ -731,6 +730,9 @@ header {
   width: 40%;
 }
 
+.main_cal-body tr p:nth-child(3) {
+  color: var(--point-color);
+}
 .main_cal-body tr .today p {
   background-color: var(--point-color);
   border-radius: 0.3em;
@@ -820,7 +822,7 @@ header {
   height: 22.5rem;
   position: relative;
   margin: 0 var(--display-gap);
-  transition: background-size .4s ease-in-out;
+  transition: background-size 0.4s ease-in-out;
 }
 .main_mainCon:hover {
   background-size: 170%;
@@ -1123,8 +1125,10 @@ header {
   position: absolute;
   left: 0;
   right: 0;
+  transform: skewX(-5deg);
+  border-radius: 0.2em;
 }
-#Voldemort-work:hover {
+#Voldemort-work:active {
   -webkit-animation: ani 0.7s steps(22) forwards;
   animation: ani 0.7s steps(22) forwards;
 }
@@ -1503,7 +1507,7 @@ header {
   transition: 0.3s;
   width: 100%;
 }
-#common_footer .comm_footer_text{
+#common_footer .comm_footer_text {
   align-self: flex-end;
   justify-self: center;
   order: 1;

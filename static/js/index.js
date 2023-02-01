@@ -32,7 +32,7 @@
   });
 
   // header
-  // 스크롤 시, header 높이 축소 🖱
+  // 스크롤 시, header 높이 축소 
   const $navMenu = document.querySelector("#main_nav-menu-wrap");
   var headerMoving = function(direction){
     if (direction === "up"){
@@ -57,7 +57,7 @@
   });
 
 
-  // main_search-container 클릭 후 유지
+  // main_search-container 검색창 input 연결
   const $searchFront = document.querySelector("#search-front > input");
   const $searchBack = document.querySelector("#search-back > input");
 

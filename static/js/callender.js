@@ -132,7 +132,6 @@ const init = {
       }
       init.activeDTag = e.target.parentElement;
       init.activeDTag.classList.add('day-active')
-      console.log(e.target.parentNode)
     }
   });
   
