@@ -104,7 +104,6 @@ body::-webkit-scrollbar {
     overflow: hidden;
     color: var(--font-txt-color);
     border-right: var(--border-color);
-    z-index: 1;
 }
 
 .his_infoTitleCnt::before {
@@ -374,10 +373,11 @@ body::-webkit-scrollbar {
 
     .his_fix {
         position: fixed;
-        top: 118px;
+        top: 76px;
         border-bottom: var(--border-color);
         background-color: var(--color-back);
         height: 6.5%;
+        z-index: 1;
     }
 
     .his_infoCnt {
