@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova' , 'Eulyoo1945';
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.HouseTest_bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background-image: url(../img/seoha/houseTestBg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.HouseTest_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.HouseTest_center{
+    position: relative;
+    text-align: center;
+}
+
+.houseTest_nextBtn{
+    cursor: pointer;
+}
+
+.blurFilter{
+    filter: blur(5px);
+}
+.opacity{
+    opacity: 0;
+}
