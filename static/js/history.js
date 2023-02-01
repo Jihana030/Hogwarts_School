@@ -112,7 +112,6 @@
         window.addEventListener('scroll', e=>{
             e.preventDefault();
         });
-        
         // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
@@ -160,6 +159,13 @@
             });
             console.log(`wheel: ${e.deltaY}`)
             // 세로일때 nav fix 
+            let navTop = hisNav.getBoundingClientRect().top;
+            console.log(navTop);
+            if(navTop < (his_cnt.scrollTop + (2*e.deltaY))){
+                hisNav.classList.add('his_fix');
+            } else if(navTop > 8*e.deltaY) {
+                hisNav.classList.remove('his_fix');
+            }
             // let scroll = his_cnt.scrollTop;
             // let high = hisStart.scrollHeight;
             // if(scroll === high){
