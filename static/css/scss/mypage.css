@@ -11,10 +11,6 @@
   overflow: hidden;
 }
 
-:root {
-  --fc-today-bg-color: #ffffff;
-}
-
 #mypage_contents {
   width: 100%;
   height: 100vh;
@@ -600,4 +596,11 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_select_subject2 {
   grid-row: 13/16;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: none;
+}
+.fc .fc-daygrid-day.fc-day-today div.fc-daygrid-day-top a.fc-daygrid-day-number {
+  background-color: rgb(255, 174, 0);
 }/*# sourceMappingURL=mypage.css.map */

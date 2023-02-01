@@ -26,9 +26,9 @@ $borderColor-smooth: #AFA489;
     overflow: hidden;
 }
 
-:root {
-    --fc-today-bg-color: #ffffff;
-}
+// :root {
+//     --fc-today-bg-color: #ffffff;
+// }
 
 #mypage_contents {
     width: 100%;
@@ -412,6 +412,9 @@ $borderColor-smooth: #AFA489;
                                     }
 
                                     // Month
+
+                                    
+
                                     .fc-daygrid-body {
                                         width: 100% !important;
                         
@@ -819,5 +822,13 @@ $borderColor-smooth: #AFA489;
 
             }
         }
+    }
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: none;
+
+    div.fc-daygrid-day-top a.fc-daygrid-day-number {
+        background-color: rgb(255, 174, 0);
     }
 }

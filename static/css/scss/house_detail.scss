@@ -16,6 +16,13 @@ $fontmainColor: #423620;
 $fontAboutColor: #686255;
 $borderColor: #978b7e;
 
+
+@keyframes motion {
+	0% { bottom: 6vh; }
+	100% { bottom: 8vh; }
+}
+
+
 #comm_container {
     width: 100%;
 
@@ -87,6 +94,8 @@ $borderColor: #978b7e;
             bottom: 8vh;
             // bottom: 4vw;
             // margin-top: 8vw;
+
+            animation: motion 0.3s linear 2s infinite alternate;
 
             svg {
                 width: 10vh;
@@ -558,7 +567,7 @@ $borderColor: #978b7e;
                         grid-template-rows: repeat(8, 1fr);
                         opacity: 0;
                         transition: .3s;
-                        background: url('../../img/khlll/background-white.png');
+                        background: #efefef57;
 
                         &.house_detail_s4_active_accordion {
                             height: 70%;
@@ -1794,6 +1803,8 @@ $borderColor: #978b7e;
                         max-height: 0 !important;
                         overflow: hidden;
                         transition: .3s;
+                        background: url('../../img/khlll/background-default.png') no-repeat !important;
+
                         
                         &.house_detail_s4_active_accordion {
                             max-height: 70% !important;
