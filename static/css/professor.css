@@ -33,7 +33,7 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 }
 
 /* ---------임시 해더-------------------임시 해더----------------------------- */
-.pro_header_cnt {
+/* .pro_header_cnt {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -41,7 +41,7 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
     width: 96vw;
     margin: 1rem 0.5rem;
     z-index: 2;
-}
+} */
 /* ---------임시 해더-------------------임시 해더----------------------------- */
 
 /* ---------교수사진----------------------교수사진---------------------------- */
@@ -68,6 +68,7 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 .pro_cnt { /*이미지 전체 감싸는 div*/
     width: 100%; height: 100%;
     padding: 3%;
+    padding-top: 10%;
     display: grid;
     box-sizing: border-box;
 }
