@@ -39,33 +39,49 @@
         $todo.classList.toggle('mypage_Todolist_middle_active');
     });
 
-    
+    let todoNum = 2;
+
     function addTodoItem() {
-        const val = $todoInput.value;
-        if(val === '') { return; }
+        const inputText = $todoInput.value;
+        if (inputText === '') { return; }
 
         const $todoLi = document.createElement('li');
         $todoLi.className = 'mypage_Todolist_detail';
-        let todoNum = 0;
+
+        todoNum++;
 
         $todoLi.innerHTML = `
             <div class="mypage_Todolist_detail_check_box">
-                <input type="checkbox" id="mypage_Todolist_check">
-                <label for="mypage_Todolist_check" class="mypage_Todolist_detail_check"></label>
+                <input type="checkbox" id="mypage_Todolist_check${todoNum}">
+                <label for="mypage_Todolist_check${todoNum}" class="mypage_Todolist_detail_check"></label>
             </div>
             <p>
-                ${val + ' '}
+                ${inputText}
             </p>
+            <div class="mypage_Todolist_detail_dltBtn">
+                <div class="mypage_Todolist_detail_dltBtn_icon"></div>
+            </div>
         `;
         $todoUl.append($todoLi);
         $todoInput.value = '';
 
+        // Todolist 삭제 **
+        const $todoDltBtn = document.querySelectorAll('.mypage_Todolist_detail_dltBtn');
+        $todoDltBtn.forEach(X => {
+            X.addEventListener('click', e => {
+                e.target.parentNode.parentNode.remove();
+            });
+        });
     }
 
-    $todoInput.addEventListener('keyup', e => {
+    // Todolist 등록 **
+    $todoAddBtn.addEventListener('click', addTodoItem); // 추가버튼 클릭 시
+    $todoInput.addEventListener('keyup', e => { // Enter 누를 시
         if (e.key === 'Enter') {
             addTodoItem();
         }
     });
+
+
 
 })();
