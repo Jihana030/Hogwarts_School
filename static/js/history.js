@@ -112,13 +112,11 @@
         window.addEventListener('scroll', e=>{
             e.preventDefault();
         });
-        let wheel = e.deltaY;
-        let y = 0;
-            y += wheel;
+        
         // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
-                left: wheel,
+                left: e.deltaY,
                 // behavior: 'smooth'
             });
               
@@ -153,23 +151,23 @@
                 ele.addEventListener('click', e=>{
                         const location = document.querySelector(".his_" + idx + 'nav').offsetLeft;
                         his_cnt.scrollLeft = location;
-                    })
+                })
             })
         } else { //가로850보다 작을때
             his_cnt.scrollBy({
-                top: wheel,
+                top: e.deltaY,
                 // behavior: 'smooth'
             });
-            console.log(`wheel: ${wheel}`)
+            console.log(`wheel: ${e.deltaY}`)
             // 세로일때 nav fix 
-            let scroll = his_cnt.scrollTop;
-            let high = hisStart.scrollHeight;
-            if(scroll === high){
-                hisNav.classList.add('his_fix');
-                console.log(hisNav.classList);
-            }else{
-                hisNav.classList.remove('his_fix');
-            }// 세로일때 nav fix 
+            // let scroll = his_cnt.scrollTop;
+            // let high = hisStart.scrollHeight;
+            // if(scroll === high){
+            //     hisNav.classList.add('his_fix');
+            //     console.log(hisNav.classList);
+            // }else{
+            //     hisNav.classList.remove('his_fix');
+            // }// 세로일때 nav fix 
 
             // 세로 스크롤 터치하기
             let startY;
@@ -184,8 +182,8 @@
             });
             his_cnt.addEventListener('mouseleave', () => {
                 isDown = false;
-                console.log('mouseleave');
                 his_cnt.classList.remove('active');
+                console.log('mouseleave');
             });
             his_cnt.addEventListener('mouseup', () => {
                 console.log('mouseup');
@@ -204,11 +202,11 @@
         }
     });
     //paper 높이 조절용
-    function setScreenSize(){
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    }
-    setScreenSize();
+    // function setScreenSize(){
+    //     let vh = window.innerHeight * 0.01;
+    //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // }
+    // setScreenSize();
     
     //cursor grab grabbing 
     his_cnt.addEventListener('mousedown', e=>{

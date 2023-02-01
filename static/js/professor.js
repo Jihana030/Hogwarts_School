@@ -62,9 +62,6 @@
                         e.stopPropagation();
                         return false;
                     });
-                    let wheel = e.deltaY;
-                    let y = 0;
-                        y += wheel;
                     if(!(windowWidth.matches)){ 
                         probody.addEventListener("mousemove", (e) => {
                             let width = window.innerWidth / 2;
@@ -77,21 +74,19 @@
                         // 세로 스크롤 터치하기
                         let startY = 0;
                         let scrollTop = 0;
-                        his_cnt.scrollBy({
-                            top: wheel,
+                        probody.scrollBy({
+                            top: e.deltaY,
                             // behavior: 'smooth'
                         });
                         probody.addEventListener('mousedown', e => {
                             isDown = true;
                             probody.classList.add('active');
-                            console.log(probody.classList)
                             startY = e.pageY - probody.offsetTop;
                             scrollTop = probody.scrollTop;
                         });
                         probody.addEventListener('mouseleave', () => {
                             isDown = false;
                             probody.classList.remove('active');
-                            console.log(probody.classList)
                         });
                         probody.addEventListener('mouseup', () => {
                             isDown = false;
@@ -105,10 +100,7 @@
                             probody.scrollTop = scrollTop - walk;
                         });// 세로 스크롤 터치하기
                     }
-
                 })
-
-            
         });
     })
     //paper 높이 조절용 -근데 안됌.
