@@ -56,46 +56,57 @@
             // -------mouse trust event-----------------------------mouse trust event-----------------
             
                 let isDown = false; //터치이벤트용
-                if(!(windowWidth.matches)){ 
+                window.addEventListener('wheel', e=>{
                     window.addEventListener('scroll', e=>{
                         e.preventDefault();
+                        e.stopPropagation();
+                        return false;
                     });
-                    probody.addEventListener("mousemove", (e) => {
-                        let width = window.innerWidth / 2;
-                        let mouseMoved2 = ((width - e.pageX*2.5));
-                        let mouseMoved3 = ((width - e.pageY*2.8));
-                        imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
-                        imgDiv.style.transition=  'all 1.5s';
-                    });
-                } else { //모바일
-                    // 세로 스크롤 터치하기
-                    let startY;
-                    let scrollTop;
-                
-                    probody.addEventListener('mousedown', e => {
-                        isDown = true;
-                        probody.classList.add('active');
-                        console.log(probody.classList)
-                        startY = e.pageY - probody.offsetTop;
-                        scrollTop = probody.scrollTop;
-                    });
-                    probody.addEventListener('mouseleave', () => {
-                        isDown = false;
-                        probody.classList.remove('active');
-                        console.log(probody.classList)
-                    });
-                    probody.addEventListener('mouseup', () => {
-                        isDown = false;
-                        probody.classList.remove('active');
-                    });
-                    probody.addEventListener('mousemove', e => {
-                        if (!isDown) return; 
-                        e.preventDefault();
-                        const y = e.pageY - probody.offsetTop;
-                        const walk = y - startY;
-                        probody.scrollTop = scrollTop - walk;
-                    });// 세로 스크롤 터치하기
-                }
+                    let wheel = e.deltaY;
+                    let y = 0;
+                        y += wheel;
+                    if(!(windowWidth.matches)){ 
+                        probody.addEventListener("mousemove", (e) => {
+                            let width = window.innerWidth / 2;
+                            let mouseMoved2 = ((width - e.pageX*2.5));
+                            let mouseMoved3 = ((width - e.pageY*2.5));
+                            imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
+                            imgDiv.style.transition=  'all 1.5s';
+                        });
+                    } else { //모바일
+                        // 세로 스크롤 터치하기
+                        let startY = 0;
+                        let scrollTop = 0;
+                        his_cnt.scrollBy({
+                            top: wheel,
+                            // behavior: 'smooth'
+                        });
+                        probody.addEventListener('mousedown', e => {
+                            isDown = true;
+                            probody.classList.add('active');
+                            console.log(probody.classList)
+                            startY = e.pageY - probody.offsetTop;
+                            scrollTop = probody.scrollTop;
+                        });
+                        probody.addEventListener('mouseleave', () => {
+                            isDown = false;
+                            probody.classList.remove('active');
+                            console.log(probody.classList)
+                        });
+                        probody.addEventListener('mouseup', () => {
+                            isDown = false;
+                            probody.classList.remove('active');
+                        });
+                        probody.addEventListener('mousemove', e => {
+                            if (!isDown) return; 
+                            e.preventDefault();
+                            const y = e.pageY - probody.offsetTop;
+                            const walk = y - startY;
+                            probody.scrollTop = scrollTop - walk;
+                        });// 세로 스크롤 터치하기
+                    }
+
+                })
 
             
         });
