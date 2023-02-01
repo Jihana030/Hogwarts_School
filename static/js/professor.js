@@ -57,13 +57,13 @@
             
                 let isDown = false; //터치이벤트용
                 window.addEventListener('wheel', e=>{
-                    window.addEventListener('scroll', e=>{
+                    window.addEventListener('scroll', e=>{ //스크롤 막기
                         e.preventDefault();
                         e.stopPropagation();
                         return false;
                     });
                     if(!(windowWidth.matches)){ 
-                        probody.addEventListener("mousemove", (e) => {
+                        pro_img_cnt.addEventListener("mousemove", (e) => {
                             let width = window.innerWidth / 2;
                             let mouseMoved2 = ((width - e.pageX*2.5));
                             let mouseMoved3 = ((width - e.pageY*2.8));
@@ -72,33 +72,57 @@
                         });
                     } else { //모바일
                         // 세로 스크롤 터치하기
-                        let startY = 0;
-                        let scrollTop = 0;
-                        probody.scrollBy({
-                            top: e.deltaY,
-                            // behavior: 'smooth'
-                        });
-                        probody.addEventListener('mousedown', e => {
-                            isDown = true;
-                            probody.classList.add('active');
-                            startY = e.pageY - probody.offsetTop;
-                            scrollTop = probody.scrollTop;
-                        });
-                        probody.addEventListener('mouseleave', () => {
-                            isDown = false;
-                            probody.classList.remove('active');
-                        });
-                        probody.addEventListener('mouseup', () => {
-                            isDown = false;
-                            probody.classList.remove('active');
-                        });
-                        probody.addEventListener('mousemove', e => {
-                            if (!isDown) return; 
-                            e.preventDefault();
-                            const y = e.pageY - probody.offsetTop;
-                            const walk = y - startY;
-                            probody.scrollTop = scrollTop - walk;
-                        });// 세로 스크롤 터치하기
+                        // let startY = 0;
+                        // let scrollTop = 0;
+                        // pro_img_cnt.scrollBy({
+                        //     top: e.deltaY,
+                        //     // behavior: 'smooth'
+                        // });
+                        // pro_img_cnt.addEventListener('mousedown', e => {
+                        //     isDown = true;
+                        //     pro_img_cnt.classList.add('active');
+                        //     startY = e.pageY - pro_img_cnt.offsetTop;
+                        //     scrollTop = pro_img_cnt.scrollTop;
+                        //     console.log('mousedown')
+                        // });
+                        // pro_img_cnt.addEventListener('mouseleave', () => {
+                        //     isDown = false;
+                        //     pro_img_cnt.classList.remove('active');
+                        //     console.log('mouseleave')
+                        // });
+                        // pro_img_cnt.addEventListener('mouseup', () => {
+                        //     isDown = false;
+                        //     pro_img_cnt.classList.remove('active');
+                        //     console.log('mouseup')
+                        // });
+
+                        //마우스의 이전좌표와 현재 좌표를 비교하는 함수
+                        let prevY = 0;
+
+                        const getMouseDirection = (e) => {
+                            // const yDir = prevY <= e.clientY ? "down" : "up";
+                        //down이면 아래로 마우스 따라가고, up이면 위로 마우스따라가게.
+                        if(prevY <= e.clientY){
+                            //down
+                            //이미지좌표를 마우스 좌표 움직인만큼 움직이게
+                            pro_img_cnt.offsetY = e.clientY;
+                        } else {
+                            //up
+                            pro_img_cnt.offsetY = e.clientY;
+                        }
+                            // prevY = e.clientY; //얜 뭐지
+                        }
+
+                        pro_img_cnt.addEventListener("mousemove", getMouseDirection);
+                        
+                        // pro_img_cnt.addEventListener('mousemove', e => {
+                        //     if (!isDown) return; 
+                        //     e.preventDefault();
+                        //     const y = e.pageY - pro_img_cnt.offsetTop;
+                        //     const walk = y - startY;
+                        //     pro_img_cnt.scrollTop = scrollTop - walk;
+                        //     console.log('mousemove')
+                        // });// 세로 스크롤 터치하기
                     }
                 })
         });
