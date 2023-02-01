@@ -26,9 +26,9 @@ $borderColor-smooth: #AFA489;
     overflow: hidden;
 }
 
-// :root {
-//     --fc-today-bg-color: #ffffff;
-// }
+:root {
+    --fc-today-bg-color: transparent !important;
+}
 
 #mypage_contents {
     width: 100%;

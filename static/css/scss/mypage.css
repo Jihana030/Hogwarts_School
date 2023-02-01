@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+:root {
+  --fc-today-bg-color: transparent !important;
+}
+
 #mypage_contents {
   width: 100%;
   height: 100vh;
