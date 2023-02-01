@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    // 스크롤 애니메이션 라이브러리 렌더링
+    // 스크롤 애니메이션 라이브러리 렌더링 ***
     AOS.init();
 
 
@@ -12,7 +12,7 @@
         $svgDraw,
         {
             type: 'delayed',
-            duration: 200,
+            duration: 600,
             start: 'autostart',
             // animTimingFunction: Vivus.EASE
         },
@@ -93,7 +93,7 @@
     });
 
 
-    // section4 - housecup 아코디언 메뉴
+    // section4 - housecup 아코디언 메뉴 & 선택 반영
 
     const $houseMenuBtn = document.querySelector('.house_detail_s4_main_select_choice_box');
     const $houseMenuLi = document.querySelector('.house_detail_s4_main_select_list');
@@ -101,6 +101,28 @@
     $houseMenuBtn.addEventListener('click', () => {
         $houseMenuLi.classList.toggle('house_detail_s4_active_accordion');
     });
+
+    const $houseSelect = document.querySelector('.house_detail_s4_main_select_one');
+    const $houseMenuItem = document.querySelectorAll('.house_detail_s4_main_select_item');
+
+    $houseMenuItem.forEach(item => {
+        item.addEventListener('click', e => {
+            $houseSelect.textContent = e.target.textContent;
+            $houseMenuLi.classList.remove('house_detail_s4_active_accordion');
+        })
+    })
+
+
+    // section4 - houseDetail_houseCup.json fetch
+    // https://www.hogwartsishere.com/great-hall/?year=school 참고 링크
+
+    function studentList() {
+        return fetch('../static/json/houseDetail_houseCup.json')
+        .then(res => res.json())
+        .then(json => json.students);
+    }
+
+    
 
 
 

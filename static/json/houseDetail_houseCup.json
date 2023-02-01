@@ -1,0 +1,62 @@
+[
+    {
+        "name": "John granger",
+        "year": 1,
+        "points": 2535,
+        "pic": "../static/img/khlll/housecupStudent/student_1.jpg"
+    },
+    {
+        "name": "Michael Moody",
+        "year": 1,
+        "points": 2039,
+        "pic": "../static/img/khlll/housecupStudent/student_2.jpg"
+    },
+    {
+        "name": "Elena",
+        "year": 1,
+        "points": 1826,
+        "pic": "../static/img/khlll/housecupStudent/student_3.jpg"
+    },
+    {
+        "name": "Gabrielle",
+        "year": 1,
+        "points": 1775,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.jpg"
+    },
+    {
+        "name": "Alixina Dumbledore",
+        "year": 1,
+        "points": 1260,
+        "pic": "../static/img/khlll/housecupStudent/student_4.jpg"
+    },
+    {
+        "name": "Jealisha Leung",
+        "year": 1,
+        "points": 1223,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.jpg"
+    },
+    {
+        "name": "Meadow Foley",
+        "year": 1,
+        "points": 1081,
+        "pic": "../static/img/khlll/housecupStudent/student_5.jpg"
+    },
+    {
+        "name": "Alexei",
+        "year": 1,
+        "points": 1054,
+        "pic": "../static/img/khlll/housecupStudent/student_6.jpg"
+    },
+    {
+        "name": "Violet Brontë",
+        "year": 1,
+        "points": 1022,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.jpg"
+    },
+    {
+        "name": "Athena",
+        "year": 1,
+        "points": 967,
+        "pic": "../static/img/khlll/housecupStudent/student_7.jpg"
+    }
+]

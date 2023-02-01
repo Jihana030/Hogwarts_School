@@ -289,7 +289,7 @@
 #comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
   padding: 14px;
   color: #504733;
-  box-shadow: 0 0.3vw 0.5vw #c4bead;
+  box-shadow: 0 0.3vw 0.5vw rgba(0, 0, 0, 0.062745098);
   border: 1px solid #504733;
   font-family: "SUIT", sans-serif;
   background-image: url("../../img/khlll/background-default.png");
