@@ -125,6 +125,11 @@ body::-webkit-scrollbar {
     text-align: center;
     position: relative;
     font-family: var(--font-e);
+    scroll-snap-type: x mandatory;
+}
+
+.his_infoTitleCnt section {
+    scroll-snap-align: start;
 }
 /* our history txt cnt */
 .his_title {
@@ -381,6 +386,7 @@ body::-webkit-scrollbar {
     .his_infoTitleCnt {
         padding-top: 10vh;
         padding-bottom: 15vh;
+        scroll-snap-type: y mandatory;
     }
 
     .his_infoTitleCnt::before {
@@ -470,7 +476,7 @@ body::-webkit-scrollbar {
     }
 
     .his_year {
-        transform: rotate(90deg) translateY(-6vw);
+        transform: rotate(90deg) translateY(-8vw);
         transform-origin: left top;
         left: 0;
         flex-basis: auto;

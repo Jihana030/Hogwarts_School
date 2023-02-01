@@ -144,7 +144,7 @@
                 if (!isDown) return; 
                 e.preventDefault();
                 const x = e.pageX - his_cnt.offsetLeft;
-                const walk = x - startX;
+                const walk = (x - startX);
                 his_cnt.scrollLeft = scrollLeft - walk;
             });// -----가로 스크롤 터치하기------
             
@@ -166,6 +166,7 @@
             let high = hisStart.scrollHeight;
             if(scroll === high){
                 hisNav.classList.add('his_fix');
+                console.log(hisNav.classList);
             }else{
                 hisNav.classList.remove('his_fix');
             }// 세로일때 nav fix 
@@ -175,25 +176,29 @@
             let scrollTop;
         
             his_cnt.addEventListener('mousedown', e => {
-            isDown = true;
-            his_cnt.classList.add('active');
-            startY = e.pageY - his_cnt.offsetTop;
-            scrollTop = his_cnt.scrollTop;
+                isDown = true;
+                his_cnt.classList.add('active');
+                startY = e.pageY - his_cnt.offsetTop;
+                scrollTop = his_cnt.scrollTop;
+                console.log('mousedown');
             });
             his_cnt.addEventListener('mouseleave', () => {
-            isDown = false;
-            his_cnt.classList.remove('active');
+                isDown = false;
+                console.log('mouseleave');
+                his_cnt.classList.remove('active');
             });
             his_cnt.addEventListener('mouseup', () => {
-            isDown = false;
-            his_cnt.classList.remove('active');
+                console.log('mouseup');
+                isDown = false;
+                his_cnt.classList.remove('active');
             });
             his_cnt.addEventListener('mousemove', e => {
-            if (!isDown) return; 
-            e.preventDefault();
-            const y = e.pageY - his_cnt.offsetTop;
-            const walk = y - startY;
-            his_cnt.scrollTop = scrollTop - walk;
+                if (!isDown) return; 
+                e.preventDefault();
+                const y = e.pageY - his_cnt.offsetTop;
+                const walk = (y - startY);
+                his_cnt.scrollTop = scrollTop - walk;
+                console.log('mousemove');
             });// 세로 스크롤 터치하기
             
         }
