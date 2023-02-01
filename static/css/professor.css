@@ -5,10 +5,20 @@
     --img-hover: 5vw;
 }
 
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url(../font/Eulyoo1945-Regular.ttf);
+}
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    src: url(../font/IbarraRealNova-Regular.ttf);
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
 body {
-    width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
+    width: 2000px;
+    height: 2000px;
+    overflow: hidden;
     background-color: #E7E3DD;
     box-sizing: border-box;
     -ms-overflow-style: none;/*스크롤바 막음*/
@@ -56,7 +66,7 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 }
 
 .pro_cnt { /*이미지 전체 감싸는 div*/
-    width: 100vw; height: 100vh;
+    width: 100%; height: 100%;
     padding: 3%;
     display: grid;
     box-sizing: border-box;
@@ -171,6 +181,8 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 /* --------미디어쿼리---------------------------------------------- */
 @media (max-width: 850px) {
     body {
+        width: 100%;
+        height: 100%;
         /* 드래그 방지 */
         -webkit-user-select:none;
         -moz-user-select:none;
