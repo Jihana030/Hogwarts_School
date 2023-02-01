@@ -1366,7 +1366,7 @@ header {
   flex-grow: 1;
   height: 1px;
 }
-
+/* main_con6 style sheet - 카드 */
 .main_con6_card-wrapper {
   display: grid;
   gap: 0.5rem;
@@ -1374,11 +1374,12 @@ header {
   grid-template-rows: repeat(6, 1fr);
 }
 
-.main_con6_card {
-  transition: all 0.8s;
+.main_con6_cardIn {
+  transition: all 0.6s ease-in-out;
   transform-style: preserve-3d;
+  height: 100%;
+  
 }
-
 .main_con6_card-front,
 .main_con6_card-back {
   width: 100%;
@@ -1416,7 +1417,7 @@ header {
   transform: rotateY(180deg);
 }
 
-.main_con6_card:hover {
+.main_con6_card:hover .main_con6_cardIn{
   transform: rotateY(180deg);
 }
 

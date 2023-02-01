@@ -161,19 +161,21 @@
     div.classList.add("main_con6_card");
 
     div.innerHTML = `
-                <div class="main_con6_card-front">
-                <div class="main_con6_card-border">
-                    <p>${item.front_num}</p>
-                    <img src="${item.front_icon}" alt="">
-                    <p>${item.front_subject}</p>
-                </div>
-                </div>
-                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover; background-position: center;" >
-                    <div>
-                        <span>${item.back_subject}</span>
-                        <span>${item.back_professor}</span>
-                    </div>
-                </div>
+    <div class="main_con6_cardIn">
+      <div class="main_con6_card-front">
+      <div class="main_con6_card-border">
+          <p>${item.front_num}</p>
+          <img src="${item.front_icon}" alt="">
+          <p>${item.front_subject}</p>
+      </div>
+      </div>
+      <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover; background-position: center;" >
+          <div>
+              <span>${item.back_subject}</span>
+              <span>${item.back_professor}</span>
+          </div>
+      </div>
+    </div>
         `;
     return div;
   }
