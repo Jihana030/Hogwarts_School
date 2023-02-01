@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/history.css">
+    <link rel="stylesheet" href="../static/css/scss/common_header.css">
+    <link rel="stylesheet" href="../static/css/scss/common_header.css.map">
+    <!-- <link rel="stylesheet" href="../static/css/scss/common_footer.css">
+    <link rel="stylesheet" href="../static/css/scss/common_footer.css.map"> -->
     <title>history </title>
 </head>
 <body>
+    <header data-include="./common_header.html"></header>
     <div class="his_cnt">
         <div class="his_paper"></div>
         <!-- 도입 컨테이너-->
@@ -78,6 +83,42 @@
             <!-- <div class="his_lineLong"></div> -->
         </div>
     </div>
+    <!-- <footer data-include="./common_footer.html"></footer> -->
 </body>
+<script src="../static/js/common_header.js"></script>
+<script>
+    function includeHTML(){
+        let z, elmnt, file, xhttp;
+        
+        z = document.getElementsByTagName("*");
+        
+        for (let i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("data-include");
+            
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("data-include");
+                        includeHTML();
+                    }//if
+                }//onreadystatechange
+                
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+            }//if - file
+        }//for
+    }//includeHTML
+    
+    /* ✨ 실행 */
+    window.addEventListener('DOMContentLoaded',()=>{
+        includeHTML();
+    });
+</script>
 <script src="../static/js/history.js"></script>
 </html>

@@ -384,14 +384,14 @@ body::-webkit-scrollbar {
     }
 
     .his_infoTitleCnt {
-        padding-top: 10vh;
+        padding-top: 22vh;
         padding-bottom: 15vh;
         scroll-snap-type: y mandatory;
     }
 
     .his_infoTitleCnt::before {
         background-size: 48vw;
-        top: -15vw;
+        top: -10vw;
         right: -2vw;
         bottom: 10vw;
         left: 50vw;
