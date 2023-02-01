@@ -66,7 +66,7 @@
                         probody.addEventListener("mousemove", (e) => {
                             let width = window.innerWidth / 2;
                             let mouseMoved2 = ((width - e.pageX*2.5));
-                            let mouseMoved3 = ((width - e.pageY*2.5));
+                            let mouseMoved3 = ((width - e.pageY*2.8));
                             imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
                             imgDiv.style.transition=  'all 1.5s';
                         });
