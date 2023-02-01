@@ -19,7 +19,8 @@ $fontmainColor: #423620;
 
 .comm_white_Bg { background-color: rgba(255, 255, 255, 0.15); }
 .comm_animation_play_pause { animation-play-state: paused !important; }
-.comm_dp_none { display: none; }
+.comm_dp_none { display: none !important; }
+.comm_opacity_0 { opacity: 0; }
 
 // ---------------------------------------------------------------------------------------------------------*
 

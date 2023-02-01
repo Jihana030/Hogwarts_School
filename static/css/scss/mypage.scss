@@ -26,6 +26,10 @@ $borderColor-smooth: #AFA489;
     overflow: hidden;
 }
 
+:root {
+    --fc-today-bg-color: #ffffff;
+}
+
 #mypage_contents {
     width: 100%;
     height: 100vh;
@@ -283,6 +287,14 @@ $borderColor-smooth: #AFA489;
             .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th {
                 border: 0;
             }
+
+            .fc-theme-standard td {
+                border-radius: 100px;
+                width: 2vw;
+                height: 2.4vw;
+            }
+
+
             
             // Calendar style ***
 
@@ -311,6 +323,7 @@ $borderColor-smooth: #AFA489;
 
 
                         // Fullcalendar style fix ***
+
 
                         // scrollbar 
                         .fc-scroller::-webkit-scrollbar {
@@ -407,26 +420,35 @@ $borderColor-smooth: #AFA489;
                                             height: 100% !important;
                                             margin: 0;
                                         }
-
-                                        .fc-daygrid-day-top {
-                                            display: block;
-                                            width: 100%;
-                                            height: 100%;
-                                            
-                                            .fc-daygrid-day-number {
+                                        .fc-daygrid-day-frame {
+                                            display: flex;
+                                            align-items: center;
+                                            .fc-daygrid-day-top {
+                                                // display: block;
                                                 width: 100%;
-                                                height: 2.3vw;
-                            
-                                                padding: 0;
-                                                text-align: center;
-                                                font-size: 0.9vw;
-                                                font-family: 'SUIT', sans-serif;
-                            
+                                                height: 100%;
+                                                margin: 0;
+    
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
-
-                                                z-index: 1;
+    
+                                                .fc-daygrid-day-number { // a 태그
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+                                                    border-radius: 200px;
+                                
+                                                    padding: 0;
+                                                    text-align: center;
+                                                    font-size: 0.9vw;
+                                                    font-family: 'SUIT', sans-serif;
+                                
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+    
+                                                    z-index: 1;
+                                                }
                                             }
                                         }
 
@@ -438,6 +460,8 @@ $borderColor-smooth: #AFA489;
                                 }
                             }
                         }
+
+                        
             
                     }
                 }

@@ -155,6 +155,7 @@ $borderColor: #978b7e;
                 svg {
                     // width: 436px;
                     width: 53vh;
+                    
                     // width: 26vw;
                 }
             }
@@ -227,9 +228,16 @@ $borderColor: #978b7e;
                     }
 
                     .house_detail_s2_text {
+                        max-height: 0;
+                        overflow: hidden;
                         font-family: 'Eulyoo1945', serif;
                         font-size: 2vh;
                         color: $fontAboutColor;
+                        transition: .3s;
+
+                        &.house_detail_s2_text_active {
+                            max-height: 5vw;
+                        }
                     }
                 }
 
@@ -544,10 +552,18 @@ $borderColor: #978b7e;
                         }
                     }
                     .house_detail_s4_main_select_list {
-                        // height: 48.7vh;
-                        height: 70%;
+                        height: 0;
+                        overflow: hidden;
                         display: grid;
                         grid-template-rows: repeat(8, 1fr);
+                        opacity: 0;
+                        transition: .3s;
+                        background: url('../../img/khlll/background-white.png');
+
+                        &.house_detail_s4_active_accordion {
+                            height: 70%;
+                            opacity: 1;
+                        }
 
                         li {
                             width: 100%;
@@ -555,7 +571,6 @@ $borderColor: #978b7e;
                             padding-right: 2vw;
                             font-size: 2.2vh;
                             border-top: 1px solid $borderColor;
-                            background-color: rgba(255, 255, 255, 0.4);
                             cursor: pointer;
 
                             display: flex;
@@ -625,9 +640,9 @@ $borderColor: #978b7e;
         }
     }
 
-    .max480 {
-        display: none;
-    }
+}
+.max480 {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {
@@ -1373,7 +1388,7 @@ $borderColor: #978b7e;
 @media screen and (max-width: 480px) {
 
     .max480 {
-        display: block !important;
+        display: block;
     }
     .min481 {
         display: none !important;
@@ -1478,13 +1493,14 @@ $borderColor: #978b7e;
                     width: 100% !important;
                     height: 57vh !important;
                     border: 0 !important;
+                    transition: .3s;
 
                     grid-template-columns: repeat(2, 1fr) !important;
                     grid-template-rows: 7vh 43vh 7vh 0 !important;
                     
                     &.house_detail_s2_central_active {
                         height: 100% !important;
-                        grid-template-rows: 7vh 45vh 35vh 5vh !important;
+                        grid-template-rows: 7vh 43vh 35vh 5vh !important;
                     }
 
                     .house_detail_s2_central_char1 {
@@ -1525,6 +1541,7 @@ $borderColor: #978b7e;
                         line-height: 7vh;
                         letter-spacing: -0.1vw;
                         border-bottom: 1px solid $borderColor;
+                        cursor: pointer;
                         z-index: 2;
 
                         background: url('../../img/khlll/background-default.png');
@@ -1681,9 +1698,11 @@ $borderColor: #978b7e;
             }
             .house_detail_s3_letter {
                 margin-top: 22vw;
+                cursor: pointer;
                 
                 display: flex;
                 justify-content: center;
+                
                 .house_detail_s3_text {
                     width: 74vw !important;
 
@@ -1785,6 +1804,10 @@ $borderColor: #978b7e;
                             font-size: 2.2vh;
 
                             justify-content: center !important;
+
+                            &:last-child {
+                                border-bottom: 1px solid $borderColor;
+                            }
                         }
                     }
                 }
@@ -1855,30 +1878,34 @@ $borderColor: #978b7e;
     .house_detail_letter_expand {
         width: 100%;
         height: 70vh;
+        transition: .3s;
         
         background-color: #efefef;
-        
-        overflow: scroll;
-        &::-webkit-scrollbar {
-            display: none;
+        opacity: 0;
+        z-index: -1;
+
+        &.house_detail_letter_expand_active {
+            opacity: 1;
+            z-index: 99;
         }
-        z-index: 99;
 
         position: fixed;
         top: 50%;
         left: 0;
         transform: translate(0, -50%);
-
-        display: none !important;
         
         .house_detail_letter_expand_text {
             width: 100%;
             height: 100%;
             
-            margin: 10vw 7vw;
+            padding: 12vw 10vw;
             font-size: 2vh;
             font-family: 'Eulyoo1945', serif;
             line-height: 3.5vh;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
             
             display: flex !important;
             justify-content: center;
