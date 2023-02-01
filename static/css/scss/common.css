@@ -25,6 +25,12 @@
   outline: none;
 }
 
+.contents {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/khlll/background-default.png");
+}
+
 ul,
 ol {
   list-style: none;
@@ -34,4 +40,10 @@ a {
   text-decoration: none;
   color: #423620;
   display: inline-block;
+}
+
+.contents {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../img/khlll/background-default.png");
 }/*# sourceMappingURL=common.css.map */

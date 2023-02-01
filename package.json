@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@pixi/text-html": "^3.3.0",
     "axios": "^1.2.5",
     "body-parser": "^1.20.1",
     "cookie-parser": "^1.4.6",
@@ -21,6 +22,7 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20",
     "nunjucks": "^3.2.3",
-    "session": "^0.1.0"
+    "session": "^0.1.0",
+    "session-file-store": "^1.5.0"
   }
 }

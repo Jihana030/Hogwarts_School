@@ -6,16 +6,6 @@
     font-family: 'Ibarra Real Nova';
 }
 
-body{
-	width:100%;
-	height:100vh;
-}
-
-.body{
-    width:100%;
-	height:100vh;
-}
-
 table{
     border-collapse: collapse;
 }
@@ -24,8 +14,30 @@ table{
     cursor: pointer;
 }
 
+#login_frm{
+    z-index: 100 !important;
+}
+
 .hidden{
     display: none !important;
+}
+
+@media screen and (min-width:1024px) {
+    #login_main_body{
+        width: 618px;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    #login_main_body{
+        width: 482px;
+    }
+    #login_item_body{
+        width: 474px;
+    }
+    .login_underText{
+        margin-right: 126px;
+    }
 }
 
 .login_modal{
@@ -37,7 +49,6 @@ table{
 
 #login_main_body{
     position: relative;
-    width: 618px;
     height: 260px;
     padding: 4px;
     background: #F8F1E6;
@@ -45,7 +56,6 @@ table{
 
 #login_item_body{
     position: absolute;
-    width: 610px;
     height: 252px;
     background: #F8F1E6;
     border: 2px solid #DBC48F;
@@ -226,6 +236,7 @@ table{
 .modal_overlay{
     filter: blur(5px);
     -webkit-filter: blur(3px);
+    background-color: #685d4e8b;
 }
 
 .login_form_btn:focus{
