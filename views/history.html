@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/history.css">
+    <link rel="stylesheet" href="../static/css/scss/common_header.css">
+    <link rel="stylesheet" href="../static/css/scss/common_header.css.map">
+    <!-- <link rel="stylesheet" href="../static/css/scss/common_footer.css">
+    <link rel="stylesheet" href="../static/css/scss/common_footer.css.map"> -->
     <title>history </title>
 </head>
 <body>
+    <header data-include="./common_header.html"></header>
     <div class="his_cnt">
         <div class="his_paper"></div>
         <!-- 도입 컨테이너-->
         <div class="his_infoCnt">
             <div class="his_paper"></div>
             <!-- 네비제외 -->
-            <div class="his_infoTitleCnt">
+            <article class="his_infoTitleCnt">
                 <!-- 타이틀 our history -->
-                <div class="his_title">
-                    <span class="his_titleTxt his_Our">Our</span>
-                    <span class="his_titleTxt his_History">History</span>
-                </div>
-                <div><img class="his_line" src="../static/img/jiwon/Line.svg" alt="line"></div>
-                <!-- 타이틀 아래 문구 -->
-                <div class="his_detailCnt">
-                    <p class="his_deTxt">천년의 역사를 자랑하는 명문 마법 학교<br>호그와트에 오신 걸 환영합니다.</p>
-                    <p class="his_deTxt">마법사 세계에서 가장 안전한 곳,<br>자신의 역량을 펼칠 수 있는 곳,<br>뛰어난 마법사의 뒤를 따라갈 수 있는 곳</p>
-                    <p class="his_deTxt">다양한 업적을 자랑하는<br>호그와트의 역사를 소개합니다.</p>
-                </div>
-            </div>
+                <section>
+                    <div class="his_title">
+                        <span class="his_titleTxt his_Our">Our</span>
+                        <span class="his_titleTxt his_History">History</span>
+                    </div>
+                    <div><img class="his_line" src="../static/img/jiwon/Line.svg" alt="line"></div>
+                    <!-- 타이틀 아래 문구 -->
+                    <div class="his_detailCnt">
+                        <p class="his_deTxt">천년의 역사를 자랑하는 명문 마법 학교<br>호그와트에 오신 걸 환영합니다.</p>
+                        <p class="his_deTxt">마법사 세계에서 가장 안전한 곳,<br>자신의 역량을 펼칠 수 있는 곳,<br>뛰어난 마법사의 뒤를 따라갈 수 있는 곳</p>
+                        <p class="his_deTxt">다양한 업적을 자랑하는<br>호그와트의 역사를 소개합니다.</p>
+                    </div>
+                </section>
+            </article>
             <!-- 네비 -->
             <nav class="his_navCnt">
                 <a href="#10th" class="his_nav0 his_nav">10th</a>
@@ -76,6 +83,42 @@
             <!-- <div class="his_lineLong"></div> -->
         </div>
     </div>
+    <!-- <footer data-include="./common_footer.html"></footer> -->
 </body>
+<script src="../static/js/common_header.js"></script>
+<script>
+    function includeHTML(){
+        let z, elmnt, file, xhttp;
+        
+        z = document.getElementsByTagName("*");
+        
+        for (let i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("data-include");
+            
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("data-include");
+                        includeHTML();
+                    }//if
+                }//onreadystatechange
+                
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+            }//if - file
+        }//for
+    }//includeHTML
+    
+    /* ✨ 실행 */
+    window.addEventListener('DOMContentLoaded',()=>{
+        includeHTML();
+    });
+</script>
 <script src="../static/js/history.js"></script>
 </html>

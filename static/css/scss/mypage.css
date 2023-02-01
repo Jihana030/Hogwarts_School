@@ -419,11 +419,12 @@
   width: 100%;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail {
+  width: 100%;
   font-size: 0.85vw;
   color: #504733;
   font-family: "Eulyoo1945", serif;
   display: grid;
-  grid-template-columns: 1.3vw 1fr;
+  grid-template-columns: 1.3vw 15.4vw 1.3vw;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail:not(:last-child) {
   margin-bottom: 0.7vw;
@@ -453,6 +454,36 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_check_box input {
   display: none;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn {
+  position: relative;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon {
+  width: 0.7vw;
+  height: 0.7vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon::before, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon::after {
+  content: "";
+  width: 1px;
+  height: 0.7vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #8d8368;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon::before {
+  transform: rotate(-45deg);
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon::after {
+  transform: rotate(45deg);
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable {
   width: 100%;
