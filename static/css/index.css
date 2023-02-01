@@ -494,12 +494,13 @@ header {
 #main_nav-menu-wrap {
   background-image: url(../img/circle/common/Background_texture-light.jpg);
   background-repeat: repeat;
-
+  z-index: 99; 
+  transition: all 0.25s ease-in-out;
+}
+.sticky-top {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  z-index: 99;
-  transition: all 0.5s ease-out;
+  top: 0;  
 }
 #main_nav-menu-wrap.scrollDown {
   transform: translate(0, -100%);
@@ -728,11 +729,15 @@ header {
   padding: 0.2rem 0.4rem;
   display: inline-table;
   width: 40%;
+  color: var(--text-color);
 }
-
-.main_cal-body tr p:nth-child(3) {
-  color: var(--point-color);
+.main_cal-body td:nth-child(7) p {
+  /* color: var(--point-color); */
 }
+.main_cal-body td[data-date="3"] p,
+.main_cal-body td[data-date="14"] p{
+  /* color: var(--point-color); */
+} 
 .main_cal-body tr .today p {
   background-color: var(--point-color);
   border-radius: 0.3em;
