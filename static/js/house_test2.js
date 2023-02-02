@@ -8,57 +8,64 @@ function qesList(){
     .then(json=>json);
 }
 
-let i=0;
+let i=-1;
 $nextBtn.addEventListener('click', e=>{
-    qesList().then((item)=>{
-      if(i<item.length){
-        $houseTest_container.innerHTML = `
-        <div class="HouseTest_center opacity blurFilter">
-            <div class="HouseTest_img">
-                <img src="" alt="">
-            </div>
-            <div class="houseTest_qes">
-            ${item[i].q}
-            </div>
-            <div class="houseTest_ansList">
-                <ul>
-                    <li>
-                        <label><input type="radio" name="houseTest_g" value="" />${item[i].a[0].answer}</label>
-                    </li>
-                    <li>
-                        <label><input type="radio" name="houseTest_g" value="" />${item[i].a[1].answer}</label>
-                    </li>
-                    <li>
-                        <label><input type="radio" name="houseTest_g" value="" />${item[i].a[2].answer}</label>
-                    </li>
-                    <li>
-                        <label><input type="radio" name="houseTest_g" value="" />${item[i].a[3].answer}</label>
-                    </li>
-                </ul>
-            </div>
-        `;
+  $nextBtn.innerHTML = `Next`;
+  if(i>-1){
+    checkedAns()
+  } else {
+    makeList()
+  }
 
-        addFilters();
-      }
-    })
-    
-    i += 1;
-    $nextBtn.innerHTML = `Next`;
-});
+})
 
-const textTexture = new PIXI.RenderTexture(
-  new PIXI.BaseRenderTexture({
-    width: $houseTest_container.innerHTML.width,
-    height: $houseTest_container.innerHTML.height
+function makeList(){
+  qesList().then((item)=>{
+    if(i<item.length){
+      $houseTest_container.innerHTML = `
+          <div class="HouseTest_img blurFilter opacity">
+              <img src="" alt="">
+          </div>
+          <div class="houseTest_qes blurFilter opacity">
+          ${item[i].q.replace(/\\n/g, '<br>')}
+          </div>
+          <div class="houseTest_ansList blurFilter opacity">
+              <ul>
+                  <li>
+                      <label><input type="radio" name="houseTest" value="" /><p><span class="ansNum">1.</span> ${item[i].a[0].answer.replace(/\\n/g, '<br>')}</p></label>
+                  </li>
+                  <li>
+                      <label><input type="radio" name="houseTest" value="" /><p><span>2.</span class="ansNum"> ${item[i].a[1].answer.replace(/\\n/g, '<br>')}</p></label>
+                  </li>
+                  <li>
+                      <label><input type="radio" name="houseTest" value="" /><p><span>3.</span class="ansNum"> ${item[i].a[2].answer.replace(/\\n/g, '<br>')}</p></label>
+                  </li>
+                  <li>
+                      <label><input type="radio" name="houseTest" value="" /><p><span>4.</span class="ansNum"> ${item[i].a[3].answer.replace(/\\n/g, '<br>')}</p></label>
+                  </li>
+              </ul>
+          </div>
+      `;
+
+      addFilters();
+    }
   })
-)
+  i += 1;
+}
 
-// Our filters
-const colorMatrix = new PIXI.filters.ColorMatrixFilter();
-const textSprite = new PIXI.Sprite(textTexture);
+function checkedAns(){
+  const $ansList = document.querySelectorAll('input[type="radio"]');
+
+  if(!$ansList[0].checked && !$ansList[1].checked && !$ansList[2].checked && !$ansList[3].checked) {
+    alert('답변을 선택해 주세요.');
+    return;
+  } else {
+    makeList();
+  }
+}
  
 // Indentity Matrix for our target
-const identMatrix = 	[
+const identMatrix = [
           1, 0, 0, 0, 0,
           0, 1, 0, 0, 0,
           0, 0, 1, 0, 0,
@@ -75,20 +82,16 @@ const contrastMatrix = [
 
 // Create our GSAP Timeline and respective Tweens
 function addFilters(){
-  const sec = 1.1;
-  gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 60})
+  const sec = 1;
+  gsap.timeline({repeat: -1, yoyo: true, repeatDelay: 360})
   .to('.blurFilter', {
+    startArray: contrastMatrix,
+    endArray: identMatrix,
     'filter': 'blur(0)',
     delay: sec,
     ease: 'power1.Out'})
-    .to(contrastMatrix,{
-      endArray: identMatrix,
-      duration: sec,
-      ease: 'power1.Out'}, "<")
     .to('.opacity', {
     'opacity': 1,
       delay: 0.05,
       ease: 'power1.Out'},"<");
-  
-    colorMatrix.matrix = contrastMatrix;
 }
