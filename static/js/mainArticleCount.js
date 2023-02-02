@@ -1,8 +1,6 @@
 (function () {
   "use strict";
 
-  const $con4 = document.querySelector(".main_con4");
-
   const $articleArea = document.querySelector(".main_blog-header-container");
   const $articleEach = document.querySelectorAll(".main_blog-header-container > .main_blog-header");
 
@@ -11,6 +9,7 @@
 
   let scrollTimer = null;
 
+  // 스크롤 거리 값을 이용해서 No.1 ← 숫자 바꾸기
   $articleArea.addEventListener("scroll", function () {
     if (!scrollTimer) {
       scrollTimer = setTimeout(function () {
@@ -23,7 +22,7 @@
             $pageNum.innerHTML = `NO.3`;
             console.log(`${articleTopDistant[2]} - 3`);
         } 
-        else if ($articleAreaTop > articleTopDistant[1]) {
+        else if ($articleAreaTop + 1 > articleTopDistant[1]) {
           $pageNum.innerHTML = `NO.2`;
           console.log(`${articleTopDistant[1]} - 2`);
         } 

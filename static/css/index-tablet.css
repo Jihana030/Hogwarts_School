@@ -8,8 +8,11 @@
   text-align: right;
 }
 
-#TopBtn img {
-  width: 3rem;
+#TopBtn i {
+  font-size: clamp(0.75rem, 3vw, 1.25rem);
+  line-height: clamp(2rem, 8vw, 4rem);  
+  width: clamp(2rem, 8vw, 4rem);
+  height: clamp(2rem, 8vw, 4rem);
 }
 
 /* main_nav-top - 최상단 */

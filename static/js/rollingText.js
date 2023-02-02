@@ -13,8 +13,11 @@
     document.querySelector(".main_auto-scroll-wrap").appendChild(clone); //부착
 
     //원본, 복제본 배너 위치 지정
-    document.querySelector("#roller1").style.left = "0";
-    document.querySelector("#roller2").style.left = document.querySelector(".main_auto-scroll-roller").offsetWidth + "px";
+    let $roller1 = document.querySelector("#roller1");
+    let $roller2 = document.querySelector("#roller2");
+
+    $roller1.style.left = "0";
+    $roller2.style.left = document.querySelector(".main_auto-scroll-roller").offsetWidth + "px";
 
     //클래스 할당
     roller.classList.add("original");
@@ -22,9 +25,10 @@
 
     //인터벌 메서드로 애니메이션 생성
     let rollerWidth = document.querySelector(".main_auto-scroll-roller").offsetWidth; //회전 배너 너비값
-    let betweenDistance = 1; //이동 크기 - 정수여야 함
-    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 50), betweenDistance, document.querySelector("#roller1"));
-    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 50), betweenDistance, document.querySelector("#roller2"));
+    let betweenDistance = 1; // 이동 크기 - 정수여야 함
+    
+    originalID = window.setInterval(betweenRollCallback, parseInt(1000 / 50), betweenDistance, $roller1);
+    cloneID = window.setInterval(betweenRollCallback, parseInt(1000 / 50), betweenDistance, $roller2);
 
     //인터벌 애니메이션 함수(공용)
     function betweenRollCallback(d, roller) {
