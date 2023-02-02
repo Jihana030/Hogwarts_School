@@ -163,17 +163,27 @@ const $calbodyTr = document.querySelectorAll(".main_cal-body tr");
 const $calbodyTd = document.querySelectorAll(".main_cal-body tr td");
 const $month = document.querySelector(".main_cal-month");
 
+// 순간이동 특강 날짜
 const $teleportClass = document.querySelectorAll(".main_cal-body td:nth-child(7) p");
-// $teleportClass.children[0].style.color = "var(--point-color)";
 
 console.log($teleportClass);
 console.log($calbodyTd[7].innerText);
 // console.log($calbodyTd.length);
 
+// 발렌타인 데이 행사 표시
 for (let i = 0; i < $calbodyTd.length; i++) {
   if (i === 16) {
     let $dayElem = $calbodyTd[i].children;
     $dayElem[0].style.color = "var(--point-color)";
+    $dayElem[0].addEventListener("click", function (e) {
+      let eventDay = e.target.innerText;
+      $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 성 발렌타인 데이 행사`;
+
+      console.log(`${eventDay} - e.target.innerText`);
+      console.log($matchDate.innerHTML);
+
+      $matchDate.innerHTML = $match;
+    });
   }
 }
 
@@ -181,16 +191,13 @@ for (let i = 0; i < $calbodyTd.length; i++) {
 for (let i = 0; i < $teleportClass.length; i++) {
   let $teleportElem = $teleportClass[i];
   $teleportElem.style.color = "var(--point-color)";
-  $teleportElem.addEventListener("click", handleDayClick);
+  $teleportElem.addEventListener("click", function (e) {
+    let eventDay = e.target.innerText;
+    $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 순간이동 시험 대비 특강 (${[i + 1]}주차)`;
+
+    console.log(`${eventDay} - e.target.innerText`);
+    console.log($matchDate.innerHTML);
+
+    $matchDate.innerHTML = $match;
+  });
 }
-let weekOrder = 0;
-function handleDayClick(e) {
-  $match = `${month} / ${e.target.innerText < 10 ? "0" + e.target.innerText : e.target.innerText} : 순간이동 시험 대비 특강 (${weekOrder++}주차)`;
-
-  console.log(`${e.target.innerText} - e.target.innerText`);
-  console.log($matchDate.innerHTML);
-
-  $matchDate.innerHTML = $match;
-}
-
-

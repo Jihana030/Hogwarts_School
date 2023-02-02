@@ -81,8 +81,8 @@
     const value = e.target.value;
     $searchFront.value = value;
   }
-  console.log($searchFront.value);
 
+  
   // main_wide-menu 메뉴 펼치기
   const $meneWideBtn = document.querySelector("#main_wide-menu");
   const $WideTap = document.querySelector("#main_menu-toggle-wrap");
