@@ -72,9 +72,6 @@
   const $searchFront = document.querySelector("#search-front > input");
   const $searchBack = document.querySelector("#search-back > input");
 
-  console.log($searchFront);
-  console.log($searchBack);
-
   $searchBack.addEventListener("input", handleChange);
 
   function handleChange(e) {
@@ -182,28 +179,4 @@
 
   getData();
 
-  // con6 card flip
-  // $card.addEventListener('mouseover', flipper)
-
-  // function flipper (e) {
-  //     const cardTarget = e.currentTarget;
-  //     cardTarget.style.transform = 'rotateY(180deg)'
-  //     cardTarget.addEventListener('mouseout', backFlipper);
-  // };
-
-  // function backFlipper(e) {
-  //     const cardTarget = e.currentTarget;
-  //     cardTarget.style.transform = 'rotateY(0deg)'
-  //     cardTarget.addEventListener('mouseout', flipper);
-  //     cardTarget.removeEventListener('mouseout', backFlipper);
-
-  var timer;
-  document.querySelector("#input").addEventListener("click", function (e) {
-    if (!timer) {
-      timer = setTimeout(function () {
-        timer = null;
-        console.log("여기에 ajax 요청", e.target.value);
-      }, 200);
-    }
-  });
 })();

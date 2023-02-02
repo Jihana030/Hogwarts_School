@@ -35,8 +35,8 @@
     let con3Height = document.querySelector(".main_con3").offsetHeight;
 
     if (targetCon3 + con3Height < scrollLocation + windowHeight) {
-      console.log("끝");
       countMotion();
+      // console.log("끝");
     }
   });
 })();
