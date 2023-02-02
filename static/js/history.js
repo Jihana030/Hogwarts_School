@@ -159,27 +159,22 @@
                 // behavior: 'smooth'
             });
             console.log(`wheel: ${e.deltaY}`)
+
             // 세로일때 nav fix 
             let navTop = hisNav.getBoundingClientRect().top;
-            console.log(navTop);
-            if(navTop < (his_cnt.scrollTop + (2*e.deltaY))){
+            const $headerBtn = document.querySelector('.comm_menu_btn')
+            if(navTop < (his_cnt.scrollTop + e.deltaY)){
+                console.log(`fix:${navTop}`);
                 hisNav.classList.add('his_fix');
-                $headerBtn.addEventListener('click', e=>{
-                    const navFix = document.querySelector('.his_fix');
-                    navFix.style.top = '118px';
-                })
-            } else if(navTop > 8*e.deltaY) {
+                // $headerBtn.addEventListener('click', e=>{
+                //     const navFix = document.querySelector('.his_fix');
+                //     navFix.style.top = '118px';
+                // })
+            } else {
                 hisNav.classList.remove('his_fix');
+                console.log(`nonfix:${navTop}`);
             }
-            // let scroll = his_cnt.scrollTop;
-            // let high = hisStart.scrollHeight;
-            // if(scroll === high){
-            //     hisNav.classList.add('his_fix');
-            //     console.log(hisNav.classList);
-            // }else{
-            //     hisNav.classList.remove('his_fix');
-            // }// 세로일때 nav fix 
-
+            
             // 세로 스크롤 터치하기
             let startY;
             let scrollTop;
@@ -212,12 +207,6 @@
             
         }
     });
-    //paper 높이 조절용
-    // function setScreenSize(){
-    //     let vh = window.innerHeight * 0.01;
-    //     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // }
-    // setScreenSize();
     
     //cursor grab grabbing 
     his_cnt.addEventListener('mousedown', e=>{

@@ -29,7 +29,7 @@ a {
     --border-color: 1px solid #B5AAA0;
     --width-start: 24%;
     --font-size-16: 0.8vw;
-    --font-size-16-h: 2vh;
+    --font-size-16-h: 2vw;
     --font-size-20: 1vw;
     --font-size-20-h: 2.2vh;
     --font-size-28: 1.45vw;
@@ -373,11 +373,16 @@ body::-webkit-scrollbar {
 
     .his_fix {
         position: fixed;
-        top: 76px;
+        top: 0;
         border-bottom: var(--border-color);
         background-color: var(--color-back);
-        height: 6.5%;
+        height: 16%;
+        padding-top: 9%;
+        text-align: end;
         z-index: 1;
+    }
+    .comm_header_menu_max1920 {
+        z-index: 2;
     }
 
     .his_infoCnt {
@@ -513,7 +518,7 @@ body::-webkit-scrollbar {
     .his_detailY {
         top: 45%;
         width: 10rem;
-        height: 27vh;
+        height: 45%;
         z-index: -1;
         padding: 20px 0;
         font-size: var(--font-size-y-h);
