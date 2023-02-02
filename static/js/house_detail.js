@@ -97,11 +97,15 @@
 
     // houseDetail_houseCup.json fetch **
     // https://www.hogwartsishere.com/great-hall/?year=school 자료 참고 링크
+
     let studentDataList = null;
+    
     fetch('../static/json/houseDetail_houseCup.json')
         .then(res => res.json())
         .then(json => {
             studentDataList = json;
+
+            // 내림차순 정렬 **
             studentDataList.sort((a, b) => {
                 let leftVal = a.points;
                 let rightVal = b.points;
@@ -137,8 +141,6 @@
         });
     });
 
-
-    // 내림차순 정렬(랭킹) **
     function studentList(year) {
         $s4Ul.innerHTML = null;
         let list = studentDataList.slice(0, 10);
@@ -152,6 +154,7 @@
 
     }
 
+    // 목록 내용
     function makeLi(student) {
 
         const $s4Li = document.createElement('li');
