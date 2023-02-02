@@ -31,7 +31,7 @@
 body{
 	width:100%;
     background-color: #efefeb;
-  position: relative;
+    position: relative;
 }
 
 .main_overlay {
@@ -102,6 +102,10 @@ body{
 .join_contnets_box{
     margin-top: 90px;
     width: 100%;
+}
+
+#common_footer{
+    margin-top: 180px;
 }
 
 @media screen and (min-width:1024px) {
