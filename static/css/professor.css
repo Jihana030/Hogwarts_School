@@ -32,18 +32,6 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
     display: none;
 }
 
-/* ---------임시 해더-------------------임시 해더----------------------------- */
-/* .pro_header_cnt {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 96vw;
-    margin: 1rem 0.5rem;
-    z-index: 2;
-} */
-/* ---------임시 해더-------------------임시 해더----------------------------- */
-
 /* ---------교수사진----------------------교수사진---------------------------- */
 .proHidden{ /*호버이벤트용*/
     display: none !important;
@@ -194,7 +182,6 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 
     .pro_paper {
         height: 100%;
-        /* height: calc(var(--vh, 1vh) * 100); */
     }
 
     .pro_cnt {

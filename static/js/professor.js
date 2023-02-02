@@ -55,7 +55,6 @@
             
             // -------mouse trust event-----------------------------mouse trust event-----------------
             
-                let isDown = false; //터치이벤트용
                 window.addEventListener('wheel', e=>{
                     window.addEventListener('scroll', e=>{ //스크롤 막기
                         e.preventDefault();
@@ -72,57 +71,35 @@
                         });
                     } else { //모바일
                         // 세로 스크롤 터치하기
-                        // let startY = 0;
-                        // let scrollTop = 0;
-                        // pro_img_cnt.scrollBy({
-                        //     top: e.deltaY,
-                        //     // behavior: 'smooth'
-                        // });
-                        // pro_img_cnt.addEventListener('mousedown', e => {
-                        //     isDown = true;
-                        //     pro_img_cnt.classList.add('active');
-                        //     startY = e.pageY - pro_img_cnt.offsetTop;
-                        //     scrollTop = pro_img_cnt.scrollTop;
-                        //     console.log('mousedown')
-                        // });
-                        // pro_img_cnt.addEventListener('mouseleave', () => {
-                        //     isDown = false;
-                        //     pro_img_cnt.classList.remove('active');
-                        //     console.log('mouseleave')
-                        // });
-                        // pro_img_cnt.addEventListener('mouseup', () => {
-                        //     isDown = false;
-                        //     pro_img_cnt.classList.remove('active');
-                        //     console.log('mouseup')
-                        // });
+                        let isDown = false;
+                        let startY;
+                        let scrollTop;
 
-                        //마우스의 이전좌표와 현재 좌표를 비교하는 함수
-                        let prevY = 0;
+                        probody.addEventListener('mousedown', e => {
+                            isDown = true;
+                            startY = e.pageY - probody.offsetTop;
+                            scrollTop = probody.scrollTop;
+                            console.log('mousedown')
+                        });
 
-                        const getMouseDirection = (e) => {
-                            // const yDir = prevY <= e.clientY ? "down" : "up";
-                        //down이면 아래로 마우스 따라가고, up이면 위로 마우스따라가게.
-                        if(prevY <= e.clientY){
-                            //down
-                            //이미지좌표를 마우스 좌표 움직인만큼 움직이게
-                            pro_img_cnt.offsetY = e.clientY;
-                        } else {
-                            //up
-                            pro_img_cnt.offsetY = e.clientY;
-                        }
-                            // prevY = e.clientY; //얜 뭐지
-                        }
+                        probody.addEventListener('mouseleave', () => {
+                            isDown = false;
+                            console.log('mouseleave')
+                        });
 
-                        pro_img_cnt.addEventListener("mousemove", getMouseDirection);
-                        
-                        // pro_img_cnt.addEventListener('mousemove', e => {
-                        //     if (!isDown) return; 
-                        //     e.preventDefault();
-                        //     const y = e.pageY - pro_img_cnt.offsetTop;
-                        //     const walk = y - startY;
-                        //     pro_img_cnt.scrollTop = scrollTop - walk;
-                        //     console.log('mousemove')
-                        // });// 세로 스크롤 터치하기
+                        probody.addEventListener('mouseup', () => {
+                            isDown = false;
+                            console.log('mouseup')
+                        });
+
+                        probody.addEventListener('mousemove', e => {
+                            if (!isDown) return; 
+                            e.preventDefault();
+                            const y = e.pageY - probody.offsetTop;
+                            const walk = y - startY;
+                            probody.scrollTop = scrollTop - walk;
+                            console.log('mousemove')
+                        });
                     }
                 })
         });
