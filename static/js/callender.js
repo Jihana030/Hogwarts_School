@@ -166,8 +166,8 @@ const $month = document.querySelector(".main_cal-month");
 // 순간이동 특강 날짜
 const $teleportClass = document.querySelectorAll(".main_cal-body td:nth-child(7) p");
 
-console.log($teleportClass);
-console.log($calbodyTd[7].innerText);
+// console.log($teleportClass);
+// console.log($calbodyTd[7].innerText);
 // console.log($calbodyTd.length);
 
 // 발렌타인 데이 행사 표시
