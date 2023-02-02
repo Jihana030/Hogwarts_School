@@ -4,7 +4,7 @@
   // con3
   // con3 기숙사 점수 카운팅
   const counters = document.querySelectorAll(".main_con3_cnt");
-  const speed = 700;
+  const speed = 1000;
 
   let countMotion = function () {
     counters.forEach((counter) => {
