@@ -218,10 +218,11 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
         "num14";
         padding: 10vw;
     }
-
+    
     .proImage {
         margin: 0 auto;
         padding: var(--img-hover);
+        margin-bottom: 6vh;
     }
 
     .pro_hover {
