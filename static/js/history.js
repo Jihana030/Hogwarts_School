@@ -106,13 +106,16 @@
             }
         });
     })
-    
-    const his_nav = document.querySelectorAll('.his_nav')//----원하는 시대로 이동하기----
-    let isDown = false; //터치이벤트용
-    window.addEventListener('wheel', (e) => {
-        window.addEventListener('scroll', e=>{
+     window.addEventListener('scroll', e=>{
             e.preventDefault();
         });
+    const his_nav = document.querySelectorAll('.his_nav')//----원하는 시대로 이동하기----
+    let isDown = false; //터치이벤트용
+
+
+    let navTop = hisNav.getBoundingClientRect().top;
+    window.addEventListener('wheel', (e) => {
+       
         // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
@@ -158,22 +161,27 @@
                 top: e.deltaY,
                 // behavior: 'smooth'
             });
-            console.log(`wheel: ${e.deltaY}`)
+            // console.log(`wheel: ${e.deltaY}`)
 
             // 세로일때 nav fix 
-            let navTop = hisNav.getBoundingClientRect().top;
+            
             const $headerBtn = document.querySelector('.comm_menu_btn')
-            if(navTop < (his_cnt.scrollTop + e.deltaY)){
-                console.log(`fix:${navTop}`);
+            if(navTop<=window.scrollY + 1){
                 hisNav.classList.add('his_fix');
-                // $headerBtn.addEventListener('click', e=>{
-                //     const navFix = document.querySelector('.his_fix');
-                //     navFix.style.top = '118px';
-                // })
             } else {
                 hisNav.classList.remove('his_fix');
-                console.log(`nonfix:${navTop}`);
             }
+            // if(navTop < (his_cnt.scrollTop + e.deltaY)){
+                console.log(`fix:${navTop}`);
+            //     hisNav.classList.add('his_fix');
+            //     // $headerBtn.addEventListener('click', e=>{
+            //     //     const navFix = document.querySelector('.his_fix');
+            //     //     navFix.style.top = '118px';
+            //     // })
+            // } else {
+            //     hisNav.classList.remove('his_fix');
+            //     console.log(`nonfix:${navTop}`);
+            // }
             
             // 세로 스크롤 터치하기
             let startY;
