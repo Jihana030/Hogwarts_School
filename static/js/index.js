@@ -32,32 +32,43 @@
   });
 
   // header
-  // 스크롤 시, header 높이 축소 🖱
+  // 스크롤 시, header 높이 축소
   const $navMenu = document.querySelector("#main_nav-menu-wrap");
-  var headerMoving = function(direction){
-    if (direction === "up"){
-      $navMenu.className = '';
-    } else if (direction === "down"){
-      $navMenu.className = 'scrollDown';
+  var headerMoving = function (direction) {
+    if (direction === "up") {
+      $navMenu.classList.add("sticky-top");
+      $navMenu.classList.remove("scrollDown");
+    } else if (navMenuTop + $navMenu.offsetHeight < window.scrollY && direction === "down") {
+      $navMenu.classList.add("scrollDown");
     }
   };
-  // var prevScrollTop = 0;
-  const $header = document.querySelector('header')
-  var prevScrollTop = $navMenu.getBoundingClientRect().top;
-  console.log(prevScrollTop)
 
-  document.addEventListener("scroll", function(){
-    var nextScrollTop = window.pageYOffset || 0 ; // pageYOffset -> IE 8 이하 빼고 다 됨.
-    if (nextScrollTop > prevScrollTop){
-      headerMoving("down");
-    } else if (nextScrollTop < prevScrollTop){
-      headerMoving("up");
+  var prevScrollTop = 0;
+  let navMenuTop = null;
+
+  function setNavMenuTop() {
+    navMenuTop = $navMenu.getBoundingClientRect().top + window.pageYOffset;
+  }
+  setNavMenuTop();
+
+  let scrollTimer = null;
+  document.addEventListener("scroll", function () {
+    if (!scrollTimer) {
+      scrollTimer = setTimeout(function () {
+        if (navMenuTop < window.scrollY) {
+          const direction = prevScrollTop > window.scrollY ? "up" : "down";
+          headerMoving(direction);
+        } else {
+          $navMenu.classList.remove("sticky-top");
+          $navMenu.classList.remove("scrollDown");
+        }
+        prevScrollTop = window.scrollY;
+        scrollTimer = null;
+      }, 100);
     }
-    prevScrollTop = nextScrollTop;
   });
 
-
-  // main_search-container 클릭 후 유지
+  // main_search-container 검색창 input 연결
   const $searchFront = document.querySelector("#search-front > input");
   const $searchBack = document.querySelector("#search-back > input");
 
@@ -71,26 +82,6 @@
     $searchFront.value = value;
   }
   console.log($searchFront.value);
-
-  
-  // main_nav-menu-date
-  // 현재 날짜 출력 ex.2023-01-19
-  const $navDate = document.querySelector("#main_nav-menu-date");
-  let date = new Date();
-  let year = date.getFullYear();
-  let month = date.getMonth() + 1; //0부터 시작하므로 1을 더한다.
-  let day = date.getDate();
-
-  if (("" + month).length === 1) {
-    month = "0" + month;
-  }
-  if (("" + day).length === 1) {
-    day = "0" + day;
-  }
-
-  const $today = `${year} - ${month} - ${day}`;
-
-  $navDate.innerHTML = $today;
 
   // main_wide-menu 메뉴 펼치기
   const $meneWideBtn = document.querySelector("#main_wide-menu");
@@ -138,11 +129,6 @@
       document.querySelector(activeCont).style.display = "flex";
     });
   }
-
-  // con1 - 달력 퀴디치 일정
-  const $match = `${month} / ${day} : 퀴디치 (그리핀도르 vs 후플푸프)`;
-  const $matchDate = document.querySelector("#main_match");
-  $matchDate.innerHTML = $match;
 
   // mainCon - h1 호버 효과
   document
@@ -210,7 +196,7 @@
   //     cardTarget.removeEventListener('mouseout', backFlipper);
 
   var timer;
-  document.querySelector("#input").addEventListener('click', function (e) {
+  document.querySelector("#input").addEventListener("click", function (e) {
     if (!timer) {
       timer = setTimeout(function () {
         timer = null;
