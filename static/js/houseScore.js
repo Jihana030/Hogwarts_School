@@ -4,7 +4,7 @@
   // con3
   // con3 기숙사 점수 카운팅
   const counters = document.querySelectorAll(".main_con3_cnt");
-  const speed = 700;
+  const speed = 1000;
 
   let countMotion = function () {
     counters.forEach((counter) => {
@@ -35,8 +35,8 @@
     let con3Height = document.querySelector(".main_con3").offsetHeight;
 
     if (targetCon3 + con3Height < scrollLocation + windowHeight) {
-      console.log("끝");
       countMotion();
+      // console.log("끝");
     }
   });
 })();

@@ -72,17 +72,14 @@
   const $searchFront = document.querySelector("#search-front > input");
   const $searchBack = document.querySelector("#search-back > input");
 
-  console.log($searchFront);
-  console.log($searchBack);
-
   $searchBack.addEventListener("input", handleChange);
 
   function handleChange(e) {
     const value = e.target.value;
     $searchFront.value = value;
   }
-  console.log($searchFront.value);
 
+  
   // main_wide-menu 메뉴 펼치기
   const $meneWideBtn = document.querySelector("#main_wide-menu");
   const $WideTap = document.querySelector("#main_menu-toggle-wrap");
@@ -161,47 +158,25 @@
     div.classList.add("main_con6_card");
 
     div.innerHTML = `
-                <div class="main_con6_card-front">
-                <div class="main_con6_card-border">
-                    <p>${item.front_num}</p>
-                    <img src="${item.front_icon}" alt="">
-                    <p>${item.front_subject}</p>
-                </div>
-                </div>
-                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover; background-position: center;" >
-                    <div>
-                        <span>${item.back_subject}</span>
-                        <span>${item.back_professor}</span>
-                    </div>
-                </div>
+    <div class="main_con6_cardIn">
+      <div class="main_con6_card-front">
+      <div class="main_con6_card-border">
+          <p>${item.front_num}</p>
+          <img src="${item.front_icon}" alt="">
+          <p>${item.front_subject}</p>
+      </div>
+      </div>
+      <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover; background-position: center;" >
+          <div>
+              <span>${item.back_subject}</span>
+              <span>${item.back_professor}</span>
+          </div>
+      </div>
+    </div>
         `;
     return div;
   }
 
   getData();
 
-  // con6 card flip
-  // $card.addEventListener('mouseover', flipper)
-
-  // function flipper (e) {
-  //     const cardTarget = e.currentTarget;
-  //     cardTarget.style.transform = 'rotateY(180deg)'
-  //     cardTarget.addEventListener('mouseout', backFlipper);
-  // };
-
-  // function backFlipper(e) {
-  //     const cardTarget = e.currentTarget;
-  //     cardTarget.style.transform = 'rotateY(0deg)'
-  //     cardTarget.addEventListener('mouseout', flipper);
-  //     cardTarget.removeEventListener('mouseout', backFlipper);
-
-  var timer;
-  document.querySelector("#input").addEventListener("click", function (e) {
-    if (!timer) {
-      timer = setTimeout(function () {
-        timer = null;
-        console.log("여기에 ajax 요청", e.target.value);
-      }, 200);
-    }
-  });
 })();

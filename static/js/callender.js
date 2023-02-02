@@ -89,8 +89,6 @@ function loadYYMM(fullDate) {
   $calBody.innerHTML = trtd;
 }
 
-
-
 /**
  * @param {string} val
  */
@@ -137,7 +135,6 @@ $calBody.addEventListener("mousemove", (e) => {
   }
 });
 
-
 // main_nav-menu-date
 // 현재 날짜 출력 ex.2023-01-19
 const $navDate = document.querySelector("#main_nav-menu-date");
@@ -146,8 +143,12 @@ let year = date.getFullYear();
 let month = date.getMonth() + 1; //0부터 시작하므로 1을 더한다.
 let day = date.getDate();
 
-if (("" + month).length === 1) { month = "0" + month; }
-if (("" + day).length === 1) { day = "0" + day; }
+if (("" + month).length === 1) {
+  month = "0" + month;
+}
+if (("" + day).length === 1) {
+  day = "0" + day;
+}
 
 const $today = `${year} - ${month} - ${day}`;
 $navDate.innerHTML = $today;
@@ -162,41 +163,41 @@ const $calbodyTr = document.querySelectorAll(".main_cal-body tr");
 const $calbodyTd = document.querySelectorAll(".main_cal-body tr td");
 const $month = document.querySelector(".main_cal-month");
 
-const $teleportClass = document.querySelectorAll('.main_cal-body td:nth-child(7) p')
-// $teleportClass.children[0].style.color = "var(--point-color)";
+// 순간이동 특강 날짜
+const $teleportClass = document.querySelectorAll(".main_cal-body td:nth-child(7) p");
 
-console.log($teleportClass);
-console.log($calbodyTd[7].innerText);
+// console.log($teleportClass);
+// console.log($calbodyTd[7].innerText);
 // console.log($calbodyTd.length);
 
+// 발렌타인 데이 행사 표시
 for (let i = 0; i < $calbodyTd.length; i++) {
   if (i === 16) {
     let $dayElem = $calbodyTd[i].children;
     $dayElem[0].style.color = "var(--point-color)";
+    $dayElem[0].addEventListener("click", function (e) {
+      let eventDay = e.target.innerText;
+      $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 성 발렌타인 데이 행사`;
+
+      console.log(`${eventDay} - e.target.innerText`);
+      console.log($matchDate.innerHTML);
+
+      $matchDate.innerHTML = $match;
+    });
   }
 }
 
 // con1 - 달력 : 순간이동 시험 대비 특강
-for(let i = 0; i < $teleportClass.length; i++) {
+for (let i = 0; i < $teleportClass.length; i++) {
   let $teleportElem = $teleportClass[i];
   $teleportElem.style.color = "var(--point-color)";
+  $teleportElem.addEventListener("click", function (e) {
+    let eventDay = e.target.innerText;
+    $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 순간이동 시험 대비 특강 (${[i + 1]}주차)`;
 
-  $teleportElem.addEventListener('click', function(e) {
-    let num = 0;
-    $match = `${month} / ${e.target.innerText} : 순간이동 시험 대비 특강 (${num}주차)`;
+    console.log(`${eventDay} - e.target.innerText`);
+    console.log($matchDate.innerHTML);
 
-    console.log(`${e.target.innerText} - e.target.innerText`)
-    console.log(++num)
-    console.log($matchDate.innerHTML)
-  })
-}
-
-$calBody.addEventListener("click", (e) => {
-  if (e.target === $teleportClass) {
-    console.log(e.target)
-    $matchDate.innerHTML = `${month} / 0${$calbodyTd[7].innerText} : 순간이동 시험 대비 특강 (1주차)`;
-  }
-  else {
     $matchDate.innerHTML = $match;
-  }
-});
+  });
+}

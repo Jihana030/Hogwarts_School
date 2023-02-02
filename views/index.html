@@ -37,7 +37,10 @@
 
 <body>
   <div class="main_overlay"></div>
-  <a href="#top" id="TopBtn"><img src="../static/img/circle/common/TopBtn_Default.svg" alt=""></a>
+  <a href="#top" id="TopBtn">
+    <i class="fa-solid fa-angle-up"></i>
+    <!-- <img src="../static/img/circle/common/TopBtn_Default.svg" alt=""> -->
+  </a>
   <header>
     <audio src="../audio/Prologue Book II and the Escape from the Dursleys.mp3" autoplay loop></audio>
 
@@ -368,7 +371,7 @@
         </div>
       </div>
       <div class="main_blog-header-container">
-        <div class="main_blog-header">
+        <div class="main_blog-header" id="main_article1">
           <div class="main_blog-article main_header main_article">
             <div class="main_blog-big_title">BRAVE</div>
           </div>
@@ -386,7 +389,7 @@
             </div>
           </div>
         </div>
-        <div class="main_blog-header">
+        <div class="main_blog-header" id="main_article2">
           <div class="main_blog-article main_header main_article">
             <div class="main_blog-big_title">FRIENDS</div>
           </div>
@@ -403,7 +406,7 @@
             </div>
           </div>
         </div>
-        <div class="main_blog-header">
+        <div class="main_blog-header" id="main_article3">
           <div class="main_blog-article main_header article">
             <div class="main_blog-big_title">BETTER</div>
           </div>
@@ -561,6 +564,7 @@
 </body>
 <script src="../static/js/callender.js"></script>
 <script src="../static/js/index.js"></script>
+<script src="../static/js/mainArticleCount.js"></script>
 <script src="../static/js/rollingText.js"></script>
 <script src="../static/js/houseScore.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
