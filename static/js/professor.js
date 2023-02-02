@@ -67,7 +67,7 @@
                             let mouseMoved2 = ((width - e.pageX*2.5));
                             let mouseMoved3 = ((width - e.pageY*2.8));
                             imgDiv.style.transform = 'translate(' + mouseMoved2 + 'px, ' + mouseMoved3 + 'px)';
-                            imgDiv.style.transition=  'all 1.5s';
+                            imgDiv.style.transition=  'all 5s';
                         });
                     } else { //모바일
                         // 세로 스크롤 터치하기
@@ -79,17 +79,14 @@
                             isDown = true;
                             startY = e.pageY - probody.offsetTop;
                             scrollTop = probody.scrollTop;
-                            console.log('mousedown')
                         });
 
                         probody.addEventListener('mouseleave', () => {
                             isDown = false;
-                            console.log('mouseleave')
                         });
 
                         probody.addEventListener('mouseup', () => {
                             isDown = false;
-                            console.log('mouseup')
                         });
 
                         probody.addEventListener('mousemove', e => {
@@ -98,7 +95,6 @@
                             const y = e.pageY - probody.offsetTop;
                             const walk = y - startY;
                             probody.scrollTop = scrollTop - walk;
-                            console.log('mousemove')
                         });
                     }
                 })
