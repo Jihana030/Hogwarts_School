@@ -93,40 +93,89 @@
     });
 
 
-    // section4 - housecup 아코디언 메뉴 & 선택 반영
+    // section4 ***
+
+    // houseDetail_houseCup.json fetch **
+    // https://www.hogwartsishere.com/great-hall/?year=school 자료 참고 링크
+    let studentDataList = null;
+    fetch('../static/json/houseDetail_houseCup.json')
+        .then(res => res.json())
+        .then(json => {
+            studentDataList = json;
+            studentDataList.sort((a, b) => {
+                let leftVal = a.points;
+                let rightVal = b.points;
+
+                return rightVal - leftVal;
+            });
+
+            studentList();
+        });
 
     const $houseMenuBtn = document.querySelector('.house_detail_s4_main_select_choice_box');
     const $houseMenuLi = document.querySelector('.house_detail_s4_main_select_list');
 
+    // housecup 아코디언 메뉴**
     $houseMenuBtn.addEventListener('click', () => {
         $houseMenuLi.classList.toggle('house_detail_s4_active_accordion');
     });
 
     const $houseSelect = document.querySelector('.house_detail_s4_main_select_one');
     const $houseMenuItem = document.querySelectorAll('.house_detail_s4_main_select_item');
+    const $s4Ul = document.querySelector('.house_detail_s4_main_list_contents');
 
+
+    // housecup 선택 반영 및 랭킹 순 리스트 배치 **
     $houseMenuItem.forEach(item => {
         item.addEventListener('click', e => {
+
+            studentList(+e.target.dataset.year);
+
             $houseSelect.textContent = e.target.textContent;
             $houseMenuLi.classList.remove('house_detail_s4_active_accordion');
-        })
-    })
+
+        });
+    });
 
 
-    // section4 - houseDetail_houseCup.json fetch
-    // https://www.hogwartsishere.com/great-hall/?year=school 참고 링크
+    // 내림차순 정렬(랭킹) **
+    function studentList(year) {
+        $s4Ul.innerHTML = null;
+        let list = studentDataList.slice(0, 10);
+        if (year) {
+            list = studentDataList.filter(item => item.data[0] === year);
+        }
 
-    function studentList() {
-        return fetch('../static/json/houseDetail_houseCup.json')
-        .then(res => res.json())
-        .then(json => json.students);
+        list.forEach(student => {
+            makeLi(student);
+        });
+
     }
 
-    
+    function makeLi(student) {
 
+        const $s4Li = document.createElement('li');
+        $s4Li.className = 'house_detail_s4_main_list_item';
 
+        $s4Li.innerHTML = `
+            
+                <div class="house_detail_s4_main_list_item_pic">
+                    <img src="${student.pic}"
+                        alt="그리핀도르 기숙사생 프로필 사진">
+                </div>
+                <div class="house_detail_s4_main_list_item_name">
+                    <p>${student.name}</p>
+                </div>
+                <div class="house_detail_s4_main_list_item_year">
+                    <p>${student.year}</p>
+                </div>
+                <div class="house_detail_s4_main_list_item_points">
+                    <p>${student.points.toLocaleString('ko-KR')} Points</p>
+                </div>
+            
+            `;
 
-
-
+        $s4Ul.append($s4Li);
+    }
 
 })();

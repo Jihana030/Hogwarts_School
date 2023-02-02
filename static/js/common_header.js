@@ -24,8 +24,8 @@
     const $musicbarSpanList = $musicbarContainer.querySelectorAll('.comm_bar');
     const $audio = document.querySelector('audio');
 
-    // $audio.volume = 0.2; // volume control
-    $audio.volume = 0; // volume control(작업용)
+    $audio.volume = 0.2; // volume control
+    // $audio.volume = 0; // volume control(작업용)
 
     $musicbarContainer.addEventListener('click', e => {
 

@@ -33,6 +33,7 @@
 #house_list_contents .house_list {
   display: grid;
   z-index: 1;
+  position: relative;
 }
 #house_list_contents .house_list .house_list_item_gryffindor {
   background-color: #A53F3F;
@@ -48,14 +49,35 @@
 }
 #house_list_contents .house_list .house_list_item_logo {
   height: 100%;
-  position: relative;
+  transition: 0.2s;
+}
+#house_list_contents .house_list .house_list_item_logo .house_list_item_logo_hidden {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #house_list_contents .house_list .house_list_item_logo svg {
   position: absolute;
+}
+#house_list_contents .house_list .house_list_item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#house_list_contents .house_list .house_list_item .house_list_item_box {
+  width: 100%;
+  height: 100%;
+}
+#house_list_contents .house_list .house_list_item .house_list_item_box .house_list_item_flag {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 @media screen and (min-width: 1025px) {
@@ -85,12 +107,48 @@
     display: none;
   }
   #house_list_contents .house_list {
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, auto));
+    position: relative;
+  }
+  #house_list_contents .house_list .house_list_item {
+    transition: 0.5s;
+  }
+  #house_list_contents .house_list .house_list_item:nth-child(1) h2 {
+    color: #DEA354;
+  }
+  #house_list_contents .house_list .house_list_item:nth-child(2) h2 {
+    color: #A8A8A8;
+  }
+  #house_list_contents .house_list .house_list_item:nth-child(3) h2 {
+    color: #212028;
+  }
+  #house_list_contents .house_list .house_list_item:nth-child(4) h2 {
+    color: #8F8F8F;
+  }
+  #house_list_contents .house_list .house_list_item.house_list_item_animation {
+    transform: translateY(-20vw);
+    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.2);
+  }
+  #house_list_contents .house_list .house_list_item:hover .house_list_item_logo {
+    opacity: 0;
+  }
+  #house_list_contents .house_list .house_list_item_box {
+    transition: 0.5s;
   }
   #house_list_contents .house_list .house_list_item_title {
-    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 4vw;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  #house_list_contents .house_list .house_list_item_title.house_list_item_title_animation {
+    opacity: 1;
+    top: 70%;
   }
   #house_list_contents .house_list .house_list_item_logo {
     height: 100%;

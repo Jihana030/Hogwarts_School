@@ -21,6 +21,8 @@
   color: #BFBFBF;
   font-family: "SUIT", sans-serif;
   transition: 0.3s;
+  position: relative;
+  z-index: 5;
   display: grid;
   align-items: center;
   grid-template-columns: minmax(400px, 1fr) 5em;
