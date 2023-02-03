@@ -330,8 +330,19 @@
   align-items: center;
   z-index: 1;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events {
-  display: none;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events {
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events .fc-event {
+  width: 1.7vw;
+  height: 1.7vw;
+  border-radius: 1.7vw;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
   width: 100%;
@@ -606,5 +617,6 @@
   background: none;
 }
 .fc .fc-daygrid-day.fc-day-today div.fc-daygrid-day-top a.fc-daygrid-day-number {
-  background-color: rgb(255, 174, 0);
+  color: #fff;
+  background-color: #D4B35B;
 }/*# sourceMappingURL=mypage.css.map */

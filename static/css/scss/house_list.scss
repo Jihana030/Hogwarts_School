@@ -112,21 +112,11 @@
                             }
 
                         }
-            
-                    }
-    
-                    .house_list_item_flag {
-                        width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: -1;
                     }
                 }
             }
         }
     }
-
 }
 
 
@@ -169,13 +159,17 @@
 
                 display: grid;
                 grid-template-columns: repeat(4, minmax(200px, auto));
+                // gap: 0.5vw;
                 position: relative;
                 
                 .house_list_item {
+                    height: 118vh;
                     transition: .5s;
+                    clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+                    // polygon(위왼쪽 사이드왼쪽, 위오른쪽 숫자올리면 다 펴짐, 100% 84%, 50% 100%, 0 84%)
 
                     &.house_list_item_animation {
-                        transform: translateY(-20vw);
+                        transform: translateY(-22vh);
                         box-shadow: 0 0 3vw rgba(0, 0, 0, 0.2);
                     }
         
@@ -191,7 +185,8 @@
                         }
 
                         .house_list_item_logo {
-                            height: 100%;
+                            height: 87%;
+                            transition: .2s;
                             
                             .house_list_item_logo_hidden {
 
@@ -206,17 +201,18 @@
 
                         .house_list_item_title {
                             opacity: 0;
-                            font-size: 4vw;
+                            font-size: 3vw;
                             position: absolute;
-                            top: 60%;
+                            top: 55%;
                             left: 50%;
                             transform: translate(-50%, -50%) rotate(-90deg);
-                            transition: .3s;
+                            transition: .2s;
                             
                             &.house_list_item_title_animation {
+                                // top: 55%;
                                 opacity: 1;
-                                top: 70%;
-                            }
+                                transition: .7s;
+                        }
                         }
                     }
                 }

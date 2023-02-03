@@ -18,8 +18,10 @@
         },
     );
 
-    // section2 - symbol 설명 드러나는 효과
 
+    // section2 ***
+
+    // symbol 설명 드러나는 효과
     const $symbolTitle = document.querySelectorAll('.house_detail_s2_symbol_title');
 
     $symbolTitle.forEach(title => {
@@ -34,14 +36,15 @@
         });
     });
 
-    // section2 - 기숙사 인물 소개 swiper ***
+
+    // 기숙사 인물 소개 swiper **
     var swiper = new Swiper(".house_detail_slide_pic", {
         // slidesPerView: 'auto',
-        slidesPerView: 1,
-        centeredSlides: true,
+
+        slidesPerView: 2,
         spaceBetween: 0,
         allowTouchMove: false,
-        // loop: true,
+        loop: true,
         // loopedSlides: 'auto',
         navigation: {
             nextEl: ".house_detail_slide_btn",
@@ -68,8 +71,7 @@
         },
     });
 
-    // @media screen max-width 480 : More 버튼 누를 때 내용 나오는 효과 ***
-
+    // @media screen max-width 480 : More 버튼 누를 때 내용 나오는 효과 **
     const $aboutText = document.querySelector('.house_detail_s2_central_char_middle');
     const $moreBtn = document.querySelector('.house_detail_s2_central_char1-2');
     $moreBtn.addEventListener('click', () => {
@@ -99,7 +101,7 @@
     // https://www.hogwartsishere.com/great-hall/?year=school 자료 참고 링크
 
     let studentDataList = null;
-    
+
     fetch('../static/json/houseDetail_houseCup.json')
         .then(res => res.json())
         .then(json => {
@@ -112,7 +114,6 @@
 
                 return rightVal - leftVal;
             });
-
             studentList();
         });
 

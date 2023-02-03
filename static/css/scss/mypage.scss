@@ -412,9 +412,6 @@ $borderColor-smooth: #AFA489;
                                     }
 
                                     // Month
-
-                                    
-
                                     .fc-daygrid-body {
                                         width: 100% !important;
                         
@@ -453,11 +450,30 @@ $borderColor-smooth: #AFA489;
                                                     z-index: 1;
                                                 }
                                             }
+
+                                            .fc-daygrid-day-events {
+                                                width: 100%;
+                                                min-height: 100%;
+
+                                                z-index: -1;
+
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+
+                                                .fc-event {
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+                                                    border-radius: 1.7vw;
+                                                }
+
+                                            }
                                         }
 
-                                        .fc-daygrid-day-events {
-                                            display: none;
-                                        }
+                                        // .fc-daygrid-day-events {
+                                        //     display: none;
+                                        // }
                                     }
 
                                 }
@@ -829,6 +845,7 @@ $borderColor-smooth: #AFA489;
     background: none;
 
     div.fc-daygrid-day-top a.fc-daygrid-day-number {
-        background-color: rgb(255, 174, 0);
+        color: #fff;
+        background-color: #D4B35B;
     }
 }
