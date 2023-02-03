@@ -1135,6 +1135,7 @@ header {
   margin-top: auto;
 }
 
+/* 텍스트 효과 *** */
 .Voldemort {
   position: relative;
   overflow: hidden;
@@ -1200,6 +1201,27 @@ header {
     mask-position: 0 0;
   }
 }
+
+#main_moaning-myrtle span{
+  transition: 1s;
+}
+#main_moaning-myrtle span:hover {
+  filter: blur(2px);
+  opacity: 0;
+}
+#main_moaning-myrtle span:nth-child(1){
+  animation-delay: 0.2s;
+}
+#main_moaning-myrtle span:nth-child(2){
+  animation-delay: 0.4s;
+}
+#main_moaning-myrtle span:nth-child(3){
+  animation-delay: 0.6s;
+}
+#main_moaning-myrtle span:nth-child(4){
+  animation-delay: 0.8s;
+}
+
 /* con4 - 우측 게시판 */
 .main_right-blog {
   overflow: auto;
