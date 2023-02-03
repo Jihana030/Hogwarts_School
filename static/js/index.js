@@ -79,7 +79,6 @@
     $searchFront.value = value;
   }
 
-  
   // main_wide-menu 메뉴 펼치기
   const $meneWideBtn = document.querySelector("#main_wide-menu");
   const $WideTap = document.querySelector("#main_menu-toggle-wrap");
@@ -179,4 +178,10 @@
 
   getData();
 
+  // 모우닝 머틀 effect
+  const moaning = document.querySelector("#main_moaning-myrtle");
+  moaning.innerHTML = moaning.textContent.replace(/\S/g, "<span>$&</span>");
+  // document.querySelectorAll("#main_moaning-myrtle span").forEach((letter) => {
+  //   letter.addEventListener("mouseover", () => { letter.classList.add("active");});
+  // });
 })();

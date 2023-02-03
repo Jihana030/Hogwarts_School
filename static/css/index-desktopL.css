@@ -269,7 +269,7 @@
   width: 4.5rem;
 }
 .main_con5-categories span {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 /* main_con5 -  오늘 식단표 */
@@ -281,6 +281,7 @@
 
 .main_con5-today_menu h3 {
   text-align: left;
+  padding-top: 0.5rem;
 }
 .main_con5-today_menu h3 br {
   display: block;
@@ -289,7 +290,7 @@
   flex-grow: 1;
 }
 .main_con5-today_menu ul li {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   text-align: left;
 }
 
@@ -298,7 +299,7 @@
   padding-bottom: 1rem;
 }
 .main_con5-news-article span {
-  font-size: 0.875rem;
+  font-size: 1rem;
   text-align: center;
 }
 
