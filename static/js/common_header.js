@@ -123,7 +123,7 @@
         function () {
             this.isOpen = true;
             this.el.style.transform = 'translateY(0)';
-            this.el.style.zIndex = '1';
+            this.el.style.zIndex = '999';
             this.el.style.opacity = '1';
         },
         function () {
