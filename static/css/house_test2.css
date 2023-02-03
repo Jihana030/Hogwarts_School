@@ -177,13 +177,13 @@ body{
   
   div.location div.text {opacity: 1;}
   
-  svg.HouseTest_draw path {
+  svg.HouseTest_draw path, ellipse, circle, polygon, polyline, rect, line {
     stroke-width: 2;
     stroke:#404040;
     fill:transparent;
     stroke-dasharray:1000;
     stroke-dashoffset:1000;
-    animation:line 3.5s cubic-bezier(0,0,0,0) forwards;
+    animation:line 3s cubic-bezier(0,0,0,0) forwards !important;
   }
   
   @keyframes line {
