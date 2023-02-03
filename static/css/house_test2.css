@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Ibarra Real Nova' , 'Eulyoo1945';
+}
+
+body{
+    background-color: #efefeb;
+    position: relative;
+    color: #404040;
+}
+
+.HouseTest_bg {
+    background-image: url("../img/circle/common/Background_texture.jpg");
+    background-repeat: repeat;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    mix-blend-mode: darken;
+    z-index: -1;
+}
+
+.houseTest_ansList ul li label{
+    cursor: pointer !important;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.HouseTest_container{
+    padding: 30px 8%;
+    display: grid;
+    grid-template-columns: 4.95fr 0.1fr 4.95fr;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.HouseTest_left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HouseTest_border{
+    height: 70%;
+    border-left: 1px solid #404040;
+}
+
+.HouseTest_right{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.HouseTest_center_item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.houseTest_qes{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+.houseTest_ansList{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    padding-right: 10%;
+    padding-top: 20px;
+}
+
+.houseTest_ansList ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.houseTest_ansList ul li label input{
+    -webkit-appearance: none;
+    width: 22px !important;
+    height: 22px !important;
+    border: 1px solid #404040;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.houseTest_ansList ul li label input:checked{
+    border: none !important;
+    background-image: url(../img/seoha/checkmark.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.houseTest_nextBtn{
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (max-width:1023px) {
+    .houseTest_qes{
+        font-size: 17px;
+        line-height: 21px;
+    }
+    .houseTest_ansList{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .houseTest_ansList ul li label input{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .HouseTest_container{
+        padding-top: 100px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        align-items: center;
+        justify-content: center;
+    }
+    .HouseTest_border{
+        display: none;
+    }
+    .HouseTest_right{
+        padding: 9%;
+    }
+    .HouseTest_left svg{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width:479px){
+    .HouseTest_right{
+        padding: 7%;
+    }
+    .houseTest_qes{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .houseTest_ansList{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .houseTest_ansList ul li label input{
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.blurFilter{
+    filter: blur(5px);
+}
+
+.opacity{
+    opacity: 0;
+}
+  
+  div.location div.text {opacity: 1;}
+  
+  svg.HouseTest_draw path {
+    stroke-width: 2;
+    stroke:#404040;
+    fill:transparent;
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:line 3.5s cubic-bezier(0,0,0,0) forwards;
+  }
+  
+  @keyframes line {
+    to {
+        stroke-dashoffset:0;
+    }
+  }
+

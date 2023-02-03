@@ -40,12 +40,12 @@
             }
         });
 
-        if ($audio.paused) {
-            $audio.play();
-        }
-        else {
-            $audio.pause();
-        }
+        // if ($audio.paused) {
+        //     $audio.play();
+        // }
+        // else {
+        //     $audio.pause();
+        // }
     });
 
     // Menu accordion animation ***
