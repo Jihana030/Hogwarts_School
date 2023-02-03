@@ -15,6 +15,11 @@
     unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
+html {
+    min-width: 100%;
+    min-height: 100%;
+}
+
 body {
     width: 2000px;
     height: 2000px;
@@ -22,38 +27,19 @@ body {
     background-color: #E7E3DD;
     box-sizing: border-box;
     -ms-overflow-style: none;/*스크롤바 막음*/
-    /* 커서 모양 */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
 }
 
 body::-webkit-scrollbar {/*스크롤바 막음*/
     display: none;
 }
 
-/* ---------임시 해더-------------------임시 해더----------------------------- */
-/* .pro_header_cnt {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 96vw;
-    margin: 1rem 0.5rem;
-    z-index: 2;
-} */
-/* ---------임시 해더-------------------임시 해더----------------------------- */
-
 /* ---------교수사진----------------------교수사진---------------------------- */
 .proHidden{ /*호버이벤트용*/
     display: none !important;
 }
 
-/* 마우스 커서 */
-.his_grabbing {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+#comm_footer {
+    display: none;
 }
 
 .pro_paper {
@@ -75,7 +61,6 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 
 .proImage{/*이미지의 부모 공통태그*/
     position: relative;
-    /* overflow: hidden; */
 }
 
 .pro_imgSize {
@@ -129,8 +114,6 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
     font-size: 0.9rem;
 }
 
-/* ---------교수사진----------------------교수사진---------------------------- */
-
 /*---------교수사진 위치-------------------교수사진 위치------------------------*/
 .imgNum0 {/*해그리드*/
     grid-area: 2/2/6/4;
@@ -181,25 +164,40 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 
 /* --------미디어쿼리---------------------------------------------- */
 @media (max-width: 850px) {
+    html {
+        min-width: 100%;
+        min-height: 100%;
+    }
     body {
         width: 100%;
-        height: 100%;
+        min-height: 100%;
         /* 드래그 방지 */
         -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
         user-select:none;
-        height: 100%;
+        overflow: scroll;
     }
 
+    /* footer */
+    #comm_footer {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: calc(7700px + 50%);
+    }
+
+    /* 종이질감 */
     .pro_paper {
-        height: 100%;
-        /* height: calc(var(--vh, 1vh) * 100); */
+        width: 100%;
+        height: calc(8400px + 30%);
     }
 
+    /* 전체 부모 */
     .pro_cnt {
         height: 100%;
         margin: 0 auto;
+        place-items: center;
         grid-template-areas: 
         "num0"
         "num1"
@@ -219,14 +217,10 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
         padding: 10vw;
     }
     
+    /* 교수사진 공통태그 */
     .proImage {
-        margin: 0 auto;
-        padding: var(--img-hover);
-        margin-bottom: 6vh;
-    }
-
-    .pro_hover {
-        margin-top: var(--img-hover);
+        /* padding-bottom: var(--img-hover); */
+        margin: 7.5vh 0;
     }
 
     /*---------교수사진 위치-------------------교수사진 위치------------------------*/

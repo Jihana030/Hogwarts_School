@@ -22,6 +22,9 @@
   color: var(--text-reverse-color);
 }
 
+html {
+  cursor: url(../img/circle/common/Cursor_Default.png), auto;
+}
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -35,6 +38,12 @@
 
 body {
   background-color: var(--base-color);
+  opacity: 1;
+  transition-duration: 2s;
+  transition-property: opacity;
+}
+.fade {
+  opacity: 0;
 }
 
 a,
@@ -42,7 +51,7 @@ ul,
 li {
   text-decoration: none;
   list-style: none;
-  cursor: pointer;
+  cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
 i {
@@ -56,7 +65,7 @@ input:focus {
 }
 
 button {
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   background: transparent;
   border: 0;
   outline: 0;
@@ -145,6 +154,7 @@ span {
 
 #TopBtn {
   bottom: var(--display-gap);
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   position: fixed;
   right: var(--display-gap);
   z-index: 999;
@@ -197,7 +207,7 @@ header {
 .comm_musicbar {
   padding: 0 var(--display-gap);
   display: inline-block;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   background-color: transparent;
 }
 .comm_musicbar .comm_bar {
@@ -548,7 +558,7 @@ header {
   align-items: center;
   justify-self: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   display: flex;
   flex-direction: column;
 }
@@ -733,7 +743,7 @@ header {
 }
 
 .main_cal-body tr .day {
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
 .main_cal-body tr .day-active p {
@@ -853,7 +863,7 @@ header {
 }
 .main_mainCon a {
   bottom: 0;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   padding: 6.25vw;
   position: absolute;
 
@@ -1131,6 +1141,7 @@ header {
   margin-top: auto;
 }
 
+/* 텍스트 효과 *** */
 .Voldemort {
   position: relative;
   overflow: hidden;
@@ -1196,6 +1207,22 @@ header {
     mask-position: 0 0;
   }
 }
+
+/* 모우닝 머틀 */
+#main_moaning-myrtle span{
+  display: inline-block;
+  transition: 0.8s ease-in;
+}
+#main_moaning-myrtle span:hover {
+  filter: blur(1rem);
+  transform: translate3d(-1rem, -1.25rem, 0) rotate(-90deg);
+  opacity: 0;
+}
+#main_moaning-myrtle span:nth-child(1){ animation-delay: 0.5s; }
+#main_moaning-myrtle span:nth-child(2){ animation-delay: 0.5s; }
+#main_moaning-myrtle span:nth-child(3){ animation-delay: 0.5s; }
+#main_moaning-myrtle span:nth-child(4){ animation-delay: 0.5s; }
+
 /* con4 - 우측 게시판 */
 .main_right-blog {
   overflow: auto;

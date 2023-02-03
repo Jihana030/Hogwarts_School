@@ -14,7 +14,6 @@
         .then((response)=>response.json())
         .then((json)=>json.items);
     }
-    const his_yearCnt = document.querySelector('.his_yearCnt');
     const his_yearFlex = document.querySelectorAll('.his_yearFlex')
     
     // json 뿌리기
@@ -106,18 +105,19 @@
             }
         });
     })
-    
+    window.addEventListener('scroll', e=>{
+        e.preventDefault();
+    });
     const his_nav = document.querySelectorAll('.his_nav')//----원하는 시대로 이동하기----
     let isDown = false; //터치이벤트용
+
+    let navTop = hisNav.getBoundingClientRect().top;
     window.addEventListener('wheel', (e) => {
-        window.addEventListener('scroll', e=>{
-            e.preventDefault();
-        });
-        // 마우스 휠 가로스크롤 850보다 클 때만.
+       
+    // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
                 left: e.deltaY,
-                // behavior: 'smooth'
             });
               
             // -----가로 스크롤 터치하기------
@@ -155,31 +155,16 @@
             })
         } else { //가로850보다 작을때
             his_cnt.scrollBy({
-                top: e.deltaY,
-                // behavior: 'smooth'
+                top: e.deltaY
             });
-            console.log(`wheel: ${e.deltaY}`)
-            // 세로일때 nav fix 
-            let navTop = hisNav.getBoundingClientRect().top;
-            console.log(navTop);
-            if(navTop < (his_cnt.scrollTop + (2*e.deltaY))){
+
+            // 세로일때 nav fix
+            if(navTop<=window.scrollY + 1){
                 hisNav.classList.add('his_fix');
-                $headerBtn.addEventListener('click', e=>{
-                    const navFix = document.querySelector('.his_fix');
-                    navFix.style.top = '118px';
-                })
-            } else if(navTop > 8*e.deltaY) {
+            } else {
                 hisNav.classList.remove('his_fix');
             }
-            // let scroll = his_cnt.scrollTop;
-            // let high = hisStart.scrollHeight;
-            // if(scroll === high){
-            //     hisNav.classList.add('his_fix');
-            //     console.log(hisNav.classList);
-            // }else{
-            //     hisNav.classList.remove('his_fix');
-            // }// 세로일때 nav fix 
-
+            
             // 세로 스크롤 터치하기
             let startY;
             let scrollTop;
@@ -212,12 +197,6 @@
             
         }
     });
-    //paper 높이 조절용
-    // function setScreenSize(){
-    //     let vh = window.innerHeight * 0.01;
-    //     document.documentElement.style.setProperty('--vh', `${vh}px`);
-    // }
-    // setScreenSize();
     
     //cursor grab grabbing 
     his_cnt.addEventListener('mousedown', e=>{

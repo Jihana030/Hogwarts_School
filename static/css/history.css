@@ -1,6 +1,7 @@
 *{margin: 0; padding: 0;}
 
 html { scroll-behavior: smooth; }
+
 a {
     text-decoration: none;
     color: var(--font-nav-color);
@@ -29,7 +30,7 @@ a {
     --border-color: 1px solid #B5AAA0;
     --width-start: 24%;
     --font-size-16: 0.8vw;
-    --font-size-16-h: 2vh;
+    --font-size-16-h: 2vw;
     --font-size-20: 1vw;
     --font-size-20-h: 2.2vh;
     --font-size-28: 1.45vw;
@@ -62,6 +63,10 @@ body{
 body::-webkit-scrollbar {
     display: none;
   }
+
+#common_footer {
+    display: none !important;
+}
 
 /* 마우스 커서 */
 .his_grabbing {
@@ -211,8 +216,8 @@ body::-webkit-scrollbar {
     text-align: center;
     width: auto; height: 100%;
 }
-/* 연혁 가운데 선 */
 
+/* 연혁 가운데 선 */
 .his_lineLong {
     background-image: url('../img/jiwon/Line3.svg');
     content: "";
@@ -231,7 +236,6 @@ body::-webkit-scrollbar {
     padding: 0 3vw;
     border-top: var(--border-color);
     border-bottom: var(--border-color);
-    
 }
 
 /* 연혁 사이 이미지 부모*/
@@ -359,7 +363,10 @@ body::-webkit-scrollbar {
     .his_paper {
         width: 100%;
         height: 100%;
-        /* height: calc(var(--vh, 1vh) * 100); */
+    }
+
+    .his_paper_pc {
+        display: none;
     }
 
     .his_paph {
@@ -373,11 +380,20 @@ body::-webkit-scrollbar {
 
     .his_fix {
         position: fixed;
-        top: 76px;
+        top: 0;
         border-bottom: var(--border-color);
         background-color: var(--color-back);
-        height: 6.5%;
+        height: 14vh;
+        padding-top: 8vh;
+        text-align: end;
         z-index: 1;
+    }
+    .comm_header_menu_max1920 {
+        z-index: 2;
+    }
+
+    #common_footer {
+        display: grid !important;
     }
 
     .his_infoCnt {
@@ -386,7 +402,7 @@ body::-webkit-scrollbar {
     }
 
     .his_infoTitleCnt {
-        padding-top: 22vh;
+        padding-top: 16vh;
         padding-bottom: 18vh;
         scroll-snap-type: y mandatory;
     }
@@ -449,14 +465,14 @@ body::-webkit-scrollbar {
         align-items: center;
         width: 100%; height: auto;
         margin-left: 6%;
-        padding-top: 15vh;
+        padding-top: 13vw;
     }
 
     .his_imgCnt {
         width: 100%;
         height: 100%;
     }
-
+    
     .his_img {
         width: 100%;
     }
@@ -464,37 +480,34 @@ body::-webkit-scrollbar {
     .his_upCnt {
         flex-direction: column-reverse;
     }
-/*  최후의 수단
-    .his_mcgonagall {
-        position: absolute;
-        bottom: 0; left: 0;
-    } */
 
     .his_lineLong {
         transform: rotate(90deg);
-        margin: 0 -60vw;
+        margin: 0 -80vw;
         z-index: -2;
         left: 0%;
         background-position: center;
     }
 
     .his_year {
-        transform: rotate(90deg) translateY(-8vw);
+        transform: rotate(90deg);
         transform-origin: left top;
-        left: 0;
+        left: 7vh; top: -160vw;
         flex-basis: auto;
         position: absolute;
         border-bottom: none;
         font-size: var(--font-size-nav-h);
-        width: 100rem;
+        width: 500%;
     }
 
     .his_18nav {
-        width: 48rem;
+        top: -50vw;
+        width: 200%;
     }
 
     .his_20nav {
-        width: 250rem;
+        top: -60vw;
+        width: 800vw;
     }
 
     .his_downImg, .his_upImg {
@@ -507,13 +520,13 @@ body::-webkit-scrollbar {
     }
     
     .his_detCnt {
-        margin-bottom: calc(var(--vh, 1vh)*12.03555);
+        margin-bottom: 20vh;
     }
 
     .his_detailY {
-        top: 45%;
+        top: 32vw;
         width: 10rem;
-        height: 27vh;
+        height: 45%;
         z-index: -1;
         padding: 20px 0;
         font-size: var(--font-size-y-h);
@@ -523,7 +536,7 @@ body::-webkit-scrollbar {
     }
     .his_detailD{
         font-size: var(--font-size-16-h);
-        padding: 0.7vw;
+        /* padding: 0.7vw; */
     }
 
     .his_border {
