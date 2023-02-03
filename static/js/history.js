@@ -14,7 +14,6 @@
         .then((response)=>response.json())
         .then((json)=>json.items);
     }
-    const his_yearCnt = document.querySelector('.his_yearCnt');
     const his_yearFlex = document.querySelectorAll('.his_yearFlex')
     
     // json 뿌리기
@@ -115,7 +114,7 @@
     let navTop = hisNav.getBoundingClientRect().top;
     window.addEventListener('wheel', (e) => {
        
-        // 마우스 휠 가로스크롤 850보다 클 때만.
+    // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
                 left: e.deltaY,
@@ -159,8 +158,7 @@
                 top: e.deltaY
             });
 
-            // 세로일때 nav fix 
-            const $headerBtn = document.querySelector('.comm_menu_btn')
+            // 세로일때 nav fix
             if(navTop<=window.scrollY + 1){
                 hisNav.classList.add('his_fix');
             } else {
