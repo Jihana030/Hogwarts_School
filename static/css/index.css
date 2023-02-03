@@ -22,6 +22,9 @@
   color: var(--text-reverse-color);
 }
 
+html {
+  cursor: url(../img/circle/common/Cursor_Default.png), auto;
+}
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -42,7 +45,7 @@ ul,
 li {
   text-decoration: none;
   list-style: none;
-  cursor: pointer;
+  cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
 i {
@@ -56,7 +59,7 @@ input:focus {
 }
 
 button {
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   background: transparent;
   border: 0;
   outline: 0;
@@ -145,6 +148,7 @@ span {
 
 #TopBtn {
   bottom: var(--display-gap);
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   position: fixed;
   right: var(--display-gap);
   z-index: 999;
@@ -197,7 +201,7 @@ header {
 .comm_musicbar {
   padding: 0 var(--display-gap);
   display: inline-block;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   background-color: transparent;
 }
 .comm_musicbar .comm_bar {
@@ -548,7 +552,7 @@ header {
   align-items: center;
   justify-self: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   display: flex;
   flex-direction: column;
 }
@@ -733,7 +737,7 @@ header {
 }
 
 .main_cal-body tr .day {
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
 .main_cal-body tr .day-active p {
@@ -853,7 +857,7 @@ header {
 }
 .main_mainCon a {
   bottom: 0;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   padding: 6.25vw;
   position: absolute;
 

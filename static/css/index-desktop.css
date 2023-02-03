@@ -79,7 +79,7 @@
   text-transform: uppercase;
   display: grid;
   grid-template-columns: repeat(4, 1fr) 1.1fr;
-  cursor: pointer;
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 #main_wide-menu p {
   font-size: 1.25rem;
