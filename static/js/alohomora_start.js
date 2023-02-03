@@ -10,7 +10,12 @@
             if(e.target.value==='Alohomora' || e.target.value==='alohomora' || e.target.value==='알로호모라' || e.target.value==='ALOHOMORA'){
                 start_left.classList.add('start_ani_left');
                 start_right.classList.add('start_ani_right');
-                alohomora.classList.add('displayNone')
+                alohomora.classList.add('displayNone');
+                var meta = document.createElement('meta');
+                meta.httpEquiv = 'refresh'
+                meta.name = 'viewport';
+                meta.content = "1.6;URL='../views/index.html'";
+                document.getElementsByTagName('head')[0].appendChild(meta);
             } else {
                 alohomora.classList.toggle('start_error');
             }

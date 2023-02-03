@@ -3,6 +3,7 @@
 body {
     overflow: hidden;
     touch-action: none;
+    background-color: #fafaf8;
 }
 /* ------가로세로 스크롤 막기----------------------------------------------------------------- */
 
@@ -21,10 +22,13 @@ body {
 .alo_paper {
     position: absolute;
     background-image: url('../img/jiwon/paper.jpg');
+    background-repeat: repeat;
     mix-blend-mode: darken;
-    opacity: 40%;
-    width: 100%;
-    height: 100%;
+    opacity: 0.25;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 /* ------------컨테이너----------------------컨테이너------------------------------------------ */
@@ -37,7 +41,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: #E4DDD0;
+    
 }
 /* ------------------밝은 배경--------------------------밝은 배경----------------------- */
 /* -------------어두운 배경----------------------------어두운 배경------------------------- */
