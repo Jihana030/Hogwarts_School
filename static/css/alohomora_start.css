@@ -1,12 +1,21 @@
-*{
-    margin: 0; padding: 0;
-}
+*{margin: 0; padding: 0;}
 /* ----------------가로세로 스크롤 막기---------------------------------------------------- */
 body {
     overflow: hidden;
     touch-action: none;
 }
 /* ------가로세로 스크롤 막기----------------------------------------------------------------- */
+
+/* 한글영어 폰트 지정하기 */
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url(../font/Eulyoo1945-Regular.ttf);
+}
+@font-face {
+    font-family: 'Ibarra Real Nova';
+    src: url(../font/IbarraRealNova-Regular.ttf);
+    unicode-range: U+0041-005A, U+0061-007A;
+}
 
 /* paper */
 .alo_paper {
@@ -21,7 +30,6 @@ body {
 /* ------------컨테이너----------------------컨테이너------------------------------------------ */
 .start_ctn {
     overflow: hidden;
-    
 }
 /* ------------컨테이너----------------------컨테이너-------------------------------------------- */
 /* ------------------밝은 배경--------------------------밝은 배경----------------------- */
@@ -41,7 +49,6 @@ body {
     background-color: #211B19;
     overflow: hidden;
 }
-
 .start_img_right {
     opacity: 30%;
     filter: grayscale(100%);
@@ -55,7 +62,6 @@ body {
     transform-origin: 0% 100%;
     transform: rotate(90deg) scale(400%);
 }
-
 .start_backChange_left {
     position: absolute;
     left: 0;
@@ -64,7 +70,6 @@ body {
     background-color: #211B19;
     overflow: hidden;
 }
-
 .start_img_left {
     opacity: 30%;
     filter: grayscale(100%);
@@ -74,7 +79,6 @@ body {
     right: 0; 
     top: 0;
 }
-
 .start_ani_left {
     transform-origin: 100% 100%;
     transition: transform 2s;
@@ -83,21 +87,10 @@ body {
 /* -------------어두운 배경----------------------------어두운 배경------------------------- */
 
 /* ----------input-------------------------------------input------------------------- */
-/* 한글영어 폰트 지정하기 */
-@font-face {
-    font-family: 'Eulyoo1945';
-    src: url(../font/Eulyoo1945-Regular.ttf);
-}
-@font-face {
-    font-family: 'Ibarra Real Nova';
-    src: url(../font/IbarraRealNova-Regular.ttf);
-    unicode-range: U+0041-005A, U+0061-007A;
-}
+
 .alohomora {
     position: fixed;
-    width: 40%;
-    top: 50%;
-    left: 50%;
+    width: 40%; top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     border: none;
