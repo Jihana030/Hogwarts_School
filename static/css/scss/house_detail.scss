@@ -393,6 +393,18 @@ $borderColor: #978b7e;
                                         font-weight: 500;
                                         letter-spacing: -0.15vw;
                                         line-height: 7vh;
+
+
+                                        p {
+                                            display: inline-block;
+                                        }
+
+                                        .house_detail_s2_central_char_name_animation {
+                                            transform: rotate(40deg);
+                                            span {
+                                                display: inline-block;
+                                            }
+                                        }
                                     }
 
                                     .house_detail_s2_central_char_name_max480 {

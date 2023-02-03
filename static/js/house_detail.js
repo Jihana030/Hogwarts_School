@@ -39,19 +39,17 @@
 
     // 기숙사 인물 소개 swiper **
     var swiper = new Swiper(".house_detail_slide_pic", {
-        // slidesPerView: 'auto',
-
-        slidesPerView: 2,
+        centeredSlides: true,
+        slidesPerView: 1,
         spaceBetween: 0,
         allowTouchMove: false,
-        loop: true,
-        // loopedSlides: 'auto',
         navigation: {
             nextEl: ".house_detail_slide_btn",
         },
     });
+    console.log(swiper)
 
-    var swiper = new Swiper(".house_detail_slide_title_name", {
+    var swiper2 = new Swiper(".house_detail_slide_title_name", {
         slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 0,
@@ -60,9 +58,10 @@
             nextEl: ".house_detail_slide_btn",
         },
     });
+    console.log(swiper2)
 
-    var swiper = new Swiper(".house_detail_slide_about", {
-        slidesPerView: 'auto',
+    var swiper3 = new Swiper(".house_detail_slide_about", {
+        slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 0,
         allowTouchMove: false,
