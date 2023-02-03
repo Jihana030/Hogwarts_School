@@ -1,6 +1,7 @@
 *{margin: 0; padding: 0;}
 
 html { scroll-behavior: smooth; }
+
 a {
     text-decoration: none;
     color: var(--font-nav-color);
@@ -215,8 +216,8 @@ body::-webkit-scrollbar {
     text-align: center;
     width: auto; height: 100%;
 }
-/* 연혁 가운데 선 */
 
+/* 연혁 가운데 선 */
 .his_lineLong {
     background-image: url('../img/jiwon/Line3.svg');
     content: "";
@@ -235,7 +236,6 @@ body::-webkit-scrollbar {
     padding: 0 3vw;
     border-top: var(--border-color);
     border-bottom: var(--border-color);
-    
 }
 
 /* 연혁 사이 이미지 부모*/
@@ -363,7 +363,6 @@ body::-webkit-scrollbar {
     .his_paper {
         width: 100%;
         height: 100%;
-        /* height: calc(var(--vh, 1vh) * 100); */
     }
 
     .his_paper_pc {
