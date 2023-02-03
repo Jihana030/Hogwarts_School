@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+:root {
+  --fc-today-bg-color: transparent !important;
+}
+
 #mypage_contents {
   width: 100%;
   height: 100vh;
@@ -212,6 +216,11 @@
 #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard .fc-scrollgrid, #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard td, #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard th {
   border: 0;
 }
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard td {
+  border-radius: 100px;
+  width: 2vw;
+  height: 2.4vw;
+}
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist {
   border-right: 1px solid #AFA489;
   display: grid;
@@ -296,14 +305,22 @@
   height: 100% !important;
   margin: 0;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top {
-  display: block;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame {
+  display: flex;
+  align-items: center;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top {
   width: 100%;
   height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top .fc-daygrid-day-number {
-  width: 100%;
-  height: 2.3vw;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+  width: 1.7vw;
+  height: 1.7vw;
+  border-radius: 200px;
   padding: 0;
   text-align: center;
   font-size: 0.9vw;
@@ -313,8 +330,20 @@
   align-items: center;
   z-index: 1;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events {
-  display: none;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events {
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 10.5%;
+  left: 16%;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events .fc-event {
+  width: 1.7vw;
+  height: 1.7vw;
+  border: none;
+  border-radius: 1.7vw;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
   width: 100%;
@@ -519,7 +548,13 @@
   font-family: "SUIT", sans-serif;
   border-radius: 0.5vw;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_detail .mypage_timeTable_detail_classroom {
+  margin-top: 0.2vw;
+  font-size: 0.6vw;
+  color: #7e7560;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
   background-color: rgba(255, 255, 255, 0.45);
@@ -583,4 +618,12 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_select_subject2 {
   grid-row: 13/16;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: none;
+}
+.fc .fc-daygrid-day.fc-day-today div.fc-daygrid-day-top a.fc-daygrid-day-number {
+  color: #fff;
+  background-color: #D4B35B;
 }/*# sourceMappingURL=mypage.css.map */

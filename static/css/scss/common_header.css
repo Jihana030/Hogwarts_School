@@ -58,17 +58,17 @@
   vertical-align: bottom;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-1 {
-  height: 5px;
+  height: 12px;
   -webkit-animation-delay: -1.9s;
           animation-delay: -1.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-2 {
-  height: 5px;
+  height: 15px;
   -webkit-animation-delay: -2.9s;
           animation-delay: -2.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-3 {
-  height: 5px;
+  height: 10px;
   -webkit-animation-delay: -3.9s;
           animation-delay: -3.9s;
 }
@@ -289,7 +289,7 @@
 #comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
   padding: 14px;
   color: #504733;
-  box-shadow: 0 0.3vw 0.5vw #c4bead;
+  box-shadow: 0 0.3vw 0.5vw rgba(0, 0, 0, 0.062745098);
   border: 1px solid #504733;
   font-family: "SUIT", sans-serif;
   background-image: url("../../img/khlll/background-default.png");

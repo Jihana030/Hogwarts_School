@@ -26,6 +26,10 @@ $borderColor-smooth: #AFA489;
     overflow: hidden;
 }
 
+:root {
+    --fc-today-bg-color: transparent !important;
+}
+
 #mypage_contents {
     width: 100%;
     height: 100vh;
@@ -283,6 +287,14 @@ $borderColor-smooth: #AFA489;
             .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th {
                 border: 0;
             }
+
+            .fc-theme-standard td {
+                border-radius: 100px;
+                width: 2vw;
+                height: 2.4vw;
+            }
+
+
             
             // Calendar style ***
 
@@ -311,6 +323,7 @@ $borderColor-smooth: #AFA489;
 
 
                         // Fullcalendar style fix ***
+
 
                         // scrollbar 
                         .fc-scroller::-webkit-scrollbar {
@@ -407,37 +420,71 @@ $borderColor-smooth: #AFA489;
                                             height: 100% !important;
                                             margin: 0;
                                         }
+                                        .fc-daygrid-day-frame {
+                                            display: flex;
+                                            align-items: center;
 
-                                        .fc-daygrid-day-top {
-                                            display: block;
-                                            width: 100%;
-                                            height: 100%;
-                                            
-                                            .fc-daygrid-day-number {
+                                            .fc-daygrid-day-top {
+                                                // display: block;
                                                 width: 100%;
-                                                height: 2.3vw;
-                            
-                                                padding: 0;
-                                                text-align: center;
-                                                font-size: 0.9vw;
-                                                font-family: 'SUIT', sans-serif;
-                            
+                                                height: 100%;
+                                                margin: 0;
+    
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
+    
+                                                .fc-daygrid-day-number { // a 태그
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+                                                    border-radius: 200px;
+                                
+                                                    padding: 0;
+                                                    text-align: center;
+                                                    font-size: 0.9vw;
+                                                    font-family: 'SUIT', sans-serif;
+                                
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+    
+                                                    z-index: 1;
+                                                }
+                                            }
 
-                                                z-index: 1;
+                                            .fc-daygrid-day-events {
+                                                width: 100%;
+                                                min-height: 100%;
+
+                                                z-index: -1;
+
+                                                position: absolute;
+                                                top: 10.5%;
+                                                left: 16%;
+
+                                                .fc-event {
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+
+                                                    border: none;
+                                                    border-radius: 1.7vw;
+                                                    background-color: rgba(255, 255, 255, 0.7);
+
+                                                }
+
                                             }
                                         }
 
-                                        .fc-daygrid-day-events {
-                                            display: none;
-                                        }
+                                        // .fc-daygrid-day-events {
+                                        //     display: none;
+                                        // }
                                     }
 
                                 }
                             }
                         }
+
+                        
             
                     }
                 }
@@ -706,7 +753,14 @@ $borderColor-smooth: #AFA489;
                         border-radius: 0.5vw;
 
                         display: flex;
-                        align-items: flex-end;
+                        flex-direction: column;
+                        justify-content: flex-end;
+
+                        .mypage_timeTable_detail_classroom {
+                            margin-top: 0.2vw;
+                            font-size: 0.6vw;
+                            color: #7e7560;
+                        }
                     }
                     
                     .mypage_timeTable_slot_subject {
@@ -795,5 +849,14 @@ $borderColor-smooth: #AFA489;
 
             }
         }
+    }
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: none;
+
+    div.fc-daygrid-day-top a.fc-daygrid-day-number {
+        color: #fff;
+        background-color: #D4B35B;
     }
 }
