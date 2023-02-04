@@ -79,6 +79,39 @@
     $searchFront.value = value;
   }
 
+  // ??
+  const $searchAll = document.querySelector('.main_search-container > input')
+  // const $lumos = document.querySelector('.lumos')
+  console.log($searchAll)
+  $searchBack.addEventListener('keyup', e => {
+    if (e.keyCode === 13) {
+      if (e.target.value === 'LUMOS'
+        || e.target.value === 'Lumos'
+        || e.target.value === '루모스'
+        || e.target.value === 'lumos') {
+          document.querySelector('body').classList.add('start-lumos');
+        
+        function update(e) {
+          var x = e.clientX || e.touches[0].clientX
+          var y = e.clientY || e.touches[0].clientY
+      
+          document.querySelector('body').style.setProperty('--cursorX', x + 'px')
+          document.querySelector('body').style.setProperty('--cursorY', y + 'px')
+        }
+      
+        document.querySelector('body').addEventListener('mousemove', update)
+        document.querySelector('body').addEventListener('touchmove', update)
+
+      }
+      if(e.target.value === '녹스' || e.target.value === 'Nox' || e.target.value === 'NOX' || e.target.value === 'npx'){
+        document.querySelector('body').classList.remove('start-lumos');
+      }
+      
+    }
+  })
+
+
+
   // main_wide-menu 메뉴 펼치기
   const $meneWideBtn = document.querySelector("#main_wide-menu");
   const $WideTap = document.querySelector("#main_menu-toggle-wrap");
