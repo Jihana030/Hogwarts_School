@@ -777,10 +777,14 @@
     margin-bottom: 2.7vw !important;
     font-size: 7vw !important;
     line-height: 7vw !important;
-    flex-basis: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+  }
+  #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_first_name {
+    transform-origin: bottom right;
+  }
+  #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_first_name span {
+    display: inline-block;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_slide_btn {
     cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
@@ -1074,8 +1078,7 @@
     font-size: 7vw !important;
     line-height: 7vw !important;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_slide_btn {
     width: 20vw;

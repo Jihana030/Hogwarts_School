@@ -437,7 +437,6 @@ $selectText: #fff;
                                         display: flex;
                                         justify-content: flex-end;
 
-
                                         p {
                                             display: inline-block;
                                         }
@@ -933,10 +932,16 @@ $selectText: #fff;
                                         font-size: 7vw !important;
                                         line-height: 7vw !important;
 
-                                        flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
+
+                                        .house_detail_s2_central_char_first_name {
+                                            transform-origin: bottom right;
+                                            span {
+                                                display: inline-block;
+                                            }
+                                            
+                                        }
                                     }
                                 }
                             }
@@ -1326,8 +1331,7 @@ $selectText: #fff;
 
                                         // flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
                                     }
                                 }
                             }
