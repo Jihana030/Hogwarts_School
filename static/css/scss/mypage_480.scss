@@ -12,10 +12,16 @@
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Eulyoo1945', serif;
 
+$fontBlack: #333;
 $fontmainColor: #423620;
 $fontSubColor: #504733;
-$borderColor: #69604b;
+
+$borderColor: #978b7e;
 $borderColor-smooth: #AFA489;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
 
 @media screen and (max-width: 480px) {
     
@@ -103,8 +109,6 @@ $borderColor-smooth: #AFA489;
                                     position: relative;
     
                                     .mypage_profile_top_setting {
-                                        cursor: pointer;
-    
                                         position: absolute;
                                         top: 0;
                                         right: 0;
@@ -169,7 +173,6 @@ $borderColor-smooth: #AFA489;
     
                                 .mypage_profile_bottom_icon {
                                     width: 15vw;
-                                    cursor: pointer;
                                     
                                     display: flex;
                                     flex-direction: column;
@@ -237,7 +240,6 @@ $borderColor-smooth: #AFA489;
                                     height: 10vw;
                                     
                                     text-align: center;
-                                    cursor: pointer;
     
                                     display: flex;
                                     justify-content: center;
@@ -261,7 +263,6 @@ $borderColor-smooth: #AFA489;
                         .mypage_profile_right_menu {
                             width: 100%;
                             height: 100%;
-                            cursor: pointer;
     
                             display: flex;
                             flex-direction: column;
@@ -463,7 +464,6 @@ $borderColor-smooth: #AFA489;
                                 width: 3.5vw;
                                 height: 3.5vw;
                                 margin-left: 0;
-                                cursor: pointer;
         
                                 position: relative;
 
@@ -488,6 +488,7 @@ $borderColor-smooth: #AFA489;
                         }
 
                         .mypage_Todolist_middle {
+                            width: 70vw;
                             max-height: 0;
                             overflow: hidden;
 
@@ -495,7 +496,6 @@ $borderColor-smooth: #AFA489;
                             transition: linear .2s all;
     
                             display: flex;
-                            justify-content: center;
                             align-items: center;
 
                             &.mypage_Todolist_middle_active {
@@ -503,7 +503,7 @@ $borderColor-smooth: #AFA489;
                             }
     
                             .mypage_Todolist_middle_input {
-                                width: 50vw;
+                                width: 56vw;
                                 height: 7vw;
                                 border: none;
 
@@ -514,9 +514,6 @@ $borderColor-smooth: #AFA489;
                             }
     
                             .mypage_Todolist_middle_btn {
-                                width: 7vw;
-                                height: 3.5vw;
-                                
                                 margin-left: 2vw;
                                 border: none;
                                 background-color: transparent;
