@@ -15,7 +15,15 @@
 
 // ------------------------------------------------- DEFAULT SET -------------------------------------------*
 
+$fontBlack: #333;
 $fontmainColor: #423620;
+$fontSubColor: #504733;
+
+$borderColor: #978b7e;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
 
 .comm_white_Bg { background-color: rgba(255, 255, 255, 0.15); }
 .comm_animation_play_pause { animation-play-state: paused !important; }
@@ -23,7 +31,6 @@ $fontmainColor: #423620;
 .comm_opacity_0 { opacity: 0; }
 
 // ---------------------------------------------------------------------------------------------------------*
-
 
 * {
     padding: 0;
@@ -35,10 +42,17 @@ $fontmainColor: #423620;
     }
 }
 
-.contents {
-    width: 100%;
-    height: 100vh;
-    background-image: url('../../img/khlll/background-default.png');
+html {
+    cursor: url('../../img/circle/common/Cursor_Default.png'), auto;
+}
+
+a, button, li, input {
+    cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+}
+
+::selection {
+    background-color: $selectColor-dark;
+    color: $selectText;
 }
 
 ul,
@@ -57,14 +71,3 @@ a {
     height: 100vh;
     background-image: url("../../img/khlll/background-default.png");
   }
-
-// #comm_container {
-//     width: 100%;
-//     height: 100vh;
-
-//     background: url("../../images/background-default.png");
-//     background-size: cover;
-//     font-family: 'Ibarra Real Nova', serif;
-//     overflow: hidden;
-//     position: relative;
-// }

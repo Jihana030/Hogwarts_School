@@ -7,7 +7,42 @@
     
     const hisStart = document.querySelector('.his_infoTitleCnt'); //our history
     const hisNav = document.querySelector('.his_navCnt') //nav
+    const topSideMenu = new Drawer(document.querySelector('.comm_header_menu_max1920'),
+    function () {
+        this.isOpen = true;
+        this.el.style.transform = 'translateY(0)';
+        this.el.style.zIndex = '5';
+        this.el.style.opacity = '1';
+    },
+    function () {
+        this.isOpen = false;
+        this.el.style.transform = 'translateY(-100%)';
+        this.el.style.zIndex = '-1';
+        this.el.style.opacity = '0';
+    }
+    );
+    // Header menu animation (top & right) **
 
+    function Drawer(el, cbOpen, cbClose, open = false) {
+
+        this.el = el;
+        this.isOpen = open;
+
+        this.open = cbOpen ? cbOpen : defaultOpen;
+        this.close = cbClose ? cbClose : defaultClose;
+
+        function defaultOpen() {
+            this.isOpen = true;
+            this.el.style.transform = 'translate(0)';
+        }
+
+        function defaultClose() {
+            this.isOpen = false;
+            this.el.style.transform = 'translate(100%)';
+        }
+
+        (this.isOpen) ? this.open() : this.close();
+    }
     // json 가져오기
     function loadItems(){
         return fetch("../static/json/history.json")
@@ -153,6 +188,15 @@
                         his_cnt.scrollLeft = location;
                 })
             })
+
+            //cursor grab grabbing 
+            his_cnt.addEventListener('mousedown', e=>{
+                his_cnt.classList.add('his_grabbing');
+            })
+            his_cnt.addEventListener('mouseup', e=>{
+                his_cnt.classList.remove('his_grabbing');
+            })   
+                    
         } else { //가로850보다 작을때
             his_cnt.scrollBy({
                 top: e.deltaY
@@ -198,12 +242,5 @@
         }
     });
     
-    //cursor grab grabbing 
-    his_cnt.addEventListener('mousedown', e=>{
-        his_cnt.classList.add('his_grabbing');
-    })
-    his_cnt.addEventListener('mouseup', e=>{
-        his_cnt.classList.remove('his_grabbing');
-    })   
-            
+    
 })()

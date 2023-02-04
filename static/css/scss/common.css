@@ -29,10 +29,22 @@
   outline: none;
 }
 
-.contents {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../../img/khlll/background-default.png");
+html {
+  cursor: url("../../img/circle/common/Cursor_Default.png"), auto;
+}
+
+a, button, li, input {
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
+}
+
+::-moz-selection {
+  background-color: #5e5647;
+  color: #fff;
+}
+
+::selection {
+  background-color: #5e5647;
+  color: #fff;
 }
 
 ul,

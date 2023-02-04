@@ -12,14 +12,42 @@
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Eulyoo1945', serif;
 
+$fontBlack: #333;
+$fontmainColor: #423620;
+
+$fontAboutColor: #686255;
+$fontSubColor: #504733;
+
+$borderColor: #978b7e;
+$borderColor2: #69604b;
+$borderColor-smooth: #AFA489;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
 
 #comm_container {
     width: 100%;
 
-    background: url("../../img/khlll/background-white.png");
-    background-size: cover;
     font-family: 'Ibarra Real Nova', serif;
+    background-color: #e2dccb;
     overflow: hidden;
+
+    position: relative;
+
+    .house_list_overlay {
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/khlll/Background_texture.jpg") repeat;
+        opacity: 0.3;
+        mix-blend-mode: multiply;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }
 
 #house_list_contents {
@@ -34,6 +62,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: $fontBlack;
         
         .house_about_text {
             margin-top: 5vh;
@@ -55,6 +84,7 @@
                 width: 100%;
                 height: 100%;
                 position: relative;
+                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
                 &.house_list_item_gryffindor {
                     background-color: #A53F3F;
@@ -159,14 +189,12 @@
 
                 display: grid;
                 grid-template-columns: repeat(4, minmax(200px, auto));
-                // gap: 0.5vw;
                 position: relative;
                 
                 .house_list_item {
                     height: 118vh;
                     transition: .5s;
                     clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
-                    // polygon(위왼쪽 사이드왼쪽, 위오른쪽 숫자올리면 다 펴짐, 100% 84%, 50% 100%, 0 84%)
 
                     &.house_list_item_animation {
                         transform: translateY(-22vh);
@@ -209,7 +237,6 @@
                             transition: .2s;
                             
                             &.house_list_item_title_animation {
-                                // top: 55%;
                                 opacity: 1;
                                 transition: .7s;
                         }
