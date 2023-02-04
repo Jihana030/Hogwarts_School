@@ -1,4 +1,7 @@
 *{margin: 0; padding: 0;}
+html {
+    cursor: url(../img/circle/common/Cursor_Default.png), auto;
+}
 /* ----------------가로세로 스크롤 막기---------------------------------------------------- */
 body {
     overflow: hidden;
@@ -50,7 +53,7 @@ body {
     right: 0;
     width: 50vw;
     height: 100vh;
-    background-color: #211B19;
+    background-color: #111111;
     overflow: hidden;
 }
 .start_img_right {
@@ -71,7 +74,7 @@ body {
     left: 0;
     width: 50vw;
     height: 100vh;
-    background-color: #211B19;
+    background-color: #111;
     overflow: hidden;
 }
 .start_img_left {

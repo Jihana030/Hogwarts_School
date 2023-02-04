@@ -188,6 +188,15 @@
                         his_cnt.scrollLeft = location;
                 })
             })
+
+            //cursor grab grabbing 
+            his_cnt.addEventListener('mousedown', e=>{
+                his_cnt.classList.add('his_grabbing');
+            })
+            his_cnt.addEventListener('mouseup', e=>{
+                his_cnt.classList.remove('his_grabbing');
+            })   
+                    
         } else { //가로850보다 작을때
             his_cnt.scrollBy({
                 top: e.deltaY
@@ -233,12 +242,5 @@
         }
     });
     
-    //cursor grab grabbing 
-    his_cnt.addEventListener('mousedown', e=>{
-        his_cnt.classList.add('his_grabbing');
-    })
-    his_cnt.addEventListener('mouseup', e=>{
-        his_cnt.classList.remove('his_grabbing');
-    })   
-            
+    
 })()
