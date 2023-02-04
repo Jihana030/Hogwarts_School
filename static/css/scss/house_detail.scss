@@ -24,11 +24,51 @@ $selectText: #fff;
 
 
 @keyframes motion {
-	0% { bottom: 6vh; }
+	0% { bottom: 7vh; }
 	100% { bottom: 8vh; }
 }
 
+@keyframes neckslice{
+    0% {
+        transform:  rotate(0deg);
+    }
+    20% {
+        transform:  rotate(2deg) ;
+    }
+    40% {
+        transform:  rotate(-140deg) ;
+      }
+    60% {
+        transform:  rotate(-110deg) ;
+      }
+    80% {
+        transform:  rotate(-130deg) ;
+      }
+    100% {
+        transform:  rotate(-120deg) ;
+    }
+}
 
+@keyframes Maintain{
+    0% {
+        transform:  rotate(-120deg);
+    }
+    20% {
+        transform:  rotate(-130deg) ;
+    }
+    40% {
+        transform:  rotate(-110deg) ;
+      }
+    60% {
+        transform:  rotate(-130deg) ;
+      }
+    80% {
+        transform:  rotate(-110deg) ;
+      }
+    100% {
+        transform:  rotate(0deg)  ;
+    }
+}
 
 #comm_container {
     width: 100%;
@@ -111,7 +151,11 @@ $selectText: #fff;
             // bottom: 4vw;
             // margin-top: 8vw;
 
-            animation: motion 0.3s linear 2s infinite alternate;
+            animation-name: motion;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
 
             svg {
                 width: 10vh;
@@ -382,7 +426,7 @@ $selectText: #fff;
 
                                     .house_detail_s2_central_char_title {
                                         font-size: 5vh;
-                                        color: $fontAboutColor;
+                                        color: $fontSubColor;
                                         letter-spacing: -0.2vw;
                                     }
                                     
@@ -394,17 +438,28 @@ $selectText: #fff;
                                         letter-spacing: -0.15vw;
                                         line-height: 7vh;
 
+                                        display: flex;
+                                        justify-content: flex-end;
 
                                         p {
                                             display: inline-block;
                                         }
 
-                                        .house_detail_s2_central_char_name_animation {
-                                            transform: rotate(40deg);
+                                        .house_detail_s2_central_char_first_name {
+                                            transform-origin: bottom right;
                                             span {
                                                 display: inline-block;
                                             }
+                                            
                                         }
+                                        .house_detail_s2_central_char_first_name_animation {
+                                            animation-fill-mode: forwards;
+                                            animation-name: neckslice, Maintain;
+                                            animation-delay: 0s, 2s;
+                                            animation-duration: 2s, 7s;
+                                            animation-timing-function: ease-in, ease-in-out;
+                                        }
+                                        
                                     }
 
                                     .house_detail_s2_central_char_name_max480 {
@@ -881,10 +936,16 @@ $selectText: #fff;
                                         font-size: 7vw !important;
                                         line-height: 7vw !important;
 
-                                        flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
+
+                                        .house_detail_s2_central_char_first_name {
+                                            transform-origin: bottom right;
+                                            span {
+                                                display: inline-block;
+                                            }
+                                            
+                                        }
                                     }
                                 }
                             }
@@ -1274,8 +1335,7 @@ $selectText: #fff;
 
                                         // flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
                                     }
                                 }
                             }

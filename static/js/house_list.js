@@ -6,7 +6,6 @@
     AOS.init();
 
     const $item = document.querySelectorAll('.house_list_item');
-    const $itemUp = document.querySelectorAll('.house_list_item_box');
     const $itemTitle = document.querySelectorAll('.house_list_item_title');
 
     $item.forEach((house, idx) => {
@@ -18,6 +17,10 @@
             house.classList.remove('house_list_item_animation');
             $itemTitle[idx].classList.remove('house_list_item_title_animation');
         });
+    });
+
+    $item[0].addEventListener('click', () => {
+        window.location.href = 'house_detail.html';
     });
 
 })();
