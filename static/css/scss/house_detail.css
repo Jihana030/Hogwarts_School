@@ -5,7 +5,7 @@
 }
 @-webkit-keyframes motion {
   0% {
-    bottom: 6vh;
+    bottom: 7vh;
   }
   100% {
     bottom: 8vh;
@@ -13,7 +13,7 @@
 }
 @keyframes motion {
   0% {
-    bottom: 6vh;
+    bottom: 7vh;
   }
   100% {
     bottom: 8vh;
@@ -158,8 +158,15 @@
 #house_detail_contents .house_detail_intro .house_detail_navi {
   position: absolute;
   bottom: 8vh;
-  -webkit-animation: motion 0.3s linear 2s infinite alternate;
-          animation: motion 0.3s linear 2s infinite alternate;
+  -webkit-animation-name: motion;
+          animation-name: motion;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  animation-direction: alternate-reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 #house_detail_contents .house_detail_intro .house_detail_navi svg {
   width: 10vh;

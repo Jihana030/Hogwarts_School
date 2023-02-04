@@ -68,8 +68,12 @@
                     item.classList.remove('comm_active_accordion');
                 }
             });
-        })
-    })
+        });
+    });
+    console.log($submenuTitle[2]);
+    $submenuTitle[2].addEventListener('click', () => {
+        window.location.href = 'house_list.html';
+    });
 
     // Flag icon accordion menu **
     $menuFlag.addEventListener('click', () => {

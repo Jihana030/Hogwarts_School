@@ -86,6 +86,7 @@
         $todoDltBtn.forEach(X => {
             X.addEventListener('click', e => {
                 e.target.parentNode.parentNode.remove();
+                console.log(e.target.parentNode.parentNode)
             });
         });
     }

@@ -24,7 +24,7 @@ $selectText: #fff;
 
 
 @keyframes motion {
-	0% { bottom: 6vh; }
+	0% { bottom: 7vh; }
 	100% { bottom: 8vh; }
 }
 
@@ -151,7 +151,11 @@ $selectText: #fff;
             // bottom: 4vw;
             // margin-top: 8vw;
 
-            animation: motion 0.3s linear 2s infinite alternate;
+            animation-name: motion;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
 
             svg {
                 width: 10vh;
