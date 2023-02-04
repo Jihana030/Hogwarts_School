@@ -447,8 +447,15 @@
   background-color: #fff;
   z-index: 99999;
 }
+.comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu a p {
+  color: #7a7a7a;
+}
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu:not(:last-child) {
   margin-bottom: 0.7em;
+}
+.comm_header_menu_max1920 .comm_header_menu_list .comm_submenu_exists {
+  color: #333 !important;
+  font-weight: 500;
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu.comm_active_accordion {
   max-height: 16em;
@@ -626,7 +633,12 @@
   margin-bottom: 4vw;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu p {
+  color: #7a7a7a;
   font-size: 3vw;
+}
+.comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_submenu_exists {
+  color: #333 !important;
+  font-weight: 500;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu.comm_active_accordion {
   max-height: 20em;
@@ -800,11 +812,11 @@
   .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu {
     margin-bottom: 4vw;
   }
-  .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu p {
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu a p {
     font-size: 4.5vw;
   }
   .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu.comm_active_accordion {
-    max-height: 16em;
+    max-height: 17em;
     padding-top: 6vw;
   }
   .comm_header_menu_max768 .comm_header_menu_bottom {

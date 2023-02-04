@@ -16,9 +16,14 @@ a {
     src: url(../font/IbarraRealNova-Regular.ttf);
     unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
+@font-face {
+    font-family: 'SUIT';
+    src: url(../font/SUIT-Regular.ttf);
+}
 
 /* 지정변수 */
 :root {
+    --font-s:'SUIT';
     --font-e: 'Eulyoo1945';
     --font-i: 'Ibarra Real Nova';
     --font-size-nav: 1.2vw;
@@ -28,6 +33,7 @@ a {
     --font-txt-color: #333;
     --font-nav-color: #706357;
     --border-color: 1px solid #B5AAA0;
+    --color-brown: #423620;
     --width-start: 24%;
     --font-size-16: 0.8vw;
     --font-size-16-h: 2vw;
@@ -35,7 +41,7 @@ a {
     --font-size-20-h: 2.2vh;
     --font-size-28: 1.45vw;
     --font-size-28-h: 4vw;
-    --font-size-y: 3vh;
+    --font-size-y: 2.4vh;
     --font-size-y-h: 3vh;
     --color-back: #F0EDE8;
     --img-size-y: 20vh;
@@ -139,12 +145,14 @@ body::-webkit-scrollbar {
 .his_title {
     display: flex;
     flex-direction: column;
+    color: var(--font-nav-color);
 }
 
 /* our history 그 잡채 */
 .his_titleTxt { /*텍스트 공통 클래스*/
     font-family: var(--font-i);
     font-size: var(--font-size-tle-v);
+    color: var(--color-brown);
     font-weight: 700;
     line-height: 5vw;
     text-align: center;
@@ -205,7 +213,7 @@ body::-webkit-scrollbar {
 .his_yearFlex2 {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-i);
+    font-family: var(--font-e);
     font-style: italic;
     font-weight: 400;
     font-size: var(--font-size-nav);
@@ -390,6 +398,10 @@ body::-webkit-scrollbar {
     }
     .comm_header_menu_max1920 {
         z-index: 2;
+    }
+
+    .comm_header_menu_max1920 .comm_header_menu_list {
+        z-index: 999;
     }
 
     #common_footer {

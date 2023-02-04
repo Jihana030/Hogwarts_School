@@ -490,10 +490,23 @@ $selectText: #fff;
             background-color: #fff;
             z-index: 99999;
 
+            .comm_submenu {
+                a {
+                    p {
+                        color: #7a7a7a;
+                    }
+                }
+            }
+
             .comm_submenu:not(:last-child) {
                 margin-bottom: .7em;
             }
 
+            
+        }
+        .comm_submenu_exists {
+            color: $fontBlack !important;
+            font-weight: 500;
         }
 
         .comm_header_submenu.comm_active_accordion {
@@ -721,9 +734,14 @@ $selectText: #fff;
                     margin-bottom: 4vw;
 
                     p {
+                        color: #7a7a7a;
                         font-size: 3vw;
                     }
                 }
+            }
+            .comm_submenu_exists {
+                color: $fontBlack !important;
+                font-weight: 500;
             }
 
             .comm_header_submenu.comm_active_accordion {
@@ -958,14 +976,16 @@ $selectText: #fff;
                         .comm_submenu {
                             margin-bottom: 4vw;
 
-                            p {
-                                font-size: 4.5vw;
+                            a {
+                                p {
+                                    font-size: 4.5vw;
+                                }
                             }
                         }
                     }
 
                     .comm_header_submenu.comm_active_accordion {
-                        max-height: 16em;
+                        max-height: 17em;
                         padding-top: 6vw;
                     }
                 }
