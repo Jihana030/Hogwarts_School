@@ -1,6 +1,6 @@
 *{margin: 0; padding: 0;}
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; cursor: url(../img/circle/common/Cursor_Default.png), auto; }
 
 a {
     text-decoration: none;

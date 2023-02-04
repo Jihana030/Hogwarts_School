@@ -1,4 +1,7 @@
 *{margin: 0; padding: 0;}
+html {
+    cursor: url(../img/circle/common/Cursor_Default.png), auto;
+}
 /* ----------------가로세로 스크롤 막기---------------------------------------------------- */
 body {
     overflow: hidden;
