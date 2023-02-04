@@ -19,6 +19,86 @@
     bottom: 8vh;
   }
 }
+@-webkit-keyframes neckslice {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  40% {
+    transform: rotate(-140deg);
+  }
+  60% {
+    transform: rotate(-110deg);
+  }
+  80% {
+    transform: rotate(-130deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
+}
+@keyframes neckslice {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  40% {
+    transform: rotate(-140deg);
+  }
+  60% {
+    transform: rotate(-110deg);
+  }
+  80% {
+    transform: rotate(-130deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
+}
+@-webkit-keyframes Maintain {
+  0% {
+    transform: rotate(-120deg);
+  }
+  20% {
+    transform: rotate(-130deg);
+  }
+  40% {
+    transform: rotate(-110deg);
+  }
+  60% {
+    transform: rotate(-130deg);
+  }
+  80% {
+    transform: rotate(-110deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes Maintain {
+  0% {
+    transform: rotate(-120deg);
+  }
+  20% {
+    transform: rotate(-130deg);
+  }
+  40% {
+    transform: rotate(-110deg);
+  }
+  60% {
+    transform: rotate(-130deg);
+  }
+  80% {
+    transform: rotate(-110deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #comm_container {
   width: 100%;
   font-family: "Ibarra Real Nova", serif;
@@ -191,7 +271,7 @@
   overflow: hidden;
   font-family: "Eulyoo1945", serif;
   font-size: 2vh;
-  color: #686255;
+  color: #504733;
   transition: 0.3s;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_symbol .house_detail_s2_symbol_main .house_detail_s2_text.house_detail_s2_text_active {
@@ -306,7 +386,7 @@
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_title {
   font-size: 5vh;
-  color: #686255;
+  color: #504733;
   letter-spacing: -0.2vw;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name {
@@ -316,15 +396,29 @@
   font-weight: 500;
   letter-spacing: -0.15vw;
   line-height: 7vh;
+  display: flex;
+  justify-content: flex-end;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name p {
   display: inline-block;
 }
-#house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_name_animation {
-  transform: rotate(40deg);
+#house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_first_name {
+  transform-origin: bottom right;
 }
-#house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_name_animation span {
+#house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_first_name span {
   display: inline-block;
+}
+#house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name .house_detail_s2_central_char_first_name_animation {
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: neckslice, Maintain;
+          animation-name: neckslice, Maintain;
+  -webkit-animation-delay: 0s, 2s;
+          animation-delay: 0s, 2s;
+  -webkit-animation-duration: 2s, 7s;
+          animation-duration: 2s, 7s;
+  -webkit-animation-timing-function: ease-in, ease-in-out;
+          animation-timing-function: ease-in, ease-in-out;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name_max480 {
   display: none;
