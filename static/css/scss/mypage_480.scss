@@ -304,14 +304,14 @@ $selectText: #fff;
                         
                         #calendar {
                             width: 70vw;
-                            height: 62vw;
+                            height: 65vw;
 
                             // Fullcalendar style fix ***
 
                             // calendar top
                             .fc-header-toolbar {
                                 align-self:stretch;
-                                margin-bottom: 1vw;
+                                margin-bottom: 2vw;
 
                                 .fc-toolbar-chunk {
 
@@ -403,28 +403,49 @@ $selectText: #fff;
                                                 margin: 0;
                                             }
 
-                                            .fc-daygrid-day-top {
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
-                                                
-                                                .fc-daygrid-day-number {
-                                                    width: 100%;
+                                            .fc-daygrid-day-frame {
+                                                display: flex;
+                                                align-items: center;
+
+                                                .fc-daygrid-day-top {
+                                                    width: 9.6vw;
                                                     height: 9.6vw;
-                                
-                                                    padding: 0;
-                                                    text-align: center;
-                                                    font-size: 3vw;
-                                                    font-family: 'SUIT', sans-serif;
-                                
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    align-items: center;
+                                                    
+                                                    .fc-daygrid-day-number {
+                                                        width: 5.5vw;
+                                                        height: 5.5vw;
+                                    
+                                                        padding: 0;
+                                                        text-align: center;
+                                                        font-size: 3vw;
+                                                        font-family: 'SUIT', sans-serif;
+                                    
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                    }
+
                                                 }
                                             }
 
                                             .fc-daygrid-day-events {
-                                                display: none;
+                                                width: 100%;
+                                                min-height: 100%;
+
+                                                z-index: -1;
+
+                                                position: absolute;
+                                                top: 18% !important;
+                                                left: 15% !important;
+
+                                                .fc-event {
+                                                    width: 5.5vw !important;
+                                                    height: 5.5vw !important;
+
+                                                    border: none;
+                                                    border-radius: 5.5vw !important;
+                                                    background-color: rgba(255, 255, 255, 0.7);
+                                                }
                                             }
                                         }
 
@@ -677,7 +698,8 @@ $selectText: #fff;
                             border-radius: 1.5vw;
     
                             display: flex;
-                            align-items: flex-end;
+                            flex-direction: column;
+                            justify-content: flex-end;
                         }
                         
                         .mypage_timeTable_slot_subject {
