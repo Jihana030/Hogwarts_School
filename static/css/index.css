@@ -1286,6 +1286,7 @@ header {
 }
 
 .main_con5-categories div {
+  cursor: url(../img/circle/common/Cursor_Pointer.png), auto;
   padding: 3rem 0;
   text-align: center;
   width: 100%;
