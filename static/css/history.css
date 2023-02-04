@@ -7,6 +7,13 @@ a {
     color: var(--font-nav-color);
 }
 
+a,
+ul,
+li,
+nav {
+  cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
+}
+
 @font-face {
     font-family: 'Eulyoo1945';
     src: url(../font/Eulyoo1945-Regular.ttf);
@@ -361,10 +368,18 @@ body::-webkit-scrollbar {
 
 /* ------------ 미디어쿼리 ---------------------- 미디어쿼리 ----------------------- */
 @media (max-width: 850px){
+    a,
+    ul,
+    li,
+    nav {
+    cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
+    }
+
     body {
         overflow-y: scroll;
         /* overflow: hidden; */
         height: 100%;
+        cursor: url(../img/circle/common/Cursor_Default.png), auto;
     }
 
     /* 배경 종이질감 */
