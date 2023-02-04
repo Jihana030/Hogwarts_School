@@ -222,11 +222,11 @@
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar {
     width: 70vw;
-    height: 62vw;
+    height: 65vw;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar {
     align-self: stretch;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-toolbar-title {
     width: 55vw;
@@ -286,14 +286,17 @@
     height: 100% !important;
     margin: 0;
   }
-  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top {
-    display: block;
-    width: 100%;
-    height: 100%;
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame {
+    display: flex;
+    align-items: center;
   }
-  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top .fc-daygrid-day-number {
-    width: 100%;
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top {
+    width: 9.6vw;
     height: 9.6vw;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+    width: 5.5vw;
+    height: 5.5vw;
     padding: 0;
     text-align: center;
     font-size: 3vw;
@@ -303,7 +306,19 @@
     align-items: center;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events {
-    display: none;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 18% !important;
+    left: 15% !important;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events .fc-event {
+    width: 5.5vw !important;
+    height: 5.5vw !important;
+    border: none;
+    border-radius: 5.5vw !important;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
     width: 100%;
@@ -499,7 +514,8 @@
     font-family: "SUIT", sans-serif;
     border-radius: 1.5vw;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
     background-color: rgba(255, 255, 255, 0.45);
