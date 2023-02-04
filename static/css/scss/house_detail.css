@@ -1,7 +1,7 @@
 /*------------ font ------------*/
 @font-face {
   font-family: "Eulyoo1945", serif;
-  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+  src: url("../../font/Eulyoo1945-Regular.ttf");
 }
 @-webkit-keyframes motion {
   0% {
@@ -27,13 +27,13 @@
     transform: rotate(2deg);
   }
   40% {
-    transform: rotate(-140deg);
+    transform: rotate(-160deg);
   }
   60% {
-    transform: rotate(-110deg);
+    transform: rotate(-100deg);
   }
   80% {
-    transform: rotate(-130deg);
+    transform: rotate(-140deg);
   }
   100% {
     transform: rotate(-120deg);
@@ -47,13 +47,13 @@
     transform: rotate(2deg);
   }
   40% {
-    transform: rotate(-140deg);
+    transform: rotate(-160deg);
   }
   60% {
-    transform: rotate(-110deg);
+    transform: rotate(-100deg);
   }
   80% {
-    transform: rotate(-130deg);
+    transform: rotate(-140deg);
   }
   100% {
     transform: rotate(-120deg);
@@ -67,13 +67,16 @@
     transform: rotate(-130deg);
   }
   40% {
-    transform: rotate(-110deg);
+    transform: rotate(-160deg);
   }
   60% {
-    transform: rotate(-130deg);
+    transform: rotate(-100deg);
   }
   80% {
-    transform: rotate(-110deg);
+    transform: rotate(-120deg);
+  }
+  90% {
+    transform: rotate(2deg);
   }
   100% {
     transform: rotate(0deg);
@@ -87,13 +90,16 @@
     transform: rotate(-130deg);
   }
   40% {
-    transform: rotate(-110deg);
+    transform: rotate(-160deg);
   }
   60% {
-    transform: rotate(-130deg);
+    transform: rotate(-100deg);
   }
   80% {
-    transform: rotate(-110deg);
+    transform: rotate(-120deg);
+  }
+  90% {
+    transform: rotate(2deg);
   }
   100% {
     transform: rotate(0deg);
@@ -422,8 +428,8 @@
           animation-name: neckslice, Maintain;
   -webkit-animation-delay: 0s, 2s;
           animation-delay: 0s, 2s;
-  -webkit-animation-duration: 2s, 7s;
-          animation-duration: 2s, 7s;
+  -webkit-animation-duration: 2s, 2.5s;
+          animation-duration: 2s, 2.5s;
   -webkit-animation-timing-function: ease-in, ease-in-out;
           animation-timing-function: ease-in, ease-in-out;
 }
