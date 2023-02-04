@@ -3,6 +3,13 @@
 /* 지정변수 */
 :root {
     --img-hover: 5vw;
+    --point-color: #b2a069;
+    --text-reverse-color: #fff;
+}
+
+::selection {
+    background-color: var(--point-color);
+    color: var(--text-reverse-color);
 }
 
 @font-face {
@@ -176,11 +183,11 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
         width: 100%;
         min-height: 100%;
         /* 드래그 방지 */
-        -webkit-user-select:none;
+        /* -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
         user-select:none;
-        overflow: scroll;
+        overflow: scroll; */
     }
 
     /* footer */
