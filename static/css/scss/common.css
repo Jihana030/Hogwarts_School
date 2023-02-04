@@ -61,5 +61,16 @@ a {
 .contents {
   width: 100%;
   height: 100vh;
-  background-image: url("../../img/khlll/background-default.png");
+  background-color: #f1f0ec;
+}
+.contents .contents_overlay {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/khlll/Background_texture.jpg") repeat;
+  opacity: 0.25;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }/*# sourceMappingURL=common.css.map */
