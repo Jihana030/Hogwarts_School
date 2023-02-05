@@ -58,18 +58,33 @@
     const $menuFlagList = document.querySelector('.comm_menu_login_flag_menu');
 
     $submenuTitle.forEach((title, index) => {
-        title.addEventListener('click', e => {
+        title.addEventListener('mouseover', e => {
             e.preventDefault();
             $menuFlagList.classList.remove('comm_menu_login_flag_menu_accordion');
             $searchText.classList.remove('comm_active_input');
             $submenuItem.forEach((item, index2) => {
-                item.classList.toggle('comm_active_accordion');
+                item.classList.add('comm_active_accordion');
                 if (index !== index2) {
                     item.classList.remove('comm_active_accordion');
                 }
             });
-        })
-    })
+        });
+    });
+
+    $submenuItem.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('comm_active_accordion');
+        });
+    });
+    $submenuItem.forEach(item => {
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('comm_active_accordion');
+        });
+    });
+
+    $submenuTitle[2].addEventListener('click', () => {
+        window.location.href = 'house_list.html';
+    });
 
     // Flag icon accordion menu **
     $menuFlag.addEventListener('click', () => {

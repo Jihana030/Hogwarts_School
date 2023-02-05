@@ -1,7 +1,7 @@
 /*------------ font ------------*/
 @font-face {
   font-family: "Eulyoo1945", serif;
-  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+  src: url("../../font/Eulyoo1945-Regular.ttf");
 }
 .comm_white_Bg {
   background-color: rgba(255, 255, 255, 0.4);
@@ -287,6 +287,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #e2dccb;
+  z-index: 99999;
   display: none;
 }
 #comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
@@ -449,6 +450,9 @@
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu a p {
   color: #7a7a7a;
+}
+.comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu:hover p {
+  color: #69604b;
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu:not(:last-child) {
   margin-bottom: 0.7em;
@@ -792,7 +796,7 @@
     margin-bottom: 8vw;
     cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   }
-  .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu a, .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
     display: inline-block;
     font-size: 6.2vw;
   }

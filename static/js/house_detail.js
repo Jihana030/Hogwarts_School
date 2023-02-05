@@ -47,7 +47,6 @@
             nextEl: ".house_detail_slide_btn",
         },
     });
-    console.log(swiper)
 
     var swiper2 = new Swiper(".house_detail_slide_title_name", {
         slidesPerView: 'auto',
@@ -58,7 +57,6 @@
             nextEl: ".house_detail_slide_btn",
         },
     });
-    console.log(swiper2)
 
     var swiper3 = new Swiper(".house_detail_slide_about", {
         slidesPerView: 1,
@@ -68,6 +66,14 @@
         navigation: {
             nextEl: ".house_detail_slide_btn",
         },
+    });
+
+    // "Sir" 애니메이션 효과 **
+    const $ghost = document.querySelector('.house_detail_s2_central_char_title_name3');
+    const $pointAnmaition = document.querySelector('.house_detail_s2_central_char_first_name');
+
+    $ghost.addEventListener('mouseover', () => {
+        $pointAnmaition.classList.add('house_detail_s2_central_char_first_name_animation');
     });
 
     // @media screen max-width 480 : More 버튼 누를 때 내용 나오는 효과 **

@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
@@ -255,9 +252,7 @@ $selectText: #fff;
                     }
 
                 }
-
             }
-
         }
 
         .comm_login {
@@ -284,6 +279,7 @@ $selectText: #fff;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #e2dccb;
+                z-index: 99999;
 
                 display: none;
                 
@@ -495,6 +491,9 @@ $selectText: #fff;
                     p {
                         color: #7a7a7a;
                     }
+                }
+                &:hover p {
+                    color: $borderColor;
                 }
             }
 
@@ -953,7 +952,7 @@ $selectText: #fff;
                     margin-bottom: 8vw;
                     cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
-                    p {
+                    a, p {
                         display: inline-block;
                         font-size: 6.2vw;
                     }

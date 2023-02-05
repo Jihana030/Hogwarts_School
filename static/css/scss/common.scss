@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
@@ -55,6 +52,8 @@ a, button, li, input {
     color: $selectText;
 }
 
+
+
 ul,
 ol {
     list-style: none;
@@ -69,5 +68,19 @@ a {
 .contents {
     width: 100%;
     height: 100vh;
-    background-image: url("../../img/khlll/background-default.png");
-  }
+    background-color: #f1f0ec;
+
+    .contents_overlay {
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/khlll/Background_texture.jpg") repeat;
+        opacity: 0.25;
+        mix-blend-mode: darken;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
