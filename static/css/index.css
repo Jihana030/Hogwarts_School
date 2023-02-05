@@ -13,14 +13,7 @@
   --display-gap: 3.125vw;
 }
 
-/* Flashlight Overlay */
-/* .lumos {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
+/* Flashlight Overlay✨ */
 .start-lumos {
   --cursorX: 50vw;
   --cursorY: 50vh;
@@ -856,15 +849,6 @@ header {
   color: var(--text-color);
 }
 
-.main_cal-body td:nth-child(7) p {
-  /* color: var(--point-color); */
-}
-
-.main_cal-body td[data-date="3"] p,
-.main_cal-body td[data-date="14"] p {
-  /* color: var(--point-color); */
-}
-
 .main_cal-body tr .today p {
   background-color: var(--point-color);
   border-radius: 0.3em;
@@ -1339,7 +1323,7 @@ header {
 /* 모우닝 머틀 */
 #main_moaning-myrtle span {
   display: inline-block;
-  transition: 0.8s ease-in;
+  transition: 0.6s ease-in;
 }
 
 #main_moaning-myrtle span:hover {
@@ -1349,19 +1333,19 @@ header {
 }
 
 #main_moaning-myrtle span:nth-child(1) {
-  animation-delay: 0.5s;
+  animation-delay: 0.1s;
 }
 
 #main_moaning-myrtle span:nth-child(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
 }
 
 #main_moaning-myrtle span:nth-child(3) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 #main_moaning-myrtle span:nth-child(4) {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 /* con4 - 우측 게시판 */

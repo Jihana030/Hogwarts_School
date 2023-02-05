@@ -81,7 +81,7 @@
 
   // ??
   const $searchAll = document.querySelector('.main_search-container > input')
-  // const $lumos = document.querySelector('.lumos')
+  const $body = document.querySelector('body')
   console.log($searchAll)
   $searchBack.addEventListener('keyup', e => {
     if (e.keyCode === 13) {
@@ -89,22 +89,22 @@
         || e.target.value === 'Lumos'
         || e.target.value === '루모스'
         || e.target.value === 'lumos') {
-          document.querySelector('body').classList.add('start-lumos');
+          $body.classList.add('start-lumos');
         
         function update(e) {
           var x = e.clientX || e.touches[0].clientX
           var y = e.clientY || e.touches[0].clientY
       
-          document.querySelector('body').style.setProperty('--cursorX', x + 'px')
-          document.querySelector('body').style.setProperty('--cursorY', y + 'px')
+          $body.style.setProperty('--cursorX', x + 'px')
+          $body.style.setProperty('--cursorY', y + 'px')
         }
       
-        document.querySelector('body').addEventListener('mousemove', update)
-        document.querySelector('body').addEventListener('touchmove', update)
+        $body.addEventListener('mousemove', update)
+        $body.addEventListener('touchmove', update)
 
       }
       if(e.target.value === '녹스' || e.target.value === 'Nox' || e.target.value === 'NOX' || e.target.value === 'npx'){
-        document.querySelector('body').classList.remove('start-lumos');
+        $body.classList.remove('start-lumos');
       }
       
     }
