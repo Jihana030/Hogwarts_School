@@ -679,21 +679,21 @@ header {
   transform: translateX(2.5px) translateY(1px) rotate(-55deg);
 }
 
-#main_nav-menu #main_user-info {
+#main_nav-menu .main_user-info {
   text-align: end;
   position: relative;
   display: flex;
     justify-self: self-end;
 }
 
-#main_nav-menu #main_user-info img {
+#main_nav-menu .main_user-info img {
   width: 1.5rem;
 }
 
-#main_user-info:hover .comm_login_flag_menu {
+.main_user-info:hover .comm_login_flag_menu {
   display: block;
 }
-#main_user-info .comm_login_flag_menu {
+.main_user-info .comm_login_flag_menu {
   width: 95px;
   height: 195px;
   position: absolute;
@@ -703,7 +703,7 @@ header {
   z-index: 99999;
   display: none;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box {
   width: 100%;
   height: 100%;
   padding: 14px;
@@ -716,7 +716,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year {
   width: 70px;
   margin-top: 0.5em;
   display: flex;
@@ -726,20 +726,20 @@ header {
   color:  var(--text-color);
   font-weight: 600;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_name {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_name {
   font-size: 1rem;
   font-family: "Eulyoo1945", serif;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_year {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_name_year .comm_login_flag_menu_year {
   font-size: 14px;
   font-family: "Eulyoo1945", serif;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_line {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_line {
   width: 70px;
   border-bottom: 1px solid #918670;
   margin: 0.7em;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents {
   width: 70px;
   height: 90%;
   display: inline-flex;
@@ -748,19 +748,19 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item {
   margin-bottom: 0.5em;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item a {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents ul .comm_login_flag_menu_item a {
   display: inline-block;
   font-size: 14px;
   color:  var(--text-color);
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents .comm_login_flag_menu_logout {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_contents .comm_login_flag_menu_logout {
   font-size: 14px;
   margin-bottom: 0.5em;
 }
-#main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_tail {
+.main_user-info .comm_login_flag_menu .comm_login_flag_menu_box .comm_login_flag_menu_tail {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -771,7 +771,7 @@ header {
   left: 76%;
   transform: translate(-50%, -50%);
 }
-#main_user-info .comm_login_flag_menu .comm_menu_login_flag_box_overlay {
+.main_user-info .comm_login_flag_menu .comm_menu_login_flag_box_overlay {
   width: 100%;
   height: 100%;
   background: url("../../img/khlll/background_texture.jpg") repeat;
