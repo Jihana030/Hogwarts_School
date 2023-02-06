@@ -2,34 +2,103 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Eulyoo1945', serif;
 
+$fontBlack: #333;
 $fontmainColor: #423620;
-$fontAboutColor: #686255;
+$fontSubColor: #504733;
+
 $borderColor: #978b7e;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
+
+
+@keyframes motion {
+	0% { bottom: 7vh; }
+	100% { bottom: 8vh; }
+}
+
+@keyframes neckslice{
+    0% {
+        transform:  rotate(0deg);
+    }
+    20% {
+        transform:  rotate(2deg) ;
+    }
+    40% {
+        transform:  rotate(-160deg) ;
+      }
+    60% {
+        transform:  rotate(-100deg) ;
+      }
+    80% {
+        transform:  rotate(-140deg) ;
+      }
+    100% {
+        transform:  rotate(-120deg) ;
+    }
+}
+
+@keyframes Maintain{
+    0% {
+        transform:  rotate(-120deg);
+    }
+    20% {
+        transform:  rotate(-130deg) ;
+    }
+    40% {
+        transform:  rotate(-160deg) ;
+      }
+    60% {
+        transform:  rotate(-100deg) ;
+      }
+    80% {
+        transform:  rotate(-120deg) ;
+      }
+    90% {
+    transform:  rotate(2deg) ;
+    }
+    100% {
+        transform:  rotate(0deg)  ;
+    }
+}
 
 #comm_container {
     width: 100%;
 
-    background: url("../../img/khlll/background-default.png");
-    background-size: cover;
     font-family: 'Ibarra Real Nova', serif;
+    background-color: #e2dccb;
     overflow: hidden;
+
+    position: relative;
+
+    .house_detail_overlay {
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/khlll/background_texture.jpg") repeat;
+        opacity: 0.3;
+        mix-blend-mode: multiply;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
 }
 
 #house_detail_contents {
     .house_detail_intro {
         width: 100%;
         height: 100vh;
-        background: url(../../img/khlll/background_housepage.png) no-repeat;
+        background: url(../../img/khlll/house_detail/background_housepage.png) no-repeat;
         background-size: cover;
 
         display: flex;
@@ -47,18 +116,14 @@ $borderColor: #978b7e;
             .house_detail_title {
                 .house_detail_sub_title {
                     font-size: 3.2vh;
-                    // font-size: 30px;
                 }
                 .house_detail_title_name {
                     font-size: 14.5vh;
-                    // font-size: 7.7vw;
-                    // font-size: 130px;
                 }
             }
     
             .house_detail_about {
                 margin-top: 5.5vw;
-                // margin-top: 105px;
 
                 display: flex;
                 flex-direction: column;
@@ -67,11 +132,9 @@ $borderColor: #978b7e;
     
                 .house_detail_about_greet {
                     font-size: 3.7vh;
-                    // font-size: 35px;
                 }
                 .house_detail_about_text {
                     margin: 3.3vw 20vw 0 20vw;
-                    // margin-top: 55px;
 
                     line-height: 1.5em;
                     font-family: 'Eulyoo1945', serif;
@@ -87,6 +150,12 @@ $borderColor: #978b7e;
             bottom: 8vh;
             // bottom: 4vw;
             // margin-top: 8vw;
+
+            animation-name: motion;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
 
             svg {
                 width: 10vh;
@@ -122,25 +191,16 @@ $borderColor: #978b7e;
                 .house_detail_s1_word {
                     margin: 0 9vw 0 9vw;
                     font-size: 4.1vh;
-                    // font-size: 2vw;
-                    // font-size: 30px;
                     font-weight: bold;
                 }
                 .house_detail_s1_title {
                     margin-top: 4vh;
-                    // margin-top: 35px;
                     font-size: 7.15vh;
-                    // font-size: 3.5vw;
-                    // font-size: 60px;
                     line-height: 7vh;
                 }
                 .house_detail_s1_about {
-                    // width: 60vw;
-                    // width: 927px;
                     margin: 5.3vh 9vw 0 9vw;
-                    // margin-top: 50px;
                     font-size: 2vh;
-                    // font-size: 1vw;
                     line-height: 1.5em;
                     font-family: 'Eulyoo1945', serif;
                 }
@@ -153,9 +213,7 @@ $borderColor: #978b7e;
                 z-index: 1;
 
                 svg {
-                    // width: 436px;
                     width: 53vh;
-                    // width: 26vw;
                 }
             }
         }
@@ -179,7 +237,6 @@ $borderColor: #978b7e;
                 overflow: hidden;
 
                 .house_detail_s2_symbol_main {
-                    // width: 60vw;
                     width: 1150px;
                     height: 100%;
                     
@@ -187,7 +244,6 @@ $borderColor: #978b7e;
                     border-right: 1px solid $borderColor;
                     background: rgba(255, 255, 255, 0.15);
                     z-index: 2;
-                    // backdrop-filter: blur(13px);
 
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
@@ -227,23 +283,27 @@ $borderColor: #978b7e;
                     }
 
                     .house_detail_s2_text {
+                        max-height: 0;
+                        overflow: hidden;
                         font-family: 'Eulyoo1945', serif;
                         font-size: 2vh;
-                        color: $fontAboutColor;
+                        color: $fontSubColor;
+                        transition: .3s;
+
+                        &.house_detail_s2_text_active {
+                            max-height: 5vw;
+                        }
                     }
                 }
 
                 .house_detail_s2_symbol_bgText {
                     font-size: 36vh;
-                    // font-size: 22vw;
-                    // font-size: 340px;
                     font-weight: bold;
                     letter-spacing: -1vw;
                     
                     position: absolute;
                     top: 50%; left: 50%;
                     transform: translate(-50%, -50%);
-                    // color: $fontmainColor;
                     color: #c0b8a5;
                 }
             }
@@ -254,10 +314,11 @@ $borderColor: #978b7e;
 
                 display: flex;
                 justify-content: center;
+                position: relative;
+                z-index: 2;
 
                 .house_detail_s2_central_char_middle {
                     width: 170vh;
-                    // width: 83vw;
 
                     border-left: 1px solid $borderColor;
                     border-right: 1px solid $borderColor;
@@ -365,7 +426,7 @@ $borderColor: #978b7e;
 
                                     .house_detail_s2_central_char_title {
                                         font-size: 5vh;
-                                        color: $fontAboutColor;
+                                        color: $fontSubColor;
                                         letter-spacing: -0.2vw;
                                     }
                                     
@@ -376,6 +437,29 @@ $borderColor: #978b7e;
                                         font-weight: 500;
                                         letter-spacing: -0.15vw;
                                         line-height: 7vh;
+
+                                        display: flex;
+                                        justify-content: flex-end;
+
+                                        p {
+                                            display: inline-block;
+                                        }
+
+                                        .house_detail_s2_central_char_first_name {
+                                            transform-origin: bottom right;
+                                            span {
+                                                display: inline-block;
+                                            }
+                                            
+                                        }
+                                        .house_detail_s2_central_char_first_name_animation {
+                                            animation-fill-mode: forwards;
+                                            animation-name: neckslice, Maintain;
+                                            animation-delay: 0s, 2s;
+                                            animation-duration: 2s, 2.5s;
+                                            animation-timing-function: ease-in, ease-in-out;
+                                        }
+                                        
                                     }
 
                                     .house_detail_s2_central_char_name_max480 {
@@ -389,7 +473,7 @@ $borderColor: #978b7e;
             }
 
             .house_detail_slide_btn {
-                cursor: pointer;
+                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
             }
         }
 
@@ -497,7 +581,7 @@ $borderColor: #978b7e;
                         font-weight: normal;
                     }
                     p {
-                        margin-top: 1.6vh;
+                        margin-top: 1.4vh;
                         margin-left: 0.6vw;
                         font-size: 3.8vh;
                     }
@@ -507,127 +591,155 @@ $borderColor: #978b7e;
             .house_detail_s4_main {
                 height: 70vh;
                 border-top: 1px solid $borderColor;
-
+                
                 display: flex;
+                justify-content: center;
 
-                .house_detail_s4_main_select {
-                    width: 34.5vw;
+                .house_detail_s4_main_box {
+                    
+                    width: 160vh;
                     height: 100%;
-                    border-right: 1px solid $borderColor;
-                    z-index: 2;
 
-                    .house_detail_s4_main_select_choice {
-                        width: 100% !important;
-                        height: 30%;
-                        // margin-right: -7.3vh;
-                        
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        
-                        .house_detail_s4_main_select_choice_box {
-                            margin-right: -6.5vh;
-
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                            // background-color: aquamarine;
-
-                            .house_detail_s4_main_select_one {
-                                font-size: 7vh;
-                                letter-spacing: -0.15vw;
-                            }
-                            .house_detail_s4_main_select_btn {
-                                margin-left: 7vh;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    .house_detail_s4_main_select_list {
-                        // height: 48.7vh;
-                        height: 70%;
-                        display: grid;
-                        grid-template-rows: repeat(8, 1fr);
-
-                        li {
-                            width: 100%;
-                            height: 100%;
-                            padding-right: 2vw;
-                            font-size: 2.2vh;
-                            border-top: 1px solid $borderColor;
-                            background-color: rgba(255, 255, 255, 0.4);
-                            cursor: pointer;
-
-                            display: flex;
-                            justify-content: flex-end;
-                            align-items: center;
-                        }
-                    }
-
-                }
-
-                .house_detail_s4_main_list {
-                    width: 65vw;
-                    height: 70vh;
-                    padding-top: 9.5vh;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    overflow: scroll;
-                    &::-webkit-scrollbar{
-                        display: none;
-                    }
-                    z-index: 1;
+                    border-left: 1px solid $borderColor;
+                    border-right: 1px solid $borderColor;   
 
                     display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
 
-                    .house_detail_s4_main_list_item {
-                        width: 37vw;
-                        min-width: 540px;
-                        height: 8.2vh;
-                        font-size: 2.5vh;
-                        margin: 0 0 3.2vh 10vw;
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .house_detail_s4_main_list_item_pic {
-                            width: 8.2vh;
-                            height: 8.2vh;
-                            border-radius: 8.2vh;
-                            overflow: hidden;
-
-                            img {
-                                width: 8.2vh;
-                            }
-                        }
-
-                        .house_detail_s4_main_list_item_name {
-                            width: 11vw;
-                            height: 100%;
+                    .house_detail_s4_main_select {
+                        width: 34.5vw;
+                        height: 100%;
+                        border-right: 1px solid $borderColor;
+                        z-index: 2;
+    
+                        .house_detail_s4_main_select_choice {
+                            width: 100% !important;
+                            height: 30%;
+                            // margin-right: -7.3vh;
                             
                             display: flex;
+                            justify-content: center;
                             align-items: center;
-
-                            p {
-                                overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                display:inline-block;
-                            }
                             
+                            .house_detail_s4_main_select_choice_box {
+    
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
+    
+                                .house_detail_s4_main_select_one {
+                                    font-size: 4vh;
+                                    text-align: right;
+                                    letter-spacing: -0.1vw;
+                                }
+                                .house_detail_s4_main_select_btn {
+                                    margin-left: 3vw;
+
+                                    svg {
+                                        width: 2.2vh;
+                                    }
+                                }
+                            }
+                        }
+                        .house_detail_s4_main_select_list {
+                            height: 0;
+                            overflow: hidden;
+                            
+                            display: grid;
+                            grid-template-rows: repeat(8, 1fr);
+                            opacity: 0;
+                            transition: .3s;
+                            background: #efefef57;
+    
+                            &.house_detail_s4_active_accordion {
+                                height: 70%;
+                                opacity: 1;
+                            }
+    
+                            li {
+                                width: 100%;
+                                height: 100%;
+                                font-size: 2.2vh;
+                                border-top: 1px solid $borderColor;
+                                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
+    
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+    
+                    }
+    
+                    .house_detail_s4_main_list {
+                        width: 100%;
+                        height: 70vh;
+                        padding-top: 9.5vh;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        overflow: scroll;
+                        &::-webkit-scrollbar{
+                            display: none;
+                        }
+                        z-index: 1;
+    
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: center;
+    
+                        .house_detail_s4_main_list_item {
+                            width: 37vw;
+                            min-width: 540px;
+                            height: 8.2vh;
+                            font-size: 2.5vh;
+                            margin-bottom: 3.2vh;
+                            // margin: 0 0 3.2vh 10vw;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            .house_detail_s4_main_list_item_pic {
+                                width: 8.2vh;
+                                height: 8.2vh;
+                                border-radius: 8.2vh;
+                                overflow: hidden;
+                                background-color: rgba(255, 255, 255, 0.3);
+                                border: 1px solid #c2b4a6;
+    
+                                img {
+                                    height: 100%;
+                                    object-fit: fill;
+                                }
+                            }
+    
+                            .house_detail_s4_main_list_item_name {
+                                width: 11vw;
+                                height: 100%;
+                                
+                                display: flex;
+                                align-items: center;
+    
+                                p {
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    display:inline-block;
+                                }
+                                
+                            }
                         }
                     }
+
                 }
+
             }
         }
     }
 
-    .max480 {
-        display: none;
-    }
+}
+.max480 {
+    display: none;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 769px) {
@@ -824,17 +936,23 @@ $borderColor: #978b7e;
                                         font-size: 7vw !important;
                                         line-height: 7vw !important;
 
-                                        flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
+
+                                        .house_detail_s2_central_char_first_name {
+                                            transform-origin: bottom right;
+                                            span {
+                                                display: inline-block;
+                                            }
+                                            
+                                        }
                                     }
                                 }
                             }
                         }
 
                         .house_detail_slide_btn {
-                            cursor: pointer;
+                            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                         }
                     }
                 }
@@ -907,8 +1025,8 @@ $borderColor: #978b7e;
                         font-size: 5vw !important;
                     }
                     p {
-                        letter-spacing: 0 !important;
-                        margin-top: 1.5vh !important;
+                        letter-spacing: -0.1vw !important;
+                        margin-top: 1.3vh !important;
                         margin-left: 0.9vw;
                         font-size: 3vw !important;
                     }
@@ -916,63 +1034,91 @@ $borderColor: #978b7e;
             }
 
             .house_detail_s4_main {
-                .house_detail_s4_main_select {
+                flex-direction: column;
+                position: relative;
 
-                    .house_detail_s4_main_select_choice {
-                        height: 20% !important;
+                .house_detail_s4_main_box {
+                    width: 100% !important;
+                    flex-direction: column;
 
-                        justify-content: center !important;
-                        
-                        .house_detail_s4_main_select_choice_box {
-                            margin-right: 0 !important;
-                            .house_detail_s4_main_select_one {
-                                font-size: 5vh !important;
-                                letter-spacing: -0.15vw;
+                    border-left: 0 !important;
+                    border-right: 0 !important;
+                    
+                    .house_detail_s4_main_select {
+                        width: 100% !important;
+                        height: 10% !important;
+
+                        border-left: 0 !important;
+                        border-right: 0 !important;
+                        border-bottom: 1px solid $borderColor;
+    
+                        .house_detail_s4_main_select_choice {
+                            height: 100% !important;
+                            justify-content: center !important;
+                            
+                            .house_detail_s4_main_select_choice_box {
+                                .house_detail_s4_main_select_one {
+                                    font-size: 3.5vh !important;
+                                    letter-spacing: -0.15vw;
+                                }
+                                .house_detail_s4_main_select_btn {
+                                    height: 1.4vh;
+                                    margin-left: 3vw !important;
+                                    
+                                    svg {
+                                        width: 1.9vh !important;
+                                    }
+                                }
                             }
-                            .house_detail_s4_main_select_btn {
-                                margin-left: 3vw !important;
-                                cursor: pointer;
+                        }
+                        .house_detail_s4_main_select_list {
+                            width: 100%;
+                            position: absolute;
+                            max-height: 0 !important;
+                            overflow: hidden;
+                            transition: .3s;
+                            background: url('../../img/khlll/background-default.png') no-repeat !important;
+    
+                            &.house_detail_s4_active_accordion {
+                                max-height: 80% !important;
+                            }
+    
+                            li {
+                                padding-right: 0 !important;
+                                font-size: 2.2vh;
+    
+                                justify-content: center !important;
 
-                                svg {
-                                    width: 2.5vh;
+                                &:last-child {
+                                    border-bottom: 1px solid $borderColor;
                                 }
                             }
                         }
                     }
-                    .house_detail_s4_main_select_list {
-                        height: 80% !important;
+    
+                    .house_detail_s4_main_list {
+                        padding-top: 5.5vh !important;
+    
+                        .house_detail_s4_main_list_item {
+                            width: 72vw !important;
+                            min-width: 405px !important;
+                            height: 8.2vh;
+                            font-size: 2.1vh !important;
+                            // margin: 0 0 3.2vh 7vw !important;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            .house_detail_s4_main_list_item_pic {
+                                width: 7vw !important;
+                                height: 7vw !important;
+                                border-radius: 7vh !important;
+                                overflow: hidden;
+                            }
 
-                        li {
-                            padding-right: 0 !important;
-                            font-size: 2.2vh;
-
-                            justify-content: center !important;
-                        }
-                    }
-                }
-
-                .house_detail_s4_main_list {
-                    padding-top: 5.5vh !important;
-
-                    .house_detail_s4_main_list_item {
-                        width: 47.5vw !important;
-                        min-width: 405px !important;
-                        height: 8.2vh;
-                        font-size: 2vw !important;
-                        margin: 0 0 3.2vh 7vw !important;
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .house_detail_s4_main_list_item_pic {
-                            width: 7vh !important;
-                            height: 7vh !important;
-                            border-radius: 7vh !important;
-                            overflow: hidden;
-
-                            img {
-                                width: 7vh !important;
+                            .house_detail_s4_main_list_item_name {
+                                width: 20vw !important;
                             }
                         }
                     }
@@ -1189,8 +1335,7 @@ $borderColor: #978b7e;
 
                                         // flex-basis: 100%;
                                         display: flex;
-                                        flex-direction: column;
-                                        justify-content: center;
+                                        justify-content: flex-end;
                                     }
                                 }
                             }
@@ -1272,8 +1417,8 @@ $borderColor: #978b7e;
                         font-size: 4vh !important;
                     }
                     p {
-                        letter-spacing: 0 !important;
-                        margin-top: 1.5vh !important;
+                        letter-spacing: -0.1vw !important;
+                        margin-top: 1vh !important;
                         margin-left: 0.9vw;
                         font-size: 3vh !important;
                     }
@@ -1281,85 +1426,96 @@ $borderColor: #978b7e;
             }
 
             .house_detail_s4_main {
-                .house_detail_s4_main_select {
+                flex-direction: column;
+                position: relative;
+                
+                .house_detail_s4_main_box {
+                    width: 100% !important;
+                    flex-direction: column;
 
-                    .house_detail_s4_main_select_choice {
-                        height: 20% !important;
+                    border-left: 0 !important;
+                    border-right: 0 !important;
 
-                        justify-content: center !important;
-                        
-                        .house_detail_s4_main_select_choice_box {
-                            margin-right: 0 !important;
-                            .house_detail_s4_main_select_one {
-                                font-size: 4vh !important;
-                                letter-spacing: -0.15vw;
+                    .house_detail_s4_main_select {
+                        width: 100% !important;
+                        height: 10% !important;
+                        border-right: 0 !important;
+                        border-bottom: 1px solid $borderColor;
+    
+                        .house_detail_s4_main_select_choice {
+                            height: 100% !important;
+                            justify-content: center !important;
+                            
+                            .house_detail_s4_main_select_choice_box {
+                                .house_detail_s4_main_select_one {
+                                    font-size: 3.5vh !important;
+                                    letter-spacing: -0.15vw;
+                                }
+                                .house_detail_s4_main_select_btn {
+                                    height: 1.4vh;
+                                    margin-left: 3vw !important;
+                                    cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
+    
+                                    svg {
+                                        width: 1.7vh !important;
+                                    }
+                                }
                             }
-                            .house_detail_s4_main_select_btn {
-                                margin-left: 3vw !important;
-                                cursor: pointer;
+                        }
+                        .house_detail_s4_main_select_list {
+                            width: 100%;
+                            position: absolute;
+                            max-height: 0 !important;
+                            overflow: hidden;
+                            transition: .3s;
+                            background: url('../../img/khlll/background-default.png') no-repeat !important;
 
-                                svg {
-                                    width: 2.5vh;
+                            &.house_detail_s4_active_accordion {
+                                max-height: 80% !important;
+                            }
+    
+                            li {
+                                padding-right: 0 !important;
+                                font-size: 2.2vh;
+    
+                                justify-content: center !important;
+    
+                                &:last-child {
+                                    border-bottom: 1px solid $borderColor;
                                 }
                             }
                         }
                     }
-                    .house_detail_s4_main_select_list {
-                        height: 80% !important;
-
-                        li {
-                            padding-right: 0 !important;
-                            font-size: 2.2vh;
-
-                            justify-content: center !important;
-                        }
-                    }
-                }
-
-                .house_detail_s4_main_list {
-                    padding-top: 5.5vh !important;
-
-                    .house_detail_s4_main_list_item {
-                        width: 56vw !important;
-                        min-width: 250px !important;
-                        height: 7vw !important;
-                        margin: 0 0 3.2vh 5vh !important;
-                        font-size: 2vw !important;
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        .house_detail_s4_main_list_item_pic {
-                            width: 7vw !important;
-                            height: 100% !important;
-                            border-radius: 7vw !important;
-                            overflow: hidden;
-
-                            img {
+    
+                    .house_detail_s4_main_list {
+                        padding-top: 5.5vh !important;
+    
+                        .house_detail_s4_main_list_item {
+                            width: 80vw !important;
+                            min-width: 250px !important;
+                            height: 7vw !important;
+                            // margin: 0 0 3.2vh 5vh !important;
+                            font-size: 2vh !important;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            .house_detail_s4_main_list_item_pic {
                                 width: 7vw !important;
-                            }
-                        }
-
-                        .house_detail_s4_main_list_item_name {
-                            width: 20vw !important;
-                            font-size: 2vh;
-
-                            p {
+                                height: 100% !important;
+                                border-radius: 7vw !important;
                                 overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                display:inline-block;
                             }
-                        }
-
-                        .house_detail_s4_main_list_item_year {
-                            display: none;
-                        }
-
-                        .house_detail_s4_main_list_item_points {
-                            width: 10vh;
-                            font-size: 1.7vh;
+    
+                            .house_detail_s4_main_list_item_name {
+                                width: 25vw !important;
+                            }
+    
+                            .house_detail_s4_main_list_item_points {
+                                width: 10vh;
+                                font-size: 1.7vh;
+                            }
                         }
                     }
                 }
@@ -1373,7 +1529,7 @@ $borderColor: #978b7e;
 @media screen and (max-width: 480px) {
 
     .max480 {
-        display: block !important;
+        display: block;
     }
     .min481 {
         display: none !important;
@@ -1478,13 +1634,14 @@ $borderColor: #978b7e;
                     width: 100% !important;
                     height: 57vh !important;
                     border: 0 !important;
+                    transition: .3s;
 
                     grid-template-columns: repeat(2, 1fr) !important;
                     grid-template-rows: 7vh 43vh 7vh 0 !important;
                     
                     &.house_detail_s2_central_active {
                         height: 100% !important;
-                        grid-template-rows: 7vh 45vh 35vh 5vh !important;
+                        grid-template-rows: 7vh 43vh 35vh 5vh !important;
                     }
 
                     .house_detail_s2_central_char1 {
@@ -1525,13 +1682,27 @@ $borderColor: #978b7e;
                         line-height: 7vh;
                         letter-spacing: -0.1vw;
                         border-bottom: 1px solid $borderColor;
+                        cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                         z-index: 2;
-
-                        background: url('../../img/khlll/background-default.png');
+                        background-color: #e2dccb;
 
                         position: absolute;
                         top: 0;
                         left: 0;
+
+                        .house_detail_s2_central_char1-2_overlay {
+                            width: 100%;
+                            height: 100%;
+                    
+                            background: url("../../img/khlll/background_texture.jpg") repeat;
+                            opacity: 0.3;
+                            mix-blend-mode: multiply;
+                    
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 1;
+                        }
                     }
 
                     .house_detail_s2_central_char2 {
@@ -1681,9 +1852,11 @@ $borderColor: #978b7e;
             }
             .house_detail_s3_letter {
                 margin-top: 22vw;
+                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                 
                 display: flex;
                 justify-content: center;
+                
                 .house_detail_s3_text {
                     width: 74vw !important;
 
@@ -1730,7 +1903,7 @@ $borderColor: #978b7e;
                         letter-spacing: 0.005em;
                     }
                     p {
-                        letter-spacing: 0 !important;
+                        letter-spacing: -0.1vw !important;
                         margin-top: 1vh !important;
                         margin-left: 0.9vw;
                         font-size: 5.3vw !important;
@@ -1742,111 +1915,121 @@ $borderColor: #978b7e;
                 flex-direction: column;
                 position: relative;
 
-                .house_detail_s4_main_select {
+                .house_detail_s4_main_box {
                     width: 100% !important;
-                    height: 10% !important;
+                    flex-direction: column;
+
+                    border-left: 0 !important;
                     border-right: 0 !important;
-                    border-bottom: 1px solid $borderColor;
-
-                    .house_detail_s4_main_select_choice {
-                        height: 100% !important;
-                        justify-content: center !important;
-                        
-                        .house_detail_s4_main_select_choice_box {
-                            margin-right: 0 !important;
-                            .house_detail_s4_main_select_one {
-                                font-size: 3.5vh !important;
-                                letter-spacing: -0.15vw;
+                    
+                    .house_detail_s4_main_select {
+                        width: 100% !important;
+                        height: 10% !important;
+                        border-right: 0 !important;
+                        border-bottom: 1px solid $borderColor;
+    
+                        .house_detail_s4_main_select_choice {
+                            height: 100% !important;
+                            justify-content: center !important;
+                            
+                            .house_detail_s4_main_select_choice_box {
+                                margin-right: 0 !important;
+                                .house_detail_s4_main_select_one {
+                                    font-size: 3.5vh !important;
+                                    letter-spacing: -0.15vw;
+                                }
+                                .house_detail_s4_main_select_btn {
+                                    height: 1.4vh;
+                                    margin-left: 3vw !important;
+                                    cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
+    
+                                    svg {
+                                        width: 1.7vh !important;
+                                    }
+                                }
                             }
-                            .house_detail_s4_main_select_btn {
-                                height: 1.4vh;
-                                margin-left: 3vw !important;
-                                cursor: pointer;
-
-                                svg {
-                                    width: 1.7vh;
+                        }
+                        .house_detail_s4_main_select_list {
+                            width: 100%;
+                            position: absolute;
+                            max-height: 0 !important;
+                            overflow: hidden;
+                            transition: .3s;
+                            background: url('../../img/khlll/background-default.png') no-repeat !important;
+    
+                            &.house_detail_s4_active_accordion {
+                                max-height: 70% !important;
+                            }
+    
+                            li {
+                                padding-right: 0 !important;
+                                font-size: 2.2vh;
+    
+                                justify-content: center !important;
+    
+                                &:last-child {
+                                    border-bottom: 1px solid $borderColor;
                                 }
                             }
                         }
                     }
-                    .house_detail_s4_main_select_list {
-                        width: 100%;
-                        position: absolute;
-                        max-height: 0 !important;
-                        overflow: hidden;
-                        transition: .3s;
-                        
-                        &.house_detail_s4_active_accordion {
-                            max-height: 70% !important;
-                        }
-
-                        li {
-                            padding-right: 0 !important;
-                            font-size: 2.2vh;
-
-                            justify-content: center !important;
-                        }
-                    }
-                }
-
-                .house_detail_s4_main_list {
-                    width: 100% !important;
-                    padding-top: 2vh !important;
-                    align-items: center !important;
-
-                    .house_detail_s4_main_list_item {
-                        width: 41vh !important;
-                        min-width: 230px !important;
-                        height: 5vh !important;
-                        font-size: 2vw !important;
-                        margin: 4vh 0 !important;
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-
-                        .house_detail_s4_main_list_item_pic {
-                            width: 5vh !important;
+    
+                    .house_detail_s4_main_list {
+                        width: 100% !important;
+                        padding-top: 2vh !important;
+                        align-items: center !important;
+    
+                        .house_detail_s4_main_list_item {
+                            width: 41vh !important;
+                            min-width: 230px !important;
                             height: 5vh !important;
-                            border-radius: 5vh !important;
-                            overflow: hidden;
-
-                            img {
+                            font-size: 2vw !important;
+                            margin: 4vh 0 !important;
+    
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+    
+                            .house_detail_s4_main_list_item_pic {
                                 width: 5vh !important;
-                            }
-                        }
-
-                        .house_detail_s4_main_list_item_name {
-                            width: 20vh !important;
-                            height: 100%;
-                            font-size: 4.3vw;
-
-                            display: flex;
-                            align-items: center;
-
-                            p {
+                                height: 5vh !important;
+                                border-radius: 5vh !important;
                                 overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                display:inline-block;
                             }
-                            
-                        }
-
-                        .house_detail_s4_main_list_item_year {
-                            display: none;
-                        }
-
-                        .house_detail_s4_main_list_item_points {
-                            height: 100%;
-                            font-size: 4vw;
-
-                            display: flex;
-                            align-items: center;
+    
+                            .house_detail_s4_main_list_item_name {
+                                width: 20vh !important;
+                                height: 100%;
+                                font-size: 4.3vw;
+    
+                                display: flex;
+                                align-items: center;
+    
+                                p {
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                    display:inline-block;
+                                }
+                                
+                            }
+    
+                            .house_detail_s4_main_list_item_year {
+                                display: none;
+                            }
+    
+                            .house_detail_s4_main_list_item_points {
+                                height: 100%;
+                                font-size: 4vw;
+    
+                                display: flex;
+                                align-items: center;
+                            }
                         }
                     }
                 }
+
             }
         }
 
@@ -1855,30 +2038,34 @@ $borderColor: #978b7e;
     .house_detail_letter_expand {
         width: 100%;
         height: 70vh;
+        transition: .3s;
         
         background-color: #efefef;
-        
-        overflow: scroll;
-        &::-webkit-scrollbar {
-            display: none;
+        opacity: 0;
+        z-index: -1;
+
+        &.house_detail_letter_expand_active {
+            opacity: 1;
+            z-index: 99;
         }
-        z-index: 99;
 
         position: fixed;
         top: 50%;
         left: 0;
         transform: translate(0, -50%);
-
-        display: none !important;
         
         .house_detail_letter_expand_text {
             width: 100%;
             height: 100%;
             
-            margin: 10vw 7vw;
+            padding: 12vw 10vw;
             font-size: 2vh;
             font-family: 'Eulyoo1945', serif;
             line-height: 3.5vh;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
             
             display: flex !important;
             justify-content: center;
@@ -1891,7 +2078,7 @@ $borderColor: #978b7e;
     
             position: fixed;
             top: 5vw; right: 7vw;
-            cursor: pointer;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
             &::before, &::after {
                 width: .2vw;

@@ -1,7 +1,7 @@
 /*------------ font ------------*/
 @font-face {
   font-family: "Eulyoo1945", serif;
-  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+  src: url("../../font/Eulyoo1945-Regular.ttf");
 }
 .comm_white_Bg {
   background-color: rgba(255, 255, 255, 0.4);
@@ -38,12 +38,13 @@
   display: inline-block;
   align-self: center;
   font-family: "Ibarra Real Nova", serif;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 #comm_header .comm_left .comm_musicbar {
-  display: inline-block;
-  cursor: pointer;
-  background-color: transparent;
   margin-left: 1.5rem;
+  display: inline-block;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
+  background-color: transparent;
   align-self: center;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar {
@@ -58,17 +59,17 @@
   vertical-align: bottom;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-1 {
-  height: 5px;
+  height: 12px;
   -webkit-animation-delay: -1.9s;
           animation-delay: -1.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-2 {
-  height: 5px;
+  height: 15px;
   -webkit-animation-delay: -2.9s;
           animation-delay: -2.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-3 {
-  height: 5px;
+  height: 10px;
   -webkit-animation-delay: -3.9s;
           animation-delay: -3.9s;
 }
@@ -243,13 +244,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 #comm_header .comm_right .comm_search .comm_search_textbox i.comm_search_btn {
   width: 1.3rem;
   height: 1.3rem;
   display: inline-block;
   color: #423620;
-  cursor: pointer;
 }
 #comm_header .comm_right .comm_search .comm_search_textbox input.comm_search_text {
   width: 0;
@@ -273,6 +274,7 @@
   width: 2rem;
   display: inline-block;
   fill: #423620;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 #comm_header .comm_right .comm_login .comm_login_flag_box:hover .comm_login_flag_menu {
   display: block;
@@ -284,15 +286,19 @@
   top: 155px;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #e2dccb;
+  z-index: 99999;
   display: none;
 }
 #comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
+  width: 100%;
+  height: 100%;
   padding: 14px;
   color: #504733;
-  box-shadow: 0 0.3vw 0.5vw #c4bead;
+  box-shadow: 0 0.3vw 0.5vw rgba(0, 0, 0, 0.062745098);
   border: 1px solid #504733;
   font-family: "SUIT", sans-serif;
-  background-image: url("../../img/khlll/background-default.png");
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,11 +355,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#comm_header .comm_right .comm_login .comm_login_flag_menu .comm_menu_login_flag_box_overlay {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/khlll/background_texture.jpg") repeat;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 #comm_header .comm_right .comm_menu_btn {
   width: 30px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 #comm_header .comm_right .comm_menu_btn span {
   width: 30px;
@@ -409,7 +426,7 @@
   position: relative;
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_menu {
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_menu_title {
   display: flex;
@@ -431,8 +448,18 @@
   background-color: #fff;
   z-index: 99999;
 }
+.comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu a p {
+  color: #7a7a7a;
+}
+.comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu:hover p {
+  color: #69604b;
+}
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu .comm_submenu:not(:last-child) {
   margin-bottom: 0.7em;
+}
+.comm_header_menu_max1920 .comm_header_menu_list .comm_submenu_exists {
+  color: #333 !important;
+  font-weight: 500;
 }
 .comm_header_menu_max1920 .comm_header_menu_list .comm_header_submenu.comm_active_accordion {
   max-height: 16em;
@@ -470,8 +497,8 @@
   height: 5vw;
   position: absolute;
   top: 5vw;
-  right: 7vw;
-  cursor: pointer;
+  right: 5vw;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 .comm_header_menu_max768 .comm_closeBtn::before,
 .comm_header_menu_max768 .comm_closeBtn::after {
@@ -480,6 +507,7 @@
   content: "";
   position: absolute;
   left: 4.55vw;
+  left: 50%;
   border-radius: 4.55vw;
   background-color: #423620;
 }
@@ -585,7 +613,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
   display: inline-block;
@@ -609,7 +637,12 @@
   margin-bottom: 4vw;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu p {
+  color: #7a7a7a;
   font-size: 3vw;
+}
+.comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_submenu_exists {
+  color: #333 !important;
+  font-weight: 500;
 }
 .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu.comm_active_accordion {
   max-height: 20em;
@@ -627,13 +660,14 @@
 .comm_header_menu_max768 .comm_header_menu_bottom label.comm_menu_search_textbox {
   width: 20vw;
   height: 100%;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .comm_header_menu_max768 .comm_header_menu_bottom label.comm_menu_search_textbox i.comm_menu_search_btn {
   color: #423620;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   font-size: 4vw;
 }
 .comm_header_menu_max768 .comm_header_menu_bottom #comm_menu_search_text {
@@ -728,7 +762,7 @@
     position: absolute;
     top: 5vw;
     right: 5vw;
-    cursor: pointer;
+    cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   }
   .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::before,
 .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::after {
@@ -760,9 +794,9 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 8vw;
-    cursor: pointer;
+    cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   }
-  .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu a, .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
     display: inline-block;
     font-size: 6.2vw;
   }
@@ -782,11 +816,11 @@
   .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu {
     margin-bottom: 4vw;
   }
-  .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu p {
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu .comm_submenu a p {
     font-size: 4.5vw;
   }
   .comm_header_menu_max768 .comm_header_menu_list .comm_menu .comm_header_submenu.comm_active_accordion {
-    max-height: 16em;
+    max-height: 17em;
     padding-top: 6vw;
   }
   .comm_header_menu_max768 .comm_header_menu_bottom {

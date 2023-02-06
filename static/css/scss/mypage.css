@@ -1,14 +1,38 @@
 /*------------ font ------------*/
 @font-face {
   font-family: "Eulyoo1945", serif;
-  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+  src: url("../../font/Eulyoo1945-Regular.ttf");
 }
+::-moz-selection {
+  background-color: #b2a069;
+  color: #fff;
+}
+::selection {
+  background-color: #b2a069;
+  color: #fff;
+}
+
 #comm_container {
   width: 100%;
-  background: url("../../img/khlll/background-default.png");
-  background-size: cover;
-  font-family: "Ibarra Real Nova", serif;
   overflow: hidden;
+  font-family: "Ibarra Real Nova", serif;
+  background-color: #f1f0ec;
+  position: relative;
+}
+#comm_container .mypage_overlay {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/khlll/Background_texture.jpg") repeat;
+  opacity: 0.25;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+:root {
+  --fc-today-bg-color: transparent !important;
 }
 
 #mypage_contents {
@@ -16,11 +40,13 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 #mypage_contents .mypage_contents_line {
   width: 100%;
-  border-top: 1px solid #69604b;
-  border-bottom: 1px solid #69604b;
+  border-top: 1px solid #978b7e;
+  border-bottom: 1px solid #978b7e;
   display: flex;
   justify-content: center;
 }
@@ -72,7 +98,7 @@
   position: relative;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_setting {
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   position: absolute;
   top: 0;
   right: 0;
@@ -103,12 +129,12 @@
   font-family: "Eulyoo1945", serif;
   font-weight: 400;
   letter-spacing: -0.1vw;
-  color: #504733;
+  color: #423620;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_text .mypage_profile_top_year {
   font-size: 1vw;
   margin-top: 0.2vw;
-  color: #504733;
+  color: #423620;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom {
   width: 100%;
@@ -124,7 +150,7 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon {
   width: 3.5vw;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,7 +200,7 @@
   width: 100%;
   height: 2vw;
   text-align: center;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +217,7 @@
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_right_menu {
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,6 +238,11 @@
 #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard .fc-scrollgrid, #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard td, #mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard th {
   border: 0;
 }
+#mypage_contents .mypage_contents_line .mypage_contents_box .fc-theme-standard td {
+  border-radius: 100px;
+  width: 2vw;
+  height: 2.4vw;
+}
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist {
   border-right: 1px solid #AFA489;
   display: grid;
@@ -227,7 +258,7 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar {
   width: 18vw;
-  height: 16vw;
+  height: 17vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,13 +283,16 @@
   display: flex;
   justify-content: space-between;
 }
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button {
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
+}
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-button:focus {
   box-shadow: none !important;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-prev-button, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-next-button {
   background-color: transparent;
   border-color: transparent;
-  color: #69604b;
+  color: #978b7e;
   padding: 0;
   margin-left: 0;
   border: none;
@@ -296,14 +330,22 @@
   height: 100% !important;
   margin: 0;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top {
-  display: block;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame {
+  display: flex;
+  align-items: center;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top {
   width: 100%;
   height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top .fc-daygrid-day-number {
-  width: 100%;
-  height: 2.3vw;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+  width: 1.7vw;
+  height: 1.7vw;
+  border-radius: 200px;
   padding: 0;
   text-align: center;
   font-size: 0.9vw;
@@ -313,8 +355,20 @@
   align-items: center;
   z-index: 1;
 }
-#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events {
-  display: none;
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events {
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 10.5%;
+  left: 16%;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-events .fc-event {
+  width: 1.7vw;
+  height: 1.7vw;
+  border: none;
+  border-radius: 1.7vw;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
   width: 100%;
@@ -346,7 +400,7 @@
   height: 1vw;
   display: inline-block;
   margin-left: 5vw;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   position: relative;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon::before, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon::after {
@@ -374,18 +428,19 @@
   transition: ease-out 0.3s all;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle {
+  width: 18vw;
   max-height: 0;
   overflow: hidden;
   transition: linear 0.3s all;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle.mypage_Todolist_middle_active {
   max-height: 5vw;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle .mypage_Todolist_middle_input {
-  width: 12vw;
+  width: 15vw;
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #AFA489;
@@ -393,12 +448,11 @@
   font-family: "SUIT", sans-serif;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle .mypage_Todolist_middle_btn {
-  width: 2vw;
   height: 0.8vw;
-  margin-left: 0.5vw;
+  margin-left: 1.5vw;
   border: none;
   background-color: transparent;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   font-size: 0.8vw;
   color: #504733;
   font-family: "Ibarra Real Nova", serif;
@@ -445,11 +499,11 @@
   width: 0.8vw;
   height: 0.8vw;
   border: 1px solid #9b9179;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_check_box input:checked + label {
   border: none;
-  background: url("../../img/khlll/check.png") no-repeat;
+  background: url("../../img/khlll/mypage/mypage_check.png") no-repeat;
   background-size: contain;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_check_box input {
@@ -461,7 +515,7 @@
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_bottom .mypage_Todolist_bottom_box .mypage_Todolist_contents .mypage_Todolist_detail .mypage_Todolist_detail_dltBtn .mypage_Todolist_detail_dltBtn_icon {
   width: 0.7vw;
   height: 0.7vw;
-  cursor: pointer;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -519,7 +573,13 @@
   font-family: "SUIT", sans-serif;
   border-radius: 0.5vw;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_detail .mypage_timeTable_detail_classroom {
+  margin-top: 0.2vw;
+  font-size: 0.5vw;
+  color: #7e7560;
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
   background-color: rgba(255, 255, 255, 0.45);
@@ -583,4 +643,12 @@
 }
 #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot6 .mypage_select_subject2 {
   grid-row: 13/16;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: none;
+}
+.fc .fc-daygrid-day.fc-day-today div.fc-daygrid-day-top a.fc-daygrid-day-number {
+  color: #fff;
+  background-color: #D4B35B;
 }/*# sourceMappingURL=mypage.css.map */

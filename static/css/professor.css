@@ -3,6 +3,13 @@
 /* 지정변수 */
 :root {
     --img-hover: 5vw;
+    --point-color: #b2a069;
+    --text-reverse-color: #fff;
+}
+
+::selection {
+    background-color: var(--point-color);
+    color: var(--text-reverse-color);
 }
 
 @font-face {
@@ -18,6 +25,7 @@
 html {
     min-width: 100%;
     min-height: 100%;
+    cursor: url(../img/circle/common/Cursor_Default.png), auto;
 }
 
 body {
@@ -45,10 +53,14 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 .pro_paper {
     position: absolute;
     background-image: url('../img/jiwon/paper.jpg');
+    background-repeat: repeat;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     mix-blend-mode: darken;
-    opacity: 40%;
-    width: 100%;
-    height: 100%;
 }
 
 .pro_cnt { /*이미지 전체 감싸는 div*/
@@ -165,17 +177,17 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
 /* --------미디어쿼리---------------------------------------------- */
 @media (max-width: 850px) {
     html {
-        min-width: 100%;
+        width: 100%;
         min-height: 100%;
     }
     body {
         width: 100%;
-        min-height: 100%;
+        height: 100%;
         /* 드래그 방지 */
-        -webkit-user-select:none;
+        /* -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
-        user-select:none;
+        user-select:none; */
         overflow: scroll;
     }
 
@@ -184,13 +196,15 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
         display: block;
         position: absolute;
         z-index: -1;
-        top: calc(7700px + 50%);
+        /* top: calc(7700px + 50%); */
+        bottom: 0;
     }
 
     /* 종이질감 */
     .pro_paper {
         width: 100%;
-        height: calc(8400px + 30%);
+        /* height: auto; */
+        height: calc(100% + 930vw);
     }
 
     /* 전체 부모 */

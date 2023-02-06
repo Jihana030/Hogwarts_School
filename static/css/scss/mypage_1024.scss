@@ -12,10 +12,16 @@
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Eulyoo1945', serif;
 
+$fontBlack: #333;
 $fontmainColor: #423620;
 $fontSubColor: #504733;
-$borderColor: #69604b;
+
+$borderColor: #978b7e;
 $borderColor-smooth: #AFA489;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
 
 @media screen and (max-width: 1024px) and (min-width: 481px) {
     
@@ -96,7 +102,7 @@ $borderColor-smooth: #AFA489;
                                     position: relative;
     
                                     .mypage_profile_top_setting {
-                                        cursor: pointer;
+                                        cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
     
                                         position: absolute;
                                         top: 0;
@@ -162,7 +168,6 @@ $borderColor-smooth: #AFA489;
     
                                 .mypage_profile_bottom_icon {
                                     width: 6vw;
-                                    cursor: pointer;
                                     
                                     display: flex;
                                     flex-direction: column;
@@ -230,7 +235,6 @@ $borderColor-smooth: #AFA489;
                                     height: 2vw;
                                     
                                     text-align: center;
-                                    cursor: pointer;
     
                                     display: flex;
                                     justify-content: center;
@@ -254,7 +258,6 @@ $borderColor-smooth: #AFA489;
                         .mypage_profile_right_menu {
                             width: 100%;
                             height: 100%;
-                            cursor: pointer;
     
                             display: flex;
                             flex-direction: column;
@@ -296,7 +299,7 @@ $borderColor-smooth: #AFA489;
                         
                         #calendar {
                             width: 30vw;
-                            height: 28vw;
+                            height: 29vw;
 
                             // Fullcalendar style fix ***
 
@@ -395,31 +398,59 @@ $borderColor-smooth: #AFA489;
                                                 margin: 0;
                                             }
 
-                                            .fc-daygrid-day-top {
-                                                display: block;
-                                                width: 100%;
-                                                height: 100%;
+                                            .fc-daygrid-day-frame {
+                                                display: flex;
+                                                align-items: center;
                                                 
-                                                .fc-daygrid-day-number {
-                                                    width: 100%;
+                                                .fc-daygrid-day-top {
+                                                    // display: block;
+                                                    width: 4.2vw;
                                                     height: 4.2vw;
-                                
-                                                    padding: 0;
-                                                    text-align: center;
-                                                    font-size: 1.5vw;
-                                                    font-family: 'SUIT', sans-serif;
-                                
+    
                                                     display: flex;
                                                     justify-content: center;
                                                     align-items: center;
+                                                    
+                                                    .fc-daygrid-day-number {
+                                                        width: 2.7vw;
+                                                        height: 2.7vw;
+                                                        border-radius: 200px;
+                                    
+                                                        padding: 0;
+                                                        text-align: center;
+                                                        font-size: 1.5vw;
+                                                        font-family: 'SUIT', sans-serif;
+                                    
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+    
+                                                        z-index: 1;
+                                                    }
                                                 }
                                             }
 
+
                                             .fc-daygrid-day-events {
-                                                display: none;
+                                                width: 100%;
+                                                min-height: 100%;
+
+                                                z-index: -1;
+
+                                                position: absolute;
+                                                top: 12% !important;
+                                                left: 12% !important;
+
+                                                .fc-event {
+                                                    width: 2.7vw !important;
+                                                    height: 2.7vw !important;
+
+                                                    border: none;
+                                                    border-radius: 2.7vw !important;
+                                                    background-color: rgba(255, 255, 255, 0.7);
+                                                }
                                             }
                                         }
-
                                     }
                                 }
                             }
@@ -458,7 +489,6 @@ $borderColor-smooth: #AFA489;
                                 width: 1.5vw;
                                 height: 1.5vw;
                                 margin-left: 0;
-                                cursor: pointer;
         
                                 position: relative;
 
@@ -483,12 +513,12 @@ $borderColor-smooth: #AFA489;
                         }
 
                         .mypage_Todolist_middle {
+                            width: 30vw;
                             max-height: 0;
                             overflow: hidden;
                             transition: linear .2s all;
     
                             display: flex;
-                            justify-content: center;
                             align-items: center;
     
                             &.mypage_Todolist_middle_active {
@@ -496,10 +526,9 @@ $borderColor-smooth: #AFA489;
                             }
     
                             .mypage_Todolist_middle_input {
-                                width: 20vw;
+                                width: 24vw;
                                 height: 3vw;
                                 border: none;
-                                // background-color: #FFF;
                                 background-color: transparent;
                                 border-bottom: 1px solid $borderColor-smooth;
                                 padding: 0.3vw;
@@ -507,13 +536,9 @@ $borderColor-smooth: #AFA489;
                             }
     
                             .mypage_Todolist_middle_btn {
-                                width: 5vw;
-                                height: 2vw;
-                                
                                 margin-left: 0.5vw;
                                 border: none;
                                 background-color: transparent;
-                                cursor: pointer;
                                 font-size: 1.7vw;
                                 color: $fontSubColor;
                                 font-family: 'Ibarra Real Nova', serif;
@@ -672,7 +697,8 @@ $borderColor-smooth: #AFA489;
                             border-radius: 1.5vw;
     
                             display: flex;
-                            align-items: flex-end;
+                            flex-direction: column;
+                            justify-content: flex-end;
                         }
                         
                         .mypage_timeTable_slot_subject {

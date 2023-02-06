@@ -1,0 +1,492 @@
+[
+    {
+        "name": "John granger",
+        "year": "1st year",
+        "points": 2535,
+        "pic": "../static/img/khlll/housecupStudent/student_1.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Michael Moody",
+        "year": "1st year",
+        "points": 2039,
+        "pic": "../static/img/khlll/housecupStudent/student_2.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Elena",
+        "year": "1st year",
+        "points": 1826,
+        "pic": "../static/img/khlll/housecupStudent/student_3.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Gabrielle",
+        "year": "1st year",
+        "points": 1775,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Alixina Dumbledore",
+        "year": "1st year",
+        "points": 1260,
+        "pic": "../static/img/khlll/housecupStudent/student_4.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Jealisha Leung",
+        "year": "1st year",
+        "points": 1223,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Meadow Foley",
+        "year": "1st year",
+        "points": 1081,
+        "pic": "../static/img/khlll/housecupStudent/student_5.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Alexei",
+        "year": "1st year",
+        "points": 1054,
+        "pic": "../static/img/khlll/housecupStudent/student_6.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Violet Brontë",
+        "year": "1st year",
+        "points": 1042,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Athena",
+        "year": "1st year",
+        "points": 1022,
+        "pic": "../static/img/khlll/housecupStudent/student_7.jpg",
+        "data": [1, "All"]
+    },
+    {
+        "name": "Mackenzie Bowers",
+        "year": "2nd year",
+        "points": 3186,
+        "pic": "../static/img/khlll/housecupStudent/student_8.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Lily Lavender",
+        "year": "2nd year",
+        "points": 2569,
+        "pic": "../static/img/khlll/housecupStudent/student_9.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Emma Allen",
+        "year": "2nd year",
+        "points": 2285,
+        "pic": "../static/img/khlll/housecupStudent/student_10.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Olivia Benton",
+        "year": "2nd year",
+        "points": 2051,
+        "pic": "../static/img/khlll/housecupStudent/student_11.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Caterina Cirone",
+        "year": "2nd year",
+        "points": 1890,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Allison Krug",
+        "year": "2nd year",
+        "points": 1884,
+        "pic": "../static/img/khlll/housecupStudent/student_12.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Hannah M. Cohen",
+        "year": "2nd year",
+        "points": 1782,
+        "pic": "../static/img/khlll/housecupStudent/student_13.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Huan-Jan Michael Fu",
+        "year": "2nd year",
+        "points": 1697,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Kate A Dale",
+        "year": "2nd year",
+        "points": 1551,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Soratriz",
+        "year": "2nd year",
+        "points": 1408,
+        "pic": "../static/img/khlll/housecupStudent/student_14.jpg",
+        "data": [2, "All"]
+    },
+    {
+        "name": "Kelley King",
+        "year": "3rd year",
+        "points": 4020,
+        "pic": "../static/img/khlll/housecupStudent/student_15.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Beezer Vablatsky",
+        "year": "3rd year",
+        "points": 3772,
+        "pic": "../static/img/khlll/housecupStudent/student_16.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Emily Culyer",
+        "year": "3rd year",
+        "points": 3428,
+        "pic": "../static/img/khlll/housecupStudent/student_17.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Indira Thornton",
+        "year": "3rd year",
+        "points": 2269,
+        "pic": "../static/img/khlll/housecupStudent/student_18.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Lola Wolf",
+        "year": "3rd year",
+        "points": 1933,
+        "pic": "../static/img/khlll/housecupStudent/student_19.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Winter Grimwood",
+        "year": "3rd year",
+        "points": 1823,
+        "pic": "../static/img/khlll/housecupStudent/student_20.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Emily Beausoleil",
+        "year": "3rd year",
+        "points": 1701,
+        "pic": "../static/img/khlll/housecupStudent/student_30.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Blake Hans Magnus Salgord",
+        "year": "3rd year",
+        "points": 1698,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [3, "All"]
+    },
+    {
+        "name": "HarriSun",
+        "year": "3rd year",
+        "points": 1655,
+        "pic": "../static/img/khlll/housecupStudent/student_21.jpg",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Tammy Coleman",
+        "year": "3rd year",
+        "points": 1610,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [3, "All"]
+    },
+    {
+        "name": "Timothy Walsh",
+        "year": "4th year",
+        "points": 7434,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Crimson Fawkes",
+        "year": "4th year",
+        "points": 5967,
+        "pic": "../static/img/khlll/housecupStudent/student_22.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Dani",
+        "year": "4th year",
+        "points": 4706,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Isabel Rhodesse",
+        "year": "4th year",
+        "points": 4621,
+        "pic": "../static/img/khlll/housecupStudent/student_23.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Lurkelly Leikeze",
+        "year": "4th year",
+        "points": 4332,
+        "pic": "../static/img/khlll/housecupStudent/student_24.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Angeline Delacour",
+        "year": "4th year",
+        "points": 4023,
+        "pic": "../static/img/khlll/housecupStudent/student_25.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Louisa S R W",
+        "year": "4th year",
+        "points": 3653,
+        "pic": "../static/img/khlll/housecupStudent/student_6.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Elizabeth Schulte",
+        "year": "4th year",
+        "points": 2517,
+        "pic": "../static/img/khlll/housecupStudent/student_2.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Aurora Jackson",
+        "year": "4th year",
+        "points": 1959,
+        "pic": "../static/img/khlll/housecupStudent/student_5.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "muse raylin",
+        "year": "4th year",
+        "points": 1842,
+        "pic": "../static/img/khlll/housecupStudent/student_27.jpg",
+        "data": [4, "All"]
+    },
+    {
+        "name": "Dane Lautner",
+        "year": "5th year",
+        "points": 9874,
+        "pic": "../static/img/khlll/housecupStudent/student_28.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Noula",
+        "year": "5th year",
+        "points": 9625,
+        "pic": "../static/img/khlll/housecupStudent/student_29.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Selenia Crossfire",
+        "year": "5th year",
+        "points": 8744,
+        "pic": "../static/img/khlll/housecupStudent/student_30.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Sadie Bean",
+        "year": "5th year",
+        "points": 7155,
+        "pic": "../static/img/khlll/housecupStudent/student_1.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Hallow Witch",
+        "year": "5th year",
+        "points": 6367,
+        "pic": "../static/img/khlll/housecupStudent/student_2.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Staraptor",
+        "year": "5th year",
+        "points": 5785,
+        "pic": "../static/img/khlll/housecupStudent/student_3.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Jesse Cassandra",
+        "year": "5th year",
+        "points": 4535,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Katie",
+        "year": "5th year",
+        "points": 3629,
+        "pic": "../static/img/khlll/housecupStudent/student_4.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Jose Delacour",
+        "year": "5th year",
+        "points": 2055,
+        "pic": "../static/img/khlll/housecupStudent/student_5.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Megan",
+        "year": "5th year",
+        "points": 1708,
+        "pic": "../static/img/khlll/housecupStudent/student_6.jpg",
+        "data": [5, "All"]
+    },
+    {
+        "name": "Geraldine Mayer",
+        "year": "6th year",
+        "points": 7734,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Ralph Brockington",
+        "year": "6th year",
+        "points": 6067,
+        "pic": "../static/img/khlll/housecupStudent/student_7.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Holzman",
+        "year": "6th year",
+        "points": 4906,
+        "pic": "../static/img/khlll/housecupStudent/student_8.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Allen",
+        "year": "6th year",
+        "points": 4821,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Hazel Cowley",
+        "year": "6th year",
+        "points": 4302,
+        "pic": "../static/img/khlll/housecupStudent/student_9.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Colleen",
+        "year": "6th year",
+        "points": 4011,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Robert X. Rue",
+        "year": "6th year",
+        "points": 3453,
+        "pic": "../static/img/khlll/housecupStudent/student_10.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Brown",
+        "year": "6th year",
+        "points": 2217,
+        "pic": "../static/img/khlll/housecupStudent/student_11.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Alba",
+        "year": "6th year",
+        "points": 1919,
+        "pic": "../static/img/khlll/housecupStudent/student_12.jpg",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Gerald Monge",
+        "year": "6th year",
+        "points": 1742,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [6, "All"]
+    },
+    {
+        "name": "Joan Harrell",
+        "year": "7th year",
+        "points": 9174,
+        "pic": "../static/img/khlll/housecupStudent/student_13.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Joanne Schafer",
+        "year": "7th year",
+        "points": 8925,
+        "pic": "../static/img/khlll/housecupStudent/student_14.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Church",
+        "year": "7th year",
+        "points": 8724,
+        "pic": "../static/img/khlll/housecupStudent/student_15.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Ann Mole",
+        "year": "7th year",
+        "points": 7151,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [7, "All"]
+    },
+    {
+        "name": "David Russell",
+        "year": "7th year",
+        "points": 6157,
+        "pic": "../static/img/khlll/housecupStudent/student_16.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Sherry",
+        "year": "7th year",
+        "points": 5725,
+        "pic": "../static/img/khlll/housecupStudent/student_17.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Robin Z. Parker",
+        "year": "7th year",
+        "points": 4135,
+        "pic": "../static/img/khlll/housecupStudent/student_noPic.png",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Estell",
+        "year": "7th year",
+        "points": 3349,
+        "pic": "../static/img/khlll/housecupStudent/student_18.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Daniel I. Tucker",
+        "year": "7th year",
+        "points": 2040,
+        "pic": "../static/img/khlll/housecupStudent/student_19.jpg",
+        "data": [7, "All"]
+    },
+    {
+        "name": "Mary",
+        "year": "7th year",
+        "points": 1408,
+        "pic": "../static/img/khlll/housecupStudent/student_22.jpg",
+        "data": [7, "All"]
+    }    
+]

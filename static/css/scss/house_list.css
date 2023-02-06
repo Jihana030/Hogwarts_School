@@ -1,14 +1,25 @@
 /*------------ font ------------*/
 @font-face {
   font-family: "Eulyoo1945", serif;
-  src: url("../../font/Eulyoo1945-Regular.eot"), url("../../font/Eulyoo1945-Regular.woff") format("woff"), url("../../font/Eulyoo1945-Regular.woff2") format("woff2"), url("../../font/Eulyoo1945-Regular.ttf") format(truetype);
+  src: url("../../font/Eulyoo1945-Regular.ttf");
 }
 #comm_container {
   width: 100%;
-  background: url("../../img/khlll/background-white.png");
-  background-size: cover;
   font-family: "Ibarra Real Nova", serif;
+  background-color: #e2dccb;
   overflow: hidden;
+  position: relative;
+}
+#comm_container .house_list_overlay {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/khlll/Background_texture.jpg") repeat;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 #house_list_contents {
@@ -22,6 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #333;
 }
 #house_list_contents .house_about .house_about_text {
   margin-top: 5vh;
@@ -30,35 +42,63 @@
   text-align: center;
   font-family: "SUIT", sans-serif;
 }
-#house_list_contents .house_list {
+#house_list_contents .house_list_box .house_list {
   display: grid;
   z-index: 1;
+  position: relative;
 }
-#house_list_contents .house_list .house_list_item_gryffindor {
-  background-color: #A53F3F;
-}
-#house_list_contents .house_list .house_list_item_slytherin {
-  background-color: #376148;
-}
-#house_list_contents .house_list .house_list_item_hufflepuff {
-  background-color: #EBBD1C;
-}
-#house_list_contents .house_list .house_list_item_ravenclaw {
-  background-color: #294966;
-}
-#house_list_contents .house_list .house_list_item_logo {
+#house_list_contents .house_list_box .house_list .house_list_item {
+  width: 100%;
   height: 100%;
   position: relative;
+  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_gryffindor {
+  background-color: #A53F3F;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_gryffindor .house_list_item_title {
+  color: #DEA354;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_slytherin {
+  background-color: #376148;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_slytherin .house_list_item_title {
+  color: #A8A8A8;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_hufflepuff {
+  background-color: #EBBD1C;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_hufflepuff .house_list_item_title {
+  color: #212028;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_ravenclaw {
+  background-color: #294966;
+}
+#house_list_contents .house_list_box .house_list .house_list_item.house_list_item_ravenclaw .house_list_item_title {
+  color: #8F8F8F;
+}
+#house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box {
+  width: 100%;
+  height: 100%;
+}
+#house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_logo {
+  height: 100%;
+  transition: 0.2s;
+}
+#house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_logo .house_list_item_logo_hidden {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#house_list_contents .house_list .house_list_item_logo svg {
+#house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_logo .house_list_item_logo_hidden svg {
   position: absolute;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1920px) and (min-width: 1025px) {
   #house_list_contents {
     width: 100%;
     height: 100vh;
@@ -84,21 +124,52 @@
   #house_list_contents .house_about .house_about_text_max480 {
     display: none;
   }
-  #house_list_contents .house_list {
-    height: 100%;
+  #house_list_contents .house_list_box .house_list {
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, auto));
+    position: relative;
   }
-  #house_list_contents .house_list .house_list_item_title {
-    display: none;
+  #house_list_contents .house_list_box .house_list .house_list_item {
+    height: 118vh;
+    transition: 0.5s;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
   }
-  #house_list_contents .house_list .house_list_item_logo {
-    height: 100%;
+  #house_list_contents .house_list_box .house_list .house_list_item.house_list_item_animation {
+    transform: translateY(-22vh);
+    box-shadow: 0 0 3vw rgba(0, 0, 0, 0.2);
   }
-  #house_list_contents .house_list .house_list_item_logo svg {
+  #house_list_contents .house_list_box .house_list .house_list_item:hover .house_list_item_logo {
+    opacity: 0;
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box {
+    transition: 0.5s;
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box.house_list_item_animation {
+    transform: translateY(-20vw);
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_logo {
+    height: 87%;
+    transition: 0.2s;
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_logo .house_list_item_logo_hidden svg {
     width: 35vw;
     height: 35vw;
     left: -18vw;
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_title {
+    opacity: 0;
+    font-size: 3vw;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transition: 0.2s;
+  }
+  #house_list_contents .house_list_box .house_list .house_list_item .house_list_item_box .house_list_item_title.house_list_item_title_animation {
+    opacity: 1;
+    transition: 0.7s;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 481px) {
@@ -129,13 +200,13 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(96px, auto));
   }
-  #house_list_contents .house_list .house_list_item_title {
-    display: none;
-  }
-  #house_list_contents .house_list .house_list_item_logo svg {
+  #house_list_contents .house_list .house_list_item .house_list_item_box .house_list_item_logo svg {
     width: 40vw;
     height: 40vw;
     left: -20vw;
+  }
+  #house_list_contents .house_list .house_list_item .house_list_item_box .house_list_item_title {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -161,12 +232,6 @@
     width: 40vw;
     min-width: 150px;
   }
-  #house_list_contents .house_about .house_about_text_max1920 {
-    display: none;
-  }
-  #house_list_contents .house_about .house_about_text_max480 {
-    display: block;
-  }
   #house_list_contents .house_about .house_about_text_max480 p {
     font-size: 4vw;
   }
@@ -174,11 +239,11 @@
     display: grid;
     grid-template-rows: repeat(4, minmax(280px, auto));
   }
-  #house_list_contents .house_list .house_list_item_title {
-    display: none;
-  }
-  #house_list_contents .house_list .house_list_item_logo svg {
+  #house_list_contents .house_list .house_list_item .house_list_item_box .house_list_item_logo svg {
     width: 11em;
     height: 11em;
+  }
+  #house_list_contents .house_list .house_list_item .house_list_item_box .house_list_item_title {
+    display: none;
   }
 }/*# sourceMappingURL=house_list.css.map */

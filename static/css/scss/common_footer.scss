@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
@@ -34,6 +31,8 @@ $fontmainColor: #423620;
     color: #BFBFBF;
     font-family: 'SUIT', sans-serif;
     transition: .3s;
+    position: relative;
+    z-index: 5;
 
     display: grid;
     align-items: center;

@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
@@ -15,14 +12,22 @@
 
 // ------------------------------------------------- DEFAULT SET -------------------------------------------*
 
+$fontBlack: #333;
 $fontmainColor: #423620;
+$fontSubColor: #504733;
+
+$borderColor: #978b7e;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
 
 .comm_white_Bg { background-color: rgba(255, 255, 255, 0.15); }
 .comm_animation_play_pause { animation-play-state: paused !important; }
-.comm_dp_none { display: none; }
+.comm_dp_none { display: none !important; }
+.comm_opacity_0 { opacity: 0; }
 
 // ---------------------------------------------------------------------------------------------------------*
-
 
 * {
     padding: 0;
@@ -34,11 +39,20 @@ $fontmainColor: #423620;
     }
 }
 
-.contents {
-    width: 100%;
-    height: 100vh;
-    background-image: url('../../img/khlll/background-default.png');
+html {
+    cursor: url('../../img/circle/common/Cursor_Default.png'), auto;
 }
+
+a, button, li, input {
+    cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+}
+
+::selection {
+    background-color: $selectColor-dark;
+    color: $selectText;
+}
+
+
 
 ul,
 ol {
@@ -54,16 +68,19 @@ a {
 .contents {
     width: 100%;
     height: 100vh;
-    background-image: url("../../img/khlll/background-default.png");
-  }
+    background-color: #f1f0ec;
 
-// #comm_container {
-//     width: 100%;
-//     height: 100vh;
+    .contents_overlay {
+        width: 100%;
+        height: 100%;
 
-//     background: url("../../images/background-default.png");
-//     background-size: cover;
-//     font-family: 'Ibarra Real Nova', serif;
-//     overflow: hidden;
-//     position: relative;
-// }
+        background: url("../../img/khlll/Background_texture.jpg") repeat;
+        opacity: 0.25;
+        mix-blend-mode: darken;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}

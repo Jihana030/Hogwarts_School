@@ -10,6 +10,22 @@
             expandRows: true,
             initialView: 'dayGridMonth',
             fixedWeekCount: false,
+
+            events: [
+                {
+                    start: '2023-02-06',
+                    end: '2023-02-07'
+                },
+                {
+                    start: '2023-02-10'
+                },
+                {
+                    start: '2023-02-17'
+                },
+                {
+                    start: '2023-02-23'
+                }
+            ]
         });
         calendar.render();
 
@@ -70,6 +86,7 @@
         $todoDltBtn.forEach(X => {
             X.addEventListener('click', e => {
                 e.target.parentNode.parentNode.remove();
+                console.log(e.target.parentNode.parentNode)
             });
         });
     }

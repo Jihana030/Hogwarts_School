@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
@@ -15,10 +12,19 @@
 
 // ------------------------------------------------- DEFAULT SET -------------------------------------------*
 
+$fontBlack: #333;
 $fontmainColor: #423620;
 $fontSubColor: #504733;
+$fontAboutColor: #686255;
+
 $borderColor: #69604b;
+$borderColor2: #978b7e;
 $borderColor-smooth: #AFA489;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
+
 
 .comm_white_Bg {
     background-color: rgba(255, 255, 255, 0.4);
@@ -60,13 +66,15 @@ $borderColor-smooth: #AFA489;
             display: inline-block;
             align-self: center;
             font-family: 'Ibarra Real Nova', serif;
+            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
         }
 
         .comm_musicbar {
-            display: inline-block;
-            cursor: pointer;
-            background-color: transparent;
             margin-left: 1.5rem;
+
+            display: inline-block;
+            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            background-color: transparent;
             align-self: center;
 
             .comm_bar {
@@ -81,17 +89,17 @@ $borderColor-smooth: #AFA489;
             }
 
             .comm_bar-1 {
-                height: 5px;
+                height: 12px;
                 animation-delay: -1.9s;
             }
 
             .comm_bar-2 {
-                height: 5px;
+                height: 15px;
                 animation-delay: -2.9s;
             }
 
             .comm_bar-3 {
-                height: 5px;
+                height: 10px;
                 animation-delay: -3.9s;
             }
 
@@ -216,14 +224,14 @@ $borderColor-smooth: #AFA489;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+                
                 i.comm_search_btn {
                     width: 1.3rem;
                     height: 1.3rem;
-
+                    
                     display: inline-block;
                     color: $fontmainColor;
-                    cursor: pointer;
                 }
 
                 input.comm_search_text {
@@ -244,17 +252,16 @@ $borderColor-smooth: #AFA489;
                     }
 
                 }
-
             }
-
         }
 
         .comm_login {
-
+            
             svg {
                 width: 2rem;
                 display: inline-block;
                 fill: $fontmainColor;
+                cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
             }
             
             position: relative;
@@ -271,17 +278,22 @@ $borderColor-smooth: #AFA489;
                 top: 155px;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                background-color: #e2dccb;
+                z-index: 99999;
 
                 display: none;
                 
                 .comm_login_flag_menu_box {
+                    width: 100%;
+                    height: 100%;
                     
                     padding: 14px;
                     color: $fontSubColor;
-                    box-shadow: 0 0.3vw 0.5vw #c4bead;
+                    box-shadow: 0 0.3vw 0.5vw #00000010;
                     border: 1px solid $fontSubColor;
                     font-family: 'SUIT', sans-serif;
-                    background-image: url('../../img/khlll/background-default.png');
+
+                    position: relative;
     
                     display: flex;
                     flex-direction: column;
@@ -355,6 +367,19 @@ $borderColor-smooth: #AFA489;
                         transform: translate(-50%, -50%);
                     }
                 }
+                .comm_menu_login_flag_box_overlay {
+                    width: 100%;
+                    height: 100%;
+            
+                    background: url("../../img/khlll/background_texture.jpg") repeat;
+                    opacity: 0.3;
+                    mix-blend-mode: multiply;
+            
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
 
             }
         }
@@ -362,9 +387,9 @@ $borderColor-smooth: #AFA489;
         .comm_menu_btn {
             width: 30px;
 
-            cursor: pointer;
             display: flex;
             flex-direction: column;
+            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
             span {
                 width: 30px;
@@ -434,7 +459,7 @@ $borderColor-smooth: #AFA489;
         position: relative;
 
         .comm_menu {
-            cursor: pointer;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
         }
 
         .comm_menu_title {
@@ -461,10 +486,26 @@ $borderColor-smooth: #AFA489;
             background-color: #fff;
             z-index: 99999;
 
+            .comm_submenu {
+                a {
+                    p {
+                        color: #7a7a7a;
+                    }
+                }
+                &:hover p {
+                    color: $borderColor;
+                }
+            }
+
             .comm_submenu:not(:last-child) {
                 margin-bottom: .7em;
             }
 
+            
+        }
+        .comm_submenu_exists {
+            color: $fontBlack !important;
+            font-weight: 500;
         }
 
         .comm_header_submenu.comm_active_accordion {
@@ -517,8 +558,8 @@ $borderColor-smooth: #AFA489;
 
         position: absolute;
         top: 5vw;
-        right: 7vw;
-        cursor: pointer;
+        right: 5vw;
+        cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
     }
 
     .comm_closeBtn::before,
@@ -529,6 +570,7 @@ $borderColor-smooth: #AFA489;
         content: '';
         position: absolute;
         left: 4.55vw;
+        left: 50%;
         border-radius: 4.55vw;
         background-color: $fontmainColor;
     }
@@ -663,7 +705,7 @@ $borderColor-smooth: #AFA489;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            cursor: pointer;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
             p {
                 display: inline-block;
@@ -691,9 +733,14 @@ $borderColor-smooth: #AFA489;
                     margin-bottom: 4vw;
 
                     p {
+                        color: #7a7a7a;
                         font-size: 3vw;
                     }
                 }
+            }
+            .comm_submenu_exists {
+                color: $fontBlack !important;
+                font-weight: 500;
             }
 
             .comm_header_submenu.comm_active_accordion {
@@ -716,6 +763,7 @@ $borderColor-smooth: #AFA489;
         label.comm_menu_search_textbox {
             width: 20vw;
             height: 100%;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
             display: flex;
             justify-content: center;
@@ -723,7 +771,7 @@ $borderColor-smooth: #AFA489;
 
             i.comm_menu_search_btn {
                 color: $fontmainColor;
-                cursor: pointer;
+                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                 // transition: .3s;
                 font-size: 4vw;
             }
@@ -802,7 +850,6 @@ $borderColor-smooth: #AFA489;
         display: block;
         .comm_menu_login {
             display: none;
-
         }
 
         .comm_menu_login_flag_box {
@@ -864,7 +911,7 @@ $borderColor-smooth: #AFA489;
                     position: absolute;
                     top: 5vw;
                     right: 5vw;
-                    cursor: pointer;
+                    cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                 }
 
                 .comm_closeBtn::before,
@@ -903,9 +950,9 @@ $borderColor-smooth: #AFA489;
                     align-items: center;
                     flex-wrap: wrap;
                     margin-bottom: 8vw;
-                    cursor: pointer;
+                    cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
-                    p {
+                    a, p {
                         display: inline-block;
                         font-size: 6.2vw;
                     }
@@ -928,14 +975,16 @@ $borderColor-smooth: #AFA489;
                         .comm_submenu {
                             margin-bottom: 4vw;
 
-                            p {
-                                font-size: 4.5vw;
+                            a {
+                                p {
+                                    font-size: 4.5vw;
+                                }
                             }
                         }
                     }
 
                     .comm_header_submenu.comm_active_accordion {
-                        max-height: 16em;
+                        max-height: 17em;
                         padding-top: 6vw;
                     }
                 }

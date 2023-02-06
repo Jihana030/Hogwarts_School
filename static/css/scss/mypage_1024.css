@@ -13,8 +13,8 @@
   #mypage_contents .mypage_contents_line {
     width: 100%;
     margin-top: 10vh;
-    border-top: 1px solid #69604b;
-    border-bottom: 1px solid #69604b;
+    border-top: 1px solid #978b7e;
+    border-bottom: 1px solid #978b7e;
     display: flex;
     justify-content: center;
   }
@@ -70,7 +70,7 @@
     position: relative;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_top .mypage_profile_top_contents .mypage_profile_top_pic .mypage_profile_top_setting {
-    cursor: pointer;
+    cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
     position: absolute;
     top: 0;
     right: 0;
@@ -122,7 +122,6 @@
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_main .mypage_profile_bottom ul .mypage_profile_bottom_icon {
     width: 6vw;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +172,6 @@
     width: 100%;
     height: 2vw;
     text-align: center;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +188,6 @@
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_profile .mypage_profile_menu .mypage_profile_right_menu {
     width: 100%;
     height: 100%;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,7 +220,7 @@
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar {
     width: 30vw;
-    height: 28vw;
+    height: 29vw;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar {
     align-self: stretch;
@@ -249,7 +246,7 @@
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-prev-button, #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group .fc-next-button {
     background-color: transparent;
     border-color: transparent;
-    color: #69604b;
+    color: #978b7e;
     padding: 0;
     margin-left: 0;
     border: none;
@@ -287,14 +284,21 @@
     height: 100% !important;
     margin: 0;
   }
-  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top {
-    display: block;
-    width: 100%;
-    height: 100%;
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame {
+    display: flex;
+    align-items: center;
   }
-  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-top .fc-daygrid-day-number {
-    width: 100%;
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top {
+    width: 4.2vw;
     height: 4.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+    width: 2.7vw;
+    height: 2.7vw;
+    border-radius: 200px;
     padding: 0;
     text-align: center;
     font-size: 1.5vw;
@@ -302,9 +306,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events {
-    display: none;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 12% !important;
+    left: 12% !important;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_calendar #calendar .fc-view-harness .fc-dayGridMonth-view .fc-scrollgrid .fc-daygrid-body .fc-daygrid-day-events .fc-event {
+    width: 2.7vw !important;
+    height: 2.7vw !important;
+    border: none;
+    border-radius: 2.7vw !important;
+    background-color: rgba(255, 255, 255, 0.7);
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist {
     width: 100%;
@@ -334,7 +351,6 @@
     width: 1.5vw;
     height: 1.5vw;
     margin-left: 0;
-    cursor: pointer;
     position: relative;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_top .mypage_Todolist_plus .mypage_Todolist_plus_icon {
@@ -353,18 +369,18 @@
     transform: rotate(-90deg);
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle {
+    width: 30vw;
     max-height: 0;
     overflow: hidden;
     transition: linear 0.2s all;
     display: flex;
-    justify-content: center;
     align-items: center;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle.mypage_Todolist_middle_active {
     max-height: 3vw;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle .mypage_Todolist_middle_input {
-    width: 20vw;
+    width: 24vw;
     height: 3vw;
     border: none;
     background-color: transparent;
@@ -373,12 +389,9 @@
     font-family: "SUIT", sans-serif;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_calendar_Todolist .mypage_Todolist .mypage_Todolist_middle .mypage_Todolist_middle_btn {
-    width: 5vw;
-    height: 2vw;
     margin-left: 0.5vw;
     border: none;
     background-color: transparent;
-    cursor: pointer;
     font-size: 1.7vw;
     color: #504733;
     font-family: "Ibarra Real Nova", serif;
@@ -503,7 +516,8 @@
     font-family: "SUIT", sans-serif;
     border-radius: 1.5vw;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
     background-color: rgba(255, 255, 255, 0.45);

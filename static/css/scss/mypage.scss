@@ -2,28 +2,56 @@
 
 @font-face {
     font-family: 'Eulyoo1945', serif;
-    src: url('../../font/Eulyoo1945-Regular.eot'),
-        url('../../font/Eulyoo1945-Regular.woff') format('woff'),
-        url('../../font/Eulyoo1945-Regular.woff2') format('woff2'),
-        url('../../font/Eulyoo1945-Regular.ttf') format(truetype);
+    src: url('../../font/Eulyoo1945-Regular.ttf');
 }
 
 // font-family: 'SUIT', sans-serif;
 // font-family: 'Ibarra Real Nova', serif;
 // font-family: 'Eulyoo1945', serif;
 
+
+$fontBlack: #333;
 $fontmainColor: #423620;
 $fontSubColor: #504733;
-$borderColor: #69604b;
+
+$borderColor: #978b7e;
 $borderColor-smooth: #AFA489;
+
+$selectColor: #b2a069;
+$selectColor-dark: #5e5647;
+$selectText: #fff;
+
+::selection {
+    background-color: $selectColor;
+    color: $selectText;
+}
 
 #comm_container {
     width: 100%;
 
-    background: url("../../img/khlll/background-default.png");
-    background-size: cover;
-    font-family: 'Ibarra Real Nova', serif;
     overflow: hidden;
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: #f1f0ec;
+
+    position: relative;
+    
+    .mypage_overlay {
+        width: 100%;
+        height: 100%;
+
+        background: url("../../img/khlll/Background_texture.jpg") repeat;
+        opacity: 0.25;
+        mix-blend-mode: darken;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+:root {
+    --fc-today-bg-color: transparent !important;
 }
 
 #mypage_contents {
@@ -32,6 +60,8 @@ $borderColor-smooth: #AFA489;
 
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
 
     .mypage_contents_line {
         width: 100%;
@@ -97,7 +127,7 @@ $borderColor-smooth: #AFA489;
                                 position: relative;
 
                                 .mypage_profile_top_setting {
-                                    cursor: pointer;
+                                    cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
                                     position: absolute;
                                     top: 0;
@@ -137,12 +167,12 @@ $borderColor-smooth: #AFA489;
                                     font-family: 'Eulyoo1945', serif;
                                     font-weight: 400;
                                     letter-spacing: -0.1vw;
-                                    color: $fontSubColor;
+                                    color: $fontmainColor;
                                 }
                                 .mypage_profile_top_year {
                                     font-size: 1vw;
                                     margin-top: 0.2vw;
-                                    color: $fontSubColor;
+                                    color: $fontmainColor;
                                 }
                             }
                         }
@@ -162,7 +192,7 @@ $borderColor-smooth: #AFA489;
 
                             .mypage_profile_bottom_icon {
                                 width: 3.5vw;
-                                cursor: pointer;
+                                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                                 
                                 display: flex;
                                 flex-direction: column;
@@ -229,7 +259,7 @@ $borderColor-smooth: #AFA489;
                                 height: 2vw;
                                 
                                 text-align: center;
-                                cursor: pointer;
+                                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
                                 display: flex;
                                 justify-content: center;
@@ -253,7 +283,7 @@ $borderColor-smooth: #AFA489;
                     .mypage_profile_right_menu {
                         width: 100%;
                         height: 100%;
-                        cursor: pointer;
+                        cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
                         display: flex;
                         flex-direction: column;
@@ -283,6 +313,14 @@ $borderColor-smooth: #AFA489;
             .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th {
                 border: 0;
             }
+
+            .fc-theme-standard td {
+                border-radius: 100px;
+                width: 2vw;
+                height: 2.4vw;
+            }
+
+
             
             // Calendar style ***
 
@@ -303,7 +341,7 @@ $borderColor-smooth: #AFA489;
                     
                     #calendar {
                         width: 18vw;
-                        height: 16vw;
+                        height: 17vw;
 
                         display: flex;
                         justify-content: center;
@@ -311,6 +349,7 @@ $borderColor-smooth: #AFA489;
 
 
                         // Fullcalendar style fix ***
+
 
                         // scrollbar 
                         .fc-scroller::-webkit-scrollbar {
@@ -342,6 +381,10 @@ $borderColor-smooth: #AFA489;
                     
                                     display: flex;
                                     justify-content: space-between;
+
+                                    .fc-button {
+                                        cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
+                                    }
                                     
                                     .fc-button:focus {
                                         box-shadow: none !important;
@@ -407,37 +450,65 @@ $borderColor-smooth: #AFA489;
                                             height: 100% !important;
                                             margin: 0;
                                         }
+                                        .fc-daygrid-day-frame {
+                                            display: flex;
+                                            align-items: center;
 
-                                        .fc-daygrid-day-top {
-                                            display: block;
-                                            width: 100%;
-                                            height: 100%;
-                                            
-                                            .fc-daygrid-day-number {
+                                            .fc-daygrid-day-top {
+                                                // display: block;
                                                 width: 100%;
-                                                height: 2.3vw;
-                            
-                                                padding: 0;
-                                                text-align: center;
-                                                font-size: 0.9vw;
-                                                font-family: 'SUIT', sans-serif;
-                            
+                                                height: 100%;
+                                                margin: 0;
+    
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
+    
+                                                .fc-daygrid-day-number { // a 태그
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+                                                    border-radius: 200px;
+                                
+                                                    padding: 0;
+                                                    text-align: center;
+                                                    font-size: 0.9vw;
+                                                    font-family: 'SUIT', sans-serif;
+                                
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+    
+                                                    z-index: 1;
+                                                }
+                                            }
 
-                                                z-index: 1;
+                                            .fc-daygrid-day-events {
+                                                width: 100%;
+                                                min-height: 100%;
+
+                                                z-index: -1;
+
+                                                position: absolute;
+                                                top: 10.5%;
+                                                left: 16%;
+
+                                                .fc-event {
+                                                    width: 1.7vw;
+                                                    height: 1.7vw;
+
+                                                    border: none;
+                                                    border-radius: 1.7vw;
+                                                    background-color: rgba(255, 255, 255, 0.7);
+                                                }
+
                                             }
                                         }
-
-                                        .fc-daygrid-day-events {
-                                            display: none;
-                                        }
                                     }
-
                                 }
                             }
                         }
+
+                        
             
                     }
                 }
@@ -478,7 +549,7 @@ $borderColor-smooth: #AFA489;
 
                             display: inline-block;
                             margin-left: 5vw;
-                            cursor: pointer;
+                            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
     
                             position: relative;
     
@@ -519,12 +590,13 @@ $borderColor-smooth: #AFA489;
                     }
 
                     .mypage_Todolist_middle {
+                        width: 18vw;
                         max-height: 0;
                         overflow: hidden;
                         transition: linear .3s all;
 
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-between;
                         align-items: center;
 
                         &.mypage_Todolist_middle_active {
@@ -532,7 +604,7 @@ $borderColor-smooth: #AFA489;
                         }
 
                         .mypage_Todolist_middle_input {
-                            width: 12vw;
+                            width: 15vw;
                             border: none;
                             // background-color: #FFF;
                             background-color: transparent;
@@ -543,13 +615,12 @@ $borderColor-smooth: #AFA489;
                         }
 
                         .mypage_Todolist_middle_btn {
-                            width: 2vw;
                             height: 0.8vw;
 
-                            margin-left: 0.5vw;
+                            margin-left: 1.5vw;
                             border: none;
                             background-color: transparent;
-                            cursor: pointer;
+                            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                             font-size: 0.8vw;
                             color: $fontSubColor;
                             font-family: 'Ibarra Real Nova', serif;
@@ -607,12 +678,12 @@ $borderColor-smooth: #AFA489;
                                             display: inline-block;
                                             width: .8vw; height: .8vw;
                                             border: 1px solid #9b9179;
-                                            cursor: pointer;
+                                            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
                                         }
 
                                         input:checked + label {
                                             border: none;
-                                            background: url('../../img/khlll/check.png') no-repeat;
+                                            background: url('../../img/khlll/mypage/mypage_check.png') no-repeat;
                                             background-size: contain;
                                         }
                                         
@@ -627,7 +698,7 @@ $borderColor-smooth: #AFA489;
                                         .mypage_Todolist_detail_dltBtn_icon {
                                             width: 0.7vw;
                                             height: 0.7vw;
-                                            cursor: pointer;
+                                            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
                                             display: flex;
                                             justify-content: center;
@@ -706,7 +777,14 @@ $borderColor-smooth: #AFA489;
                         border-radius: 0.5vw;
 
                         display: flex;
-                        align-items: flex-end;
+                        flex-direction: column;
+                        justify-content: flex-end;
+
+                        .mypage_timeTable_detail_classroom {
+                            margin-top: 0.2vw;
+                            font-size: 0.5vw;
+                            color: #7e7560;
+                        }
                     }
                     
                     .mypage_timeTable_slot_subject {
@@ -795,5 +873,14 @@ $borderColor-smooth: #AFA489;
 
             }
         }
+    }
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: none;
+
+    div.fc-daygrid-day-top a.fc-daygrid-day-number {
+        color: #fff;
+        background-color: #D4B35B;
     }
 }
