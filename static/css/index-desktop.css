@@ -229,7 +229,7 @@
 /* main_mainCon style sheet */
 .main_mainCon {
   margin: 3rem 24vw 0 var(--display-gap);
-  height: 45rem;
+  height:26rem;
 }
 .main_mainCon a {
   --font-size: 4rem;

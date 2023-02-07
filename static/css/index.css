@@ -1032,7 +1032,7 @@ header {
   background-size: 175%;
   border: 1px solid var(--line-color);
   filter: grayscale(1);
-  height: 22.5rem;
+  height: 18rem;
   position: relative;
   margin: 0 var(--display-gap);
   transition: background-size 0.4s ease-in-out;
