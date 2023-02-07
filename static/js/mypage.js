@@ -74,22 +74,26 @@
             <p>
                 ${inputText}
             </p>
-            <div class="mypage_Todolist_detail_dltBtn">
-                <div class="mypage_Todolist_detail_dltBtn_icon"></div>
-            </div>
+            <div class="mypage_Todolist_detail_dltBtn"></div>
         `;
         $todoUl.append($todoLi);
         $todoInput.value = '';
 
-        // Todolist 삭제 **
+        removeTodoItem();
+        
+    }
+    
+    // Todolist 삭제 **
+    function removeTodoItem() {
         const $todoDltBtn = document.querySelectorAll('.mypage_Todolist_detail_dltBtn');
         $todoDltBtn.forEach(X => {
             X.addEventListener('click', e => {
-                e.target.parentNode.parentNode.remove();
-                console.log(e.target.parentNode.parentNode)
+                e.target.parentNode.remove();
             });
         });
     }
+
+    removeTodoItem();
 
     // Todolist 등록 **
     $todoAddBtn.addEventListener('click', addTodoItem); // 추가버튼 클릭 시
@@ -98,7 +102,5 @@
             addTodoItem();
         }
     });
-
-
 
 })();
