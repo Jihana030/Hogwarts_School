@@ -147,12 +147,13 @@
     let isDown = false; //터치이벤트용
 
     let navTop = hisNav.getBoundingClientRect().top;
+    let navLeft =  hisNav.getBoundingClientRect().left;
     window.addEventListener('wheel', (e) => {
        
     // 마우스 휠 가로스크롤 850보다 클 때만.
         if(!(windowWidth.matches)){
             his_cnt.scrollBy({
-                left: e.deltaY,
+                left: e.deltaY
             });
               
             // -----가로 스크롤 터치하기------
@@ -196,6 +197,13 @@
             his_cnt.addEventListener('mouseup', e=>{
                 his_cnt.classList.remove('his_grabbing');
             })   
+            //가로 nav fix
+            console.log(hisNav.scrollLeft)
+            if(his_cnt.scrollLeft > 200){
+                hisNav.classList.add('his_fix');
+            } else {
+                hisNav.classList.remove('his_fix');
+            }
                     
         } else { //가로850보다 작을때
             his_cnt.scrollBy({
