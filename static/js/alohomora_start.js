@@ -5,6 +5,8 @@
     const alohomora = document.querySelector('.alohomora');
     const start_right = document.querySelector('.start_backChange_right');
     const start_left = document.querySelector('.start_backChange_left');
+    const $audio = document.querySelector('audio');
+    
     alohomora.addEventListener('keyup', e=> {
         if(e.keyCode===13){
             if(e.target.value==='Alohomora' 
@@ -20,6 +22,7 @@
                 meta.name = 'viewport';
                 meta.content = "1.6;URL='../views/index.html'";
                 document.getElementsByTagName('head')[0].appendChild(meta);
+                $audio.play();
             } else {
                 alohomora.classList.toggle('start_error');
             }
