@@ -42,9 +42,11 @@ router.post('/', async (req, res) => {
 
                     req.session.user = {
                         userId: row[0].id,
-                        userName: row[0].u_name
+                        userName: row[0].u_name,
+                        userHouse: row[0].house,
                     };
                     console.log(req.session);
+                    console.log(row[0].house)
 
                     res.redirect('/main');
                 }

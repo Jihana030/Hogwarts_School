@@ -10,10 +10,6 @@ table{
     border-collapse: collapse;
 }
 
-/* .login_btn{
-    cursor: pointer;
-} */
-
 #login_frm{
     z-index: 100 !important;
 }
