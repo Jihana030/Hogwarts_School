@@ -206,7 +206,7 @@ body::-webkit-scrollbar {
 }
 
 .his_nav {
-    cursor: pointer;
+    cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
 /* -------도입제외 연혁 cnt ----------------------- ------*/
