@@ -220,39 +220,38 @@ $selectText: #fff;
         align-items: center;
 
         .comm_search {
-            .comm_search_textbox {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            i.comm_search_btn {
+                width: 1.3rem;
+                height: 1.3rem;
                 
-                i.comm_search_btn {
-                    width: 1.3rem;
-                    height: 1.3rem;
-                    
-                    display: inline-block;
-                    color: $fontmainColor;
-                }
-
-                input.comm_search_text {
-                    width: 0;
-
-                    padding: .2vw 0;
-                    margin-right: .5em;
-                    outline: none;
-                    border: none;
-                    background: transparent;
-                    border-bottom: 1px solid #9f9a91;
-                    color: $fontmainColor;
-                    font-family: 'SUIT', sans-serif;
-                    transition: .4s;
-
-                    &.comm_active_input {
-                        width: 10em;
-                    }
-
-                }
+                display: inline-block;
+                color: $fontmainColor;
             }
+
+            input.comm_search_text {
+                width: 0;
+
+                padding: .2vw 0;
+                margin-right: .5em;
+                outline: none;
+                border: none;
+                background: transparent;
+                border-bottom: 1px solid #9f9a91;
+                color: $fontmainColor;
+                font-family: 'SUIT', sans-serif;
+                transition: .4s;
+
+                &.comm_active_input {
+                    width: 10em;
+                }
+
+            }
+            // .comm_search_textbox {
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            // }
         }
 
         .comm_login {
@@ -279,9 +278,7 @@ $selectText: #fff;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #e2dccb;
-                z-index: 99999;
-
-                display: none;
+                z-index: 999;
                 
                 .comm_login_flag_menu_box {
                     width: 100%;
@@ -378,7 +375,7 @@ $selectText: #fff;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    z-index: 1;
+                    z-index: -1;
                 }
 
             }

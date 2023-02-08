@@ -58,7 +58,7 @@
   height: 6rem;
 }
 #main_mobile-menu img,
-#main_nav-menu #main_user-info img {
+#main_nav-menu .main_user-info img {
   width: 3rem;
 }
 
@@ -169,7 +169,7 @@
 /* main_mainCon style sheet */
 .main_mainCon {
   margin: 0 var(--display-gap);
-  height: 45rem;
+  height: 26rem;
 }
 .main_mainCon a {
   --font-size: 3rem;

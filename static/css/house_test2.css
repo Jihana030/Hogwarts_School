@@ -10,6 +10,7 @@ body{
     background-color: #efefeb;
     position: relative;
     color: #404040;
+    height: 100vh;
 }
 
 .HouseTest_bg {
@@ -32,29 +33,43 @@ body{
     gap: 10px;
 }
 
+.HouseTest_m{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .HouseTest_container{
-    padding: 30px 8%;
-    display: grid;
-    grid-template-columns: 4.95fr 0.1fr 4.95fr;
-    gap: 5%;
+    width: 45%;
+    padding: 0 8%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .HouseTest_left{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5% 0;
 }
 
-.HouseTest_border{
-    height: 70%;
-    border-left: 1px solid #404040;
+.HouseTest_left svg{
+    width: 14vw;
+    height: 14vw;
+}
+
+svg.HouseTest_hat{
+    width: 20vw;
 }
 
 .HouseTest_right{
-    padding: 10%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,11 +82,18 @@ body{
     gap: 20px;
 }
 
+.houseTest_title{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
 .houseTest_qes{
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.01em;
-    font-weight: 600;
 }
 
 .houseTest_ansList{
@@ -79,7 +101,6 @@ body{
     line-height: 22px;
     letter-spacing: -0.01em;
     font-weight: 400;
-    padding-right: 10%;
     padding-top: 20px;
 }
 
@@ -93,9 +114,12 @@ body{
     -webkit-appearance: none;
     width: 22px !important;
     height: 22px !important;
-    border: 1px solid #404040;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0) !important;
+    /* border: 1px solid #404040;
+    border-radius: 50%; */
+    background-image: url(../img/seoha/Rectangle.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .houseTest_ansList ul li label input:checked{
@@ -109,11 +133,25 @@ body{
 }
 
 .houseTest_nextBtn{
-    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
     text-align: center;
 }
 
+.houseTest_nextBtn:hover{
+    font-weight: 700;
+}
+
 @media screen and (max-width:1023px) {
+    .HouseTest_container{
+        width: 100%;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        align-items: center;
+        justify-content: flex-start;
+    }
     .houseTest_qes{
         font-size: 17px;
         line-height: 21px;
@@ -126,25 +164,29 @@ body{
         width: 20px;
         height: 20px;
     }
+    .HouseTest_left svg{
+        width: 25vw !important;
+        height: 25vw !important;
+    }
+
 }
 
 @media screen and (max-width:767px){
-    .HouseTest_container{
-        padding-top: 100px !important;
-        display: flex;
-        flex-direction: column;
-        gap: 2%;
-        align-items: center;
-        justify-content: center;
-    }
+
     .HouseTest_border{
         display: none;
     }
     .HouseTest_right{
         padding: 9%;
     }
+
+    .houseTest_title{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
     .HouseTest_left svg{
-        width: 80%;
+        width: 35vw !important;
+        height: 35vw !important;
     }
 
 }
@@ -177,13 +219,13 @@ body{
   
   div.location div.text {opacity: 1;}
   
-  svg.HouseTest_draw path, ellipse, circle, polygon, polyline, rect, line {
-    stroke-width: 2;
+ .HouseTest_left svg.houseTest_draw path, .HouseTest_left svg.houseTest_draw ellipse, .HouseTest_left svg.houseTest_draw circle, .HouseTest_left svg.houseTest_draw polygon, .HouseTest_left svg.houseTest_draw polyline, .HouseTest_left svg.houseTest_draw rect, .HouseTest_left svg.houseTest_draw line{
+    stroke-width: 1;
     stroke:#404040;
     fill:transparent;
     stroke-dasharray:1000;
     stroke-dashoffset:1000;
-    animation:line 3s cubic-bezier(0,0,0,0) forwards !important;
+    animation:line 2.5s cubic-bezier(0,0,0,0) forwards !important;
   }
   
   @keyframes line {
@@ -192,3 +234,6 @@ body{
     }
   }
 
+footer{
+    bottom: 0;
+}

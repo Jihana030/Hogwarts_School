@@ -240,19 +240,13 @@
   gap: 3em;
   align-items: center;
 }
-#comm_header .comm_right .comm_search .comm_search_textbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
-}
-#comm_header .comm_right .comm_search .comm_search_textbox i.comm_search_btn {
+#comm_header .comm_right .comm_search i.comm_search_btn {
   width: 1.3rem;
   height: 1.3rem;
   display: inline-block;
   color: #423620;
 }
-#comm_header .comm_right .comm_search .comm_search_textbox input.comm_search_text {
+#comm_header .comm_right .comm_search input.comm_search_text {
   width: 0;
   padding: 0.2vw 0;
   margin-right: 0.5em;
@@ -264,7 +258,7 @@
   font-family: "SUIT", sans-serif;
   transition: 0.4s;
 }
-#comm_header .comm_right .comm_search .comm_search_textbox input.comm_search_text.comm_active_input {
+#comm_header .comm_right .comm_search input.comm_search_text.comm_active_input {
   width: 10em;
 }
 #comm_header .comm_right .comm_login {
@@ -287,8 +281,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #e2dccb;
-  z-index: 99999;
-  display: none;
+  z-index: 999;
 }
 #comm_header .comm_right .comm_login .comm_login_flag_menu .comm_login_flag_menu_box {
   width: 100%;
@@ -364,7 +357,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 #comm_header .comm_right .comm_menu_btn {
   width: 30px;
