@@ -218,6 +218,10 @@ body::-webkit-scrollbar {
     cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
 }
 
+.comm_search {
+    cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
+}
+
 /* -------도입제외 연혁 cnt ----------------------- ------*/
 .his_yearCnt {
     display: flex;
