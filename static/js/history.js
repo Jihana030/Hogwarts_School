@@ -198,7 +198,6 @@
                 his_cnt.classList.remove('his_grabbing');
             })   
             //가로 nav fix
-            console.log(hisNav.scrollLeft)
             if(his_cnt.scrollLeft > 200){
                 hisNav.classList.add('his_fix');
             } else {

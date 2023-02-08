@@ -41,6 +41,10 @@ body::-webkit-scrollbar {/*스크롤바 막음*/
     display: none;
 }
 
+.comm_search {
+    cursor:  url(../img/circle/common/Cursor_Pointer.png), auto;
+}
+
 /* ---------교수사진----------------------교수사진---------------------------- */
 .proHidden{ /*호버이벤트용*/
     display: none !important;
