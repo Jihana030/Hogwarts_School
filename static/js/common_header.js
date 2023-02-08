@@ -6,7 +6,7 @@
     // -----------------------------------------/
 
     // ========================================================== *** Header & menu control *** ==================================== //
-    
+
 
     // Header music bar control ♬ ***
 
@@ -52,7 +52,7 @@
     $headerBtn.addEventListener('click', e => {
         const btn = +($headerBtn.dataset.btn);
         $headerBtn.dataset.btn = 1 - btn;
-        if(btn) {
+        if (btn) {
             $headerBtn.classList.add('comm_active_header_btn'); // button
             $header.classList.add('comm_white_Bg');
             $searchText.classList.remove('comm_active_input');
@@ -68,7 +68,7 @@
     $searchBtn.addEventListener('click', e => {
         const btn = +($searchBtn.dataset.btn);
         $searchBtn.dataset.btn = 1 - btn;
-        if(btn) {
+        if (btn) { // 1
             $searchText.classList.add('comm_active_input');
             $header.classList.add('comm_white_Bg');
             $searchText.focus();
@@ -76,7 +76,7 @@
         else {
             $searchText.classList.remove('comm_active_input');
             console.log($headerBtn.dataset.btn)
-            if($headerBtn.dataset.btn) {
+            if (!$headerBtn.dataset.btn) {
                 $header.classList.remove('comm_white_Bg');
             }
         }
