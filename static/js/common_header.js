@@ -60,9 +60,16 @@
         else {
             $headerBtn.classList.remove('comm_active_header_btn');
             $header.classList.remove('comm_white_Bg');
-            // $searchText.classList.remove('comm_active_input');
+            if (!$searchText.dataset.btn) {
+                $searchText.classList.remove('comm_active_input');
+            }
         }
     });
+
+    // input value 값으로 비교해서 배경 넣어보기... 
+    // value = 0
+    // searchIcon = +1 else -1
+    // menuBtn = +1 else -2
 
     // - Search box control **
     $searchBtn.addEventListener('click', e => {
@@ -75,7 +82,6 @@
         }
         else {
             $searchText.classList.remove('comm_active_input');
-            console.log($headerBtn.dataset.btn)
             if (!$headerBtn.dataset.btn) {
                 $header.classList.remove('comm_white_Bg');
             }
