@@ -36,18 +36,21 @@
   
   let i=-1;
   $nextBtn.addEventListener('click', e=>{
-    console.log('a')
     $nextBtn.innerHTML = `Next`;
+    if(i===10){
+      maxType();
+    }
     if(i>-1){
-      checkedAns()
+      addAnswer();
+      checkedAns();
     } else {
-      makeList()
+      makeList();
     }
   })
   
   function makeList(){
     qesList().then((item)=>{
-      console.log(item);
+
       if(i<item.length){
         $lineDraw.innerHTML = `
         ${lineDraw[i]}
@@ -59,16 +62,16 @@
             <div class="houseTest_ansList opacity">
                 <ul>
                     <li>
-                        <label><input type="radio" name="houseTest" value="" /><p>${item[i].a[0].answer.replace(/\\n/g, '<br>')}</p></label>
+                        <label><input type="radio" name="houseTest" value="" data-type="${item[i].a[0].type}" /><p>${item[i].a[0].answer.replace(/\\n/g, '<br>')}</p></label>
                     </li>
                     <li>
-                        <label><input type="radio" name="houseTest" value="" /><p>${item[i].a[1].answer.replace(/\\n/g, '<br>')}</p></label>
+                        <label><input type="radio" name="houseTest" value="" data-type="${item[i].a[1].type}"/><p>${item[i].a[1].answer.replace(/\\n/g, '<br>')}</p></label>
                     </li>
                     <li>
-                        <label><input type="radio" name="houseTest" value="" /><p>${item[i].a[2].answer.replace(/\\n/g, '<br>')}</p></label>
+                        <label><input type="radio" name="houseTest" value="" data-type="${item[i].a[2].type}"/><p>${item[i].a[2].answer.replace(/\\n/g, '<br>')}</p></label>
                     </li>
                     <li>
-                        <label><input type="radio" name="houseTest" value="" /><p>${item[i].a[3].answer.replace(/\\n/g, '<br>')}</p></label>
+                        <label><input type="radio" name="houseTest" value="" data-type="${item[i].a[3].type}"/><p>${item[i].a[3].answer.replace(/\\n/g, '<br>')}</p></label>
                     </li>
                 </ul>
             </div>
@@ -88,6 +91,47 @@
     } else {
       makeList();
     }
+  }
+
+  //결과
+
+  const resultList = [{
+    name: '그리핀도르',
+    desc: '그리핀도르에서는 용기, 용맹, 대담성, 기사도 정신을 중요하게 생각합니다. 그리핀도르 기숙사의 마스코트는 사자이며 상징색은 진홍색과 금색입니다. 그리핀도르의 학생들은 떄떄로 무모할 정도로 용감합니다. 그리핀도르는 용맹함과 고결함을 포함한, 명예를 위한 강력한 규율을 지니고 있습니다. 그들은 자신들의 생각을 말하는 것을 주저하지 않으며 자신들의 신념을 지키기 위해 맞서 싸우기도 합니다. 그들은 지도자가 될 수 있는 자질을 지니고 있으며 용기가 필요한 일에 우두머리가 되어 앞장섭니다. 그리핀도르의 학생들은 성공하고 앞서나가길 원하며, 영웅과 같이 인정받고자 합니다. 중요한 것은 그들의 마음은 숭고해야 하고 동기는 순수해야 한다는 것입니다.'
+},
+{
+    name: '래번클로',
+    desc: '래번클로에서는 지성, 창의성, 학식, 재치를 중요하게 생각합니다. 래번클로 기숙사의 마스코트는 독수리이며 상징색은 파란색과 청동색입니다. 래번클로의 학생들은 이성적, 논리적인 성향이 있으며 학문적 수양에 대해 탐구합니다. 그들은 방대한 책 지식과 더불어 자신들의 생각이 갖고있는 독창성에 대해 자부심을 느낍니다. 지식인들이 종종 그러하듯, 래번클로의 몇몇 학생들은 자신들의 지적 호기심을 충족하기 위해 사회적인 관습을 무시하기도 합니다. 이러한 이유로 그들은 떄떄로 별나거나 이상하다고 여겨집니다.'
+},
+{
+    name: '후플푸프',
+    desc: '후플푸프에서는 헌신, 인내, 정의, 충성심을 중요하게 생각합니다. 후플푸프 기숙사의 마스코트는 오소리이며, 상징색은 노란색과 검정색입니다. 후플푸프의 학생들은 포용적이며 관대하고, 자신이나 친구들의 특별한 적성보다는 공정한 경기, 좋은 정신과 열정을 더 가치있게 여깁니다. 그들은 옭고 그름에 있어 강한 관념을 지니고 있으며 친절하며 정직하기 위해 노력합니다. 후플푸프의 학생들은 종종 과소평가되기도 하며 다른 학생들보다 경쟁력이 떨어지는 것처럼 보여질 수 있습니다. 자신들의 성취에 대해 겸손해하며 사회적 경쟁을 싫어하는 후플푸프 학생들은 모든 사람들과 잘 지내는 편입니다.'
+},
+{
+    name: '슬리데린',
+    desc: '슬리데린에서는 야망과 노련함, 지도력, 기지를 중요하게 생각합니다. 슬리데린 기숙사의 마스코트는 뱀이며, 상징색은 은색과 초록색입니다. 슬리데린의 학생들은 야망있고 빈틈없으며, 성취 지향적이고 사회적 지위를 의식하는 경향이 있습니다. 또한 그들은 자기보호에 대해 강렬한 감각을 지니고 있습니다. 즉, 그들은 발생할 수 있는 모든 가능성을 고려하기 때문에 어떤 행동을 하기 전 주저하는 경향을 지닙니다. 슬리데린의 학생들이 가치 있게 여기는 자질은 영리함, 수완, 규칙을 무시하는 것입니다. 그들은 자신의 능력에 대한 확신과 자부심을 갖고 있습니다. 그들은 책임을 도맡는 것을 좋아하며 강력한 리더십을 지니고 있습니다.'
+},
+]
+
+  let typeArr = [0, 0, 0, 0];
+  function addAnswer(){
+    const $ans = parseInt(document.querySelector('input[type="radio"]:checked').dataset.type);
+    typeArr[$ans] += 1;
+  }
+  
+  function maxType(){
+    let max = 0;
+    for(let j=0; j<typeArr.length-1; j++){
+      if (typeArr[j] > max) {
+        max = typeArr[j];
+        maxIndex = j;
+        houseResult(maxIndex);
+      }
+    }
+  }
+
+  function houseResult(type){
+    console.log(resultList[type].name);
   }
   
   // Create our GSAP Timeline and respective Tweens

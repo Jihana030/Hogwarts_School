@@ -169,7 +169,7 @@
 /* main_mainCon style sheet */
 .main_mainCon {
   margin: 0 var(--display-gap);
-  height: 45rem;
+  height: 26rem;
 }
 .main_mainCon a {
   --font-size: 3rem;

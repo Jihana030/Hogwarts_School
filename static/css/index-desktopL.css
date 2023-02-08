@@ -123,7 +123,7 @@
 /* main_mainCon style sheet */
 .main_mainCon {
   margin: 4rem 24vw 0 var(--display-gap);
-  height: 50rem;
+  height: 35rem;
 }
 
 .main_mainCon a {
