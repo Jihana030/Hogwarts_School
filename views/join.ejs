@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/join.css"">
     <link rel="stylesheet" href="../static/css/scss/common.css">
-
     <link rel="stylesheet" href="../static/css/scss/common_header.css">
     <link rel="stylesheet" href="../static/css/scss/common_footer.css">
+    <link rel="stylesheet" href="../static/css/scss/mypage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Document</title>
   </head>
@@ -16,7 +16,7 @@
     <div class="main_overlay"></div>
     <header>
       <audio src="../audio/Prologue Book II and the Escape from the Dursleys.mp3" autoplay loop></audio>
-
+  
       <!-- header   ***   -->
       <div id="comm_header">
           <div class="comm_left">
@@ -81,22 +81,27 @@
                       <ul class="comm_header_submenu">
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>창립</p>
+                                  <p>설립이념</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>연혁</p>
+                                  <p>교육과정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>교수진</p>
+                                  <p class="comm_submenu_exists">교수진</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>장소</p>
+                                  <p class="comm_submenu_exists">연혁</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>캠퍼스 안내</p>
                               </a>
                           </li>
                       </ul>
@@ -116,17 +121,17 @@
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>일정</p>
+                                  <p>교내일정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>활동</p>
+                                  <p>식단표</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>식단</p>
+                                  <p>학교규정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
@@ -134,12 +139,42 @@
                                   <p>자료실</p>
                               </a>
                           </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>발전기금</p>
+                              </a>
+                          </li>
                       </ul>
                   </li>
                   <li class="comm_menu">
-                      <a href="#">
-                          <p>Houses</p>
-                      </a>
+                      <div class="comm_menu_title">
+                          <a href="#">
+                              <p>Houses</p>
+                          </a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                      <ul class="comm_header_submenu">
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p class="comm_submenu_exists">그리핀도르</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>슬리데린</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>후플푸프</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>래번클로</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
                   <li class="comm_menu">
                       <div class="comm_menu_title">
@@ -151,12 +186,12 @@
                       <ul class="comm_header_submenu">
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>취업</p>
+                                  <p>취업정보</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>해외</p>
+                                  <p>유학정보</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
@@ -164,12 +199,42 @@
                                   <p>교환학생</p>
                               </a>
                           </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>장학안내</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>장학FAQ</p>
+                              </a>
+                          </li>
                       </ul>
                   </li>
                   <li class="comm_menu">
-                      <a href="#">
-                          <p>Community</p>
-                      </a>
+                      <div class="comm_menu_title">
+                          <a href="#">
+                              <p>Community</p>
+                          </a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                      <ul class="comm_header_submenu">
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>동아리활동</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>기숙사게시판</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>익명게시판</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
           </div>
@@ -181,7 +246,7 @@
           </div>
       </div>
       <!-- ======================== header TOP menu [end] ================================== -->
-
+  
       <!-- ======================== header RIGHT menu [start] ============================== -->
       <div class="comm_header_menu_max768">
           <div class="comm_dummy_header_menu_top"></div>
@@ -221,7 +286,7 @@
                               </svg>
                           </a>
                       </div>
-
+  
                       <div class="comm_menu_login_flag_box">
                           <div class="comm_menu_login_flag_menu">
                               <div class="comm_menu_login_flag_menu_box">
@@ -241,11 +306,11 @@
                               </div>
                           </div>
                       </div>
-
+  
                       <span class="comm_menu_line"></span>
                   </div>
               </div>
-
+  
               <ul class="comm_header_menu_list">
                   <li class="comm_menu">
                       <div class="comm_menu_title">
@@ -257,22 +322,27 @@
                       <ul class="comm_header_submenu">
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>창립</p>
+                                  <p>설립이념</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>연혁</p>
+                                  <p>교육과정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>교수진</p>
+                                  <p class="comm_submenu_exists">교수진</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>장소</p>
+                                  <p class="comm_submenu_exists">연혁</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>캠퍼스 안내</p>
                               </a>
                           </li>
                       </ul>
@@ -292,17 +362,17 @@
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>일정</p>
+                                  <p>교내일정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>활동</p>
+                                  <p>식단표</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>식단</p>
+                                  <p>학교규정</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
@@ -310,12 +380,42 @@
                                   <p>자료실</p>
                               </a>
                           </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>발전기금</p>
+                              </a>
+                          </li>
                       </ul>
                   </li>
                   <li class="comm_menu">
-                      <a href="#">
-                          <p>Houses</p>
-                      </a>
+                      <div class="comm_menu_title">
+                          <a href="#">
+                              <p>Houses</p>
+                          </a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                      <ul class="comm_header_submenu">
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p class="comm_submenu_exists">그리핀도르</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>슬리데린</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>후플푸프</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>래번클로</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
                   <li class="comm_menu">
                       <div class="comm_menu_title">
@@ -327,12 +427,12 @@
                       <ul class="comm_header_submenu">
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>취업</p>
+                                  <p>취업정보</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
                               <a href="#">
-                                  <p>해외</p>
+                                  <p>유학정보</p>
                               </a>
                           </li>
                           <li class="comm_submenu">
@@ -340,12 +440,42 @@
                                   <p>교환학생</p>
                               </a>
                           </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>장학안내</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>장학FAQ</p>
+                              </a>
+                          </li>
                       </ul>
                   </li>
                   <li class="comm_menu">
-                      <a href="#">
-                          <p>Community</p>
-                      </a>
+                      <div class="comm_menu_title">
+                          <a href="#">
+                              <p>Community</p>
+                          </a>
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                      <ul class="comm_header_submenu">
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>동아리활동</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>기숙사게시판</p>
+                              </a>
+                          </li>
+                          <li class="comm_submenu">
+                              <a href="#">
+                                  <p>익명게시판</p>
+                              </a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
               <div class="comm_dummy_header_menu_bottom"></div>
@@ -5521,6 +5651,7 @@
       </div>
     </div>
 
+    <div class="join_letter_bg"></div>
     <div class="join_letter hidden">
         <div id="join_letter_logo">
             <svg
@@ -10612,13 +10743,12 @@
               ⓒ 2023.Harry potter and best team. All rights reserved.
           </p>
       </div>
-      <img src="../static/img/khlll/hogwarts_logo_white_comm.png" alt="footer hogwarts logo" class="comm_footer_logo">
-    </footer>
+      <img src="../static/img/khlll/hogwarts_logo_white_comm.png" alt="footer hogwarts logo"
+          class="comm_footer_logo">
+  </footer>
   </body>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script src="../static/js/join.js"></script>
 
 <script src="../static/js/common_header.js"></script>
-
-
 </html>

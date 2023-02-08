@@ -113,12 +113,17 @@
 
 
   // main_wide-menu 메뉴 펼치기
-  const $meneWideBtn = document.querySelector("#main_wide-menu");
+  const $meneWideBtn = document.querySelector("#main_nav-menu-wrap");
   const $WideTap = document.querySelector("#main_menu-toggle-wrap");
 
-  $meneWideBtn.addEventListener("click", function () {
-    $WideTap.classList.toggle("wide-toggle-active");
+  $meneWideBtn.addEventListener("mouseover", function () {
+    $WideTap.classList.toggle("wide-toggle-active", true);
   });
+  
+  $meneWideBtn.addEventListener("mouseout", function () {
+    $WideTap.classList.toggle("wide-toggle-active", false);
+  });
+
 
   // Header hamberger Btn 🍔 **
   const $headerBtn = document.querySelector("#main_mobile-menu");

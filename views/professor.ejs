@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/house_test2.css">
-
-    <link rel="stylesheet" href="../static/css/scss/common.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
     <link rel="stylesheet" href="../static/css/scss/common.css">
     <link rel="stylesheet" href="../static/css/scss/common_header.css">
+    <link rel="stylesheet" href="../static/css/professor.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/img/circle/common/Logo-favicon.png" type="image/x-icon">
+    <link rel="icon" href="../static/img/circle/common/Logo-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/scss/common_footer.css">
-    <title>House Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Hogwarts School</title>
 </head>
 <body>
     <header>
@@ -23,7 +22,7 @@
         <div id="comm_header">
             <div class="comm_left">
                 <h1>
-                    <a href="index.html">Hogwarts School</a>
+                    <a href="#">Hogwarts School</a>
                 </h1>
                 <div id="comm_musicbar_container" class="comm_musicbar" data-state="1">
                     <span class="comm_bar comm_bar-1"></span>
@@ -39,7 +38,7 @@
                     </label>
                 </div>
                 <div class="comm_login">
-                    <!-- <a href="join.ejs" class="comm_login_hat">
+                    <a href="#" class="comm_login_hat">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_287_1533)">
@@ -52,9 +51,9 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                    </a> -->
+                    </a>
                     <div class="comm_login_flag_box">
-                        <a href="mypage.html" class="comm_login_flag">
+                        <a href="#" class="comm_login_flag">
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -78,7 +77,7 @@
                                 <div class="comm_login_flag_menu_contents">
                                     <ul>
                                         <li class="comm_login_flag_menu_item">
-                                            <a href="mypage.html">Mypage</a>
+                                            <a href="#">Mypage</a>
                                         </li>
                                         <li class="comm_login_flag_menu_item">
                                             <a href="#">Settings</a>
@@ -132,12 +131,12 @@
                                 </a>
                             </li>
                             <li class="comm_submenu">
-                                <a href="professor.html">
+                                <a href="/hogwarts/professor">
                                     <p class="comm_submenu_exists">교수진</p>
                                 </a>
                             </li>
                             <li class="comm_submenu">
-                                <a href="history.html">
+                                <a href="#">
                                     <p class="comm_submenu_exists">연혁</p>
                                 </a>
                             </li>
@@ -197,7 +196,7 @@
                         </div>
                         <ul class="comm_header_submenu">
                             <li class="comm_submenu">
-                                <a href="house_detail.html">
+                                <a href="#">
                                     <p class="comm_submenu_exists">그리핀도르</p>
                                 </a>
                             </li>
@@ -298,7 +297,7 @@
                     <div class="comm_menu_top_title">
                         <h3>Menu</h3>
                         <div class="comm_menu_login">
-                            <a href="join.ejs" class="comm_menu_login_hat">
+                            <a href="#" class="comm_menu_login_hat">
                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_287_1533)">
@@ -335,7 +334,7 @@
                                     <div class="comm_menu_login_flag_menu_contents">
                                         <ul>
                                             <li class="comm_menu_login_flag_menu_item">
-                                                <a href="mypage.html">Mypage</a>
+                                                <a href="#">Mypage</a>
                                             </li>
                                             <li class="comm_menu_login_flag_menu_item">
                                                 <a href="#">Settings</a>
@@ -373,12 +372,12 @@
                                 </a>
                             </li>
                             <li class="comm_submenu">
-                                <a href="professor.html">
+                                <a href="/hogwarts/professor">
                                     <p class="comm_submenu_exists">교수진</p>
                                 </a>
                             </li>
                             <li class="comm_submenu">
-                                <a href="history.html">
+                                <a href="#">
                                     <p class="comm_submenu_exists">연혁</p>
                                 </a>
                             </li>
@@ -438,7 +437,7 @@
                         </div>
                         <ul class="comm_header_submenu">
                             <li class="comm_submenu">
-                                <a href="house_detail.html">
+                                <a href="#">
                                     <p class="comm_submenu_exists">그리핀도르</p>
                                 </a>
                             </li>
@@ -531,29 +530,11 @@
         </div>
         <!-- ======================== header RIGHT menu [end] ================================ -->
     </header>
-    <div class="HouseTest_m">
-        <div class="HouseTest_bg"></div>
-        <div class="HouseTest_container">
-            <div class="HouseTest_left">
-                <svg width="901" height="824" viewBox="0 0 901 824" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M258.919 652.505L284.526 540.75H331.947L260.816 463.5L284.526 437.75L331.947 257.5L592.763 0L711.316 180.25L616.474 128.75L521.632 283.25H592.763L640.184 618L551.981 646.068C751.861 655.338 901 691.13 901 733.875C901 783.573 699.223 824 450.5 824C201.777 824 -4.00543e-05 783.573 -4.00543e-05 733.875C-4.00543e-05 697.825 105.986 666.925 258.919 652.505ZM355.658 540.75L450.5 515L474.211 437.75L355.658 540.75Z" fill="#404040"/>
-                    </svg>
-            </div>
-            <!-- <div class="HouseTest_border"> </div> -->
-            <div class="HouseTest_right">
-                <div class="HouseTest_center_item">
-                    <p class="houseTest_title">
-                        Hogwarts School <br> House Test
-                    </p>
-                </div>
-                <div class="houseTest_nextBtn">
-                    Start
-                </div>
-            </div>
-        </div>
+    <!-- contents -->
+    <div class="pro_paper"></div>
+    <div class="pro_cnt">
     </div>
-    
-
+    <!-- footer   ***   -->
     <footer id="common_footer">
         <div class="comm_footer_text">
             <p class="comm_footer_text1">
@@ -569,11 +550,6 @@
         <img src="../static/img/khlll/hogwarts_logo_white_comm.png" alt="footer hogwarts logo" class="comm_footer_logo">
     </footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.2.4/pixi.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-
-<script src="../static/js/house_test2.js"></script>
 <script src="../static/js/common_header.js"></script>
-
-
+<script src="../static/js/professor.js"></script>
 </html>

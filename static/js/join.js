@@ -169,10 +169,12 @@
 
     const $joinLetter = document.querySelector('.join_letter');
     const $toName = document.querySelector('.join_letter_userName');
+    const $body = document.querySelector('.join_letter_bg');
 
     $toName.innerHTML = `${document.querySelector('.toName').value}`;
 
     $joinLetter.classList.remove('hidden');
+    $body.classList.add('letter_overlay');
     window.scrollTo(0,0);
 })
 
