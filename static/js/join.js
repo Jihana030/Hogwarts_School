@@ -183,7 +183,7 @@
     const $letterCloseBtn = document.querySelector('.join_letter_closeBtn');
 
     $letterCloseBtn.addEventListener('click', ()=>{
-        location.replace('http://192.168.0.132:3001/main');
+        location.replace('/hogwarts/main');
     })
 
 })();

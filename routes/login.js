@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
                     console.log(req.session);
                     console.log(row[0].house)
 
-                    res.redirect('/main');
+                    res.redirect('/hogwarts/main');
                 }
             }else {
                 console.log('아이디가 존재하지 않습니다');
