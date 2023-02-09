@@ -179,8 +179,8 @@ for (let i = 0; i < $calbodyTd.length; i++) {
       let eventDay = e.target.innerText;
       $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 성 발렌타인 데이 행사`;
 
-      console.log(`${eventDay} - e.target.innerText`);
-      console.log($matchDate.innerHTML);
+      // console.log(`${eventDay} - e.target.innerText`);
+      // console.log($matchDate.innerHTML);
 
       $matchDate.innerHTML = $match;
     });
@@ -195,8 +195,8 @@ for (let i = 0; i < $teleportClass.length; i++) {
     let eventDay = e.target.innerText;
     $match = `${month} / ${eventDay < 10 ? "0" + eventDay : eventDay} : 순간이동 시험 대비 특강 (${[i + 1]}주차)`;
 
-    console.log(`${eventDay} - e.target.innerText`);
-    console.log($matchDate.innerHTML);
+    // console.log(`${eventDay} - e.target.innerText`);
+    // console.log($matchDate.innerHTML);
 
     $matchDate.innerHTML = $match;
   });
