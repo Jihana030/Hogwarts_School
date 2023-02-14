@@ -310,12 +310,18 @@
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle {
   width: 170vh;
+  height: 100%;
   border-left: 1px solid #978b7e;
   border-right: 1px solid #978b7e;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char1 {
+  width: 100%;
   margin-bottom: 3vh;
   display: flex;
   justify-content: center;
@@ -340,6 +346,7 @@
   margin-left: 2.4vw;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char2 {
+  width: 100%;
   border-left: 1px solid #978b7e;
   border-right: 1px solid #978b7e;
   overflow: hidden;
@@ -385,6 +392,7 @@
   overflow: hidden;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text {
+  width: 100%;
   text-align: right;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box {
@@ -394,7 +402,7 @@
   grid-template-columns: repeat(3, 100%);
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name {
-  width: 100%;
+  width: 100% !important;
   height: 100%;
 }
 #house_detail_contents .house_detail_main .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_title {
@@ -1331,7 +1339,7 @@
     position: relative;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char1 .house_detail_s2_about_box .house_detail_s2_about {
-    align-items: flex-start !important;
+    align-items: center !important;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char1 .house_detail_s2_about_box .house_detail_s2_about p {
     font-size: 2vh !important;
@@ -1408,18 +1416,18 @@
     overflow: hidden;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text {
-    width: 100%;
+    width: 100% !important;
     text-align: left !important;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box {
-    width: 100%;
+    width: 100% !important;
     height: 100% !important;
     padding: 0 !important;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name {
     width: 100% !important;
     height: 100%;
-    padding: 0 7vw;
+    padding: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
@@ -1432,7 +1440,7 @@
     align-items: center;
   }
   #house_detail_contents .house_detail_section2 .house_detail_s2_central_char .house_detail_s2_central_char_middle .house_detail_s2_central_char3 .house_detail_s2_central_char3_text .house_detail_s2_central_char_title_name_box .house_detail_s2_central_char_title_name .house_detail_s2_central_char_name {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 2.7vw !important;
     font-size: 6.5vw !important;
     text-align: right;

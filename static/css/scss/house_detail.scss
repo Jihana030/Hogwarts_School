@@ -319,14 +319,17 @@ $selectText: #fff;
 
                 .house_detail_s2_central_char_middle {
                     width: 170vh;
+                    height: 100%;
 
                     border-left: 1px solid $borderColor;
                     border-right: 1px solid $borderColor;
 
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
+                    user-select: none;
 
                     .house_detail_s2_central_char1 {
+                        width: 100%;
                         margin-bottom: 3vh;
 
                         display: flex;
@@ -357,6 +360,7 @@ $selectText: #fff;
                     }
 
                     .house_detail_s2_central_char2 {
+                        width: 100%;
                         border-left: 1px solid $borderColor;
                         border-right: 1px solid $borderColor;
                         overflow: hidden;
@@ -411,6 +415,7 @@ $selectText: #fff;
                         overflow: hidden;
 
                         .house_detail_s2_central_char3_text {
+                            width: 100%;
                             text-align: right;
 
                             .house_detail_s2_central_char_title_name_box { // ul
@@ -421,7 +426,7 @@ $selectText: #fff;
                                 grid-template-columns: repeat(3, 100%);
 
                                 .house_detail_s2_central_char_title_name { // li
-                                    width: 100%;
+                                    width: 100% !important;
                                     height: 100%;
 
                                     .house_detail_s2_central_char_title {
@@ -906,7 +911,6 @@ $selectText: #fff;
                         overflow: hidden;
 
                         .house_detail_s2_central_char3_text {
-
                             .house_detail_s2_central_char_title_name_box { // ul
                                 width: 100%;
                                 height: 50vh;
@@ -1333,7 +1337,6 @@ $selectText: #fff;
                                         font-size: 7vw !important;
                                         line-height: 7vw !important;
 
-                                        // flex-basis: 100%;
                                         display: flex;
                                         justify-content: flex-end;
                                     }
@@ -1657,8 +1660,8 @@ $selectText: #fff;
                         position: relative;
 
                         .house_detail_s2_about_box { // ul
-                            .house_detail_s2_about { // li
-                                align-items: flex-start !important;
+                                .house_detail_s2_about { // li
+                                align-items: center !important;
 
                                 p {
                                     font-size: 2vh !important;
@@ -1752,11 +1755,11 @@ $selectText: #fff;
                         overflow: hidden;
 
                         .house_detail_s2_central_char3_text {
-                            width: 100%;
+                            width: 100% !important;
                             text-align: left !important;
 
                             .house_detail_s2_central_char_title_name_box { // ul
-                                width: 100%;
+                                width: 100% !important;
                                 height: 100% !important;
 
                                 padding: 0 !important;
@@ -1764,7 +1767,7 @@ $selectText: #fff;
                                 .house_detail_s2_central_char_title_name { // li
                                     width: 100% !important;
                                     height: 100%;
-                                    padding: 0 7vw;
+                                    padding: 0 5vw;
                                     
                                     display: grid;
                                     grid-template-columns: 1fr 3fr;
@@ -1780,7 +1783,7 @@ $selectText: #fff;
                                     }
                                     
                                     .house_detail_s2_central_char_name {
-                                        width: 100%;
+                                        width: 100% !important;
                                         margin-bottom: 2.7vw !important;
                                         
                                         font-size: 6.5vw !important;
