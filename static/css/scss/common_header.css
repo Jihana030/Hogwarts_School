@@ -8,8 +8,7 @@
 }
 
 .comm_animation_play_pause {
-  -webkit-animation-play-state: paused !important;
-          animation-play-state: paused !important;
+  animation-play-state: paused !important;
 }
 
 .comm_dp_none {
@@ -52,106 +51,21 @@
   width: 2px;
   border-radius: 10px;
   display: inline-block;
-  -webkit-animation: equalize 4s 0s infinite;
-          animation: equalize 4s 0s infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation: equalize 4s 0s infinite;
+  animation-timing-function: linear;
   vertical-align: bottom;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-1 {
   height: 12px;
-  -webkit-animation-delay: -1.9s;
-          animation-delay: -1.9s;
+  animation-delay: -1.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-2 {
   height: 15px;
-  -webkit-animation-delay: -2.9s;
-          animation-delay: -2.9s;
+  animation-delay: -2.9s;
 }
 #comm_header .comm_left .comm_musicbar .comm_bar-3 {
   height: 10px;
-  -webkit-animation-delay: -3.9s;
-          animation-delay: -3.9s;
-}
-@-webkit-keyframes equalize {
-  0% {
-    height: 7px;
-  }
-  4% {
-    height: 13px;
-  }
-  8% {
-    height: 13.3px;
-  }
-  12% {
-    height: 14.7px;
-  }
-  16% {
-    height: 7px;
-  }
-  20% {
-    height: 14.7px;
-  }
-  24% {
-    height: 14.3px;
-  }
-  28% {
-    height: 7px;
-  }
-  32% {
-    height: 14.3px;
-  }
-  36% {
-    height: 7px;
-  }
-  40% {
-    height: 14.3px;
-  }
-  44% {
-    height: 14.3px;
-  }
-  48% {
-    height: 14.3px;
-  }
-  52% {
-    height: 14.7px;
-  }
-  56% {
-    height: 7px;
-  }
-  60% {
-    height: 14.7px;
-  }
-  64% {
-    height: 14.7px;
-  }
-  68% {
-    height: 14.7px;
-  }
-  72% {
-    height: 7px;
-  }
-  76% {
-    height: 14.3px;
-  }
-  80% {
-    height: 7px;
-  }
-  84% {
-    height: 15px;
-  }
-  88% {
-    height: 7px;
-  }
-  92% {
-    height: 14.3px;
-  }
-  96% {
-    height: 7px;
-  }
-  100% {
-    height: 7px;
-  }
+  animation-delay: -3.9s;
 }
 @keyframes equalize {
   0% {
@@ -758,7 +672,7 @@
     cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   }
   .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::before,
-.comm_header_menu_max768 .comm_menu_top .comm_closeBtn::after {
+  .comm_header_menu_max768 .comm_menu_top .comm_closeBtn::after {
     width: 0.5vw;
     height: 100%;
     content: "";

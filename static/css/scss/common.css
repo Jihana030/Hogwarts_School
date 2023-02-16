@@ -8,8 +8,7 @@
 }
 
 .comm_animation_play_pause {
-  -webkit-animation-play-state: paused !important;
-          animation-play-state: paused !important;
+  animation-play-state: paused !important;
 }
 
 .comm_dp_none {
