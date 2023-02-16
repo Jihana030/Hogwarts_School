@@ -39,8 +39,9 @@
 
     // 기숙사 인물 소개 swiper **
     var swiper = new Swiper(".house_detail_slide_pic", {
-        centeredSlides: true,
+        loop: true,
         slidesPerView: 1,
+        centeredSlides: true,
         spaceBetween: 0,
         allowTouchMove: false,
         navigation: {
@@ -49,7 +50,8 @@
     });
 
     var swiper2 = new Swiper(".house_detail_slide_title_name", {
-        slidesPerView: 'auto',
+        loop: true,
+        slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 0,
         allowTouchMove: false,
@@ -59,6 +61,7 @@
     });
 
     var swiper3 = new Swiper(".house_detail_slide_about", {
+        loop: true,
         slidesPerView: 1,
         centeredSlides: true,
         spaceBetween: 0,

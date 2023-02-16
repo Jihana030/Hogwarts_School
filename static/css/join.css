@@ -400,3 +400,13 @@ input[type="checkbox"] {
 .join_letter_closeBtn:hover{
     font-weight: 600;
 }
+
+.letter_overlay{
+    filter: blur(5px);
+    background-color: #5a504175 !important;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}

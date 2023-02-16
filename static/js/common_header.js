@@ -92,11 +92,12 @@
 
     const $flagIcon = document.querySelector('.comm_login_flag_box');
     const $flagIconMenu = document.querySelector('.comm_login_flag_menu');
-    $flagIcon.addEventListener('click', () => {
-        $searchText.classList.remove('comm_active_input');
-        $flagIconMenu.classList.toggle('comm_dp_none');
-    });
-
+    if($flagIcon){
+        $flagIcon.addEventListener('click', () => {
+            $searchText.classList.remove('comm_active_input');
+            $flagIconMenu.classList.toggle('comm_dp_none');
+        });
+    }
 
     // max-width 768px ***
 
