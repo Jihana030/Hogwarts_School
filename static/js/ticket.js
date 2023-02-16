@@ -1,8 +1,9 @@
 (function(){
     //로그인 모달
-    // const $body = document.querySelector('.main_overlay');
     const $loginBtn = document.querySelector('.login_btn');
     const $loginModal = document.querySelector('#login_frm');
+
+    const $modalBg = document.querySelectorAll('.modal_bg');
 
     const rightBox = document.querySelector('#login_body_right');
 
@@ -29,12 +30,19 @@
         $loginDate.innerHTML = `${year} - ${ month<10 ? '0'+ month : month} - ${ date<10 ? '0'+ date : date}`;
         $loginTime.innerHTML = ` ${hours>=12 ? 'PM' : 'AM'} ${newHours()} : ${minutes<10 ? '0'+minutes : minutes}`;
 
-        if(window.innerWidth <1024){
-            rightBox.classList.toggle('hidden', true);
-        }
-
         $loginModal.classList.toggle('hidden', false);
-        // $body.classList.add('modal_overlay');
+        $modalBg.forEach(ele =>{
+            ele.classList.add('modal_overlay');
+        })
+
+        const closeBtn = document.querySelector('.login_closeBtn');
+        closeBtn.addEventListener('click', e=>{
+            $modalBg.forEach(ele =>{
+                ele.classList.remove('modal_overlay');
+                $loginModal.classList.add('hidden');
+
+            })
+        })
     })
 
     // 로그인 클릭 이벤트

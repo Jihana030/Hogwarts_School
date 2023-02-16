@@ -169,10 +169,12 @@
 
     const $joinLetter = document.querySelector('.join_letter');
     const $toName = document.querySelector('.join_letter_userName');
+    const $body = document.querySelector('.join_letter_bg');
 
     $toName.innerHTML = `${document.querySelector('.toName').value}`;
 
     $joinLetter.classList.remove('hidden');
+    $body.classList.add('letter_overlay');
     window.scrollTo(0,0);
 })
 
@@ -181,7 +183,7 @@
     const $letterCloseBtn = document.querySelector('.join_letter_closeBtn');
 
     $letterCloseBtn.addEventListener('click', ()=>{
-        location.replace('http://192.168.0.132:3001/main');
+        location.replace('/hogwarts/main');
     })
 
 })();

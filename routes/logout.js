@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
                 res.clearCookie('session-cookie')
                 console.log(req.session);
                 console.log('세션 삭제 성공');
-                res.redirect('/main');
+                res.redirect('/hogwarts/main');
             }
         ); 
     });
