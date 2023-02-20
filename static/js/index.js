@@ -48,21 +48,29 @@
 
   function setNavMenuTop() {
     navMenuTop = $navMenu.getBoundingClientRect().top + window.pageYOffset;
+    // navMenuTop(nav가 문서에서 떨어진 값) = nav가 뷰포트에서 떨어진 값 + 문서에서 떨어진 값
   }
   setNavMenuTop();
 
+  // scrollTimer - 발생할 때마다 계속해서 이벤트가 발생하는 것을 방지
+  // 특정시간이 지났을 때(100)만 다시 null / 값이 없으면 false;
   let scrollTimer = null;
-  document.addEventListener("scroll", function () {
+  // 스크롤이 발생될 때마다 실행되는 이벤트
+  window.addEventListener("scroll", function () {
     if (!scrollTimer) {
       scrollTimer = setTimeout(function () {
         if (navMenuTop < window.scrollY) {
+          // navMenuTop : 헤더 위치
           const direction = prevScrollTop > window.scrollY ? "up" : "down";
+          // const 방향 = 이전에 위치했던 값 > 현재 값 ? "up" : "down"
           headerMoving(direction);
         } else {
+          // 헤더의 최하단을 아직 지나가지 않은 상태(default)
           $navMenu.classList.remove("sticky-top");
           $navMenu.classList.remove("scrollDown");
         }
         prevScrollTop = window.scrollY;
+        // 선언부가 없으니 전역변수 : 스크롤의 최상위값을 넣어준다
         scrollTimer = null;
       }, 100);
     }
