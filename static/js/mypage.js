@@ -2,6 +2,13 @@
 
     'use strict';
 
+    // TopBtn
+    const $top = document.querySelector('#comm_container #TopBtn');
+
+    $top.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     // Fullcalendar render ***
 
     const $calendar = document.querySelector('#calendar');

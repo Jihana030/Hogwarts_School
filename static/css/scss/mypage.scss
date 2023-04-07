@@ -25,6 +25,13 @@ $selectText: #fff;
     background-color: $selectColor;
     color: $selectText;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+
+#TopBtn {
+    display: none;
+}
 
 #comm_container {
     width: 100%;
@@ -424,7 +431,6 @@ $selectText: #fff;
                         .fc-view-harness {
                             width: 20vw;
                             height: 100% !important;
-
                             z-index: 0;
 
                             .fc-dayGridMonth-view {
