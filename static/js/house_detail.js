@@ -4,6 +4,45 @@
     // 스크롤 애니메이션 라이브러리 렌더링 ***
     AOS.init();
 
+    // TopBtn
+    const $top = document.querySelector('#comm_container #TopBtn');
+
+    $top.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Waypoint.js
+    const $s1AboutText = document.querySelector('.house_detail_s1_about');
+    const $header = document.querySelector('#comm_header');
+
+    // color
+    const $headerLogo = $header.querySelector('.comm_left h1 a');
+    const $headerSearch = $header.querySelector('.comm_right .comm_search i.comm_search_btn');
+
+    // background color
+    const $headerMusic = $header.querySelectorAll('.comm_left .comm_musicbar .comm_bar');
+    const $headerMenu = $header.querySelectorAll('.comm_right .comm_menu_btn span');
+
+    new Waypoint({
+        element: $s1AboutText,
+        handler: function (dir) {
+            $headerMenu.forEach((item, idx) => {
+                if(dir == 'down') {
+                    $headerSearch.classList.add('normal_text');
+                    $headerLogo.classList.add('normal_text');
+                    $headerMusic[idx].classList.add('normal_bg');
+                    $headerMenu[idx].classList.add('normal_bg');
+                } else {
+                    $headerLogo.classList.remove('normal_text');
+                    $headerSearch.classList.remove('normal_text');
+                    $headerMusic[idx].classList.remove('normal_bg');
+                    $headerMenu[idx].classList.remove('normal_bg');
+                }
+            })
+        },
+        offset: '100%'
+    })
+
 
     // section1 - 창립자 일러스트 그리기 효과 ***
 

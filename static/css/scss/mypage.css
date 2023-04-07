@@ -22,7 +22,7 @@
 #comm_container .mypage_overlay {
   width: 100%;
   height: 100%;
-  background: url("../../img/khlll/Background_texture.jpg") repeat;
+  background: url("../../img/khlll/background_texture.jpg") repeat;
   opacity: 0.25;
   mix-blend-mode: darken;
   position: absolute;

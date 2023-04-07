@@ -299,7 +299,7 @@ $selectText: #fff;
                         
                         #calendar {
                             width: 30vw;
-                            height: 29vw;
+                            height: 33vw;
 
                             // Fullcalendar style fix ***
 
@@ -571,7 +571,7 @@ $selectText: #fff;
                                     }
     
                                     p {
-                                        font-size: 1.6vw;
+                                        font-size: 1.4vw;
                                         display: inline-block;
                                         line-height: 2.1vw !important;
                                         margin-left: 1vw;
@@ -607,36 +607,34 @@ $selectText: #fff;
 
                                     .mypage_Todolist_detail_dltBtn {
                                         position: relative;
-                                        .mypage_Todolist_detail_dltBtn_icon {
-                                            width: 1.2vw !important;
+                                        width: 1.2vw !important;
+                                        height: 1.2vw !important;
+                                        cursor: pointer;
+
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translate(0, -50%);
+                                        
+                                        &::before, &::after {
+                                            content:'';
+                                            width: 1px;
                                             height: 1.2vw !important;
-                                            cursor: pointer;
-
-                                            display: flex;
-                                            justify-content: center;
-                                            align-items: center;
-
+            
                                             position: absolute;
-                                            top: 50%;
-                                            right: 0;
-                                            transform: translate(0, -50%);
-
-                                            &::before, &::after {
-                                                content:'';
-                                                width: 1px;
-                                                height: 1.2vw !important;
-                
-                                                position: absolute;
-                                                top: 0;
-                                                left: 50%;
-                                                background-color: #8d8368;
-                                            }
-                                            &::before {
-                                                transform: rotate(-45deg);
-                                            }
-                                            &::after {
-                                                transform: rotate(45deg);
-                                            }
+                                            top: 0;
+                                            left: 50%;
+                                            background-color: #8d8368;
+                                        }
+                                        &::before {
+                                            transform: rotate(-45deg);
+                                        }
+                                        &::after {
+                                            transform: rotate(45deg);
                                         }
                                     }
                                 }

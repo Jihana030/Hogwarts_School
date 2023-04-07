@@ -3,6 +3,14 @@
   font-family: "Eulyoo1945", serif;
   src: url("../../font/Eulyoo1945-Regular.ttf");
 }
+::-webkit-scrollbar {
+  display: none;
+}
+
+#TopBtn {
+  display: none;
+}
+
 #comm_container {
   width: 100%;
   font-family: "Ibarra Real Nova", serif;
@@ -13,7 +21,7 @@
 #comm_container .house_list_overlay {
   width: 100%;
   height: 100%;
-  background: url("../../img/khlll/Background_texture.jpg") repeat;
+  background: url("../../img/khlll/background_texture.jpg") repeat;
   opacity: 0.3;
   mix-blend-mode: multiply;
   position: absolute;
@@ -173,6 +181,38 @@
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 481px) {
+  #TopBtn {
+    display: block;
+    bottom: 3.125vw;
+    right: 3.125vw;
+    cursor: url("../img/circle/common/Cursor_Pointer.png"), auto;
+    position: fixed;
+    z-index: 210;
+  }
+  #TopBtn i {
+    background-color: rgba(250, 250, 248, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #333;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    font-size: clamp(0.75rem, 3vw, 1.25rem);
+    line-height: clamp(2rem, 8vw, 4rem);
+    width: clamp(2rem, 8vw, 4rem);
+    height: clamp(2rem, 8vw, 4rem);
+  }
+  #TopBtn i:hover {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+  }
+  #TopBtn i:active {
+    background-color: transparent;
+    border: 0;
+    color: #333;
+  }
   #house_list_contents {
     padding: 0;
     grid-template-rows: 100vh minmax(302px, auto);
@@ -210,6 +250,38 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #TopBtn {
+    display: block;
+    bottom: 3.125vw;
+    right: 3.125vw;
+    cursor: url("../img/circle/common/Cursor_Pointer.png"), auto;
+    position: fixed;
+    z-index: 210;
+  }
+  #TopBtn i {
+    background-color: rgba(250, 250, 248, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #333;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    font-size: clamp(0.75rem, 3vw, 1.25rem);
+    line-height: clamp(2rem, 8vw, 4rem);
+    width: clamp(2rem, 8vw, 4rem);
+    height: clamp(2rem, 8vw, 4rem);
+  }
+  #TopBtn i:hover {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+  }
+  #TopBtn i:active {
+    background-color: transparent;
+    border: 0;
+    color: #333;
+  }
   .house_about_text_max1920 {
     display: none;
   }
@@ -219,6 +291,38 @@
   }
 }
 @media screen and (max-width: 480px) {
+  #TopBtn {
+    display: block;
+    bottom: 3.125vw;
+    right: 3.125vw;
+    cursor: url("../img/circle/common/Cursor_Pointer.png"), auto;
+    position: fixed;
+    z-index: 210;
+  }
+  #TopBtn i {
+    background-color: rgba(250, 250, 248, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+    border: 1px solid #333;
+    border-radius: 50%;
+    color: #333;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+    font-size: clamp(0.75rem, 3vw, 1.25rem);
+    line-height: clamp(2rem, 8vw, 4rem);
+    width: clamp(2rem, 8vw, 4rem);
+    height: clamp(2rem, 8vw, 4rem);
+  }
+  #TopBtn i:hover {
+    background-color: #333;
+    border: 1px solid #333;
+    color: #fff;
+  }
+  #TopBtn i:active {
+    background-color: transparent;
+    border: 0;
+    color: #333;
+  }
   #house_list_contents {
     padding: 0;
     grid-template-rows: 100vh 1fr;

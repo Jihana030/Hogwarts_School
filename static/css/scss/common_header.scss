@@ -66,14 +66,14 @@ $selectText: #fff;
             display: inline-block;
             align-self: center;
             font-family: 'Ibarra Real Nova', serif;
-            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
         }
 
         .comm_musicbar {
             margin-left: 1.5rem;
 
             display: inline-block;
-            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
             background-color: transparent;
             align-self: center;
 
@@ -223,7 +223,7 @@ $selectText: #fff;
             i.comm_search_btn {
                 width: 1.3rem;
                 height: 1.3rem;
-                
+
                 display: inline-block;
                 color: $fontmainColor;
             }
@@ -246,23 +246,17 @@ $selectText: #fff;
                 }
 
             }
-            // .comm_search_textbox {
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;
-            //     cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
-            // }
         }
 
         .comm_login {
-            
+
             svg {
                 width: 2rem;
                 display: inline-block;
                 fill: $fontmainColor;
-                cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+                cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
             }
-            
+
             position: relative;
 
             .comm_login_flag_box:hover .comm_login_flag_menu {
@@ -279,11 +273,11 @@ $selectText: #fff;
                 transform: translate(-50%, -50%);
                 background-color: #e2dccb;
                 z-index: 999;
-                
+
                 .comm_login_flag_menu_box {
                     width: 100%;
                     height: 100%;
-                    
+
                     padding: 14px;
                     color: $fontSubColor;
                     box-shadow: 0 0.3vw 0.5vw #00000010;
@@ -291,11 +285,11 @@ $selectText: #fff;
                     font-family: 'SUIT', sans-serif;
 
                     position: relative;
-    
+
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-    
+
                     .comm_login_flag_menu_name_year {
                         width: 70px;
                         margin-top: 0.5em;
@@ -304,37 +298,37 @@ $selectText: #fff;
                         justify-content: center;
                         align-items: center;
                         color: $fontSubColor;
-    
+
                         .comm_login_flag_menu_name {
                             font-size: 1rem;
                         }
-    
+
                         .comm_login_flag_menu_year {
                             font-size: 14px;
                         }
                     }
-    
+
                     .comm_login_flag_menu_line {
                         width: 70px;
                         border-bottom: 1px solid #918670;
                         margin: 0.7em;
                     }
-    
+
                     .comm_login_flag_menu_contents {
                         width: 70px;
                         height: 90%;
-    
+
                         display: inline-flex;
                         flex-direction: column;
                         flex-wrap: nowrap;
                         justify-content: space-between;
                         align-items: center;
                         // background-color:#dbd6c9;
-    
+
                         ul {
                             .comm_login_flag_menu_item {
                                 margin-bottom: 0.5em;
-    
+
                                 a {
                                     display: inline-block;
                                     font-size: 14px;
@@ -342,36 +336,37 @@ $selectText: #fff;
                                 }
                             }
                         }
-    
+
                         .comm_login_flag_menu_logout {
                             font-size: 14px;
                             margin-bottom: 0.5em;
                         }
-    
+
                     }
-    
+
                     .comm_login_flag_menu_tail {
                         width: 0;
                         height: 0;
                         border-left: 5px solid transparent;
                         border-right: 5px solid transparent;
-    
+
                         border-bottom: 5.5px solid $fontSubColor;
-    
+
                         position: absolute;
                         top: -1.5%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                     }
                 }
+
                 .comm_menu_login_flag_box_overlay {
                     width: 100%;
                     height: 100%;
-            
+
                     background: url("../../img/khlll/background_texture.jpg") repeat;
                     opacity: 0.3;
                     mix-blend-mode: multiply;
-            
+
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -386,7 +381,7 @@ $selectText: #fff;
 
             display: flex;
             flex-direction: column;
-            cursor:  url('../../img/circle/common/Cursor_Pointer.png'), auto;
+            cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
             span {
                 width: 30px;
@@ -489,6 +484,7 @@ $selectText: #fff;
                         color: #7a7a7a;
                     }
                 }
+
                 &:hover p {
                     color: $borderColor;
                 }
@@ -498,8 +494,9 @@ $selectText: #fff;
                 margin-bottom: .7em;
             }
 
-            
+
         }
+
         .comm_submenu_exists {
             color: $fontBlack !important;
             font-weight: 500;
@@ -589,6 +586,7 @@ $selectText: #fff;
             flex-direction: column;
 
         }
+
         .comm_menu_login_flag_menu {
             width: 100%;
             max-height: 0;
@@ -599,9 +597,9 @@ $selectText: #fff;
                 padding-top: 2vw;
                 max-height: 4.5em;
             }
-            
+
             .comm_menu_login_flag_menu_box {
-                
+
                 color: $fontSubColor;
 
                 display: flex;
@@ -643,9 +641,11 @@ $selectText: #fff;
 
                     ul {
                         width: 100%;
+
                         .comm_menu_login_flag_menu_item {
                             width: 100%;
                             margin-bottom: 0.3em;
+
                             a {
                                 display: inline-block;
                                 font-size: 5.5vw;
@@ -735,6 +735,7 @@ $selectText: #fff;
                     }
                 }
             }
+
             .comm_submenu_exists {
                 color: $fontBlack !important;
                 font-weight: 500;
@@ -845,6 +846,7 @@ $selectText: #fff;
     .comm_header_menu_max768 {
 
         display: block;
+
         .comm_menu_login {
             display: none;
         }
@@ -949,7 +951,8 @@ $selectText: #fff;
                     margin-bottom: 8vw;
                     cursor: url('../../img/circle/common/Cursor_Pointer.png'), auto;
 
-                    a, p {
+                    a,
+                    p {
                         display: inline-block;
                         font-size: 6.2vw;
                     }

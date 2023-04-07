@@ -703,7 +703,8 @@
     margin-bottom: 8vw;
     cursor: url("../../img/circle/common/Cursor_Pointer.png"), auto;
   }
-  .comm_header_menu_max768 .comm_header_menu_list .comm_menu a, .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu a,
+  .comm_header_menu_max768 .comm_header_menu_list .comm_menu p {
     display: inline-block;
     font-size: 6.2vw;
   }
