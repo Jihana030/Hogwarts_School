@@ -12,6 +12,14 @@
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+#TopBtn {
+  display: none;
+}
+
 #comm_container {
   width: 100%;
   overflow: hidden;
