@@ -5,6 +5,13 @@
     // 스크롤 애니메이션 라이브러리 렌더링 ***
     AOS.init();
 
+    // TopBtn
+    const $top = document.querySelector('#comm_container #TopBtn');
+
+    $top.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     const $item = document.querySelectorAll('.house_list_item');
     const $itemTitle = document.querySelectorAll('.house_list_item_title');
 

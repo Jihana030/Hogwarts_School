@@ -50,7 +50,7 @@ $selectText: #fff;
     
                 display: grid;
                 grid-template-columns: 100%;
-                grid-template-rows: 90vh 75vh 75vh;
+                grid-template-rows: 175.625vw 146.25vw 146.25vw;
     
                 .mypage_profile {
                     width: 100%;
@@ -61,21 +61,17 @@ $selectText: #fff;
                     background-color: rgba(255, 255, 255, 0.2);
                     
                     display: grid;
-                    grid-template-rows: 65vh 25vh;
+                    grid-template-rows: 126.87vw 48.75vw;
     
                     .mypage_profile_main {
                         width: 100%;
                         height: 100%;
                         border-bottom: 1px solid $borderColor-smooth;
                         position: relative;
-    
-                        // display: flex;
-                        // flex-direction: column;
-                        // justify-content: space-between;
 
                         display: grid;
                         grid-template-columns: 1fr;
-                        grid-template-rows: 50vh 15vh;
+                        grid-template-rows: 97.5vw 29.16vw;
     
                         .mypage_profile_house_dp {
                             position: absolute;
@@ -291,7 +287,7 @@ $selectText: #fff;
                     border-right: 0;
     
                     display: grid;
-                    grid-template-rows: 1.25fr 1fr;
+                    grid-template-rows: 1.6fr 1fr;
     
                     .mypage_calendar {
                         width: 100%;
@@ -303,8 +299,8 @@ $selectText: #fff;
                         align-items: center;
                         
                         #calendar {
-                            width: 70vw;
-                            height: 65vw;
+                            width: 80vw;
+                            height: 75vw;
 
                             // Fullcalendar style fix ***
 
@@ -376,7 +372,7 @@ $selectText: #fff;
 
                             // calendar main
                             .fc-view-harness {
-                                width: 77vw;
+                                width: 85vw;
                                 height: 100% !important;
 
                                 .fc-dayGridMonth-view {
@@ -388,8 +384,11 @@ $selectText: #fff;
                                             width: 100% !important;
                                             height: 100% !important;
 
-                                            .fc-scrollgrid-sync-inner a {
-                                                font-size: 3.4vw;
+                                            .fc-scrollgrid-sync-inner {
+                                                width: 12.6vw;
+                                                a {
+                                                    font-size: 3.4vw;
+                                                }
                                             }
                                         }
 
@@ -408,7 +407,7 @@ $selectText: #fff;
                                                 align-items: center;
 
                                                 .fc-daygrid-day-top {
-                                                    width: 9.6vw;
+                                                    width: 12.6vw;
                                                     height: 9.6vw;
                                                     
                                                     .fc-daygrid-day-number {
@@ -466,7 +465,7 @@ $selectText: #fff;
                         border-bottom: 1px solid $borderColor-smooth;
                         
                         .mypage_Todolist_top {
-                            width: 70vw;
+                            width: 80vw;
                             height: 3.5vw;
                             margin-top: 7.5vw;
                             
@@ -509,7 +508,7 @@ $selectText: #fff;
                         }
 
                         .mypage_Todolist_middle {
-                            width: 70vw;
+                            width: 80vw;
                             max-height: 0;
                             overflow: hidden;
 
@@ -524,7 +523,7 @@ $selectText: #fff;
                             }
     
                             .mypage_Todolist_middle_input {
-                                width: 56vw;
+                                width: 67vw;
                                 height: 7vw;
                                 border: none;
 
@@ -546,7 +545,7 @@ $selectText: #fff;
                         }
                         
                         .mypage_Todolist_bottom {
-                            width: 70vw;
+                            width: 80vw;
                             height: 55%;
                             margin-top: 4vw;
     
@@ -563,7 +562,7 @@ $selectText: #fff;
                                     font-family: 'Eulyoo1945', serif;
     
                                     display: grid;
-                                    grid-template-columns: 4vw 62vw 4vw!important;
+                                    grid-template-columns: 4vw 70vw 4vw!important;
 
                                     display: flex;
                                     align-items: center;
@@ -623,22 +622,22 @@ $selectText: #fff;
                                             right: 0;
                                             transform: translate(0, -50%);
 
-                                            &::before, &::after {
-                                                content:'';
-                                                width: 1px;
-                                                height: 2.5vw !important;
-                
-                                                position: absolute;
-                                                top: 0;
-                                                left: 50%;
-                                                background-color: #8d8368;
-                                            }
-                                            &::before {
-                                                transform: rotate(-45deg);
-                                            }
-                                            &::after {
-                                                transform: rotate(45deg);
-                                            }
+                                        }
+                                        &::before, &::after {
+                                            content:'';
+                                            width: 1px;
+                                            height: 2.5vw !important;
+            
+                                            position: absolute;
+                                            top: 0;
+                                            left: 50%;
+                                            background-color: #8d8368;
+                                        }
+                                        &::before {
+                                            transform: rotate(-45deg);
+                                        }
+                                        &::after {
+                                            transform: rotate(45deg);
                                         }
                                     }
                                 }
