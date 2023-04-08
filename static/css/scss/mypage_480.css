@@ -544,13 +544,16 @@
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_detail {
     padding: 1vw;
-    font-size: 2.8vw;
+    font-size: 0.75rem;
     color: #504733;
     font-family: "SUIT", sans-serif;
     border-radius: 1.5vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+  }
+  #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_detail .mypage_timeTable_detail_classroom {
+    font-size: 0.625rem;
   }
   #mypage_contents .mypage_contents_line .mypage_contents_box .mypage_timeTable .mypage_timeTable_slot .mypage_timeTable_slot_subject {
     background-color: rgba(255, 255, 255, 0.45);
