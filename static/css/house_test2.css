@@ -13,6 +13,10 @@ body{
     height: 100vh;
 }
 
+.hidden{
+    display: none;
+}
+
 .HouseTest_bg {
     background-image: url("../img/circle/common/Background_texture.jpg");
     background-repeat: repeat;
@@ -59,10 +63,11 @@ body{
     margin: 5% 0;
 }
 
-.HouseTest_left svg{
-    width: 14vw;
-    height: 14vw;
+.HouseTest_left svg, .HouseTest_left img{
+    width: 12vw;
+    height: 12vw;
 }
+
 
 svg.HouseTest_hat{
     width: 20vw;
@@ -73,7 +78,7 @@ svg.HouseTest_hat{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .HouseTest_center_item{
@@ -142,15 +147,29 @@ svg.HouseTest_hat{
     font-weight: 700;
 }
 
+.houseTest_resultTitle{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.houseTest_resultDesc{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.houseTest_close{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
 @media screen and (max-width:1023px) {
     .HouseTest_container{
         width: 100%;
-        padding-top: 100px;
         display: flex;
         flex-direction: column;
         gap: 2%;
         align-items: center;
-        justify-content: flex-start;
     }
     .houseTest_qes{
         font-size: 17px;
@@ -164,9 +183,9 @@ svg.HouseTest_hat{
         width: 20px;
         height: 20px;
     }
-    .HouseTest_left svg{
-        width: 25vw !important;
-        height: 25vw !important;
+    .HouseTest_left svg, .HouseTest_left img{
+        width: 20vw !important;
+        height: 20vw !important;
     }
 
 }
@@ -177,16 +196,23 @@ svg.HouseTest_hat{
         display: none;
     }
     .HouseTest_right{
-        padding: 9%;
+        padding: 8%;
     }
 
     .houseTest_title{
         font-size: 2rem;
         line-height: 2.5rem;
     }
-    .HouseTest_left svg{
-        width: 35vw !important;
-        height: 35vw !important;
+    .HouseTest_left svg, .HouseTest_left img{
+        width: 30vw !important;
+        height: 30vw !important;
+    }
+    .houseTest_resultDesc{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    .houseTest_resultTitle{
+        font-size: 2rem;
     }
 
 }

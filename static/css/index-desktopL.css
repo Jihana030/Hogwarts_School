@@ -258,7 +258,7 @@
 /* main_con5 style sheet */
 .main_con5 {
   padding-top: 4rem;
-  margin: 0px 15vw;
+  /* margin: 0px 15vw; */
 }
 
 /* main_con5 - 카테고리 */
@@ -275,8 +275,8 @@
 /* main_con5 -  오늘 식단표 */
 .main_con5-today_menu {
   flex-direction: row;
-  padding: 2rem 5rem;
-  gap: 2.5rem;
+  padding: 2rem 6rem;
+  gap: 5.5rem;
 }
 
 .main_con5-today_menu h3 {

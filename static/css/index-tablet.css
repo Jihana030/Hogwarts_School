@@ -320,7 +320,7 @@
 }
 /* main_con5 -  오늘 식단표 */
 .main_con5-today_menu {
-  padding: 3.125vw;
+  padding: 3vw;
 }
 .main_con5-today_menu h3 {
   padding-bottom: 0.25rem;
@@ -337,7 +337,7 @@
 .main_con5-world_news {
   grid-column: 1 / 3;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 1rem;
 }
 
@@ -366,10 +366,11 @@
 .main_con5-news-wrap {
   border: 1px solid var(--line-color);
   overflow: hidden;
+  height: 13rem;
 }
 .main_con5-news-wrap video {
   display: block;
-  height: 13rem;
+  height: 150%;
 }
 
 /* main_con6 style sheet - 교수 */

@@ -442,7 +442,10 @@
 
 /* main_con5 - 세계 뉴스 */
 .main_con5-world_news {
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
+}
+.main_con5-news-article {
+  padding: 1rem 3.5vw;
 }
 
 /* main_con6 style sheet - 교수 */
