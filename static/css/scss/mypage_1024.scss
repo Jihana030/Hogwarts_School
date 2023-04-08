@@ -733,6 +733,10 @@ $selectText: #fff;
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-end;
+
+                            .mypage_timeTable_detail_classroom {
+                                font-size: 0.625rem;
+                            }
                         }
                         
                         .mypage_timeTable_slot_subject {
