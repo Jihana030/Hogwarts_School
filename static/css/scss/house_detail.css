@@ -108,7 +108,7 @@
 }
 #comm_header .comm_right .comm_menu_btn span {
   background-color: #fff;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 #comm_header .comm_right .comm_search i.comm_search_btn {
   color: #fff;
